@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" viewBox="0 0 27 27">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#993680"/>
+      <stop offset="1" stop-color="#2f1a59"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2717" data-name="Group 2717" transform="translate(0.18 0.18)">
+    <g id="Group_2589" data-name="Group 2589">
+      <circle id="Ellipse_138" data-name="Ellipse 138" cx="13.5" cy="13.5" r="13.5" transform="translate(-0.18 -0.18)" fill="url(#linear-gradient)"/>
+      <path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M5.511,1.9,1.343,6.071A.788.788,0,0,1,.23,4.955L4.953.229A.786.786,0,0,1,6.039.206l4.755,4.746A.788.788,0,0,1,9.682,6.068Z" transform="translate(17.789 8.051) rotate(90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

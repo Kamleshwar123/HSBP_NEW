@@ -1,0 +1,347 @@
+.home_heading {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #0F0D0E;
+    h1 {
+        font-size: 42px;
+    }
+    p {
+        font-size: 18px;
+        padding-top: 5px;
+    }
+}
+/* bannners css */
+.bann-con {
+    position: absolute;
+    bottom: 65px;
+    padding-left: 60px;
+}
+
+.bann-con h1 {
+    font-size: 25px;
+    color: #2A3133;
+    padding: 8px 0px;
+}
+
+.bann-con h2 {
+    font-size: 25px;
+    color: #2A3133;
+    font-weight: 800;
+}
+
+.ban-btn1 {
+    margin-top: 30px;
+}
+
+.book-btn1 {
+    background: transparent linear-gradient(250deg, #993680, #2f1a59 81%) 0 0 no-repeat padding-box;
+    border-radius: 7px;
+    width: 110px;
+    text-align: center;
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.book-btn1:hover {
+    background: #fff;
+    color: #2f1a59;
+    text-decoration: none;
+}
+
+/* new css */
+.main_card_box {
+    
+}
+.card_box {
+    margin: 20px;
+    box-shadow: 10px 10px 0 2px #eed0db;
+    border-radius: 42px;
+    text-align: center;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 35px 0 0;
+    height: 370px;
+    margin: 30px;
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    p {
+        font-size: 13px;
+    }
+    img {
+        margin-top: 20px;
+        width: 50%;
+    }
+}
+.card_box1 {
+    background: #D51E4A;
+}
+.card_box2 {
+    background: #ff6f00;
+}
+.card_box3 {
+    background: #8b2e5d;
+}
+.card_box4 {
+    background: #eeac16;
+}
+.card_box5 {
+    background: #d32f2f;
+}
+.beauty_box {
+    padding: 30px;
+    text-align: center;
+    .inner_box {
+        background: #ECEEF0 0% 0% no-repeat padding-box;
+        box-shadow: 15px 16px 26px rgb(0 0 0 / 16%);
+        border-radius: 30px;
+        padding: 20px;
+    }
+    .img_box {
+        text-align: center;
+        position: relative;
+        .corner {
+            &:before,
+            &:after {
+                border-color: #b13592;
+                border-width: 5px;
+                content: "";
+                display: block;
+                height: 18px;
+                pointer-events: none;
+                position: absolute;
+                width: 18px;
+            }
+        }
+        .upper_corner {
+            &:before {
+                border-left-style: solid;
+                border-top-style: solid;
+                left: -5px;
+                top: 0px;
+            }
+            &:after {
+                border-bottom-style: solid;
+                border-left-style: solid;
+                bottom: 0px;
+                left:-5px;
+            }
+        }
+        .lower_corner {
+            &:before {
+                border-right-style: solid;
+                border-top-style: solid;
+                top: 0px;
+                right: -5px;
+            }
+            &:after {
+                border-bottom-style: solid;
+                border-right-style: solid;
+                bottom: 0px;
+                right: -5px;
+            }
+        }
+    }
+    h3 {
+        margin-top: 20px;
+        color: #8B2E5D;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+    P{
+        color: #3D363A;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+.link_text {
+    text-align: left;
+    padding: 0px 30px;
+    padding-bottom:10px;
+    display: flex;
+    justify-content: flex-end;
+    a {
+        color: #561334;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    span svg{
+        transform: scale(0.7);
+    }
+}
+/* beautry_service */
+.beauty_package {
+    background: #FFD1D1;
+    .box {
+        padding: 100px 30px 10px 30px;
+        text-align: center;
+    }
+    .inner_box {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 15px 16px 26px #00000029;
+        border-radius: 30px;
+        padding: 30px 0px;
+        .package_img {
+            margin-top: -105px;
+        }
+        .content {
+            h3 {
+                color: #8B2E5D;
+                font-weight: 500;
+                font-size: 20px;
+            }
+            p {
+                color: #3D363A;
+                margin-bottom: 5px;
+            }
+        }
+        .price {
+            color: #0F0D0E;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .off_price {
+            color: #A8A3A6;
+            text-decoration: line-through;
+        }
+    }
+}
+/* testimonials  */
+.testimonial {
+    background-image: url(../images/testimonial-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 0;
+    .testi_box {
+        text-align: center;
+        position: relative;
+        .testi_bg {
+            padding: 50px 35px;
+            display: block;
+        }
+        .testi_profile {
+            position: absolute;
+            top: 50px;
+            text-align: center;
+            width: 100%;
+        }
+        .testi_content {
+            position: absolute;
+            top: 170px;
+            text-align: center;
+            width: 100%;
+            margin: auto;
+            h3 {
+                color: #561334;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            p {
+                color: #3D363A;
+                font-size: 12px;
+                font-weight: 500;
+                padding: 0px 80px;
+            }
+            .quato {
+                transform: scale(0.4);
+                margin-top: -60px;
+                margin-bottom: -20px;
+            }
+        }
+    }
+}
+.salon_home {
+    padding: 0px 30px;
+}
+.salon_heading {
+    color: #2E2E2E;
+    font-size: 24px;
+    text-align: center;
+    margin: 30px 0px !important;
+}
+.salon_box {
+    box-shadow: 20px 20px 15px #00000029;
+    border-radius: 30px;
+    background: #FFFFFF;
+    padding-bottom: 15px;
+    .salon_img {
+        text-align: center;
+        img {
+            border-radius: 30px 30px 0px 0px;
+        }
+    }
+    .salon_content {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        .left {
+            text-align: left;
+            .title {
+                color: #8B2E5D;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            p {
+                color: #3D363A;
+                font-size: 13px;
+                margin-bottom: 2px;
+            }
+        }
+        .right {
+            text-align: right;
+            .rating {
+                background: #23AA1E 0% 0% no-repeat padding-box;
+                border-radius: 4px;
+                color: #FCFCFC;
+                font-size: 12px;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            p {
+                color: #0F0D0E;
+                font-size: 10px;
+                margin-top: 5px;
+            }
+            .links_icon {
+                display: flex;
+                column-gap: 10px;
+            }
+        }
+    }
+}
+.product_box {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+    border-radius: 30px;
+    margin: 15px 20px;
+    /* position: relative;
+        &:before {
+                position: absolute;
+                content: "New Product";
+                background: #8B2E5D;
+                width: 20px;
+                height: 100%;
+                transform: skew(-45deg);
+                top: 0;
+                left: 0;
+            } */
+    .inner_box {
+        padding: 20px;
+    }
+}
+.app_mobile {
+    background-image: url(../images/mobile_hsbp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 75%;
+}

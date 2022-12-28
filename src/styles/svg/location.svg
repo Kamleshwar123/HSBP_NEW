@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="Group_2704" data-name="Group 2704" transform="translate(0.229 0.062)">
+    <path id="Icon_metro-location" data-name="Icon metro-location" d="M13.723,1.928A5.368,5.368,0,0,0,8.355,7.3c0,5.368,5.368,11.81,5.368,11.81s5.368-6.442,5.368-11.81a5.368,5.368,0,0,0-5.368-5.368Zm0,8.656A3.288,3.288,0,1,1,17.011,7.3,3.288,3.288,0,0,1,13.723,10.584ZM11.643,7.3a2.08,2.08,0,1,1,2.08,2.08A2.08,2.08,0,0,1,11.643,7.3Z" transform="translate(0.035 2.891)" fill="#561334"/>
+    <g id="Ellipse_144" data-name="Ellipse 144" transform="translate(-0.229 -0.062)" fill="none" stroke="#561334" stroke-width="1">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.5" fill="none"/>
+    </g>
+  </g>
+</svg>

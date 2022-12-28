@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="Group_2705" data-name="Group 2705" transform="translate(0.018 0.062)">
+    <g id="Ellipse_143" data-name="Ellipse 143" transform="translate(-0.018 -0.062)" fill="none" stroke="#561334" stroke-width="1">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.5" fill="none"/>
+    </g>
+    <path id="Icon_material-phone-in-talk" data-name="Icon material-phone-in-talk" d="M17.776,14.262a8.872,8.872,0,0,1-2.788-.445.8.8,0,0,0-.8.187l-1.718,1.718a11.749,11.749,0,0,1-5.146-5.146L9.045,8.85a.75.75,0,0,0,.2-.781A8.872,8.872,0,0,1,8.8,5.281.783.783,0,0,0,8.014,4.5H5.281a.783.783,0,0,0-.781.781A13.275,13.275,0,0,0,17.776,18.557a.783.783,0,0,0,.781-.781V15.043A.783.783,0,0,0,17.776,14.262Zm-.781-2.733h1.562A7.029,7.029,0,0,0,11.528,4.5V6.062A5.463,5.463,0,0,1,16.995,11.528Zm-3.124,0h1.562a3.906,3.906,0,0,0-3.9-3.9V9.186A2.34,2.34,0,0,1,13.871,11.528Z" transform="translate(1.795 2.134)" fill="#561334"/>
+  </g>
+</svg>
