@@ -4,6 +4,7 @@ import React from 'react'
 import Slider from 'react-slick';
 import IMAGES from "../../../../constant/images";
 import SvgIcon from '../../../../constant/SvgIcon';
+import SeeAll from '../../../common/SeeAll';
 
 const BeautyService = () => {
     var settings = {
@@ -40,30 +41,28 @@ const BeautyService = () => {
         { title: "Body Care", desc: "We provide special offers for students and corporates" }
     ]
     return (
-        <div className='bg-pink beauty_service'>
+        <div className='bg-pink p-6'>
             <div className='beauty_slider'>
                 <Slider {...settings}>
                     {data && data?.map((item, idx) => (
-                        < div className='beauty_box' key={"beauty" + idx}>
-                            <div className='inner_box'>
-                                <div className='img_box'>
+                        < div className='p-3 text-center' key={"beauty" + idx}>
+                            <div className='service-bg p-5 rounded-3xl'>
+                                <div className='text-center relative'>
                                     <div className='corner upper_corner'></div>
                                     <Image src={IMAGES.HairCut} alt="beauty" className="scale_img" />
                                     <div className='corner lower_corner'></div>
                                 </div>
-                                <h3>{item?.title}</h3>
-                                <p>{item.desc}</p>
+                                <div className='px-3'>
+                                <h3 className='text-2xl text-theme font-medium pt-4 pb-2'>{item?.title}</h3>
+                                <p className='pb-4'>{item.desc}</p>
                                 <button className='custom_button'>Read More</button>
+                                </div>
                             </div>
                         </div>
                     ))}
                 </Slider>
             </div>
-            <div className='link_text'>
-                <Link href={"/"} legacyBehavior>
-                    <a>See All Beauty Services <span><SvgIcon.LinkArrow /></span></a>
-                </Link>
-            </div>
+            <SeeAll text={"See All Beauty Services"} url={"/"}/>
         </div >
     )
 }

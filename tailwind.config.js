@@ -44,13 +44,16 @@ module.exports = {
       'border': '#CCC9C9',
       'blue': '#0B3ECF',
       'yellow': '#FFBD07',
-      'green': '#23AA1E'
+      'green': '#23AA1E',
+      'gray-e8e':'#E8E8E8'
     },
     extend: {
       boxShadow: {
         '8F': '0px 8px 15px #0000008F',
         '4D': '0px 6px 15px #0000004D',
-        '29': '20px 20px 15px #00000029'
+        '29': '20px 20px 15px #00000029',
+        'pkg':'15px 16px 26px #00000029',
+        'card': '10px 10px 0 2px #eed0db'
       }
     },
   },

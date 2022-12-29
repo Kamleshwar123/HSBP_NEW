@@ -9,7 +9,7 @@ const Salon = () => {
     return (
         <div className='bg-pink p-6'>
             <div className='text-2xl text-black-2e2 text-center'>Discover the best salons near you</div>
-            <div className='grid md:grid-cols-2 justify-center aling-center gap-7 py-7'>
+            <div className='grid md:grid-cols-2 justify-center aling-center gap-7 py-7 sm:px-10'>
                 <div>
                     <div className='flex'>
                         <input name="city" type="text" placeholder="Search by City" className='form-control' />

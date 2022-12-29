@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import Slider from 'react-slick';
 import IMAGES from "../../../constant/images";
+import SeeAll from '../../common/SeeAll';
 
 const BeautyPackage = () => {
     var settings = {
@@ -29,30 +30,31 @@ const BeautyPackage = () => {
         ]
     };
     return (
-        <div className='beauty_slider beauty_package bg-pink'>
+        <div className='beauty_slider bg-pink p-6'>
             <Slider {...settings}>
-                {[...Array(10).keys()].map((item, idx) => (
-                    <div className='box' key={"pkg" + idx}>
-                        <div className='inner_box'>
-                            <div className='text-center package_img'>
+                {[...Array(9).keys()].map((item, idx) => (
+                    <div className='w-full md:w-1/2 lg:w-1/3 p-3 mt-[75px] text-center' key={"pkg" + idx}>
+                        <div className='rounded-3xl bg-white shadow-pkg px-5 py-5'>
+                            <div className='text-center -mt-[95px]'>
                                 <Image src={IMAGES.Beauty} alt="beauty" className="scale_img" width={150} height={150} />
                             </div>
                             <div className='content'>
-                                <h3>Normal Packages</h3>
-                                <p>Lotus Cleanup</p>
-                                <p> Full Arms (Chocolate Wax)</p>
-                                <p>Full Legs (Chocolate Wax)</p>
-                                <p>VLCC Detan Pedicure</p>
-                                <p>Eyebrow</p>
-                                <p>Upper Lip</p>
+                                <h3 className='text-xl text-theme font-meduim my-2'>Normal Packages</h3>
+                                <p className='mb-1'>Lotus Cleanup</p>
+                                <p className='mb-1'> Full Arms (Chocolate Wax)</p>
+                                <p className='mb-1'>Full Legs (Chocolate Wax)</p>
+                                <p className='mb-1'>VLCC Detan Pedicure</p>
+                                <p className='mb-1'>Eyebrow</p>
+                                <p className='mb-1'>Upper Lip</p>
                             </div>
-                            <div className='my-3'><span className='price'>&#x20B9;1500</span><span className='off_price'>&#x20B9;2000</span></div>
+                            <div className='my-3'><span className='text-black-0f0 text-base'>&#x20B9;1500</span><span className='text-black-a8a text-base ml-3 line-through'>&#x20B9;2000</span></div>
                             <button className='custom_button'>Read More</button>
                         </div>
                     </div>
                 ))
                 }
-            </Slider >
+            </Slider>
+            <SeeAll text={"See All Packages"} url={"/"}/>
         </div >
     )
 }

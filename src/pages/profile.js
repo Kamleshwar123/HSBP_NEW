@@ -2,7 +2,7 @@ import React from 'react'
 
 const profile = () => {
     return (
-        <div className='container bg-gray'>
+        <div className='container bg-white-f2'>
             <h6>My Profile</h6>
             <div className='profile_page'>
                 <div className='profile_form_box'>

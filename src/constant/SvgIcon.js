@@ -17,6 +17,8 @@ import Hamburger from "./../styles/svg/hamburger.svg";
 import Rating from "./../styles/svg/rating.svg";
 import RightTick from "./../styles/svg/right-tick.svg";
 import Arrow from "./../styles/svg/arrow.svg";
+import BestSeller from "./../styles/svg/best-seller.svg";
+
 const SvgIcon = {
   User,
   Facebook,
@@ -36,6 +38,7 @@ const SvgIcon = {
   Hamburger,
   Rating,
   RightTick,
-  Arrow
+  Arrow,
+  BestSeller
 };
 export default SvgIcon;

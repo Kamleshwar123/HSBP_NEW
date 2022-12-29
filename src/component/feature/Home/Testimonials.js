@@ -52,19 +52,19 @@ const Testimonials = () => {
         }
     ]
     return (
-        <div className='testimonial'>
+        <div className='theme-bg py-3'>
             <div className='testi_slider'>
                 <Slider {...settings}>
                     {data && data?.map((item, idx) => (
-                        < div className="testi_box" key={"testi" + idx}>
-                            <Image src={item.image} alt="beauty" className="testi_bg scale_img" />
-                            <div className="testi_profile">
+                        < div className="text-center relative" key={"testi" + idx}>
+                            <Image src={item.image} alt="beauty" className="px-[35px] py-[50px] block scale_img" />
+                            <div className="absolute top-[50px] text-center w-full">
                                 <Image src={IMAGES.TestiProfile} alt="beauty" width={100} height={100} className="scale_img" />
                             </div>
-                            <div className='testi_content'>
-                                <h3>{item?.name}</h3>
-                                <div><SvgIcon.Qauto className="quato" /></div>
-                                <p>{item?.content}</p>
+                            <div className='absolute top-[170px] margin-auto text-center'>
+                                <h3 className='text-base text-theme-light font-medium'>{item?.name}</h3>
+                                <div className='-mt-12 -mb-5 flex justify-center'><SvgIcon.Qauto className="scale-50"/></div>
+                                <p className='text-xs font-medium px-20'>{item?.content}</p>
                             </div>
                         </div>
                     ))}

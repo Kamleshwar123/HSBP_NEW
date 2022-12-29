@@ -7,7 +7,7 @@ import { FooterCity, LeftLink, RightLink, SocialLink } from "./FooterConfig";
 
 const TheFooter = () => {
   return (
-    <footer className="footer">
+    <footer className="footer-bg mt-[30px] text-black opacity-[.84] pt-[30px] pb-[10px]">
       <div className="container">
         <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-5 justify-items-stretch">
           <div className="justify-self-start">
@@ -23,70 +23,68 @@ const TheFooter = () => {
             </p>
           </div>
           <div className="justify-self-center">
-            <div className="footer_page_list">
               <ul>
                 {LeftLink.map((item, idx) => (
-                  <li key={"leftlink" + idx}>
-                    <Link href={item?.srcUrl} className="footer_menu">{item?.label}</Link>
+                  <li key={"leftlink" + idx} className='list-style-none'>
+                    <Link href={item?.srcUrl} className="leading-7 hover:text-theme">{item?.label}</Link>
                   </li>
                 ))}
               </ul>
-            </div>
           </div>
           <div className="justify-self-center">
-            <div className="footer_page_list">
               <ul>
                 {RightLink.map((item, idx) => (
-                  <li key={"rightlink" + idx}>
-                    <Link href={item?.srcUrl} className="footer_menu">{item?.label}</Link>
+                  <li key={"rightlink" + idx} className='list-style-none'>
+                    <Link href={item?.srcUrl} className="leading-7 hover:text-theme">{item?.label}</Link>
                   </li>
                 ))}
               </ul>
-            </div>
           </div>
           <div className="justify-self-end">
-            <div className="footer_support">
+            <div className="footer-support">
               <p>Customer Care</p>
-              <div>
-                <a href="tel:9582577510">+91 958 257 7510</a>
-              </div>
-              <div>
-                <a href="mailto:hsbpncr@gmail.com">hsbpncr@gmail.com</a>
+              <div className="my-5 text-xl font-semibold opacity-100">
+                <div>
+                  <a href="tel:9582577510">+91 958 257 7510</a>
+                </div>
+                <div>
+                  <a href="mailto:hsbpncr@gmail.com">hsbpncr@gmail.com</a>
+                </div>
               </div>
             </div>
-            <div className="footer_social">
-              <h1>CONNECT US</h1>
-              <ul>
+            <div className="footer-social">
+              <h5 className="text-base font-medium opacity-100">CONNECT US</h5>
+              <div className="flex items-center gap-4 my-4">
                 {SocialLink.map((item, idx) => (
-                  <li key={"sociallink" + idx}>
+                  <div key={"sociallink" + idx}>
                     <Link href={item?.srcUrl} passHref>{item?.icon}</Link>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
         <hr />
-        <div className="footer_city">
-          <ul>
+        <div>
+          <ul className="flex flex-nowrap w-full items-center overflow-x-auto py-2 px-2">
             {FooterCity.map((item, idx) => (
-              <li key={"city" + idx}>{item}</li>
+              <li key={"city" + idx} className='list-style-none px-3 whitespace-nowrap relative after:absolute after:h-full after:w-[1px] after:top-0 after:right-0 after:bg-black'>{item}</li>
             ))}
           </ul>
         </div>
         <hr />
-        <div className="flex flex-wrap items-center justify-between footer_lower gap-5">
-          <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center justify-between gap-5">
+          <div className="flex flex-wrap items-center gap-3">
             <span><SvgIcon.Security /></span>
-            <span className="text">Safe and Secure Transactions</span>
+            <span>Safe and Secure Transactions</span>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <span><SvgIcon.Trademark /></span>
-            <span className="text">Genuine products</span>
+            <span>Genuine products</span>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <span><SvgIcon.Quality /></span>
-            <span className="text">High quality & trusted professionals</span>
+            <span>High quality & trusted professionals</span>
           </div>
         </div>
       </div>

@@ -15,33 +15,30 @@ const TheHeader = () => {
   return (
     <header>
       <div className="container">
-        <div className="header-nav">
-          <div className="header-nav-left">
-            <SvgIcon.Hamburger onClick={toggleDrawer} style={{ cursor: "pointer" }} />
+        <div className="flex items-center justify-between gap-5 h-20">
+          <div className="flex gap-5 items-center">
+            <SvgIcon.Hamburger onClick={toggleDrawer} className='cursor-pointer' />
             <Sidebar isOpen={isOpen} toggleDrawer={toggleDrawer} />
-            <div className="logo">
+            <div>
               <Link href={"/"}>
-                <Image src={IMAGES.Logo} alt="logo" className="scale_img" />
+                <Image src={IMAGES.Logo} alt="logo" height={40} className="scale_img" />
               </Link>
             </div>
           </div>
-          <div className="header-nav-right">
-            <div className="cart-icon">
-              <Image src={IMAGES.Cart} alt="cart" className="scale_img" />
-            </div>
-            <div className="app-icon">
-              <p>DOWNLOAD APP</p>
+          <div className="flex gap-5 items-center">
+              <Image src={IMAGES.Cart} alt="cart" height={30} className="scale_img cursor-pointer" />
+              <p className="ml-5 font-semibold text-base text-black-707">DOWNLOAD APP</p>
               <Link href={"#"}>
-                <Image src={IMAGES.AppStore} alt="app" className="scale_img" />
+                <Image src={IMAGES.AppStore} alt="app" className="scale_img" height={30}/>
               </Link>
               <Link href={"#"}>
                 <Image
                   src={IMAGES.GoogleStore}
                   alt="g-app"
                   className="scale_img"
+                  height={30}
                 />
               </Link>
-            </div>
           </div>
         </div>
       </div>
