@@ -4,11 +4,11 @@ import IMAGES from '../../../../constant/images'
 import SvgIcon from '../../../../constant/SvgIcon'
 
 const data = [
-    { title: "Salon at Home", number: "100+ Services", url: IMAGES.WomenBeauty },
-    { title: "Near by Salons", number: "100+ Salons", url: IMAGES.WomenBeauty },
-    { title: "Beauty Products", number: "100+ Products", url: IMAGES.WomenBeauty },
-    { title: "Franchise", number: "100+ Franchises", url: IMAGES.WomenBeauty },
-    { title: "Training Centres", number: "100+ Centres", url: IMAGES.WomenBeauty }
+    { title: "Salon at Home", number: "100+ Services", url: IMAGES.Card1 },
+    { title: "Near by Salons", number: "100+ Salons", url: IMAGES.Card2 },
+    { title: "Beauty Products", number: "100+ Products", url: IMAGES.Card3 },
+    { title: "Franchise", number: "100+ Franchises", url: IMAGES.Card4 },
+    { title: "Training Centres", number: "100+ Centres", url: IMAGES.Card5 }
 ]
 
 const Card = () => {

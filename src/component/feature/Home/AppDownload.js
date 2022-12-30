@@ -9,7 +9,7 @@ const AppDownload = () => {
                 <div className='p-8'>
                     <div className='text-center'>
                         <div className='app_mobile max-w-[300px]'>
-                            <Image src={IMAGES.GoogleMobile} alt="Banner1" className="scale_img" />
+                            <Image src={IMAGES.MobileHSBP} alt="Banner1" className="scale_img" />
                         </div>
                     </div>
                 </div>

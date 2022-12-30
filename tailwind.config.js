@@ -45,7 +45,8 @@ module.exports = {
       'blue': '#0B3ECF',
       'yellow': '#FFBD07',
       'green': '#23AA1E',
-      'gray-e8e':'#E8E8E8'
+      'gray-e8e':'#E8E8E8',
+      'theme-opacity': 'rgba(146, 58, 112, 0.7)'
     },
     extend: {
       boxShadow: {
@@ -53,7 +54,8 @@ module.exports = {
         '4D': '0px 6px 15px #0000004D',
         '29': '20px 20px 15px #00000029',
         'pkg':'15px 16px 26px #00000029',
-        'card': '10px 10px 0 2px #eed0db'
+        'card': '10px 10px 0 2px #eed0db',
+        'header': '2px -6px 20px 0px #b2a9a9'
       }
     },
   },

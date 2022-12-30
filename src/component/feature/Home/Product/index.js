@@ -1,6 +1,4 @@
-import Link from 'next/link'
 import React from 'react'
-import SvgIcon from '../../../../constant/SvgIcon'
 import SeeAll from '../../../common/SeeAll'
 import ProductBox from './ProductBox'
 

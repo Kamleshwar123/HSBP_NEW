@@ -13,7 +13,7 @@ const TheFooter = () => {
           <div className="justify-self-start">
             <div>
               <Link href={"/"}>
-                <Image src={IMAGES.Logo} alt="logo" className="max-w-100 h-auto" />
+                <Image src={IMAGES.Logo} alt="logo" className="sacle_img max-w-[70%]"/>
               </Link>
             </div>
             <p className="mt-4">

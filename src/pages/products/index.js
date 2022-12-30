@@ -8,7 +8,7 @@ const products = () => {
     return (
         <div className='container'>
             <div className='text-center'>
-                <Image src={IMAGES.Appointment} alt="Salon" className="scale_img" />
+                <Image src={IMAGES.ProductBanner} alt="Salon" className="scale_img" />
             </div>
             <Heading
                 title={"Top Selling Product"}

@@ -12,6 +12,7 @@ import ArrowDown from "./../styles/svg/arrow-down.svg";
 import IosArrowDown from "./../styles/svg/ios-arrow-down.svg";
 import Qauto from "./../styles/svg/double-quato.svg";
 import Heart from "./../styles/svg/heart.svg";
+import HeartWish from "./../styles/svg/heart-wish.svg";
 import LinkArrow from "./../styles/svg/arrow-link.svg";
 import Hamburger from "./../styles/svg/hamburger.svg";
 import Rating from "./../styles/svg/rating.svg";
@@ -32,6 +33,7 @@ const SvgIcon = {
   Call,
   ArrowDown,
   Heart,
+  HeartWish,
   Qauto,
   IosArrowDown,
   LinkArrow,
