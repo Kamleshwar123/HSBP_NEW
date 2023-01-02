@@ -36,8 +36,24 @@ import Bridal3 from './../styles/images/bridal3.webp';
 import Bridal4 from './../styles/images/bridal4.webp';
 import ServiceTab from './../styles/images/service-tab.webp';
 import ServiceTabActive from './../styles/images/service-tab-active.webp';
+import BeautySlider1 from './../styles/images/beauty-slide1.webp';
+import BeautySlider2 from './../styles/images/beauty-slide2.webp';
+import HSBPAdv from './../styles/images/hsbp-adv.webp';
+import Adv1 from './../styles/images/adv1.webp';
+import Adv2 from './../styles/images/adv2.webp';
+import Adv3 from './../styles/images/adv3.webp';
+import Adv4 from './../styles/images/adv4.webp';
+import SalonDetail from './../styles/images/salon-detail.webp';
 
 const IMAGES = {
+    SalonDetail,
+    HSBPAdv,
+    Adv1,
+    Adv2,
+    Adv3,
+    Adv4,
+    BeautySlider1,
+    BeautySlider2,
     Bridal1,
     Bridal2,
     Bridal3,

@@ -14,4 +14,10 @@
   .active {
     @apply border-solid border-b-2
   }
+  .bg-gradient {
+    background: transparent linear-gradient(266deg, #993680 0%, #2F1A59 81%) no-repeat padding-box;
+  }
+  .theme-heading-box {
+    @apply bg-gradient px-5 py-3 rounded-t-3xl text-white
+  }
 }

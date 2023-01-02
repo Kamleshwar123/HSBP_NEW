@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import ICONS from '../../../constant/icons'
 import IMAGES from '../../../constant/images'
 import Heading from '../Home/Heading'
+import ActiveShadow from './ActiveShadow'
 import BridalPackageSlider from './BridalPackageSlider'
 
 const BridalServices = () => {
@@ -20,8 +21,14 @@ const BridalServices = () => {
         />
         <div>
             <div className='pkgtab text-xl flex flex-wrap gap-5 text-black-241'>
-                <div className={`p-5 cursor-pointer${tab === "tab1" ? " text-theme" : ""}`} onClick={()=> setTab("tab1")}>Normal Packages</div>
-                <div className={`p-5 cursor-pointer${tab === "tab2" ? " text-theme" : ""}`} onClick={()=> setTab("tab2")}>Premium Packages</div>
+                <div>
+                    <div className={`px-3 cursor-pointer${tab === "tab1" ? " text-theme" : ""}`} onClick={()=> setTab("tab1")}>Normal Packages</div>
+                    <ActiveShadow val={(tab === "tab1")}/>
+                </div>
+                <div>
+                    <div className={`px-3 cursor-pointer${tab === "tab2" ? " text-theme" : ""}`} onClick={()=> setTab("tab2")}>Premium Packages</div>
+                    <ActiveShadow val={(tab === "tab2")}/>
+                </div>
             </div>
         </div>
         <div className='pb-5'>

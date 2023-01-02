@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react'
 import Slider from 'react-slick';
 import IMAGES from "../../../../constant/images";
@@ -7,6 +8,13 @@ import SvgIcon from '../../../../constant/SvgIcon';
 import SeeAll from '../../../common/SeeAll';
 
 const BeautyService = () => {
+    const router = useRouter();
+    const handleRedirect = (url,data) => {
+        router.push({
+            pathname: url,
+            query: data
+        }, url)
+    }
     var settings = {
         dots: false,
         infinite: true,
@@ -32,13 +40,13 @@ const BeautyService = () => {
         ]
     };
     const data = [
-        { title: "Body Care", desc: "We provide special offers for students and corporates" },
-        { title: "Skin Care", desc: "Pamper Your Skin and Unleash a Beautiful You !" },
-        { title: "Hair Care", desc: "From Couture Cut revitalising Treatment we've got it all !" },
-        { title: "Body Care", desc: "We provide special offers for students and corporates" },
-        { title: "Skin Care", desc: "Pamper Your Skin and Unleash a Beautiful You !" },
-        { title: "Hair Care", desc: "From Couture Cut revitalising Treatment we've got it all !" },
-        { title: "Body Care", desc: "We provide special offers for students and corporates" }
+        { title: "Body Care", desc: "We provide special offers for students and corporates", _data: {type: 1}},
+        { title: "Skin Care", desc: "Pamper Your Skin and Unleash a Beautiful You !", _data: {type: 2} },
+        { title: "Hair Care", desc: "From Couture Cut revitalising Treatment we've got it all !", _data: {type: 3} },
+        { title: "Body Care", desc: "We provide special offers for students and corporates" , _data: {type: 1}},
+        { title: "Skin Care", desc: "Pamper Your Skin and Unleash a Beautiful You !" , _data: {type: 2}},
+        { title: "Hair Care", desc: "From Couture Cut revitalising Treatment we've got it all !" , _data: {type: 3}},
+        { title: "Body Care", desc: "We provide special offers for students and corporates" , _data: {type: 2}}
     ]
     return (
         <div className='bg-pink p-6'>
@@ -46,7 +54,7 @@ const BeautyService = () => {
                 <Slider {...settings}>
                     {data && data?.map((item, idx) => (
                         < div className='p-3 text-center' key={"beauty" + idx}>
-                            <div className='service-bg p-5 rounded-3xl'>
+                            <div className='service-bg p-5 rounded-3xl cursor-pointer' onClick={()=> handleRedirect("/services", item._data)}>
                                 <div className='text-center relative'>
                                     <div className='corner upper_corner'></div>
                                     <Image src={IMAGES.HairCut} alt="beauty" className="scale_img" />
@@ -62,7 +70,7 @@ const BeautyService = () => {
                     ))}
                 </Slider>
             </div>
-            <SeeAll text={"See All Beauty Services"} url={"/"}/>
+            <SeeAll text={"See All Beauty Services"} url={"/services"}/>
         </div >
     )
 }

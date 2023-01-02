@@ -20,10 +20,10 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'gradient': 'transparent linear-gradient(266deg, #993680 0%, #2F1A59 81%)',
       'white': '#ffffff',
       'white-fc': '#FCFCFC',
       'white-f2': '#F2F2F2',
+      'white-eb': '#EBEBEB',
       'black': '#000000',
       'body': '#3D363A',
       "pink": '#ffd1d1',
@@ -54,8 +54,13 @@ module.exports = {
         '4D': '0px 6px 15px #0000004D',
         '29': '20px 20px 15px #00000029',
         'pkg':'15px 16px 26px #00000029',
+        'salon':'8px 8px 6px #00000029',
         'card': '10px 10px 0 2px #eed0db',
-        'header': '2px -6px 20px 0px #b2a9a9'
+        'header': '2px -6px 20px 0px #b2a9a9',
+        '66': '8px 3px 15px #00000066',
+        'tab': '0px 6px 1px #949494',
+        'tab-active': '0px 6px 1px #8b2e5d',
+        'form': '-6px 5px 15px #00000066'
       }
     },
   },

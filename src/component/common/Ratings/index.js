@@ -1,12 +1,12 @@
 import React from 'react'
 import StarRatings from 'react-star-ratings'
 
-const Ratings = ({ rating }) => {
+const Ratings = ({ rating, size }) => {
   return (
     <div>
       <StarRatings
         rating={Number(rating || 0)}
-        starDimension="20px"
+        starDimension={ size ? size : "20px"}
         starSpacing="0px"
         numberOfStars={5}
         starRatedColor="#FFBD07"

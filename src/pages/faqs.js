@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Heading from '../component/feature/Home/Heading'
 import SvgIcon from '../constant/SvgIcon'
 
 const Faqs = () => {

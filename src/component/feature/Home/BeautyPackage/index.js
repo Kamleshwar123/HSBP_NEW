@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
 import Slider from 'react-slick';
-import IMAGES from "../../../../constant/images";
 import SeeAll from '../../../common/SeeAll';
 import BeautyPackageBox from './BeautyPackageBox';
 
@@ -39,8 +37,8 @@ const BeautyPackage = () => {
                     </div>
                 ))}
             </Slider>
-            <SeeAll text={"See All Packages"} url={"/"}/>
-        </div >
+            <SeeAll text={"See All Packages"} url={"/services"} data={{tab: "tab2"}}/>
+        </div>
     )
 }
 

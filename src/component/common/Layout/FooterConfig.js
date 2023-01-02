@@ -23,12 +23,12 @@ const LeftLink = [
     },
     {
         label: "Beauty Products",
-        srcUrl: "/",
+        srcUrl: "/products",
         openNewTab: false
     },
     {
         label: "Institutes",
-        srcUrl: "/",
+        srcUrl: "/institutes",
         openNewTab: false
     },
     {
