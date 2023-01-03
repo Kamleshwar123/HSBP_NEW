@@ -15,15 +15,19 @@
     "bootstrap": "^5.2.3",
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
+    "formik": "^2.2.9",
     "next": "13.0.7",
+    "rc-time-picker": "^3.7.3",
     "react": "18.2.0",
+    "react-datepicker": "^4.8.0",
     "react-dom": "18.2.0",
     "react-modern-drawer": "^1.1.2",
     "react-query": "^3.39.2",
     "react-slick": "^0.29.0",
     "react-star-ratings": "^2.3.0",
     "sass": "^1.57.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

@@ -8,9 +8,9 @@ const Institues = () => {
     const countryData = ["Assam", "Banglore", "Bhopal", "Chennai", "Delhi", "Faridabad", "Gujarat", "Goa", "Jammu", "Telangana", "Haryana", "Himachal Pradesh", "Maharastra", "Rajasthan", "Punjab", "Uttar Pradesh"];
     const packageFilter = ["Reception", "Celebrate Sangeet", "Engagement", "Wedding", "Pre-Bridal Care"];
     return (
-        <div className='container'>
-            <div className='grid md:grid-cols-[25%_75%] my-3 gap-5'>
-                <div>
+        <div className='container mt-3'>
+            <div className='grid grid-cols-12 gap-6'>
+                <div className='col-span-12 lg:col-span-3 md:col-span-4'>
                     <div className='institute_sidebar'>
                         <div className='filter_box'>
                             <h5>
@@ -48,14 +48,14 @@ const Institues = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='col-span-12 lg:col-span-9 md:col-span-8'>
                     <div className='institute'>
                         {[...Array(4).fill()].map((item, idx) => (
                             <div className='institute_box' key={idx}>
                                 <div className='flex flex-col md:flex-row place-items-stretch'>
-                                    <div className='md:w-2/5'>
+                                    <div className='md:w-5/12'>
                                         <div className='text-center'>
-                                            <Image src={IMAGES.HairCut} alt="Salon" className="scale_img" height={300} />
+                                            <Image src={IMAGES.HairCut} alt="Salon" className="scale_img md:rounded-l-3xl" height={300} />
                                         </div>
                                     </div>
                                     <div className='md:w-auto'>
@@ -77,11 +77,11 @@ const Institues = () => {
                                                         <div><Ratings rating={4.5} /></div>
                                                     </div>
                                                     <div className='text-right'>
-                                                        <div><span className='bg-yellow p-1 text-white-fc text-xs'>4.5/5</span></div>
+                                                        <div><span className='bg-yellow p-2 text-white-fc text-xs rounded-lg'>4.5/5</span></div>
                                                         <p className='mt-2'>482 Reviews</p>
                                                     </div>
                                                 </div>
-                                                <div className='flex justify-between mt-7'>
+                                                <div className='flex justify-center sm:justify-between gap-7 mt-7'>
                                                     <button className='custom_button'>Book Appointment</button>
                                                     <button className='custom_button'>View Details</button>
                                                 </div>

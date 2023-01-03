@@ -44,8 +44,18 @@ import Adv2 from './../styles/images/adv2.webp';
 import Adv3 from './../styles/images/adv3.webp';
 import Adv4 from './../styles/images/adv4.webp';
 import SalonDetail from './../styles/images/salon-detail.webp';
+import Offer1 from './../styles/images/offer1.webp';
+import Offer2 from './../styles/images/offer2.webp';
+import Offer3 from './../styles/images/offer3.webp';
+import Ad1 from './../styles/images/ad1.webp';
+import Ad2 from './../styles/images/ad2.webp';
 
 const IMAGES = {
+    Ad1,
+    Ad2,
+    Offer1,
+    Offer2,
+    Offer3,
     SalonDetail,
     HSBPAdv,
     Adv1,

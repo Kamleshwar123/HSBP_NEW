@@ -4,12 +4,14 @@ import Review from './../styles/icons/review.webp';
 import Whatsapp from './../styles/icons/whatsapp.webp';
 import Off from './../styles/icons/off.webp';
 import Cart from './../styles/icons/cart.webp';
+import UserProfile from './../styles/icons/user-profile.webp';
 const ICONS = {
     Location,
     Call,
     Review,
     Whatsapp,
     Off,
-    Cart
+    Cart,
+    UserProfile
 }
 export default ICONS

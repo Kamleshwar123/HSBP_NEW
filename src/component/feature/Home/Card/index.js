@@ -23,7 +23,7 @@ const Card = () => {
                 {data && data?.length > 0 && data?.map((item, idx) => (
                     <div className='w-full md:w-1/2 lg:w-1/3 text-center p-7' key={"card" + idx}>
                         <div 
-                            className={`cursor-pointer shadow-card rounded-[40px] h-[370px] text-white  pt-5 card_box${idx + 1}`}
+                            className={`relative cursor-pointer shadow-card rounded-[40px] h-[370px] text-white  pt-5 card_box${idx + 1}`}
                             onClick={() => handleRedirect(item.url)}
                         >
                             <h3 className='text-xl font-semibold mb-2'>{item?.title}</h3>
@@ -31,8 +31,8 @@ const Card = () => {
                             <div className='flex justify-center p-3'>
                                 <SvgIcon.IosArrowDown className='scale-75' />
                             </div>
-                            <div className='text-center'>
-                                <Image src={item?.img} alt="Salon" className="scale_img w-1/2 mt-5" />
+                            <div className='text-center absolute bottom-1'>
+                                <Image src={item?.img} alt="Salon" className="scale_img w-3/5 mt-5" />
                             </div>
                         </div>
                     </div>
