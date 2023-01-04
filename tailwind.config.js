@@ -39,6 +39,7 @@ module.exports = {
       'black-686': '#686868',
       'black-241': '#241E1E',
       'black-707': '#707070',
+      'black-685':'#685F65',
       'placeholder': '#AFA9A9',
       'red-c80': '#C8052C',
       'border': '#CCC9C9',
@@ -46,7 +47,10 @@ module.exports = {
       'yellow': '#FFBD07',
       'green': '#23AA1E',
       'gray-e8e':'#E8E8E8',
-      'theme-opacity': 'rgba(146, 58, 112, 0.7)'
+      'gray-eee': '#EEEEEE',
+      'gray-f3f':'#F3F3F3',
+      'theme-opacity': 'rgba(146, 58, 112, 0.7)',
+      'blue-274':'#2747E6'
     },
     extend: {
       boxShadow: {
@@ -60,7 +64,9 @@ module.exports = {
         '66': '8px 3px 15px #00000066',
         'tab': '0px 6px 1px #949494',
         'tab-active': '0px 6px 1px #8b2e5d',
-        'form': '-6px 5px 15px #00000066'
+        'form': '-6px 5px 15px #00000066',
+        'checkout': '0px 5px 15px #00000066',
+        'beautician':'0px 6px 10px #00000029'
       }
     },
   },

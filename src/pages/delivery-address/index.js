@@ -5,7 +5,7 @@ const DeliveryAddress = () => {
     <div className='container bg-white-f2'>
             <h6 className='text-black-241 p-5 text-base font-medium'>Add Delivery Address</h6>
             <div className='p-5 md:px-12 py-5'>
-                <div className='shadow-form bg-white rounded-3xl'>
+                <div className='shadow-form bg-white rounded-2xl overflow-hidden'>
                     <div className='theme-heading-box'>
                         <h6>Contact Details</h6>
                     </div>

@@ -1,3 +1,12 @@
+.slick-track {
+    display: flex !important;
+}
+.slick-slide {
+    height: inherit !important;
+}
+.slick-slide > div {
+    height: 100% !important;
+}
 .home_banner_slider {}
 
 .home_banner_slider .slick-prev {

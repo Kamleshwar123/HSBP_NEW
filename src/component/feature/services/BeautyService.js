@@ -3,6 +3,7 @@ import React from 'react'
 import IMAGES from '../../../constant/images'
 import BeautyServiceSlider from './BeautyServiceSlider'
 import CareBox from './CareBox'
+import CheckoutBox from './CheckoutBox'
 
 const BeautyService = ({type}) => {
   const advData = [
@@ -16,7 +17,7 @@ const BeautyService = ({type}) => {
         <BeautyServiceSlider type={type}/>
         <div className='grid md:grid-cols-12 gap-7 my-5'>
           <div className='md:col-span-7'>
-            <div className='shadow-66 rounded-3xl'>
+            <div className='shadow-66 rounded-2xl overflow-hidden'>
               <div className='theme-heading-box'>Hair Care</div>
               <div>
               {[...Array(3).keys()].map((item, idx) => (
@@ -29,15 +30,7 @@ const BeautyService = ({type}) => {
             </div>
           </div>
           <div className='md:col-span-5'>
-          <div className='shadow-66 rounded-3xl'>
-              <div className='theme-heading-box flex justify-between'>
-                <p>Service / Package</p>
-                <p>Price (INR)</p>
-              </div>
-              <div>
-                <p>Treatment that helps repair damage and unwanted frizz...…...</p>
-              </div>
-            </div>
+              <CheckoutBox/>
           </div>
         </div>
         <div className='bg-pink-light bg-opacity-30 py-5 px-7 text-black-2e2'>

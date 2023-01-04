@@ -1,5 +1,5 @@
 import React from 'react'
-import Services from '../component/feature/services/Services'
+import Services from '../../component/feature/services/Services'
 
 const ServicesPage = () => {
   return (

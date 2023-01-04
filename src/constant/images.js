@@ -49,8 +49,26 @@ import Offer2 from './../styles/images/offer2.webp';
 import Offer3 from './../styles/images/offer3.webp';
 import Ad1 from './../styles/images/ad1.webp';
 import Ad2 from './../styles/images/ad2.webp';
+import Layer from './../styles/images/layer.webp';
+import Gallary1 from './../styles/images/gallary1.webp';
+import Gallary2 from './../styles/images/gallary2.webp';
+import Gallary3 from './../styles/images/gallary3.webp';
+import Beautician from './../styles/images/beautician.webp';
+import BGallary1 from './../styles/images/beauty-gal1.webp';
+import BGallary2 from './../styles/images/beauty-gal2.webp';
+import Btesti from './../styles/images/btesti.webp';
+import BtestiProfile from './../styles/images/btesti-profile.webp';
 
 const IMAGES = {
+    BGallary1,
+    BGallary2,
+    Btesti,
+    BtestiProfile,
+    Beautician,
+    Layer,
+    Gallary1,
+    Gallary2,
+    Gallary3,
     Ad1,
     Ad2,
     Offer1,

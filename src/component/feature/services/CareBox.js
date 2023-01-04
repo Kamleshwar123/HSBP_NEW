@@ -1,6 +1,8 @@
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 
 const CareBox = () => {
+    const router = useRouter();
     const [num, setNum]= useState(0);
     const inc = (e) => {
         num < 5 ? setNum(num + 1) : e.preventDefault();
@@ -15,7 +17,9 @@ const CareBox = () => {
     <div className='px-5 py-3 text-black-2a3'>
         <h6 className='text-base font-medium'>Hair Spa</h6>
         <div className='flex gap-5 flex-row sm:flex-column justify-between items-center pt-2'>
-            <p className='pb-2 text-xs'>Have you tried a variety of shampoos and hair oils without success in preventing hair loss and split ends? If so, Hair Spa will Read More</p>
+            <p className='pb-2 text-xs'>Have you tried a variety of shampoos and hair oils without success in preventing hair loss and split ends? If so, Hair Spa will... 
+                <span className='text-blue-274 font-medium cursor-pointer' onClick={()=> router.push(`/services/beauty-service/1`)}>Read More</span>
+            </p>
             <div>
             {num > 0 ?
             <div className='flex rounded-2xl border border-1'>
