@@ -1,6 +1,4 @@
-@import './home.scss';
 @import './slick.scss';
-
 /* common css */
 * {
     box-sizing: border-box;
@@ -200,11 +198,7 @@
     outline: 0;
     box-shadow: none !important;
   }
-  
-  input[type=checkbox], input[type=radio] {
-    accent-color: #993680;
-  }
-  
+
   .form_check {
     display: block;
     min-height: 1.5rem;

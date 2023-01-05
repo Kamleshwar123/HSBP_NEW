@@ -40,6 +40,7 @@ module.exports = {
       'black-241': '#241E1E',
       'black-707': '#707070',
       'black-685':'#685F65',
+      'black-605':'#605F5F',
       'placeholder': '#AFA9A9',
       'red-c80': '#C8052C',
       'border': '#CCC9C9',

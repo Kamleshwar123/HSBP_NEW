@@ -18,18 +18,12 @@
     background: transparent linear-gradient(266deg, #993680 0%, #2F1A59 81%) no-repeat padding-box;
   }
   .theme-heading-box {
-    @apply bg-gradient px-5 py-3 text-white
+    @apply bg-gradient px-5 py-3 text-white;
   }
-  /* .center3:last-child:nth-child(3n - 1) {
-    grid-column-end: -2;
+  input[type=checkbox], input[type=radio] {
+    @apply accent-[#993680];
   }
-  .center3:nth-last-child(2):nth-child(3n + 1) {
-    grid-column-end: 4;
-  }
-  .center3:last-child:nth-child(3n - 2) {
-    grid-column-end: 5;
-  } */
-  .bx3:last-child:nth-child(3n - 2) {
-    grid-column: 1 / -1;
+  .accent_green {
+    @apply accent-green !important;
   }
 }
