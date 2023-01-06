@@ -47,8 +47,8 @@ const BeautyService = ({type}) => {
           <div className='flex flex-wrap gap-7 text-center text-black-2e2 items-end justify-evenly'>
             {advData.map((item,idx)=> (
               <div key={`adv${idx}`}>
-                <Image src={item.img} alt="HSBPAdv" className="mx-auto w-auto max-h-75"/>
-                <p className='font-bold py-2'>{item.label}</p>
+                <Image src={item?.img} alt="HSBPAdv" className="mx-auto w-auto max-h-75"/>
+                <p className='font-bold py-2'>{item?.label}</p>
               </div>
             ))}
           </div>

@@ -23,7 +23,7 @@ const Faqs = () => {
                     <div className='accord border mb-5 border-text-black-2e2 rounded-[8px] overflow-hidden' key={idx}>
                         <div className={idx.toString() === index ? showCss : noShow} onClick={() => handleIndex(idx.toString())}>
                             <div>What should I do to prepare for waxing ?</div>
-                            <span><SvgIcon.Arrow width={18} height={18} /></span>
+                            <span><SvgIcon.Arrow width={18} height={18} className={idx.toString() === index ? 'rotate-180' : ''}/></span>
                         </div>
                         {idx.toString() === index &&
                             <div className='text-black-605 px-5 py-3'>

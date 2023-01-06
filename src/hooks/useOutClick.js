@@ -1,16 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 function useOutsideAlerter(ref, setOpen) {
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                setOpen(false);
-            }
+    const handleClickOutside = useCallback((event) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+            setOpen(false);
         }
+    },[setOpen, ref]);
+
+    useEffect(() => {
         document.addEventListener("click", handleClickOutside);
         return () => {
             document.removeEventListener("click", handleClickOutside);
         };
-    }, [ref]);
+    }, [handleClickOutside]);
 }
 export default function OutsideClick(props) {
     const wrapperRef = useRef(null);

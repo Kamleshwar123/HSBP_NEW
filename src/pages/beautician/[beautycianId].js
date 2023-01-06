@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import BeautycianImgGallary from '../../component/feature/BeauticianDetail/BeautycianImgGallary'
 import CustomerReview from '../../component/feature/BeauticianDetail/CustomerReview'
+import ICONS from '../../constant/icons'
 import IMAGES from '../../constant/images'
 const Ratings = dynamic(() => import('../../component/common/Ratings'), { ssr: false })
 
@@ -24,9 +25,13 @@ const BeautycianDetails = () => {
                         <span>4.5/5</span>
                         <span>482 Reviews</span>
                     </div>
-                    <div className='my-5 p-5 bg-gray-f3f rounded-2xl'>
-                        <p>"Deepika Singh is a makeup queen as well as Family Lawyer who rules the makeup industry and creates magic with her work and makes everyone spellbound with her extraordinary talent.</p>
-                        <p className='mt-7'>Optimally praised in India and around the globe with her modernised magic and establishment for style and beauty totally follow PERFECTION."</p>
+                    <div className='my-5 px-5 py-8 bg-gray-f3f rounded-2xl text-left relative'>
+                    <Image src={ICONS.Qstart} alt="Qstart" className="scale_icon-18 absolute top-4 left-5"/>
+                        <div className='px-8'>
+                            <p>Deepika Singh is a makeup queen as well as Family Lawyer who rules the makeup industry and creates magic with her work and makes everyone spellbound with her extraordinary talent.</p>
+                            <p className='mt-7'>Optimally praised in India and around the globe with her modernised magic and establishment for style and beauty totally follow PERFECTION.</p>
+                        </div>
+                        <Image src={ICONS.Qend} alt="Qend" className="scale_icon-18 absolute bottom-4 right-12"/>
                     </div>
                 </div>
             </div>

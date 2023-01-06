@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {useRouter } from 'next/router'
 import React from 'react'
+import ICONS from '../../../constant/icons'
 import IMAGES from '../../../constant/images'
 import SvgIcon from '../../../constant/SvgIcon'
 import SeeAll from '../../common/SeeAll'
@@ -9,7 +10,7 @@ import SeeAll from '../../common/SeeAll'
 const Salon = () => {
     const router = useRouter();
     return (
-        <div className='bg-pink p-6'>
+        <div>
             <div className='text-2xl text-black-2e2 text-center'>Discover the best salons near you</div>
             <div className='grid md:grid-cols-2 justify-center aling-center gap-7 py-7 sm:px-10'>
                 <div>
@@ -36,16 +37,18 @@ const Salon = () => {
                                 </div>
                                 <div className='p-4 flex justify-between gap-3'>
                                     <div>
-                                        <h3 className='text-theme text-base font-medium'>HSBP Studio</h3>
+                                        <h3 className='text-theme text-base font-medium pb-2'>HSBP Studio</h3>
                                         <p className='text-xs'>Near Mahagun Mall,</p>
                                         <p className='text-xs'>Vaishali, Ghaziabad</p>
                                     </div>
                                     <div className='text-right'>
-                                        <div className='flex justify-end text-white-fc'><span className='flex gap-1 bg-green items-center p-1 rounded'><span>4.5</span><span><SvgIcon.Rating /></span></span></div>
-                                        <p className='text-xs my-2'>482 Reviews</p>
-                                        <div className='flex gap-3 items-center'>
-                                            <SvgIcon.Call className="cursor-pointer" onClick={(e)=> e.stopPropagation()}/>
-                                            <SvgIcon.Location className="cursor-pointer" onClick={(e)=> e.stopPropagation()}/>
+                                        <div className='flex justify-end text-white-fc'><span className='flex gap-1 bg-green items-center px-1 rounded'><span>4.5</span><span><SvgIcon.Rating /></span></span></div>
+                                        <p className='text-xs mb-1'>482 Reviews</p>
+                                        <div className='flex gap-1 items-center justify-end'>
+                                            <Image src={ICONS.Scall} alt="Scall" className="scale_icon-24 cursor-pointer" onClick={(e)=> e.stopPropagation()}/>
+                                            <Image src={ICONS.Slocation} alt="Slocation" className="scale_icon-24 cursor-pointer" onClick={(e)=> e.stopPropagation()}/>
+                                            {/* <SvgIcon.Call className="cursor-pointer" />
+                                            <SvgIcon.Location className="cursor-pointer" onClick={(e)=> e.stopPropagation()}/> */}
                                         </div>
                                     </div>
                                 </div>

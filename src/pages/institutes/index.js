@@ -12,11 +12,11 @@ const Institues = () => {
             <div className='grid grid-cols-12 gap-6'>
                 <div className='col-span-12 lg:col-span-3 md:col-span-4'>
                     <div className='institute_sidebar'>
-                        <div className='filter_box'>
-                            <h5>
-                                <span className='filter_title'>Filter by State</span>
-                            </h5>
-                            <div className='filter_content'>
+                        <div className='bg-white shadow-filterbox rounded-[10px_10px_0_0] mb-5 overflow-hidden'>
+                            <div className='theme-heading-box py-3 px-4'>
+                                <span className='border-b border-white pb-1'>Filter by State</span>
+                            </div>
+                            <div className='py-3 px-4'>
                                 {countryData.map((item, idx) => (
                                     <div key={idx}>
                                         <div className="form_check">
@@ -29,11 +29,11 @@ const Institues = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className='filter_box'>
-                            <h5>
-                                <span className='filter_title'>Bridal Packages</span>
-                            </h5>
-                            <div className='filter_content'>
+                        <div className='bg-white shadow-filterbox rounded-[10px_10px_0_0] mb-5 overflow-hidden'>
+                            <div className='theme-heading-box py-3 px-4'>
+                                <span className='border-b border-white pb-1'>Bridal Packages</span>
+                            </div>
+                            <div className='py-3 px-4'>
                                 {packageFilter.map((item, idx) => (
                                     <div key={idx}>
                                         <div className="form_check">
@@ -51,7 +51,7 @@ const Institues = () => {
                 <div className='col-span-12 lg:col-span-9 md:col-span-8'>
                     <div className='institute'>
                         {[...Array(4).fill()].map((item, idx) => (
-                            <div className='institute_box' key={idx}>
+                            <div className='shadow-42 bg-white mb-7 rounded-[22px]' key={idx}>
                                 <div className='flex flex-col md:flex-row place-items-stretch'>
                                     <div className='md:w-5/12'>
                                         <div className='text-center'>
@@ -59,8 +59,8 @@ const Institues = () => {
                                         </div>
                                     </div>
                                     <div className='md:w-auto'>
-                                        <div className='right_box'>
-                                            <div className='institute_inner_box'>
+                                        <div>
+                                            <div className='p-5'>
                                                 <div className='flex justify-between'>
                                                     <div>
                                                         <h6 className='text-theme text-lg'>HSBP Studio</h6>

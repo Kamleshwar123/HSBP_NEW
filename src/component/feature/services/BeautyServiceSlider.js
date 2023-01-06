@@ -60,7 +60,7 @@ const BeautyServiceSlider = ({type}) => {
                 <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 text-center' key={"pkg" + idx}>
                     <div>
                     <Image src={item.img} alt="Bridal1" className="mx-auto rounded-full bg-white" height={100} width={100}/>
-                    <div className={`pt-5 text-white uppercase ${type === idx ? 'font-bold' : "text-opacity-75"}`}>{item.name}</div>
+                    <div className={`pt-5 text-white uppercase ${type === idx ? 'font-bold' : "text-opacity-75"}`}>{item?.name}</div>
                     </div>
                 </div>
             ))}

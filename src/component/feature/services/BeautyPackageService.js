@@ -12,7 +12,7 @@ const BeautyPackageService = () => {
         <div className='bg-pink p-6'>
             <div className='flex flex-wrap justify-center'>
                 {[...Array(6).keys()].map((item, idx) => (
-                    <div className='w-full md:w-1/2 lg:w-1/3 p-3 mt-[75px] text-center' key={"pkg" + idx}>
+                    <div className='w-full md:w-1/2 lg:w-1/3 p-3 text-center' key={"pkg" + idx}>
                     <BeautyPackageBox item={item}/>
                     </div>
                 ))}

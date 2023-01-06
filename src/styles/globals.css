@@ -5,14 +5,14 @@
 
 @layer components {
   .form-label {
-    @apply inline-block mb-2 text-body
+    @apply inline-block mb-2 text-black-2e2 font-medium;
   }
 
   .form-control {
-    @apply focus:bg-white focus:border-body focus:text-body focus:outline-none block w-full px-3 py-1.5 text-base font-normal text-body bg-white bg-clip-padding border border-solid border-body rounded transition ease-in-out m-0;
+    @apply focus:bg-white focus:border-border focus:text-body focus:outline-none block w-full px-3 py-1.5 text-sm font-normal text-body bg-white bg-clip-padding border border-solid border-border rounded transition ease-in-out m-0;
   }
   .active {
-    @apply border-solid border-b-2
+    @apply border-solid border-b-2;
   }
   .bg-gradient {
     background: transparent linear-gradient(266deg, #993680 0%, #2F1A59 81%) no-repeat padding-box;

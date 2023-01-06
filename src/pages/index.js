@@ -27,26 +27,33 @@ const Home = () => {
           desc={"We provide special offers for students and corporates"}
         />
         <BeautyService />
+      </div>
+      <Heading
+        title={"Book Appointment"}
+        desc={"Lorem ipsum dolor sit amet, consectetur adipisci elitsed eiusmod"}
+      />
+      <Appointment />
+      <div className="beautypkg-bg">
         <Heading
           title={"Beauty Packages"}
           desc={"We provide special offers for students and corporates"}
         />
         <BeautyPackage />
-        <Heading
-          title={"Book Appointment"}
-          desc={"Lorem ipsum dolor sit amet, consectetur adipisci elitsed eiusmod"}
-        />
-        <Appointment />
+      </div>
+      <div className="container">
         <Heading
           title={"Near by Salons"}
           desc={"200+ tech enabled salons, serving you quality services across 40+ cities"}
         />
         <Salon />
+      </div>
+        <div className="productshop-bg">
         <Heading
           title={"Product Shop"}
           desc={"50+ salon professional brands delivered nationally to your doorsteps"}
         />
         <Product />
+        </div>
         <Heading
           title={"Franchise"}
           desc={"100+ Tech enabled Institute, Serving you quality services across 60+ cities"}
@@ -62,6 +69,7 @@ const Home = () => {
           desc={"When the age of a person exceeds 50 years, it becomes very important to take care of one’s health as she enters the senior citizen age."}
         />
         <Testimonials />
+      <div className="container">
         <AppDownload />
       </div>
     </div>

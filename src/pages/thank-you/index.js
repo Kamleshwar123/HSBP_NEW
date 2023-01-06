@@ -1,5 +1,5 @@
 import React from 'react'
-import SvgIcon from '../constant/SvgIcon'
+import SvgIcon from '../../constant/SvgIcon'
 
 const ThankYou = () => {
     return (

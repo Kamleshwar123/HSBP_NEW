@@ -20,18 +20,25 @@ const BeautyService = () => {
         infinite: true,
         autoplay: false,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 900,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                 }
             },
             {
-                breakpoint: 576,
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -49,12 +56,12 @@ const BeautyService = () => {
         { title: "Body Care", desc: "We provide special offers for students and corporates" , _data: {type: 2}}
     ]
     return (
-        <div className='bg-pink p-6'>
-            <div className='beauty_slider'>
+        <div>
+            <div className='beauty_slider -m-3'>
                 <Slider {...settings}>
                     {data && data?.map((item, idx) => (
-                        < div className='p-3 text-center' key={"beauty" + idx}>
-                            <div className='service-bg p-5 rounded-3xl cursor-pointer' onClick={()=> handleRedirect("/services", item._data)}>
+                        < div className='h-full p-3 text-center' key={"beauty" + idx}>
+                            <div className='h-full service-bg p-5 rounded-3xl cursor-pointer' onClick={()=> handleRedirect("/services", item?._data)}>
                                 <div className='text-center relative'>
                                     <div className='corner upper_corner'></div>
                                     <Image src={IMAGES.HairCut} alt="beauty" className="scale_img" />
@@ -62,8 +69,8 @@ const BeautyService = () => {
                                 </div>
                                 <div className='px-3'>
                                 <h3 className='text-2xl text-theme font-medium pt-4 pb-2'>{item?.title}</h3>
-                                <p className='pb-4'>{item.desc}</p>
-                                <button className='custom_button'>Read More</button>
+                                <p className='pb-4'>{item?.desc}</p>
+                                <button className='custom_button'>Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +78,7 @@ const BeautyService = () => {
                 </Slider>
             </div>
             <SeeAll text={"See All Beauty Services"} url={"/services"}/>
-        </div >
+        </div>
     )
 }
 
