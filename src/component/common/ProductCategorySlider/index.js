@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 import React from 'react'
 import Slider from 'react-slick';
 import ICONS from '../../../constant/icons'
 
 const ProductCategorySlider = () => {
+    const router = useRouter();
     var settings = {
         dots: false,
         infinite: true,
@@ -47,7 +49,10 @@ const ProductCategorySlider = () => {
         <Slider {...settings}>
         {[...Array(16).keys()].map((item, idx) => (
         <div key={idx+"cat"}>
-            <div className='cursor-pointer justify-self-center mx-auto max-w-[160px] text-theme border border-theme rounded-xl flex gap-2 px-1 py-2 items-center justify-center'>
+            <div 
+                className='cursor-pointer justify-self-center mx-auto max-w-[160px] text-theme border border-theme rounded-xl flex gap-2 px-1 py-2 items-center justify-center'
+                onClick={()=> router.push("/products")}
+            >
                 <span className='w-4 h-4 rounded-full'>
                 <Image src={ICONS.Call} alt="Appointment" className="scale_img" />
                 </span>

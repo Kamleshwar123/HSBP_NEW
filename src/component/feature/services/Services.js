@@ -23,7 +23,7 @@ const Services = () => {
 
   return (
     <div className='py-3'>
-        <div className='grid md:grid-cols-3 items-center justify-center rounded-3xl text-center bg-gray-e8e bg-opacity-[0.18]'>
+        <div className='grid md:grid-cols-3 items-center justify-center text-center bg-gray-e8e bg-opacity-[0.18] overflow-hidden rounded-2xl'>
         {TabData?.map((item, idx) => (
             <div key={"tabs"+idx} className='relative font-medium cursor-pointer' onClick={()=> setTab(item.val)}>
                 <Image src={IMAGES.ServiceTab} alt="beauty" className="relative h-14 object-cover"/>

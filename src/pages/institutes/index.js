@@ -1,10 +1,12 @@
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import React from 'react'
 import IMAGES from '../../constant/images'
 const Ratings = dynamic(() => import('../../component/common/Ratings'), { ssr: false })
 
 const Institues = () => {
+    const router = useRouter();
     const countryData = ["Assam", "Banglore", "Bhopal", "Chennai", "Delhi", "Faridabad", "Gujarat", "Goa", "Jammu", "Telangana", "Haryana", "Himachal Pradesh", "Maharastra", "Rajasthan", "Punjab", "Uttar Pradesh"];
     const packageFilter = ["Reception", "Celebrate Sangeet", "Engagement", "Wedding", "Pre-Bridal Care"];
     return (
@@ -83,7 +85,7 @@ const Institues = () => {
                                                 </div>
                                                 <div className='flex justify-center sm:justify-between gap-7 mt-7'>
                                                     <button className='custom_button'>Book Appointment</button>
-                                                    <button className='custom_button'>View Details</button>
+                                                    <button className='custom_button' onClick={()=> router.push("/salons/1")}>View Details</button>
                                                 </div>
                                             </div>
                                         </div>

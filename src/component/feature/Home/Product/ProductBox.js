@@ -10,14 +10,14 @@ const ProductBox = () => {
     const router = useRouter();
     const [wishList, setWishlist] = useState(false);
     return (
-        <div className='shadow-4D h-full rounded-3xl bg-white border-[#DCDCDC] text-center cursor-pointer' onClick={()=> router.push("products/1")}>
+        <div className='overflow-hidden shadow-4D h-full rounded-3xl bg-white border-[#DCDCDC] text-center cursor-pointer' onClick={()=> router.push("products/1")}>
             <div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between relative'>
                     <div>
                         <SvgIcon.BestSeller className="cursor-pointer"/>
                         <p className='text-white rotate-[-30deg] -mt-[66px] mr-[80px]'>Best Seller</p>
                     </div>
-                    <div className='p-5 cursor-pointer' onClick={(e)=> {e.stopPropagation() ;setWishlist(!wishList)}}>{wishList ? <SvgIcon.HeartWish/> :<SvgIcon.Heart/>}</div>
+                    <div className='absolute z-10 top-2 right-0 p-5 cursor-pointer' onClick={(e)=> {e.stopPropagation() ;setWishlist(!wishList)}}>{wishList ? <SvgIcon.HeartWish/> :<SvgIcon.Heart/>}</div>
                 </div>
                 <div className='pb-5 px-5 mt-4'>
                     <div className='text-center mx-7 my-3'>
@@ -25,12 +25,12 @@ const ProductBox = () => {
                     </div>
                     <div className='content'>
                         <h6 className='font-medium text-theme'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
-                        <div className='my-3'>
+                        <div className='my-2'>
                             <Ratings rating={4.5} />
                         </div>
                     </div>
-                    <div className='mb-2'><span className='text-black-0f0 text-base'>&#x20B9;1500</span><span className='text-black-a8a text-base ml-3 line-through'>&#x20B9;2000</span></div>
-                    <div className='text-red-c80 mb-3'>50% OFF</div>
+                    <div className='mb-1'><span className='text-black-0f0 font-bold'>&#x20B9;1500</span><span className='text-black-a8a text-xs ml-3 line-through'>&#x20B9;2000</span></div>
+                    <div className='text-red-c80 mb-2'>50% OFF</div>
                     <button className='custom_button' onClick={(e)=> e.stopPropagation()}>Add to Cart</button>
                 </div>
             </div>

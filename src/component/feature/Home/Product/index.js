@@ -13,7 +13,7 @@ const Product = () => {
                 ))
                 }
             </div>
-            <SeeAll text={"See All Products"} url={"/products"}/>
+            <SeeAll text={"See All Products"} url={"/product-home"}/>
         </div>
     )
 }

@@ -48,13 +48,13 @@ const ProductDetails = () => {
                     </div>
                     <div className='px-5 text-black-241'>
                         <div>
-                            <h6 className='text-base'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
+                            <h6 className='text-xl w-4/5'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
                             <div className='py-4 flex gap-4'>
                                 <div><Ratings rating={4.5} /></div>
                                 <div className='text-black-707'>4.5/5 <span className='ml-4'>216 Reviews</span></div>
                             </div>
                             <div className='text-theme'>Special Price</div>
-                            <div className='my-2'><span>&#x20B9;1500</span><span className='ml-3 line-through'>&#x20B9;2000</span></div>
+                            <div className='my-2'><span className='font-bold text-base'>&#x20B9;1500</span><span className='ml-3 line-through text-black-a8a'>&#x20B9;2000</span></div>
                             <div>Size - 200 ML</div>
                             <div>Quantity - 1</div>
                             <div className='flex items-center gap-5 mt-3'>

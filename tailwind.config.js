@@ -41,6 +41,7 @@ module.exports = {
       'black-707': '#707070',
       'black-685':'#685F65',
       'black-605':'#605F5F',
+      'black-949':'#949494',
       'placeholder': '#AFA9A9',
       'red-c80': '#C8052C',
       'border': '#CCC9C9',
@@ -50,7 +51,7 @@ module.exports = {
       'gray-e8e':'#E8E8E8',
       'gray-eee': '#EEEEEE',
       'gray-f3f':'#F3F3F3',
-      'theme-opacity': 'rgba(146, 58, 112, 0.7)',
+      'theme-opacity': 'rgba(146, 58, 112, 0.5)',
       'blue-274':'#2747E6'
     },
     extend: {
