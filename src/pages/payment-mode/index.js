@@ -14,7 +14,7 @@ const PaymentMode = () => {
               <div>
               <div className='flex text-black-685 items-start gap-5'>
                 <input type='radio' id='net' name="payment_Type" className='mt-1 accent_green'/>
-                <label htmlFor='net'>
+                <label /* htmlFor='net' */>
                 <div className='text-black-2a3 font-medium pb-4'>Other UPI IDs/Net Banking</div>
                   <div className='inline-flex items-center space-x-4'>
                     <Image src={ICONS.Paytm} alt="Paytm" className='max-h-[24px] w-auto'/>
@@ -27,10 +27,10 @@ const PaymentMode = () => {
               </div>
               <hr className='my-2'/>
               <div className='flex text-black-685 items-start gap-5'>
-                <input type='radio' id='net' name="payment_Type" className='mt-1 accent_green'/>
-                <label htmlFor='net'>
+                <input type='radio' id='card' name="payment_Type" className='mt-1 accent_green'/>
+                <label /* htmlFor='card' */>
                 <div className='text-black-2a3 font-medium'>Add Debit / Credit / ATM Card</div>
-                <div className='text-black-2a3 pt-1 pb-1'>You can save your cards as per new RBI guidliness, <span className='cursor-pointer text-blue-274'>Learn more</span></div>
+                <div className='text-black-2a3 pt-1 pb-1'>You can save your cards as per new RBI guidliness, <span className='cursor-pointer text-blue-274' onClick={(e)=> e.stopPropagation()}>Learn more</span></div>
                   <div className='inline-flex items-center space-x-4'>
                     <Image src={ICONS.Debitcard} alt="Paytm" className='max-h-[36px] w-auto'/>
                     <Image src={ICONS.CreditCard} alt="Gpay" className='max-h-[36px] w-auto'/>
@@ -39,8 +39,8 @@ const PaymentMode = () => {
               </div>
               <hr className='my-2'/>
               <div className='flex text-black-685 items-start gap-5'>
-                <input type='radio' id='net' name="payment_Type" className='mt-1 accent_green'/>
-                <label htmlFor='net'>
+                <input type='radio' id='service' name="payment_Type" className='mt-1 accent_green'/>
+                <label /* htmlFor='service' */>
                 <div className='text-black-2a3 font-medium'>Pay On Service</div>
                 <div className='text-black-2a3 pt-1 pb-1'>To ensure social distancing, Pay on Service is not preferable</div>
                 </label>

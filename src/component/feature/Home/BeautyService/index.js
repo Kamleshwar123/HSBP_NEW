@@ -1,11 +1,10 @@
 import Image from 'next/image'
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react'
 import Slider from 'react-slick';
 import IMAGES from "../../../../constant/images";
-import SvgIcon from '../../../../constant/SvgIcon';
 import SeeAll from '../../../common/SeeAll';
+import { SampleNextArrow, SamplePrevArrow } from '../../../common/SliderArrow';
 
 const BeautyService = () => {
     const router = useRouter();
@@ -22,6 +21,8 @@ const BeautyService = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow />,
         responsive: [
             {
                 breakpoint: 1200,

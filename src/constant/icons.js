@@ -17,7 +17,35 @@ import Debitcard from './../styles/icons/debit-card.webp';
 import CreditCard from './../styles/icons/credit-card.webp';
 import Slocation from './../styles/icons/slocation.webp';
 import Scall from './../styles/icons/scall.webp';
+import Social1 from './../styles/icons/social1.webp';
+import Social2 from './../styles/icons/social2.webp';
+import Social3 from './../styles/icons/social3.webp';
+import Social4 from './../styles/icons/social4.webp';
+import Social5 from './../styles/icons/social5.webp';
+import Social6 from './../styles/icons/social6.webp';
+import Social7 from './../styles/icons/social7.webp';
+import Cmail from './../styles/icons/cmail.webp';
+import Cuser from './../styles/icons/cuser.webp';
+import Partner from './../styles/icons/partner.webp';
+import AllPartner from './../styles/icons/all-partner.webp';
+import LoginCheck from './../styles/icons/login-check.webp';
+import Share from './../styles/icons/share.webp';
+import Direction from './../styles/icons/direction.webp';
 const ICONS = {
+    Share,
+    Direction,
+    LoginCheck,
+    Partner,
+    AllPartner,
+    Cmail,
+    Cuser,
+    Social1,
+    Social2,
+    Social3,
+    Social4,
+    Social5,
+    Social6,
+    Social7,
     Scall,
     Slocation,
     Gpay,

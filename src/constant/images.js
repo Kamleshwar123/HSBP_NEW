@@ -58,8 +58,12 @@ import BGallary1 from './../styles/images/beauty-gal1.webp';
 import BGallary2 from './../styles/images/beauty-gal2.webp';
 import Btesti from './../styles/images/btesti.webp';
 import BtestiProfile from './../styles/images/btesti-profile.webp';
+import ContactUs from './../styles/images/contact-us.webp';
+import ThankYou from './../styles/images/thank-you.webp';
 
 const IMAGES = {
+    ThankYou,
+    ContactUs,
     BGallary1,
     BGallary2,
     Btesti,

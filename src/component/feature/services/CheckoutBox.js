@@ -1,7 +1,10 @@
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 
 const CheckoutBox = () => {
+  const router = useRouter();
   const [num, setNum]= useState(1);
+  const [apply, setApply]= useState(false);
     const inc = (e) => {
         num < 5 ? setNum(num + 1) : e.preventDefault();
     }
@@ -39,18 +42,18 @@ const CheckoutBox = () => {
             </div>
           </div>
           <hr className='my-3'/>
-          <div className='flex flex-wrap gap-3 sm:justify-between justify-center items-center'>
-            <div className="form_check">
-                <input type="checkbox" id="cpoupen" />
-                <label htmlFor="cpoupen" className='whitespace-nowrap text-theme text-xs'>
-                  Have a Discount Coupon?
-                </label>
-            </div>
-            <div>
-              <label className='text-xs'>Coupon Code</label>
-              <input type="text" className='form-control h-6 border border-dashed'/>
-              <button className='custom_button my-2 w-full'>Apply</button>
-            </div>
+          <div>
+              <div className='whitespace-nowrap text-theme text-xs mb-3'>
+                Have a Discount Coupon?
+              </div>
+              <div className='flex flex-wrap gap-3 justify-center items-center'>
+                  <input type="text" className={`form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5' : ''}`}/>
+                {apply ?
+                <div className='text-[#CC0000] font-bold cursor-pointer px-6' onClick={() => setApply(false)}>Remove</div>
+                :
+                <button className='custom_button' onClick={() => setApply(true)}>Apply</button>
+                }
+              </div>
           </div>
           <div className='my-3 px-4 bg-white border border-black-707 text-black-7d7 rounded-xl text-xs'>
             <div className='my-2 grid grid-cols-[70%_30%]'>
@@ -72,7 +75,7 @@ const CheckoutBox = () => {
             </div>
           </div>
           <div className='text-center'>
-            <button className='custom_button my-2'>Checkout</button>
+            <button className='custom_button my-2' onClick={()=> router.push("/checkout")}>Checkout</button>
           </div>
         </div>
     </div>

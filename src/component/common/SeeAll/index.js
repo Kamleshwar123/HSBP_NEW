@@ -11,7 +11,7 @@ const SeeAll = ({text, url, data = undefined}) => {
       }, url)
   }
   return (
-    <div className='text-theme-light font-base mt-3 flex justify-end'>
+    <div className='text-theme-light font-base flex justify-end font-medium'>
         <div className="flex items-center gap-2 cursor-pointer" onClick={handleRedirect}>
             <span>{text}</span><span><SvgIcon.LinkArrow className='scale-75'/></span>
         </div>

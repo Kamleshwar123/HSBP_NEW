@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import React from 'react'
 import ICONS from '../../../constant/icons'
 import IMAGES from '../../../constant/images'
 
 const BridalPacakgeDetail = () => {
+    const router = useRouter();
   return (
     <div className='bg-[#FFEDEC] py-6 px-8 grid md:grid-cols-[35%_65%] items-center relative'>
             <div className='absolute -top-7 right-7'>
@@ -42,7 +44,7 @@ const BridalPacakgeDetail = () => {
                         <span className='text-xl text-[#C2133C]'>&#x20B9;3,799</span>
                     </div>
                     <div className='text-center md:text-right'>
-                        <button className='custom_button'>Book Now</button>
+                        <button className='custom_button' onClick={()=> router.push("/booknow")}>Book Now</button>
                     </div>
                 </div>
             </div>

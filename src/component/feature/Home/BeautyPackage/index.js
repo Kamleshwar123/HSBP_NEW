@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick';
 import SeeAll from '../../../common/SeeAll';
+import { SampleNextArrow, SamplePrevArrow } from '../../../common/SliderArrow';
 import BeautyPackageBox from './BeautyPackageBox';
 
 const BeautyPackage = () => {
@@ -11,6 +12,8 @@ const BeautyPackage = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow />,
         responsive: [
             {
                 breakpoint: 1200,
@@ -37,7 +40,7 @@ const BeautyPackage = () => {
     };
     return (
         <div className='container'>
-            <div className='beauty_slider -m-6 pb-3'>
+            <div className='beauty_slider -m-3 pb-3'>
             <Slider {...settings}>
                 {[...Array(9).keys()].map((item, idx) => (
                     <div className='h-full p-3 text-center' key={"pkg" + idx}>

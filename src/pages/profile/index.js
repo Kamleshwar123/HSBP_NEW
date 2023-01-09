@@ -2,8 +2,8 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div className='container bg-white-f2'>
-            <h6 className='text-black-241 p-5 text-base font-bold'>My Profile</h6>
+    <div className='container bg-white-f2 my-3 rounded-2xl'>
+            <h6 className='text-black-241 px-5 pt-5 text-base font-bold'>My Profile</h6>
             <div className='p-5 md:px-12 py-5'>
                 <div className='shadow-form bg-white rounded-2xl overflow-hidden'>
                     <div className='theme-heading-box'>

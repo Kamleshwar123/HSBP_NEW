@@ -3,6 +3,7 @@ import React from 'react'
 import Slider from 'react-slick';
 import IMAGES from '../../../constant/images';
 import SvgIcon from '../../../constant/SvgIcon';
+import { SampleNextArrow, SamplePrevArrow } from '../../common/SliderArrow';
 
 const Testimonials = () => {
     var settings = {
@@ -12,6 +13,8 @@ const Testimonials = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow/>,
         responsive: [
             {
                 breakpoint: 1200,

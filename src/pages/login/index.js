@@ -1,38 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
+import OtpInput from 'react-otp-input';
+import PhoneInput from 'react-phone-input-2'
 
 const Login = () => {
-  const lg = (4/12)*100+'%';
-  const md = (3/12)*100+'%';
-  const sm = (6/12)*100+'%';
-  console.log(lg,md,sm)
+  const [screen, setScreen] = useState(1);
   return (
-    <div className='container'>
-      <div className='bx3 grid grid-cols-12 justify-center items-center text-center gap-6'>
-      {[...Array(10).keys()].map((item, idx) => (
-        <div className='col-span-12 md:col-span-6 lg:col-span-4 bg-theme p-12 text-white' key={idx}>
-          box{idx}
+    <div className='container my-3'>
+      <div className='bg-[#a05bcf] p-5 md:p-10'>
+          <div className='grid grid-cols-12 items-center rounded-2xl overflow-hidden'>
+            <div className='col-span-12 md:col-span-7 h-full'>
+              <div className='bg-[#6322a3] flex flex-col justify-center items-center h-full'>
+                <h6 className='text-white text-xl font-semibold pb-7'>Welcome Back</h6>
+                <p className='text-white'>you can sign in to access your existing account</p>
+              </div>
+            </div>
+            <div className='col-span-12 md:col-span-5'>
+              <div className='bg-white p-5 h-full'>
+                <div className='shadow-4D rounded-2xl p-5'>
+                  {screen === 1 ?
+                  <div>
+                    <p className='font-medium my-3'>Enter your mobile number</p>
+                    <PhoneInput
+                    country={'in'}
+                    className="font-Poppins"
+                    inputClass='form-control w-full'
+                    inputStyle={{width: "100%"}}
+                    />
+                  </div>
+                  :
+                  <div>
+                    <div className='w-4/5 mx-auto text-center mb-5'>
+                      <h6 className='text-base font-medium mb-2 text-black-241'>Enter your verification code</h6>
+                      <p>We have send you a 4 digit OTP on 9599043601 Edit</p>
+                    </div>
+                    <div className='flex justify-center'>
+                      <OtpInput
+                        numInputs={4}
+                        separator={<span></span>}
+                        className='form-control w-auto'
+                      />
+                    </div>
+                  </div>
+                  }
+                  <button className='custom_button w-full mt-3' onClick={()=> setScreen(2)}>Continue</button>
+                </div>
+              </div>
+            </div>
         </div>
-      ))}
-      </div>
-      <div className='my-10'>
-      <div className='flex flex-wrap justify-center items-stretch text-center -m-6'>
-      {[...Array(10).keys()].map((item, idx) => (
-        <div className={`flex-w-full sm:w-1/2 md:w1/3 lg:w-1/4 m-6 text-white bg-theme`} key={idx}>
-          <div className='p-6'>
-            {idx == 1 && 
-            <>
-            <p>box 2 </p>
-            <p>box 2 </p>
-            <p>box 2 </p>
-            <p>box 2 </p>
-            <p>box 2 </p>
-            </>
-            }
-          box{idx}
-          </div>
-        </div>
-      ))}
-      </div>
       </div>
     </div>
   )

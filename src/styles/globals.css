@@ -26,4 +26,18 @@
   .accent_green {
     @apply accent-green !important;
   }
+  .scale_img {
+    @apply max-w-full h-auto m-auto;
+  }
+
+  .scale_icon-24 {
+    @apply max-h-6 w-auto m-auto;
+  }
+
+  .scale_icon-18 {
+    @apply max-h-[18px] w-auto m-auto;
+  }
+  .img_scale {
+    @apply max-w-full h-auto;
+  }
 }

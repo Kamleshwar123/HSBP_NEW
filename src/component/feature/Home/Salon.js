@@ -11,22 +11,28 @@ const Salon = () => {
     const router = useRouter();
     return (
         <div>
-            <div className='text-2xl text-black-2e2 text-center'>Discover the best salons near you</div>
-            <div className='grid md:grid-cols-2 justify-center aling-center gap-7 py-7 sm:px-10'>
+            <div className='text-3xl text-black-2e2 text-center'>Discover the best salons near you</div>
+            <div className='grid md:grid-cols-2 justify-center items-center gap-7 py-7 sm:px-10'>
                 <div>
-                    <div className='flex'>
-                        <input name="city" type="text" placeholder="Search by City" className='form-control' />
-                        <button className="sendLinkBtn">SEARCH</button>
+                    <div className='flex justify-end'>
+                    <label htmlFor="selectcity" className="relative block">
+                        <SvgIcon.LocationTheme className="scale-75 pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"/>
+                        <select className='form-control rounded-xl' id="selectcity" style={{paddingLeft: "40px"}}>
+                            <option>Select City</option>
+                            <option>Noida</option>
+                            <option>Agra</option>
+                            <option>Delhi</option>
+                            <option>Jaipur</option>
+                        </select>
+                    </label>
                     </div>
                 </div>
-                <div>
-                    <div className='flex'>
-                        <input name="name" type="text" placeholder="Search by Salon Name" className='form-control'/>
-                        <button className="sendLinkBtn">SEARCH</button>
-                    </div>
+                <div className="relative flex w-full flex-wrap items-stretch">
+                    <SvgIcon.Search className="text-theme pointer-events-none w-5 h-5 absolute top-1/2 transform -translate-y-1/2 left-3"/>
+                    <input type="text" placeholder="Search for Services" className="form-control rounded-xl pl-10"/>
                 </div>
             </div>
-            <div className='text-theme-light'>Near by Salons</div>
+            <div className='text-theme-light text-base'>Near by Salons</div>
             <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 py-6'>
                 {[...Array(4).keys()].map((item, idx) => (
                     <div key={"salon" + idx}>
@@ -47,8 +53,6 @@ const Salon = () => {
                                         <div className='flex gap-1 items-center justify-end'>
                                             <Image src={ICONS.Scall} alt="Scall" className="scale_icon-24 cursor-pointer" onClick={(e)=> e.stopPropagation()}/>
                                             <Image src={ICONS.Slocation} alt="Slocation" className="scale_icon-24 cursor-pointer" onClick={(e)=> e.stopPropagation()}/>
-                                            {/* <SvgIcon.Call className="cursor-pointer" />
-                                            <SvgIcon.Location className="cursor-pointer" onClick={(e)=> e.stopPropagation()}/> */}
                                         </div>
                                     </div>
                                 </div>

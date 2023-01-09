@@ -66,7 +66,7 @@ const ProductDetails = () => {
                 </div>
             </div>
             <div className='mt-10'>
-                <div className='text-lg text-black-241 gap-5 flex items-center font-medium pb-5'>
+                <div className='text-lg text-theme gap-5 flex items-center font-medium pb-5'>
                     <span onClick={() => handleTab("tab1")} className={tab === 'tab1' ? 'cursor-pointer py-1 active': 'cursor-pointer py-1'}>Description</span>
                     <span onClick={() => handleTab("tab2")} className={tab === 'tab2' ? 'cursor-pointer py-1 active': 'cursor-pointer py-1'}>Review</span>
                 </div>

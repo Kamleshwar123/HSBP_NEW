@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import Slider from 'react-slick';
 import IMAGES from '../../../constant/images';
+import { SampleNextArrow, SamplePrevArrow } from '../../common/SliderArrow';
 
 const BeautyServiceSlider = ({type}) => {
     console.log(type,"ll")
@@ -12,6 +13,8 @@ const BeautyServiceSlider = ({type}) => {
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow/>,
         responsive: [
             {
                 breakpoint: 1024,
@@ -54,7 +57,7 @@ const BeautyServiceSlider = ({type}) => {
         {name: "MEHNDI ART SERVICES1", img: IMAGES.BeautySlider2}
     ]
   return (
-    <div className='beauty_slider bg-gradient'>
+    <div className='service_slider bg-gradient'>
         <Slider {...settings}>
             {data.map((item, idx) => (
                 <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 text-center' key={"pkg" + idx}>

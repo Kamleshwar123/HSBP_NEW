@@ -19,8 +19,16 @@ import Rating from "./../styles/svg/rating.svg";
 import RightTick from "./../styles/svg/right-tick.svg";
 import Arrow from "./../styles/svg/arrow.svg";
 import BestSeller from "./../styles/svg/best-seller.svg";
+import LocationTheme from "./../styles/svg/location-theme.svg";
+import Search from "./../styles/svg/search.svg";
+import SRightArrow from "./../styles/svg/s-right-arrow.svg";
+import SLeftArrow from "./../styles/svg/s-left-arrow.svg";
+import FaqRightArrow from "./../styles/svg/faq-right-light.svg";
 
 const SvgIcon = {
+  FaqRightArrow,
+  SLeftArrow,
+  SRightArrow,
   User,
   Facebook,
   Insta,
@@ -41,6 +49,8 @@ const SvgIcon = {
   Rating,
   RightTick,
   Arrow,
-  BestSeller
+  BestSeller,
+  LocationTheme,
+  Search
 };
 export default SvgIcon;

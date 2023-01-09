@@ -23,10 +23,10 @@ const ProductHome = () => {
                 title={"Top Selling Product"}
                 desc={"Need ideas? See our list of top-selling products that are being loved by the masses."}
             />
-            <div className='bg-white-f2 product p-3'>
-                <div className='flex flex-wrap justify-center'>
-                    {[...Array(6).keys()].map((item, idx) => (
-                        <div className='w-full md:w-1/2 lg:w-1/3 p-3' key={"prd" + idx}>
+            <div className='bg-white py-3'>
+                <div className='flex flex-wrap justify-center -m-3'>
+                    {[...Array(4).keys()].map((item, idx) => (
+                        <div className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-3' key={"prd" + idx}>
                             <ProductBox data={item} />
                         </div>
                     ))
@@ -38,10 +38,10 @@ const ProductHome = () => {
                 title={"New Arrivals"}
                 desc={"Need ideas? See our list of top-selling products that are being loved by the masses."}
             />
-            <div className='bg-white-f2 product p-3'>
-                <div className='flex flex-wrap justify-center'>
-                    {[...Array(6).keys()].map((item, idx) => (
-                        <div className='w-full md:w-1/2 lg:w-1/3 p-3' key={"prd" + idx}>
+            <div className='bg-white py-3'>
+                <div className='flex flex-wrap justify-center -m-3'>
+                    {[...Array(4).keys()].map((item, idx) => (
+                        <div className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-3' key={"prd" + idx}>
                             <ProductBox data={item} />
                         </div>
                     ))
@@ -52,10 +52,10 @@ const ProductHome = () => {
                 title={"Recommended Products"}
                 desc={"Need ideas? See our list of top-selling products that are being loved by the masses."}
             />
-            <div className='bg-white-f2 p-3'>
-                <div className='flex flex-wrap justify-center'>
-                    {[...Array(6).keys()].map((item, idx) => (
-                        <div className='w-full md:w-1/2 lg:w-1/3 p-3' key={"prd" + idx}>
+            <div className='bg-white py-3'>
+                <div className='flex flex-wrap justify-center -m-3'>
+                    {[...Array(4).keys()].map((item, idx) => (
+                        <div className='w-full md:w-1/2 lg:w-1/3 p-3 xl:w-1/4' key={"prd" + idx}>
                             <ProductBox data={item} />
                         </div>
                     ))

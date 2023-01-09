@@ -1,4 +1,5 @@
 import React from 'react'
+import FaqQuestion from './FaqQuestion'
 
 const ServiceFaq = () => {
   return (
@@ -8,10 +9,11 @@ const ServiceFaq = () => {
         <div className='grid md:grid-cols-2 items-stretch gap-y-6 mt-6'>
             <div className='py-5 z-10'>
                 <div className='divide-y divide-black-707 border border-black-707 rounded-3xl md:-mr-8 bg-white overflow-hidden'>
-                    <div className='p-3 cursor-pointer font-semibold text-black-241 bg-gray-eee'>What should I do to prepare for waxing ?</div>
-                    <div className='p-3 cursor-pointer'>What should I do to prepare for waxing ?</div>
-                    <div className='p-3 cursor-pointer'>What should I do to prepare for waxing ?</div>
-                    <div className='p-3 cursor-pointer'>What should I do to prepare for waxing ?</div>
+                    <FaqQuestion text={'What should I do to prepare for waxing ?'} active={true}/>
+                    <FaqQuestion text={'What should I do to prepare for waxing ?'} active={false}/>
+                    <FaqQuestion text={'What should I do to prepare for waxing ?'} active={false}/>
+                    <FaqQuestion text={'What should I do to prepare for waxing ?'} active={false}/>
+                    <FaqQuestion text={'What should I do to prepare for waxing ?'} active={false}/>
                 </div>
             </div>
             <div className='border border-theme p-5 pl-14 rounded-3xl bg-gray-eee bg-opacity-75'>

@@ -7,6 +7,7 @@ import IMAGES from "../../../constant/images";
 const Banner = () => {
   var settings = {
     dots: true,
+    arrow:false,
     infinite: true,
     autoplay: true,
     speed: 500,

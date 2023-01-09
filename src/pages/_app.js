@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/css/style.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'react-phone-input-2/lib/style.css';
 import Head from "next/head";
 import Layout from "../component/common/Layout";
 

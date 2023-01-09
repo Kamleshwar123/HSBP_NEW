@@ -19,8 +19,8 @@ const TheHeader = () => {
     <header className='w-full bg-white top-0 sticky z-[999] shadow-header'>
       <div className="container">
         <div className="flex items-center justify-between gap-5 h-20">
-          <div className="flex gap-5 items-center">
-            <SvgIcon.Hamburger onClick={toggleDrawer} className='cursor-pointer' />
+          <div className="flex gap-3 items-center">
+            <SvgIcon.Hamburger onClick={toggleDrawer} className='cursor-pointer text-black-707' />
             <Sidebar isOpen={isOpen} toggleDrawer={toggleDrawer} />
             <div>
               <Link href={"/"}>
