@@ -80,8 +80,10 @@ module.exports = {
       addComponents({
         '.container': {
           maxWidth: '100%',
-          paddingRight: "12px",
-          paddingLeft: "12px",
+          paddingRight: "15px",
+          paddingLeft: "15px",
+          marginRight: 'auto',
+          marginLeft: 'auto',
           '@screen sm': {
             maxWidth: '540px',
           },

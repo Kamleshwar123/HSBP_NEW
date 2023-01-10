@@ -23,7 +23,6 @@
     left: -35px !important;
     z-index: 1;
     color: #561334 !important;
-    
 }
 .beauty_slider .slick-next {
     right: -35px !important;
@@ -53,4 +52,19 @@
 }
 .testi_slider .slick-slide.slick-current+.slick-active {
     transform: scale(1);
+}
+
+@media only screen and (max-width: 600px) {
+    .beauty_slider .slick-prev {
+        left: -25px !important;
+    }
+    .beauty_slider .slick-next {
+        right: -25px !important;
+    }
+    .service_slider .slick-prev {
+        left: -25px !important;
+    }
+    .service_slider .slick-next {
+        right: -25px !important;
+    }
 }

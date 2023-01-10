@@ -1,8 +1,12 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import IMAGES from '../../../constant/images'
+import { onylMobileInput } from '../../../utils';
 
 const AppDownload = () => {
+    useEffect(()=> {
+        onylMobileInput();
+    },[])
     return (
         <div className='app_download'>
             <div className='grid md:grid-cols-[40%_60%] items-center'>
@@ -25,7 +29,7 @@ const AppDownload = () => {
                     <div className="getLink mt-10">
                         <p className='text-base mb-4'>Enter your mobile number to get link to download</p>
                         <div className='flex'>
-                            <input name="mobile_number" type="text" placeholder="Enter your mobile number*" maxLength="10" className='form-control md:max-w-sm' />
+                            <input id="onlyMobile" name="mobile_number" type="text" placeholder="Enter your mobile number*" maxLength="10" className='form-control md:max-w-sm' />
                             <button className="sendLinkBtn">SEND LINK</button>
                         </div>
                     </div>

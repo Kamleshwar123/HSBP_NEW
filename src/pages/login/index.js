@@ -1,17 +1,18 @@
+import Image from 'next/image';
 import React, { useState } from 'react'
 import OtpInput from 'react-otp-input';
 import PhoneInput from 'react-phone-input-2'
+import IMAGES from '../../constant/images';
 
 const Login = () => {
   const [screen, setScreen] = useState(1);
   return (
     <div className='container my-3'>
       <div className='bg-[#a05bcf] p-5 md:p-10'>
-          <div className='grid grid-cols-12 items-center rounded-2xl overflow-hidden'>
+          <div className='grid grid-cols-12 items-stretch rounded-2xl overflow-hidden'>
             <div className='col-span-12 md:col-span-7 h-full'>
               <div className='bg-[#6322a3] flex flex-col justify-center items-center h-full'>
-                <h6 className='text-white text-xl font-semibold pb-7'>Welcome Back</h6>
-                <p className='text-white'>you can sign in to access your existing account</p>
+                <Image src={IMAGES.LoginInner} alt=""/>
               </div>
             </div>
             <div className='col-span-12 md:col-span-5'>

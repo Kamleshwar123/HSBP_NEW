@@ -6,7 +6,7 @@ import IMAGES from '../../../constant/images'
 const Franchise = () => {
     return (
         <div>
-            <Link href={'franchise'} className='text-center'>
+            <Link href={'/franchise'} className='text-center'>
                 <Image src={IMAGES.Franchisi} alt="Franchisi" className="scale_img cursor-pointer" />
             </Link>
         </div>

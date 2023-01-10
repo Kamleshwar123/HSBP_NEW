@@ -62,8 +62,10 @@ import Btesti from './../styles/images/btesti.webp';
 import BtestiProfile from './../styles/images/btesti-profile.webp';
 import ContactUs from './../styles/images/contact-us.webp';
 import ThankYou from './../styles/images/thank-you.webp';
+import LoginInner from './../styles/images/login-inner.webp';
 
 const IMAGES = {
+    LoginInner,
     ThankYou,
     ContactUs,
     BGallary1,

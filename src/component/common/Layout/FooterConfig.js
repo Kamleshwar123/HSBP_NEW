@@ -8,22 +8,22 @@ const LeftLink = [
     },
     {
         label: "Nearby Salons",
-        srcUrl: "/",
+        srcUrl: "/salons",
         openNewTab: false
     },
     {
         label: "Franchises",
-        srcUrl: "/",
+        srcUrl: "/franchise",
         openNewTab: false
     },
     {
         label: "Salon at Home",
-        srcUrl: "/",
+        srcUrl: "/services",
         openNewTab: false
     },
     {
         label: "Beauty Products",
-        srcUrl: "/products",
+        srcUrl: "/product-home",
         openNewTab: false
     },
     {
@@ -33,7 +33,7 @@ const LeftLink = [
     },
     {
         label: "Contact us",
-        srcUrl: "/",
+        srcUrl: "/contact-us",
         openNewTab: false
     },
     {
