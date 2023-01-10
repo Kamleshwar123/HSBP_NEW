@@ -6,7 +6,9 @@ import Banner1 from './../styles/images/banner_1.webp';
 import Banner2 from './../styles/images/banner_2.webp';
 import Banner3 from './../styles/images/banner_3.webp';
 import Salon from './../styles/images/salon.webp';
-import HairCut from './../styles/images/hair-cut.webp';
+import HairCut1 from './../styles/images/hair-cut1.webp';
+import HairCut2 from './../styles/images/hair-cut2.webp';
+import HairCut3 from './../styles/images/hair-cut3.webp';
 import Beauty1 from './../styles/images/beauty1.webp';
 import Beauty2 from './../styles/images/beauty2.webp';
 import Beauty3 from './../styles/images/beauty3.webp';
@@ -103,7 +105,9 @@ const IMAGES = {
     Beauty1,
     Beauty2,
     Beauty3,
-    HairCut,
+    HairCut1,
+    HairCut2,
+    HairCut3,
     Appointment,
     Franchisi,
     Institute,

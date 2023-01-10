@@ -57,7 +57,7 @@ const Institues = () => {
                                 <div className='flex flex-col md:flex-row place-items-stretch'>
                                     <div className='md:w-5/12'>
                                         <div className='text-center'>
-                                            <Image src={IMAGES.HairCut} alt="Salon" className="scale_img md:rounded-l-3xl" height={300} />
+                                            <Image src={IMAGES.HairCut1} alt="Salon" className="scale_img md:rounded-l-3xl" height={300} />
                                         </div>
                                     </div>
                                     <div className='md:w-auto'>

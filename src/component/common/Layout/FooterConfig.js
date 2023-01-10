@@ -92,22 +92,22 @@ const RightLink = [
 const SocialLink = [
     {
         icon: <SvgIcon.Facebook />,
-        srcUrl: "/",
+        srcUrl: "https://www.facebook.com/",
         openNewTab: false
     },
     {
         icon: <SvgIcon.Insta />,
-        srcUrl: "/",
+        srcUrl: "https://www.instagram.com/",
         openNewTab: false
     },
     {
         icon: <SvgIcon.Twitter />,
-        srcUrl: "/",
+        srcUrl: "https://twitter.com/",
         openNewTab: false
     },
     {
         icon: <SvgIcon.Linkedin />,
-        srcUrl: "/",
+        srcUrl: "https://www.linkedin.com/",
         openNewTab: false
     }
 ]

@@ -7,25 +7,17 @@
 .slick-slide > div {
     height: 100% !important;
 }
-.home_banner_slider {}
-
-.home_banner_slider .slick-prev {
-    left: 2% !important;
-    z-index: 10;
-}
-
-.home_banner_slider .slick-next {
-    right: 2% !important;
-    z-index: 10;
-}
-
-.home_banner_slider .slick-prev:before,
-.home_banner_slider .slick-next:before {
-    color: #000000 !important;
-}
-
 .home_banner_slider .slick-dots {
-    bottom: 25px !important;
+    bottom: 15px !important;
+}
+.home_banner_slider .slick-dots li button:before {
+    font-size: 12px;
+    color: #F2F2F2;
+    opacity: 1;
+}
+.home_banner_slider .slick-dots li.slick-active button:before, .home_banner_slider .slick-dots li:hover button:before {
+    color: #685F65;
+    opacity: 1;
 }
 .beauty_slider .slick-prev {
     left: -35px !important;

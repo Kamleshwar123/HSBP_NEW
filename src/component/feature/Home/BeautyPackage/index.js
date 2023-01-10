@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick';
+import IMAGES from '../../../../constant/images';
 import SeeAll from '../../../common/SeeAll';
 import { SampleNextArrow, SamplePrevArrow } from '../../../common/SliderArrow';
 import BeautyPackageBox from './BeautyPackageBox';
@@ -38,11 +39,21 @@ const BeautyPackage = () => {
             }
         ]
     };
+    const data = [
+        {title: "Normal Packages", img: IMAGES.Beauty1},
+        {title: "Deluxe Package", img: IMAGES.Beauty2},
+        {title: "Bridal Packages", img: IMAGES.Beauty3},
+        {title: "Normal Packages", img: IMAGES.Beauty1},
+        {title: "Normal Packages", img: IMAGES.Beauty1},
+        {title: "Deluxe Package", img: IMAGES.Beauty2},
+        {title: "Bridal Packages", img: IMAGES.Beauty3},
+        {title: "Normal Packages", img: IMAGES.Beauty1}
+    ]
     return (
         <div className='container'>
             <div className='beauty_slider -m-3 pb-3'>
             <Slider {...settings}>
-                {[...Array(9).keys()].map((item, idx) => (
+                {data.map((item, idx) => (
                     <div className='h-full p-3 text-center' key={"pkg" + idx}>
                     <BeautyPackageBox item={item}/>
                     </div>

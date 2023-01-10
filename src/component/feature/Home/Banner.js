@@ -17,9 +17,9 @@ const Banner = () => {
       <Slider {...settings}>
         <div className="relative">
           <Image src={IMAGES.Banner1} alt="Banner1" className="scale_img" />
-          <div className="absolute bottom-[30px] p-5 pl-12 text-black-2a3">
+          <div className="hidden md:block absolute bottom-[20px] pl-12 text-black-2a3">
             <h6 className="text-xl my-3">Now Serving at your Home</h6>
-            <h2 className="text-2xl">BEAUTICIANS/HAIRDRESSERS</h2>
+            <h2 className="text-2xl font-bold">BEAUTICIANS/HAIRDRESSERS</h2>
             <div className="mt-7">
               <Link href={"/"} className="custom_button">
                 BOOK NOW
@@ -29,7 +29,7 @@ const Banner = () => {
         </div>
         <div className="relative">
           <Image src={IMAGES.Banner2} alt="Banner2" className="scale_img" />
-          <div className="absolute bottom-[30px] p-5 pl-12 text-black-2a3">
+          <div className="hidden md:block absolute bottom-[20px] pl-12 text-black-2a3">
             <div className="mt-7">
               <Link href={"/"} className="custom_button">
                 BOOK NOW

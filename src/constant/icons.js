@@ -31,7 +31,11 @@ import AllPartner from './../styles/icons/all-partner.webp';
 import LoginCheck from './../styles/icons/login-check.webp';
 import Share from './../styles/icons/share.webp';
 import Direction from './../styles/icons/direction.webp';
+import UserCart from './../styles/icons/usercart.webp';
+import UserPopover from './../styles/icons/user_popover.webp';
 const ICONS = {
+    UserCart,
+    UserPopover,
     Share,
     Direction,
     LoginCheck,

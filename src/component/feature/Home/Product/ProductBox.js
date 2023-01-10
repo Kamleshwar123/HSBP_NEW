@@ -17,7 +17,7 @@ const ProductBox = () => {
                         <SvgIcon.BestSeller className="cursor-pointer"/>
                         <p className='text-white rotate-[-30deg] -mt-[66px] mr-[80px]'>Best Seller</p>
                     </div>
-                    <div className='absolute z-10 top-2 right-0 p-5 cursor-pointer' onClick={(e)=> {e.stopPropagation() ;setWishlist(!wishList)}}>{wishList ? <SvgIcon.HeartWish/> :<SvgIcon.Heart/>}</div>
+                    <div className='absolute z-10 top-3 right-3 cursor-pointer' onClick={(e)=> {e.stopPropagation() ;setWishlist(!wishList)}}>{wishList ? <SvgIcon.HeartWish className="scale-75"/> :<SvgIcon.Heart className="scale-75"/>}</div>
                 </div>
                 <div className='pb-5 px-5 mt-4'>
                     <div className='text-center mx-7 my-3'>
@@ -29,9 +29,9 @@ const ProductBox = () => {
                             <Ratings rating={4.5} />
                         </div>
                     </div>
-                    <div className='mb-1'><span className='text-black-0f0 font-bold'>&#x20B9;1500</span><span className='text-black-a8a text-xs ml-3 line-through'>&#x20B9;2000</span></div>
-                    <div className='text-red-c80 mb-2'>50% OFF</div>
-                    <button className='custom_button' onClick={(e)=> e.stopPropagation()}>Add to Cart</button>
+                    <div className='mb-1'><span className='text-black-0f0 font-bold text-base'>&#x20B9;1500</span><span className='text-black-a8a ml-3 line-through'>&#x20B9;2000</span></div>
+                    <div className='text-red-c80'>50% OFF</div>
+                    <button className='custom_button mt-5' onClick={(e)=> e.stopPropagation()}>Add to Cart</button>
                 </div>
             </div>
         </div>

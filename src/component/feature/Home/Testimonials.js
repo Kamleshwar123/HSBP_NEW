@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
 import Slider from 'react-slick';
+import ICONS from '../../../constant/icons';
 import IMAGES from '../../../constant/images';
 import SvgIcon from '../../../constant/SvgIcon';
 import { SampleNextArrow, SamplePrevArrow } from '../../common/SliderArrow';
@@ -89,10 +90,12 @@ const Testimonials = () => {
                                 <div className="absolute top-[0px] text-center w-full">
                                     <Image src={IMAGES.TestiProfile} alt="beauty" width={100} height={100} className="scale_img" />
                                 </div>
-                                <div className='absolute top-[120px] margin-auto text-center'>
-                                    <h3 className='text-base text-theme-light font-medium'>{item?.name}</h3>
-                                    <div className='-mt-12 -mb-5 flex justify-center'><SvgIcon.Qauto className="scale-50"/></div>
-                                    <p className='text-xs font-medium px-20'>{item?.content}</p>
+                                <div className='absolute top-[120px] text-center'>
+                                    <h3 className='text-base text-theme-light font-medium mb-1'>{item?.name}</h3>
+                                    <div className='flex justify-center'>
+                                        <Image src={ICONS.Qend} alt="Qstart" className="w-4 h-4 mx-auto"/>
+                                    </div>
+                                    <p className='text-xs font-medium line_clamp-4 w-3/4 mx-auto py-2'>{item?.content}</p>
                                 </div>
                             </div>
                         ))}

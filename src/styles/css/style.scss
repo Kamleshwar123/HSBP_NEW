@@ -96,7 +96,7 @@
   
   .custom_button {
     background: transparent linear-gradient(250deg, #993680, #2f1a59 81%) 0 0 no-repeat padding-box;
-    border-radius: 7px;
+    border-radius: 15px;
     text-align: center;
     padding: 6px 30px;
     color: #fff;
@@ -108,12 +108,12 @@
     border: 0.5px solid #2f1a59;
   }
   
-  .custom_button:hover {
+  /* .custom_button:hover {
     background: #fff;
     color: #2f1a59;
     border: 0.5px solid #2f1a59;
     text-decoration: none;
-  }
+  } */
   
   .sendLinkBtn {
     white-space: nowrap;
@@ -168,11 +168,11 @@
     margin-left: 10px;
   }
   
-  .line_clamp {
+  .line_clamp-4 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 4;
   }
   
   

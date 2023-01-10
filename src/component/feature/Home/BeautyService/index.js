@@ -48,13 +48,14 @@ const BeautyService = () => {
         ]
     };
     const data = [
-        { title: "Body Care", desc: "We provide special offers for students and corporates", _data: {type: 1}},
-        { title: "Skin Care", desc: "Pamper Your Skin and Unleash a Beautiful You !", _data: {type: 2} },
-        { title: "Hair Care", desc: "From Couture Cut revitalising Treatment we've got it all !", _data: {type: 3} },
-        { title: "Body Care", desc: "We provide special offers for students and corporates" , _data: {type: 1}},
-        { title: "Skin Care", desc: "Pamper Your Skin and Unleash a Beautiful You !" , _data: {type: 2}},
-        { title: "Hair Care", desc: "From Couture Cut revitalising Treatment we've got it all !" , _data: {type: 3}},
-        { title: "Body Care", desc: "We provide special offers for students and corporates" , _data: {type: 2}}
+        { title: "Body Care", img: IMAGES.HairCut1,  desc: "We provide special offers for students and corporates", _data: {type: 1}},
+        { title: "Skin Care", img: IMAGES.HairCut2, desc: "Pamper Your Skin and Unleash a Beautiful You !", _data: {type: 2} },
+        { title: "Hair Care", img: IMAGES.HairCut3, desc: "From Couture Cut revitalising Treatment we've got it all !", _data: {type: 3} },
+        { title: "Makeup Services", img: IMAGES.HairCut1, desc: "Relax Detox and Rajuvenate" , _data: {type: 4}},
+        { title: "Body Care", img: IMAGES.HairCut1,  desc: "We provide special offers for students and corporates", _data: {type: 1}},
+        { title: "Skin Care", img: IMAGES.HairCut2, desc: "Pamper Your Skin and Unleash a Beautiful You !", _data: {type: 2} },
+        { title: "Hair Care", img: IMAGES.HairCut3, desc: "From Couture Cut revitalising Treatment we've got it all !", _data: {type: 3} },
+        { title: "Makeup Services", img: IMAGES.HairCut1, desc: "Relax Detox and Rajuvenate" , _data: {type: 4}}
     ]
     return (
         <div>
@@ -65,7 +66,7 @@ const BeautyService = () => {
                             <div className='h-full service-bg p-5 rounded-3xl cursor-pointer' onClick={()=> handleRedirect("/services", item?._data)}>
                                 <div className='text-center relative'>
                                     <div className='corner upper_corner'></div>
-                                    <Image src={IMAGES.HairCut} alt="beauty" className="scale_img" />
+                                    <Image src={item?.img} alt="beauty" className="scale_img" />
                                     <div className='corner lower_corner'></div>
                                 </div>
                                 <div className='px-3'>
@@ -78,7 +79,9 @@ const BeautyService = () => {
                     ))}
                 </Slider>
             </div>
+            <div className='mt-3'>
             <SeeAll text={"See All Beauty Services"} url={"/services"}/>
+            </div>
         </div>
     )
 }

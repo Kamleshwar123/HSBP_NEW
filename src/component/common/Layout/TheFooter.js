@@ -10,7 +10,7 @@ const TheFooter = () => {
     <footer className="mt-[30px]">
       <div className="footer-bg text-black opacity-[.84] pt-[30px] pb-[10px]">
         <div className="container">
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-5 justify-items-stretch">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 justify-items-stretch">
             <div className="justify-self-start">
               <div>
                 <Link href={"/"}>
@@ -23,7 +23,7 @@ const TheFooter = () => {
                 app & website.
               </p>
             </div>
-            <div className="justify-self-center">
+            <div className="md:justify-self-start lg:justify-self-center">
                 <ul>
                   {LeftLink.map((item, idx) => (
                     <li key={"leftlink" + idx} className='list-style-none'>
@@ -32,7 +32,7 @@ const TheFooter = () => {
                   ))}
                 </ul>
             </div>
-            <div className="justify-self-center">
+            <div className="md:justify-self-start lg:justify-self-center">
                 <ul>
                   {RightLink.map((item, idx) => (
                     <li key={"rightlink" + idx} className='list-style-none'>
@@ -41,7 +41,7 @@ const TheFooter = () => {
                   ))}
                 </ul>
             </div>
-            <div className="justify-self-end">
+            <div className="justify-self-start md:justify-self-end">
               <div className="footer-support">
                 <p>Customer Care</p>
                 <div className="my-5 text-xl font-semibold opacity-100">
@@ -58,7 +58,11 @@ const TheFooter = () => {
                 <div className="flex items-center gap-4 my-4">
                   {SocialLink.map((item, idx) => (
                     <div key={"sociallink" + idx}>
-                      <Link href={item?.srcUrl} passHref>{item?.icon}</Link>
+                      <Link href={item?.srcUrl} legacyBehavior>
+                        <a target="_blank" rel="noopener noreferrer">
+                          {item?.icon}
+                        </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -74,7 +78,7 @@ const TheFooter = () => {
             </ul>
           </div>
           <hr />
-          <div className="flex flex-wrap items-center justify-between gap-5">
+          <div className="flex flex-wrap items-center justify-between gap-y-3 gap-x-5">
             <div className="flex flex-wrap items-center gap-3">
               <span><SvgIcon.Security className='scale-75'/></span>
               <span>Safe and Secure Transactions</span>
@@ -92,7 +96,9 @@ const TheFooter = () => {
       </div>
       <div className="container text-center mx-auto w-4/5 text-[#827E81] text-sm p-3">
         <div className="mb-3">Copyright © 2021 Home Service Beauty Parlour. </div>
-        <div> All rights reserved | Terms of Use | Privacy Policy. Design and Powered by AbyM Technology</div>
+        <div> All rights reserved | Terms of Use | Privacy Policy. Design and Powered by 
+          <a href={"https://abym.in/"} rel="noopener noreferrer" target="_blank" className="font-semibold text-[#827E81]">{" "}AbyM Technology</a>
+          </div>
       </div>
     </footer>
   );

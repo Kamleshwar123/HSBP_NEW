@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 import React from 'react'
-import IMAGES from "../../../../constant/images";
 
 const BeautyPackageBox = ({item}) => {
     const router = useRouter();
@@ -9,10 +8,10 @@ const BeautyPackageBox = ({item}) => {
     <div className='rounded-3xl bg-white shadow-4D p-5 mt-[75px]'>
         <div className='-mt-[95px]'>
             <div className='text-center'>
-                <Image src={IMAGES.Beauty1} alt="beauty" className="scale_img" width={150} height={150} />
+                <Image src={item?.img} alt="beauty" className="scale_img" width={150} height={150} />
             </div>
             <div className='content'>
-                <h3 className='text-xl text-theme font-meduim my-2'>Normal Packages</h3>
+                <h3 className='text-xl text-theme font-meduim my-2 capitalize'>{item.title}</h3>
                 <p className='mb-1'>Lotus Cleanup</p>
                 <p className='mb-1'> Full Arms (Chocolate Wax)</p>
                 <p className='mb-1'>Full Legs (Chocolate Wax)</p>

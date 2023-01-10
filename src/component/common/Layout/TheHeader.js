@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import ICONS from "../../../constant/icons";
 import IMAGES from "../../../constant/images";
@@ -9,6 +10,8 @@ import OutsideClick from "../../../hooks/useOutClick";
 const Sidebar = dynamic(() => import('./Sidebar'), { ssr: false });
 
 const TheHeader = () => {
+  const router = useRouter();
+  console.log(router);
   const [open, setOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
@@ -50,12 +53,18 @@ const TheHeader = () => {
                 {open &&
                   <div className="shadow-66 z-10 absolute right-0 top-10 flex flex-col items-start h-auto w-auto px-3 py-3 bg-white rounded-lg text-left text-black text-sm after:content-[''] after:absolute after:left-1/2 after:bottom-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-t-transparent after:border-b-white">
                   <div>
+                    <div className="flex font-medium gap-2 cursor-pointer items-center">
+                    <Image src={ICONS.UserPopover} alt="UserPopover" className="h-4 w-auto" />
                     <h6 className="font-medium">Hello User</h6>
+                    </div>
                     <p className="text-xs whitespace-nowrap">To access your HSBP access</p>
+                    <button className="custom_button mt-2" style={{fontSize: '12px', padding: '4px 12px'}}>Sign Up</button>
                   </div>
-                  <button className="custom_button mt-2" style={{fontSize: '12px', padding: '4px 12px'}}>Sign Up</button>
                   <div className="my-2">
+                    <div className="flex font-medium gap-2 cursor-pointer items-center">
+                    <Image src={ICONS.UserCart} alt="cart" className="h-4 w-auto" />
                     <h6 className="font-medium">My Order</h6>
+                    </div>
                   </div>
                 </div>
                 }

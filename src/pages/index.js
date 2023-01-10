@@ -33,12 +33,14 @@ const Home = () => {
         desc={"Lorem ipsum dolor sit amet, consectetur adipisci elitsed eiusmod"}
       />
       <Appointment />
-      <div className="beautypkg-bg">
-        <Heading
-          title={"Beauty Packages"}
-          desc={"We provide special offers for students and corporates"}
-        />
-        <BeautyPackage />
+      <div className="mt-12">
+        <div className="beautypkg-bg pt-1">
+            <Heading
+              title={"Beauty Packages"}
+              desc={"We provide special offers for students and corporates"}
+            />
+          <BeautyPackage />
+        </div>
       </div>
       <div className="container">
         <Heading
@@ -47,13 +49,15 @@ const Home = () => {
         />
         <Salon />
       </div>
-        <div className="productshop-bg">
+      <div className="mt-12">
+        <div className="productshop-bg pt-1">
         <Heading
           title={"Product Shop"}
           desc={"50+ salon professional brands delivered nationally to your doorsteps"}
         />
         <Product />
         </div>
+      </div>
         <Heading
           title={"Franchise"}
           desc={"100+ Tech enabled Institute, Serving you quality services across 60+ cities"}
