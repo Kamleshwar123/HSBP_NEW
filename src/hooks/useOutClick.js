@@ -16,5 +16,5 @@ function useOutsideAlerter(ref, setOpen) {
 export default function OutsideClick(props) {
     const wrapperRef = useRef(null);
     useOutsideAlerter(wrapperRef, props?.setOpen);
-    return <div ref={wrapperRef} style={{ position: "relative" }}>{props?.children}</div>;
+    return <div ref={wrapperRef} className='w-full' style={{ position: "relative" }}>{props?.children}</div>;
 }
