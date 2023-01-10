@@ -38,8 +38,8 @@ const BridalPacakgeDetail = () => {
                         <p>- Bridal Mahendi</p>
                     </div>
                 </div>
-                <div className='grid sm:grid-cols-[60%_40%] pt-7 items-center'>
-                    <div className='inline-flex space-x-5 items-center'>
+                <div className='grid sm:grid-cols-[60%_40%] pt-7 items-center gap-5'>
+                    <div className='inline-flex space-x-5 items-center justify-self-center md:justify-self-start'>
                         <span className='text-base text-[#7D7D7D] line-through'>&#x20B9;7,600</span>
                         <span className='text-xl text-[#C2133C]'>&#x20B9;3,799</span>
                     </div>

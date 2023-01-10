@@ -16,7 +16,7 @@ const ServiceDetail = () => {
   ]
   return (
     <div className='container'>
-        <div className='mb-6 mt-3'>
+        <div className='mb-6 mt-6'>
           <BridalPacakgeDetail/>
         </div>
         <IncludeSection/>

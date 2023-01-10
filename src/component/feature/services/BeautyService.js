@@ -13,7 +13,7 @@ const BeautyService = ({type}) => {
     {label: "Reasonable Price", img: IMAGES.Adv4}
   ]
   return (
-    <div>
+    <div className='container'>
         <BeautyServiceSlider type={type}/>
         <div className='grid md:grid-cols-12 gap-7 my-5'>
           <div className='md:col-span-7'>

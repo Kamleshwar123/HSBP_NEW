@@ -19,7 +19,7 @@ const BeautyPackageBox = ({item}) => {
                 <p className='mb-1'>Eyebrow</p>
                 <p className='mb-1'>Upper Lip</p>
             </div>
-            <div className='my-3'><span className='text-black-0f0 text-base'>&#x20B9;1500</span><span className='text-black-a8a text-base ml-3 line-through'>&#x20B9;2000</span></div>
+            <div className='my-3'><span className='text-black-0f0 text-base'>&#x20B9;1500</span><span className='text-black-a8a ml-3 line-through'>&#x20B9;2000</span></div>
             <button className='custom_button' onClick={()=> router.push("/booknow")}>Book Now</button>
         </div>
     </div>
