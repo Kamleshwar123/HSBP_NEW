@@ -63,14 +63,14 @@ const BeautyService = () => {
                 <Slider {...settings}>
                     {data && data?.map((item, idx) => (
                         < div className='h-full p-3 text-center' key={"beauty" + idx}>
-                            <div className='h-full service-bg p-5 rounded-3xl cursor-pointer' onClick={()=> handleRedirect("/services", item?._data)}>
+                            <div className='h-full service-bg p-7 rounded-2xl cursor-pointer' onClick={()=> handleRedirect("/services", item?._data)}>
                                 <div className='text-center relative'>
                                     <div className='corner upper_corner'></div>
                                     <Image src={item?.img} alt="beauty" className="scale_img" />
                                     <div className='corner lower_corner'></div>
                                 </div>
                                 <div className='px-3'>
-                                <h3 className='text-2xl text-theme font-medium pt-4 pb-2'>{item?.title}</h3>
+                                <h3 className='text-xl text-theme font-medium pt-4 pb-2'>{item?.title}</h3>
                                 <p className='pb-4'>{item?.desc}</p>
                                 <button className='custom_button'>Know More</button>
                                 </div>
