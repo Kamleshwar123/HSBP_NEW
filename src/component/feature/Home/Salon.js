@@ -35,9 +35,9 @@ const Salon = () => {
                         </select>
                     </label>
                 </div>
-                <div className='flex w-full flex-wrap items-stretch max-w-sm'>
+                <div className='w-full max-w-sm'>
                 <OutsideClick open={showAutoComplete} setOpen={setShowAutoComplete}>
-                    <div className="flex w-full flex-wrap items-stretch">
+                    <div className="flex w-full flex-wrap items-stretch max-w-sm">
                         <SvgIcon.Search className="text-theme pointer-events-none w-5 h-5 absolute top-1/2 transform -translate-y-1/2 left-3"/>
                         <input type="text" placeholder="Search for Services" className="form-control rounded-xl pl-10" onChange={(e)=> setSearch(e.target.value)} onFocus={()=> setShowAutoComplete(true)}/>
                     </div>
