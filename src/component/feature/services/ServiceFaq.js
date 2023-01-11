@@ -5,8 +5,8 @@ const ServiceFaq = () => {
     const [tab,setTab] = useState(0);
   return (
     <div className='bg-white p-6 mt-5 shadow-4D rounded-2xl text-[#605F5F]'>
-        <h6 className='text-theme text-lg font-medium'>Frequently Asked Questions</h6>
-        <p>If you have any further questions you can contact us</p>
+        <h6 className='text-theme text-xl font-medium'>Frequently Asked Questions</h6>
+        <p className='text-lg'>If you have any further questions you can contact us</p>
         <div className='grid md:grid-cols-2 items-stretch gap-y-6 mt-6'>
             <div className='py-5 z-10'>
                 <div className='divide-y divide-black-707 border border-black-707 rounded-xl md:-mr-8 bg-white overflow-hidden'>

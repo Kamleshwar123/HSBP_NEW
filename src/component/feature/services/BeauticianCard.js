@@ -15,7 +15,7 @@ const BeauticianCard = ({item}) => {
       </div>
       <div className='p-5'>
         <h6 className='pb-2 text-theme text-base'>{item?.name}</h6>
-        <p className='pb-2'>{item?.post}</p>
+        <p className='pb-1'>{item?.post}</p>
         <p className='pb-2'>{item?.exp}</p>
         <div className='text-blue-274 font-medium'>Read More</div>
       </div>

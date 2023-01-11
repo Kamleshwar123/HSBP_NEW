@@ -56,8 +56,13 @@ import Gallary1 from './../styles/images/gallary1.webp';
 import Gallary2 from './../styles/images/gallary2.webp';
 import Gallary3 from './../styles/images/gallary3.webp';
 import Beautician from './../styles/images/beautician.webp';
-import BGallary1 from './../styles/images/beauty-gal1.webp';
-import BGallary2 from './../styles/images/beauty-gal2.webp';
+import BGallary1 from './../styles/images/bgirl1.webp';
+import BGallary2 from './../styles/images/bgirl2.webp';
+import BGallary3 from './../styles/images/bgirl3.webp';
+import BGallary4 from './../styles/images/bgirl4.webp';
+import BGallary5 from './../styles/images/bgirl5.webp';
+import BGallary6 from './../styles/images/bgirl6.webp';
+import BGallary7 from './../styles/images/bgirl7.webp';
 import Btesti from './../styles/images/btesti.webp';
 import BtestiProfile from './../styles/images/btesti-profile.webp';
 import ContactUs from './../styles/images/contact-us.webp';
@@ -70,6 +75,11 @@ const IMAGES = {
     ContactUs,
     BGallary1,
     BGallary2,
+    BGallary3,
+    BGallary4,
+    BGallary5,
+    BGallary6,
+    BGallary7,
     Btesti,
     BtestiProfile,
     Beautician,

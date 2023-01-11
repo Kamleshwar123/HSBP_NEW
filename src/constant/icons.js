@@ -33,7 +33,12 @@ import Share from './../styles/icons/share.webp';
 import Direction from './../styles/icons/direction.webp';
 import UserCart from './../styles/icons/usercart.webp';
 import UserPopover from './../styles/icons/user_popover.webp';
+import CartPlus from './../styles/icons/cart-plus.webp';
+import CartMinus from './../styles/icons/cart-minus.webp';
+
 const ICONS = {
+    CartPlus,
+    CartMinus,
     UserCart,
     UserPopover,
     Share,

@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import IMAGES from '../../../constant/images'
 import BeautyServiceSlider from './BeautyServiceSlider'
 import CareBox from './CareBox'
 import CheckoutBox from './CheckoutBox'
 
 const BeautyService = ({type}) => {
+  const [serviceId, setServiceId]= useState(type || "");
   const advData = [
     {label: "Trusted Professionals", img: IMAGES.Adv1},
     {label: "Branded Products", img: IMAGES.Adv2},
@@ -14,15 +15,14 @@ const BeautyService = ({type}) => {
   ]
   return (
     <div className='container'>
-        <BeautyServiceSlider type={type}/>
+        <BeautyServiceSlider serviceId={serviceId} setServiceId={setServiceId}/>
         <div className='grid md:grid-cols-12 gap-7 my-5'>
           <div className='md:col-span-7'>
             <div className='shadow-66 rounded-2xl overflow-hidden'>
               <div className='theme-heading-box'>Hair Care</div>
-              <div>
+              <div className='text-black-2a3 divide-y divided-black-body px-5'>
               {[...Array(3).keys()].map((item, idx) => (
                 <React.Fragment key={`care${idx}`}>
-                  {idx !== 0 && <hr className='my-0 mx-5'/>}
                   <CareBox/>
                 </React.Fragment>
               ))}
@@ -34,7 +34,7 @@ const BeautyService = ({type}) => {
           </div>
         </div>
         <div className='bg-pink-light bg-opacity-30 py-5 px-7 text-black-2e2'>
-          <h6 className='font-bold text-xl'>Home beauty service packages for your monthly need at an affordable price</h6>
+          <h6 className='font-bold text-base'>Home beauty service packages for your monthly need at an affordable price</h6>
           <p className='mt-5'>Being a women means juggling with a myriad of responsibilities. It's difficult to carve out time for yourself. We tried to make it bit easier for you.</p>
           <p className='mt-5'> We bring you customized beauty packages to cater your grooming essentials at most jaw-dropping prices. Although you still have the flexibility to add services even after the expert has arrived at your home.</p>
           <p className='mt-5'> We also provide pre-bridal services to make your wedding experience delightful and hassle-free in every possible way. On busy days of your wedding, stay at your home and our beautician will reach you to pamper. Get ready for your big day with all comforts at your home.</p>

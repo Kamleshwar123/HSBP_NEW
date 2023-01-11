@@ -1,6 +1,6 @@
 import React from "react";
 
-const SmartText = ({name, text, length, styleClass}) => {
+const SmartText = ({name="", text, length, styleClass}) => {
     const [showLess, setShowLess] = React.useState(true);
 
     if (text.length < length) {
@@ -9,10 +9,12 @@ const SmartText = ({name, text, length, styleClass}) => {
 
     return (
         <div>
-            <p className={styleClass}>{showLess ? `${text.slice(0, length)}...` : text}</p>
-            <span className="viewMoreText" onClick={() => setShowLess(!showLess)}>
+            <p className={styleClass}>
+                <span>{showLess ? `${text.slice(0, length)}...` : text}</span>
+                <span className="text-blue-274 cursor-pointer whitespace-nowrap" onClick={() => setShowLess(!showLess)}>
                 {name ? name : "Read"} {" "}{showLess ? "More" : "Less"}
-            </span>
+                </span>
+            </p>
         </div>
     );
 };

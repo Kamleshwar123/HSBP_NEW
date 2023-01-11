@@ -13,7 +13,7 @@ const BeautyPackageService = () => {
     {title: "Deluxe Package", img: IMAGES.Beauty2},
 ]
   return (
-    <div className="beautypkg-bg pt-1">
+    <div className="beautypkg-bg pt-1 mt-3">
         <div className='container'>
           <ServiceHeading
             title={"Beauty Packages"}

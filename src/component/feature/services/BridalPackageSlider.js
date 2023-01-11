@@ -39,10 +39,14 @@ const BridalPackageSlider = () => {
         {name: "Reception", img: IMAGES.Bridal1},
         {name: "Celebrate Sangeet", img: IMAGES.Bridal2},
         {name: "Wedding", img: IMAGES.Bridal3},
+        {name: "Engagement", img: IMAGES.Bridal4},
+        {name: "Reception", img: IMAGES.Bridal1},
+        {name: "Celebrate Sangeet", img: IMAGES.Bridal2},
+        {name: "Wedding", img: IMAGES.Bridal3},
         {name: "Engagement", img: IMAGES.Bridal4}
     ]
   return (
-    <div className='service_slider py-5'>
+    <div className='service_slider -m-3'>
         <Slider {...settings}>
             {data.map((item, idx) => (
                 <div className='w-full xs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 text-center' key={"pkg" + idx}>

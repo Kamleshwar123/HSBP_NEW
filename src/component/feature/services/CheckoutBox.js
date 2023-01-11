@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react'
+import AddToCart from '../../common/AddToCart';
 
 const CheckoutBox = () => {
   const router = useRouter();
@@ -22,23 +23,13 @@ const CheckoutBox = () => {
         </div>
         <div className='px-5 py-3 text-black-2a3 bg-gray-eee'>
           <div className=''>
-            <h6 className='font-medium text-black-241'>Hair Spa</h6>
-            <div className='flex gap-5 flex-row sm:flex-column justify-between items-center pt-1'>
-                <p className='pb-1 text-xs text-black-2e2'>Treatment that helps repair damage and unwanted frizz...…...</p>
-                <div>
-                {num > 0 ?
-                <div className='flex rounded-2xl border border-1'>
-                    <span className='px-3 py-1 cursor-pointer' onClick={dec}>-</span>
-                    <span className='px-3 py-1 bg-theme text-white'>{num}</span>
-                    <span className='px-3 py-1 cursor-pointer' onClick={inc}>+</span>
-                </div>
-                :
-                <button className='addcard_button' onClick={addToCart}>Add to Cart</button>
-                }
-                </div>
+            <h6 className='font-medium text-black-241 pb-1'>Hair Spa</h6>
+            <div className='flex gap-x-5 gap-y-3 flex-col sm:flex-row justify-between items-center'>
+                <p className='text-xs text-black-2e2'>Treatment that helps repair damage and unwanted frizz...…...</p>
+                <AddToCart num={num} inc={inc} dec={dec} addToCart={addToCart}/>
             </div>
-            <div className='mt-1'>
-                <div><span className='text-black-0f0'>&#x20B9;1500</span><span className='text-black-a8a ml-3 line-through'>&#x20B9;2000</span><span className='text-red-c80 ml-3'>50% OFF</span></div>
+            <div className='mt-3'>
+                <div><span className='text-black-0f0'>&#x20B9;1500</span><span className='text-black-a8a text-xs ml-3 line-through'>&#x20B9;2000</span><span className='text-red-c80 ml-3'>50% OFF</span></div>
             </div>
           </div>
           <hr className='my-3'/>
@@ -69,7 +60,7 @@ const CheckoutBox = () => {
               <span>&#x20B9;0</span>
             </div>
             <hr className='my-2 border-theme'/>
-            <div className='my-1 grid grid-cols-[70%_30%]'>
+            <div className='my-1 pb-2 grid grid-cols-[70%_30%]'>
               <span>Total</span>
               <span className='text-theme'>&#x20B9;1500</span>
             </div>

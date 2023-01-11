@@ -10,7 +10,7 @@ const Ratings = dynamic(() => import('../../component/common/Ratings'), { ssr: f
 const BeautycianDetails = () => {
   return (
     <div className='container'>
-        <h1 className="text-center text-black-2e2 my-7 text-2xl lg:text-[42px] md:text-3xl w-3/4 mx-auto">Our Beauticians are our core Strength</h1>
+        <h1 className="text-center text-black-2e2 mt-7 mb-8 text-2xl lg:text-[42px] md:text-3xl w-3/4 mx-auto">Our Beauticians are our core Strength</h1>
         <div className='grid grid-cols-12 gap-6'>
             <div className='col-span-12 md:col-span-4 text-center'>
                 <Image src={IMAGES.Beautician} alt="Beautician" className="scale_img rounded-2xl"/>

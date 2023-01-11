@@ -24,8 +24,10 @@ import Search from "./../styles/svg/search.svg";
 import SRightArrow from "./../styles/svg/s-right-arrow.svg";
 import SLeftArrow from "./../styles/svg/s-left-arrow.svg";
 import FaqRightArrow from "./../styles/svg/faq-right-light.svg";
+import Clock from "./../styles/svg/clock.svg";
 
 const SvgIcon = {
+  Clock,
   FaqRightArrow,
   SLeftArrow,
   SRightArrow,

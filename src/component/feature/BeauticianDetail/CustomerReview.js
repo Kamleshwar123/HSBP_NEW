@@ -43,11 +43,11 @@ const CustomerReview = () => {
                     <Image src={IMAGES.BtestiProfile} alt="layer" className='absolute right-0 top-0 rounded-full' height={80} width={80}/>
                     <div className='absolute left-5 pr-2 top-2 text-white'>
                         <h6>Nikita Chaudhary</h6>
-                        <p>Beautician</p>
+                        <p className='text-xs'>Beautician</p>
                     </div>
                     <div className='absolute px-5 left-5 top-[72px]'>
                         <p className='text-black-2e2 py-2 text-xs'>The beautician was efficient at work. I was happy with the waxing & pedicure session. Will definitely book again.</p>
-                        <p className='black-a8a py-2 text-xs'>21 Dec. 2022</p>
+                        <p className='text-black-a8a py-2 text-xs'>21 Dec. 2022</p>
                     </div>
                 </div>
             </div>

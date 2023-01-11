@@ -25,7 +25,7 @@ const ServiceDetail = () => {
         <ServiceFaq/>
         <div>
           <h6 className='text-theme my-8 text-2xl font-medium'>Our Beauticians</h6>
-          <div className='flex flex-wrap -m-6 justify-center items-stretch'>
+          <div className='flex flex-wrap -m-3 justify-center items-stretch'>
           {data.map((item, idx) => (
             <div className='p-3 sm:basis-1/2 md:basis-1/3 lg:basis-1/4' key={idx+"beautician"}>
                 <BeauticianCard item={item}/>
