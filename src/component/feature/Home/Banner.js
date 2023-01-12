@@ -22,7 +22,7 @@ const Banner = () => {
             <h2 className="text-2xl font-bold">BEAUTICIANS/HAIRDRESSERS</h2>
             <div className="mt-7">
               <Link href={"/"} className="custom_button">
-                BOOK NOW
+              Book Now
               </Link>
             </div>
           </div>
@@ -32,13 +32,20 @@ const Banner = () => {
           <div className="hidden md:block absolute bottom-[20px] pl-12 text-black-2a3">
             <div className="mt-7">
               <Link href={"/"} className="custom_button">
-                BOOK NOW
+              Book Now
               </Link>
             </div>
           </div>
         </div>
         <div className="relative">
           <Image src={IMAGES.Banner3} alt="Banner3" className="scale_img" />
+          <div className="hidden md:block absolute bottom-[20px] pl-12 text-black-2a3">
+            <div className="mt-7">
+              <Link href={"/"} className="custom_button">
+              Book Now
+              </Link>
+            </div>
+          </div>
         </div>
       </Slider>
     </div>
