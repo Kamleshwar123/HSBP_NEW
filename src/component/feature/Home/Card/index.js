@@ -19,7 +19,7 @@ const Card = () => {
     }
     return (
         <div className='home_card'>
-            <div className='flex flex-wrap items-stretch justify-center'>
+            <div className='flex flex-wrap justify-center'>
                 {data && data?.length > 0 && data?.map((item, idx) => (
                     <div className='w-full md:w-1/2 lg:w-1/3 text-center p-6' key={"card" + idx}>
                         <div 
@@ -33,8 +33,8 @@ const Card = () => {
                                     <SvgIcon.IosArrowDown className='scale-75' />
                                 </div>
                             </div>
-                            <div className='text-center px-5 pt-5'>
-                                <Image src={item?.img} alt="Salon" className="mt-0 mx-auto w-4/5 h-auto" />
+                            <div className='text-center px-5 pt-5 h-[250px] relative flex align-bottom'>
+                                <Image src={item?.img} alt="Salon" className="mx-auto max-h-[230px] w-auto object-contain" />
                             </div>
                         </div>
                     </div>
