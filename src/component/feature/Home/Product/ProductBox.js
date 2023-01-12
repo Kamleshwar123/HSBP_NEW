@@ -29,7 +29,7 @@ const ProductBox = () => {
                             <Ratings rating={4.5} />
                         </div>
                     </div>
-                    <div className='mb-1'><span className='text-black-0f0 font-bold text-base'>&#x20B9;1500</span><span className='text-black-a8a ml-3 line-through'>&#x20B9;2000</span></div>
+                    <div className='mb-1'><span className='text-black-0f0 font-bold text-base'><span className='rupee-sym'>₹</span>1500</span><span className='text-black-a8a ml-3 line-through'><span className='rupee-sym'>₹2000</span></span></div>
                     <div className='text-red-c80'>50% OFF</div>
                     <button className='custom_button mt-5' onClick={(e)=> e.stopPropagation()}>Add to Cart</button>
                 </div>

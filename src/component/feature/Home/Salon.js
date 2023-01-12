@@ -76,8 +76,8 @@ const Salon = () => {
                                         <p className='text-xs'>Vaishali, Ghaziabad</p>
                                     </div>
                                     <div className='text-right'>
-                                        <div className='flex justify-end text-white-fc'><span className='flex gap-1 bg-green items-center px-1 rounded'><span>4.5</span><span><SvgIcon.Rating /></span></span></div>
-                                        <p className='text-xs mb-1'>482 Reviews</p>
+                                        <div className='flex justify-end text-white-fc mb-1'><span className='flex gap-1 bg-green items-center px-1 rounded'><span>4.5</span><span><SvgIcon.Rating /></span></span></div>
+                                        <p className='text-xs mb-3 mt-2'>482 Reviews</p>
                                         <div className='flex gap-1 items-center justify-end'>
                                             <a href="tel:+4733378901"><Image src={ICONS.Scall} alt="Scall" className="scale_icon-24"/></a>
                                             <a href="https://www.google.com/maps/place/1,+Block+B,+Sector+34,+Gurugram,+Haryana+122015/@28.4327897,77.0111773,17z/data=!3m1!4b1!4m5!3m4!1s0x390d181cdf34ffbb:0xc492782cb98402e1!8m2!3d28.432785!4d77.013366" rel="noopener noreferrer" target="_blank"><Image src={ICONS.Slocation} alt="Slocation" className="scale_icon-24"/></a>
