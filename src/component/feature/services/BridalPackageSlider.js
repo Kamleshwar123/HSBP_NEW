@@ -53,7 +53,7 @@ const BridalPackageSlider = () => {
                     <div>
                         <Image src={item?.img} alt="Bridal1" className="scale_img"/>
                         <div className='py-3 cursor-pointer' onClick={()=> router.push("/services/bridal-package/1")}>
-                            <h6 className={`text-base px-3 capitalize font-medium ${idx === select ? "text-theme" : "text-black-241"}`}>{item?.name}</h6>
+                            <h6 className={`text-base px-3 capitalize font-semibold ${idx === select ? "text-theme" : "text-black-241"}`}>{item?.name}</h6>
                             <ActiveShadow val={(idx === select)}/>
                         </div>
                     </div>

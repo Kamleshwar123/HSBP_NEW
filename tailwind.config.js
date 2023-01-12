@@ -53,6 +53,7 @@ module.exports = {
       'gray-f3f':'#F3F3F3',
       'theme-opacity': 'rgba(146, 58, 112, 0.5)',
       'blue-274':'#2747E6',
+      'blue-477':'#4775D1',
       'green-0b5': '#0B551C'
     },
     extend: {

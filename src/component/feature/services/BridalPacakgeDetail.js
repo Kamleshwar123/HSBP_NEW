@@ -18,10 +18,10 @@ const BridalPacakgeDetail = () => {
                 <Image src={IMAGES.Bridal2} alt="Bridal1" className="rounded-2xl scale_img"/>
             </div>
             <div className='px-5 py-0'>
-                <h1 className='text-theme text-3xl'>Reception</h1>
+                <h1 className='text-theme text-3xl font-semibold'>Reception</h1>
                 <hr/>
                 <div className='pb-5 text-black-2e2 w-full md:w-3/4'>
-                    <h3 className='font-medium text-xl pb-1'>Services & Pricing</h3>
+                    <h3 className='font-semibold text-xl pb-1'>Services & Pricing</h3>
                     <p>{showLess ? `${text?.slice(0, 80)}...` : text}<span className='text-blue-274 ml-1 cursor-pointer' onClick={() => setShowLess(!showLess)}>{showLess ? "Read More": "Read Less"}</span></p>
                 </div>
                 <div className='bg-theme text-white py-6 px-4 grid sm:grid-cols-[60%_40%] rounded-2xl'>
@@ -42,7 +42,7 @@ const BridalPacakgeDetail = () => {
                 </div>
                 <div className='grid sm:grid-cols-[60%_40%] pt-7 items-center gap-5'>
                     <div className='inline-flex space-x-2 items-center justify-self-center md:justify-self-start'>
-                        <span className='text-black-0f0 text-xl'>&#x20B9;3799</span>
+                        <span className='text-black-0f0 text-xl font-semibold'>&#x20B9;3799</span>
                         <span className='text-black-a8a ml-3 text-base line-through'>&#x20B9;7600</span>
                     </div>
                     <div className='text-center md:text-right'>

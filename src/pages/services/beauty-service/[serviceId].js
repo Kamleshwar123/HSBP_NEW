@@ -23,7 +23,7 @@ const ServiceDetail = () => {
     <div className='container'>
         <div className='bg-pink p-6 text-black-2a3 mb-5 mt-3'>
             <div className='shadow-4D bg-white p-5 rounded-2xl'>
-                <h6 className='text-lg text-theme font-medium'>What Expert Says</h6>
+                <h6 className='text-lg text-theme font-semibold'>What Expert Says</h6>
                 <p>"Hair spa requires a lot of head massage that stimulates the blood circulation in your scalp. The procedure enhances the oxygen supply to your hair follicles. It revitalizes your scalp and improves hair growth."</p>
             </div>
             <div className='shadow-4D bg-white px-5 my-5 rounded-2xl'>
@@ -33,7 +33,7 @@ const ServiceDetail = () => {
                     </div>
                     <div className='col-span-12 md:col-span-9 px-5 py-5'>
                         <div className='grid sm:grid-cols-2 gap-x-5 gap-y-2'>
-                            <div className='text-theme font-medium text-lg'>Hair Spa</div>
+                            <div className='text-theme font-semibold text-lg'>Hair Spa</div>
                             <div className='sm:justify-self-end flex gap-1 items-center'>
                                 <SvgIcon.Clock className='scale-75'/>
                                 <div>30-60 mins</div>
