@@ -38,7 +38,7 @@ const CheckoutBox = () => {
                 Have a Discount Coupon?
               </div>
               <div className='flex flex-wrap gap-3 justify-center items-center'>
-                  <input type="text" className={`form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5' : ''}`}/>
+                  <input type="text" placeholder='Enter Coupon Here' className={`text-xs form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}/>
                 {apply ?
                 <div className='text-[#CC0000] font-bold cursor-pointer px-6' onClick={() => setApply(false)}>Remove</div>
                 :

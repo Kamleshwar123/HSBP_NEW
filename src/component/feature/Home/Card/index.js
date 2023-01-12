@@ -23,16 +23,18 @@ const Card = () => {
                 {data && data?.length > 0 && data?.map((item, idx) => (
                     <div className='w-full md:w-1/2 lg:w-1/3 text-center p-6' key={"card" + idx}>
                         <div 
-                            className={`h-full relative cursor-pointer shadow-card rounded-[42px] text-white p-5 card_box${idx + 1}`}
+                            className={`h-full relative cursor-pointer shadow-card rounded-[30px] text-white p-5 pb-0 card_box${idx + 1}`}
                             onClick={() => handleRedirect(item.url)}
                         >
-                            <h3 className='text-xl font-medium pt-5 mb-2'>{item?.title}</h3>
-                            <p>{item?.number}</p>
-                            <div className='flex justify-center p-3'>
-                                <SvgIcon.IosArrowDown className='scale-75' />
+                            <div>
+                                <h3 className='text-xl font-medium pt-5 mb-2'>{item?.title}</h3>
+                                <p>{item?.number}</p>
+                                <div className='flex justify-center p-3'>
+                                    <SvgIcon.IosArrowDown className='scale-75' />
+                                </div>
                             </div>
-                            <div className='text-center px-5 pt-5 align-bottom'>
-                                <Image src={item?.img} alt="Salon" className="mt-0 m-auto w-3/4 h-auto" />
+                            <div className='text-center px-5 pt-5'>
+                                <Image src={item?.img} alt="Salon" className="mt-0 mx-auto w-4/5 h-auto" />
                             </div>
                         </div>
                     </div>

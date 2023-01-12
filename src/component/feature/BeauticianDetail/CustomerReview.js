@@ -34,7 +34,7 @@ const CustomerReview = () => {
   return (
     <div className='bg-gray-eee p-6'>
         <h6 className='mb-5 text-theme text-lg font-medium'>Customer Review</h6>
-        <div className='beauty_slider'>
+        <div className='review_slider'>
         <Slider {...settings}>
         {[...Array(6).keys()].map((item, idx) => (
             <div key={idx+"review"}>

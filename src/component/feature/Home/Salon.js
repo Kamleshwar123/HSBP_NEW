@@ -26,7 +26,7 @@ const Salon = () => {
                 <div className='flex justify-center md:justify-end w-[278px]'>
                     <label htmlFor="selectcity" className="relative block">
                         <SvgIcon.LocationTheme className="scale-75 pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"/>
-                        <select className='form-control rounded-xl' id="selectcity" style={{paddingLeft: "40px"}}>
+                        <select className='form-control rounded-xl large-input pl-10' id="selectcity">
                             <option>Select City</option>
                             <option>Noida</option>
                             <option>Agra</option>
@@ -39,7 +39,7 @@ const Salon = () => {
                 <OutsideClick open={showAutoComplete} setOpen={setShowAutoComplete}>
                     <div className="flex w-full flex-wrap items-stretch max-w-sm">
                         <SvgIcon.Search className="text-theme pointer-events-none w-5 h-5 absolute top-1/2 transform -translate-y-1/2 left-3"/>
-                        <input type="text" placeholder="Search for Services" className="form-control rounded-xl pl-10" onChange={(e)=> setSearch(e.target.value)} onFocus={()=> setShowAutoComplete(true)}/>
+                        <input type="text" placeholder="Search for Services" className="large-input form-control rounded-xl pl-10" onChange={(e)=> setSearch(e.target.value)} onFocus={()=> setShowAutoComplete(true)}/>
                     </div>
                     {showAutoComplete &&
                     <ul className='absolute z-10 mt-0 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>

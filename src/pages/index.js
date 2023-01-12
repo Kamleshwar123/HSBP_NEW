@@ -1,4 +1,5 @@
 import React from "react";
+import ExploreAll from "../component/common/ExploreAll";
 import AppDownload from "../component/feature/Home/AppDownload";
 import Appointment from "../component/feature/Home/Appointment";
 import Banner from "../component/feature/Home/Banner";
@@ -19,26 +20,31 @@ const Home = () => {
       <div className="container">
         <Heading
           title={"India's Largest Platform"}
-          desc={"FOR ALL YOUR BEAUTY SALON NEEDS"}
+          desc={"For all your beauty salon needs"}
+          classes="mt-12 mb-9"
         />
         <Card />
         <Heading
           title={"Beauty Services"}
           desc={"We provide special offers for students and corporates"}
+          classes="mt-12"
         />
+        <ExploreAll text={"Explore All"} url={"/services"}/>
         <BeautyService />
       </div>
       <Heading
         title={"Book Appointment"}
         desc={"Lorem ipsum dolor sit amet, consectetur adipisci elitsed eiusmod"}
+        classes="mt-12 mb-9"
       />
       <Appointment />
       <div className="mt-12">
-        <div className="beautypkg-bg pt-1">
+        <div className="beautypkg-bg pt-6">
             <Heading
               title={"Beauty Packages"}
               desc={"We provide special offers for students and corporates"}
             />
+            <ExploreAll text={"Explore All"} url={"/services"} data={{tab: "tab2"}}/>
           <BeautyPackage />
         </div>
       </div>
@@ -46,31 +52,37 @@ const Home = () => {
         <Heading
           title={"Near by Salons"}
           desc={"200+ tech enabled salons, serving you quality services across 40+ cities"}
+          classes="mt-12"
         />
+        <ExploreAll text={"Explore All"} url={"/salons"}/>
         <Salon />
       </div>
       <div className="mt-12">
-        <div className="productshop-bg pt-1">
+        <div className="productshop-bg pt-6">
         <Heading
           title={"Product Shop"}
           desc={"50+ salon professional brands delivered nationally to your doorsteps"}
         />
+        <ExploreAll text={"Explore All"} url={"/product-home"}/>
         <Product />
         </div>
       </div>
         <Heading
           title={"Franchise"}
           desc={"100+ Tech enabled Institute, Serving you quality services across 60+ cities"}
+          classes="mt-12 mb-9"
         />
         <Franchise />
         <Heading
           title={"Institute"}
           desc={"200+ Tech enabled salons, Serving you quality services across 40+ cities"}
+          classes="mt-12 mb-9"
         />
         <Institute />
         <Heading
           title={"Testimonials"}
           desc={"When the age of a person exceeds 50 years, it becomes very important to take care of one’s health as she enters the senior citizen age."}
+          classes="mt-12 mb-9"
         />
         <Testimonials />
       <div className="container">

@@ -12,7 +12,7 @@
 }
 .home_banner_slider .slick-dots li button:before {
     font-size: 12px;
-    color: #F2F2F2;
+    color: #561334;
     opacity: 1;
 }
 .home_banner_slider .slick-dots li.slick-active button:before, .home_banner_slider .slick-dots li:hover button:before {
@@ -29,8 +29,19 @@
     z-index: 1;
     color: #561334 !important;
 }
+.review_slider .slick-prev {
+    left: -65px !important;
+    z-index: 1;
+    color: #561334 !important;
+}
+.review_slider .slick-next {
+    right: -65px !important;
+    z-index: 1;
+    color: #561334 !important;
+}
+
 .service_slider .slick-prev {
-    left: -35px !important;
+    left: -60px !important;
     z-index: 1;
     color: #2E2E2E !important;
 }
@@ -66,5 +77,15 @@
     }
     .service_slider .slick-next {
         right: -25px !important;
+    }
+    .review_slider .slick-prev {
+        left: -45px !important;
+        z-index: 1;
+        color: #561334 !important;
+    }
+    .review_slider .slick-next {
+        right: -45px !important;
+        z-index: 1;
+        color: #561334 !important;
     }
 }
