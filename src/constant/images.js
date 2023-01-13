@@ -68,8 +68,12 @@ import BtestiProfile from './../styles/images/btesti-profile.webp';
 import ContactUs from './../styles/images/contact-us.webp';
 import ThankYou from './../styles/images/thank-you.webp';
 import LoginInner from './../styles/images/login-inner.webp';
+import SlotBookHeader from './../styles/images/slot-book-header.webp';
+import SlotBookSide from './../styles/images/slot-book-side.webp';
 
 const IMAGES = {
+    SlotBookHeader,
+    SlotBookSide,
     LoginInner,
     ThankYou,
     ContactUs,

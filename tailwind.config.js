@@ -54,7 +54,10 @@ module.exports = {
       'theme-opacity': 'rgba(146, 58, 112, 0.5)',
       'blue-274':'#2747E6',
       'blue-477':'#4775D1',
-      'green-0b5': '#0B551C'
+      'green-0b5': '#0B551C',
+      'green-088': '#08872A',
+      'red-c21': '#C2133C',
+      'red-8b2': '#8B2E5D'
     },
     extend: {
       boxShadow: {
