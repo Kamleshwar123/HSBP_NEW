@@ -1,19 +1,24 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useState } from 'react'
+import AddAddressForm from '../../component/feature/CheckoutPage/AddAddressForm'
 import CheckoutBox from '../../component/feature/services/CheckoutBox'
 import ICONS from '../../constant/icons'
 
 const Checkout = () => {
   const router = useRouter();
+  const [paymentType, setPaymentType] = useState(1);
+  const [isAddNewAddress, setIsAddNewAddress] = useState(false);
+  const [isBook, setIsBook] = useState(false);
+  
   return (
     <div className='container my-3'>
       <div className='grid grid-cols-12 gap-6'>
         <div className='col-span-12 md:col-span-7'>
-          <div className='shadow-[8px_5px_15px_#0000004D] p-5 rounded-2xl text-black-685'>
-            <div className='flex items-center gap-2'>LOGIN <span><Image src={ICONS.LoginCheck} alt="call" className='max-h-[16px] w-auto'/></span></div>
-            <p>+91-9599043601</p>
-          </div>
+        <div className='shadow-[8px_5px_15px_#0000004D] p-5 rounded-2xl text-black-685'>
+          <div className='flex items-center gap-2'>LOGIN <span><Image src={ICONS.LoginCheck} alt="call" className='max-h-[10px] w-auto'/></span></div>
+          <p>+91-9599043601</p>
+        </div>
           <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
             <div className='theme-heading-box flex justify-between'>
               <p>Delivery Address</p>
@@ -28,8 +33,8 @@ const Checkout = () => {
                     <label>
                       <div className='inline-flex items-center'>
                         <div className='mr-3 text-black-0f0'>Manoj</div>
-                        <div className='mr-3 text-sm'>home</div>
-                        <Image src={ICONS.Call} alt="call" className='max-h-[16px] w-auto'/>
+                        <div className='mr-3 p-1 text-xs bg-[#F1F1F1] text-black-686'>home</div>
+                        <Image src={ICONS.Call} alt="call" className='max-h-[12px] w-auto'/>
                         <div className='ml-1 text-black-0f0'>+9599043601</div>
                       </div>
                       <p className='text-xs pt-1'>RZ-95, Adarsh Nagar, Indirapuram,</p>
@@ -40,81 +45,48 @@ const Checkout = () => {
               ))}
             </div>
           </div>
-          <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
-            <div className='theme-heading-box'>
-              Fill The Details
-            </div>
-            <div className='p-5'>
-              {/* <form> */}
-                <div className='grid grid-cols-6 gap-6'>
+          <div className="flex gap-2 my-6">
+              <input type="radio" id="addAddress" checked={isAddNewAddress} onChange={(e)=> setIsAddNewAddress(e.target.checked)}/>
+              <label className='whitespace-nowrap font-semibold'>Add a new address</label>
+          </div>
+          {isAddNewAddress && <AddAddressForm/>}
+          <div className="flex gap-2 my-6">
+              <input type="radio" id="selectBooking" checked={isBook} onChange={(e)=> setIsBook(e.target.checked)}/>
+              <label className='whitespace-nowrap font-semibold'>Select Booking Date/Time</label>
+          </div>
+          {isBook &&
+            <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
+                <div className='theme-heading-box'>
+                  Fill The Details
+                </div>
+                <div className='p-5'>
+                  <div className='grid grid-cols-6 gap-6'>
                     <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">First Name</label>
-                        <input type="text" className="form-control" placeholder='First Name' />
+                        <label className="form-label">Date</label>
+                        <input type="date" className="form-control" placeholder='Date' />
                     </div>
                     <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Last Name</label>
-                        <input type="text" className="form-control" placeholder='Last Name' />
+                        <label className="form-label">Timing</label>
+                        <input type="time" className="form-control" placeholder='Timing' />
                     </div>
-                    <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Mobile Number</label>
-                        <input type="text" className="form-control" placeholder='10 Digit Mobile No.' />
-                    </div>
-                    <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Email ID</label>
-                        <input type="text" className="form-control" placeholder='Email ID' />
-                    </div>
-                    <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">House No./ Building Name</label>
-                        <input type="text" className="form-control" placeholder='House No./ Building Name' />
-                    </div>
-                    <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Street Name / Area / Colony</label>
-                        <input type="text" className="form-control" placeholder='Street Name / Area / Colony' />
-                    </div>
-                    <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Select State</label>
-                        <select className='form-control'>
-                            <option>Select State</option>
-                            <option>Punjab</option>
-                            <option>Delhi</option>
-                            <option>Rajasthan</option>
-                        </select>
-                    </div>
-                    <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Select City</label>
-                        <select className='form-control'>
-                            <option>Select City</option>
-                            <option>Agra</option>
-                            <option>Delhi</option>
-                            <option>Jaipur</option>
-                        </select>
-                    </div>
-                    <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Nearby Location (Optional)</label>
-                        <input type="text" className="form-control" placeholder='Nearby Location (Optional)' />
-                    </div>
-                    <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Pin Code</label>
-                        <input type="text" className="form-control" placeholder='Pin Code' />
-                    </div>
-                    <div className='col-span-6 md:col-span-3'>
+                    <div className='col-span-6'>
                         <label className="form-label">Check your payment mode</label>
                         <div className="form_check">
-                            <input type="radio" id="online" name="payment"/>
-                            <label htmlFor="online" className='whitespace-nowrap'>Online payment</label>
+                            <input type="radio" id="online" name="payment" checked={paymentType === 1} value={1} onChange={()=> setPaymentType(1)}/>
+                            <label className='whitespace-nowrap'>Online payment</label>
                         </div>
                         <div className="form_check">
-                            <input type="radio" id="Cash" name="payment"/>
-                            <label htmlFor="Cash" className='whitespace-nowrap'>Cash (Cash after service)</label>
+                            <input type="radio" id="Cash" name="payment" checked={paymentType === 2} value={2} onChange={()=> setPaymentType(2)}/>
+                            <label className='whitespace-nowrap'>Cash (Cash after service)</label>
                         </div>
                     </div>
                   </div>
                   <div className='text-center mt-6'>
-                      <button className='custom_button' onClick={()=> router.push("/booknow")}>Book Now</button>
+                      <button className='custom_button' onClick={()=> router.push(paymentType === 1 ? "/payment-mode" :"/thank-you")}>{paymentType === 1 ? "Pay Now" :"Book Now"}</button>
                   </div>
-              {/* </form> */}
+                </div>
             </div>
-          </div>
+          }
         </div>
         <div className='col-span-12 md:col-span-5'>
           <CheckoutBox/>

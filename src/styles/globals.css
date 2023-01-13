@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 @layer components {
+  select {
+    @apply appearance-none;
+  }
   .form-label {
     @apply inline-block mb-2 text-black-2e2 font-medium;
   }

@@ -22,7 +22,7 @@ const Services = () => {
     ]
 
   return (
-    <div className='py-3'>
+    <div className='pt-3'>
         <div className='container'>
             <div className='grid md:grid-cols-3 gap-y-1 items-center justify-center text-center bg-gray-e8e bg-opacity-[0.18] overflow-hidden rounded-2xl'>
             {TabData?.map((item, idx) => (

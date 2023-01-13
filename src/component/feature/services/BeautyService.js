@@ -34,7 +34,7 @@ const BeautyService = ({type}) => {
               <CheckoutBox/>
           </div>
         </div>
-        <div className='bg-pink-light bg-opacity-30 py-5 px-7 text-black-2e2'>
+        <div className='bg-pink-light bg-opacity-30 py-5 px-7 text-black-2e2 rounded-2xl'>
           <h6 className='font-bold text-base'>Home beauty service packages for your monthly need at an affordable price</h6>
           <p className='mt-5'>Being a women means juggling with a myriad of responsibilities. It's difficult to carve out time for yourself. We tried to make it bit easier for you.</p>
           <p className='mt-5'> We bring you customized beauty packages to cater your grooming essentials at most jaw-dropping prices. Although you still have the flexibility to add services even after the expert has arrived at your home.</p>

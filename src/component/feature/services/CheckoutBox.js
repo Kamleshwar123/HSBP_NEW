@@ -42,7 +42,7 @@ const CheckoutBox = () => {
                   <input type="text" placeholder='Enter Coupon Here' className={`text-xs large-input form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}/>
                 </div>
                 {apply ?
-                <div className='text-[#CC0000] font-bold cursor-pointer px-6' onClick={() => setApply(false)}>Remove</div>
+                <button className='text-[#CC0000] h-10 font-bold cursor-pointer text-center w-32 align-middle rounded-lg' onClick={() => setApply(false)}>Remove</button>
                 :
                 <button className='custom_button h-10 w-32' onClick={() => setApply(true)}>Apply</button>
                 }

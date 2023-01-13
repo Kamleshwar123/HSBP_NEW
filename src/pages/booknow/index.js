@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router';
-import React from 'react'
+import React, { useState } from 'react'
 import CheckoutBox from '../../component/feature/services/CheckoutBox'
 
 const BookNow = () => {
     const router = useRouter();
+    const [paymentType, setPaymentType] = useState(1);
   return (
-    <div className='container bg-white-f2 my-3 rounded-2xl'>
+    <div className='container bg-white-f2 my-3 rounded-2xl bg-opacity-80'>
         <h6 className='text-black-241 px-5 pt-5 text-base font-bold text-center mx-auto w-3/4'>Awesome, No Extra Doorstep Charges!</h6>
     <div className='grid grid-cols-12 gap-6 p-7'>
       <div className='col-span-12 md:col-span-7'>
@@ -40,18 +41,18 @@ const BookNow = () => {
                       <label className="form-label">Check your payment mode</label>
                       <div className='flex flex-wrap gap-3'>
                         <div className="form_check">
-                            <input type="radio" id="online" name="payment"/>
+                            <input type="radio" id="online" name="payment" checked={paymentType === 1} value={1} onChange={()=> setPaymentType(1)}/>
                             <label htmlFor="online" className='whitespace-nowrap'>Online payment</label>
                         </div>
                         <div className="form_check">
-                            <input type="radio" id="Cash" name="payment"/>
+                            <input type="radio" id="Cash" name="payment" checked={paymentType === 2} value={2} onChange={()=> setPaymentType(2)}/>
                             <label htmlFor="Cash" className='whitespace-nowrap'>Cash (Cash after service)</label>
                         </div>
                       </div>
                   </div>
                 </div>
                 <div className='text-center mt-6'>
-                    <button className='custom_button' onClick={()=> router.push("/booknow")}>Book Now</button>
+                    <button className='custom_button' onClick={()=> router.push(paymentType === 1 ? "/payment-mode" :"/booknow")}>{paymentType === 1 ? "Pay Now" :"Book Now"}</button>
                 </div>
             {/* </form> */}
           </div>

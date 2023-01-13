@@ -2,7 +2,7 @@ import React from 'react'
 
 const IncludeSection = () => {
   return (
-    <div className='bg-pink p-6 text-black-2a3 mb-5'>
+    <div className='bg-pink p-6 text-black-2a3 mb-5 rounded-2xl'>
             <div className='grid grid-cols-6 gap-6'>
                 <div className='shadow-4D bg-white p-5 col-span-6 md:col-span-3 rounded-2xl'>
                     <h6 className='text-lg text-theme font-semibold'>What's Included?</h6>

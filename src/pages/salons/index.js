@@ -9,17 +9,17 @@ const SalonsPage = () => {
     <div className='container'>
         <div className='grid grid-cols-12 gap-6 my-6 items-center'>
             <div className='col-span-12 md:col-span-3'>
-                <h5 className='text-lg text-[#605F5F] font-medium'>HSBP Salon Centres</h5>
+                <h5 className='text-lg text-[#605F5F] font-bold'>HSBP Salon Centres</h5>
             </div>
             <div className='col-span-12 md:col-span-4'>
                 <div className='flex'>
-                <input name="city" type="text" placeholder="Search by City" className='form-control' />
+                <input name="city" type="text" placeholder="Search by City" className='form-control py-2' />
                 <button className="sendLinkBtn">SEARCH</button>
                 </div>
             </div>
             <div className='col-span-12 md:col-span-5'>
                 <div className='flex'>
-                    <input name="name" type="text" placeholder="Search by Salon Name" className='form-control'/>
+                    <input name="name" type="text" placeholder="Search by Salon Name" className='form-control py-2'/>
                     <button className="sendLinkBtn">SEARCH</button>
                 </div>
             </div>
@@ -45,13 +45,13 @@ const SalonsPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='my-4 text-xs'>
+                            <div className='my-3 text-xs'>
                                 <div>C-56/11, Sector 62, Near Staller IT Park, Noda</div>
-                                <div>Tel. : +91 958 257 7510 / 9582-577-510, E-mail : hsbpncr@gmail.com</div>
+                                <div>E-mail : hsbpncr@gmail.com</div>
                             </div>
-                            <div className='flex flex-wrap items-center justify-between mt-5 mb-2'>
+                            <div className='flex flex-wrap items-center justify-between mt-5'>
                                 <div className='inline-flex space-x-2 items-center'>
-                                    <div><Image src={ICONS.Call} alt="beauty" className="scale_icon-18" /></div>
+                                    <div><Image src={ICONS.Call} alt="beauty" className="mx-auto max-h-[16px] w-auto" /></div>
                                     <a href="tel: +91 9582-577-510">+91 9582-577-510</a>
                                 </div>
                                 <SeeAll text={"See Salon Detail"} url={"/salons/1"} data={{}}/>

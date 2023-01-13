@@ -16,7 +16,7 @@ const BeautycianDetails = () => {
                 <Image src={IMAGES.Beautician} alt="Beautician" className="scale_img rounded-2xl"/>
             </div>
             <div className='col-span-12 md:col-span-8'>
-                <div>
+                <div className='pr-0 md:pr-10'>
                     <h6 className='text-3xl font-medium'>Deepika Singh</h6>
                     <p className='text-base pt-2'>Beautician</p>
                     <p className='text-base pb-3'>10+ yrs experience</p>
@@ -31,7 +31,7 @@ const BeautycianDetails = () => {
                             <p>Deepika Singh is a makeup queen as well as Family Lawyer who rules the makeup industry and creates magic with her work and makes everyone spellbound with her extraordinary talent.</p>
                             <p className='mt-7'>Optimally praised in India and around the globe with her modernised magic and establishment for style and beauty totally follow PERFECTION.</p>
                         </div>
-                        <Image src={ICONS.Qend} alt="Qend" className="scale_icon-18 absolute bottom-4 right-12"/>
+                        <Image src={ICONS.Qend} alt="Qend" className="scale_icon-18 absolute bottom-3 right-1/4"/>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import ICONS from "../../../constant/icons";
 import IMAGES from "../../../constant/images";
 import SvgIcon from "../../../constant/SvgIcon";
 import OutsideClick from "../../../hooks/useOutClick";
+import LoginPopover from "./LoginPopover";
 const Sidebar = dynamic(() => import('./Sidebar'), { ssr: false });
 
 const TheHeader = () => {
@@ -50,22 +51,7 @@ const TheHeader = () => {
               <div className="relative flex flex-col items-center">
                 <button className="font-semibold text-sm text-black-707 cursor-pointer inline-block" onClick={()=>setOpen(!open)}>Login</button>
                 {open &&
-                  <div className="transition-all shadow-66 z-10 absolute right-0 top-10 flex flex-col items-start h-auto w-auto px-3 py-3 bg-white rounded-lg text-left text-black text-sm after:content-[''] after:absolute after:right-2 after:bottom-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-t-transparent after:border-b-white">
-                  <div>
-                    <div className="flex font-medium gap-2 cursor-pointer items-center">
-                    <Image src={ICONS.UserPopover} alt="UserPopover" className="h-4 w-auto" />
-                    <h6 className="font-medium">Hello User</h6>
-                    </div>
-                    <p className="text-xs whitespace-nowrap">To access your HSBP access</p>
-                    <button className="custom_button mt-2" style={{fontSize: '12px', padding: '4px 12px'}} onClick={()=> {router.push("/login"); setOpen(false)}}>Sign Up</button>
-                  </div>
-                  <div className="my-2">
-                    <div className="flex font-medium gap-2 cursor-pointer items-center">
-                    <Image src={ICONS.UserCart} alt="cart" className="h-4 w-auto" />
-                    <h6 className="font-medium">My Order</h6>
-                    </div>
-                  </div>
-                </div>
+                  <LoginPopover setOpen={setOpen}/>
                 }
               </div>
               </OutsideClick>

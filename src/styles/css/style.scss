@@ -1,4 +1,5 @@
 @import './slick.scss';
+@import './custom.scss';
 /* common css */
 * {
     box-sizing: border-box;
@@ -35,7 +36,13 @@
   svg {
     vertical-align: middle;
   }
- 
+ select {
+  background-image: url(../svg/select-arrow.svg);
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  background-repeat: no-repeat;
+  padding-right: 2.25rem !important;
+ }
   hr {
     margin: 1rem 0;
     height: 0px;
@@ -163,19 +170,32 @@
     font-size: 14px;
     outline: none;
   }
-
+  .downloadLinkButton {
+    white-space: nowrap;
+      background: #3D363A 0% 0% no-repeat padding-box;
+      border-radius: 5px;
+      text-align: center;
+      padding: 8px 25px;
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 14px;
+      outline: none;
+  }
   .back_button {
     background: #FFFFFF no-repeat padding-box;
     border-radius: 15px;
     text-align: center;
-    padding: 6px 25px;
+    padding: 8px 25px;
     color: #241E1E;
     font-weight: 500;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 14px;
+    font-size: 13px;
     outline: none;
-    border: 0.5px solid #241E1E;
+    letter-spacing: 0.19px;
+    /* border: 0.5px solid #241E1E; */
   }
   .addcard_button {
     background: #FFFFFF no-repeat padding-box;

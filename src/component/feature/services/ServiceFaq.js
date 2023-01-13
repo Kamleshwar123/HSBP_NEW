@@ -11,12 +11,12 @@ const ServiceFaq = () => {
             <div className='py-5 z-10'>
                 <div className='divide-y divide-black-707 border border-black-707 rounded-xl md:-mr-8 bg-white overflow-hidden'>
                     {[...Array(5).keys()].map((item,idx)=> (
-                        <FaqQuestion text={'What should I do to prepare for waxing ?'} active={tab === idx} key={"sfaq"+idx} onClick={()=> setTab(idx)}/>
+                        <FaqQuestion text={`What should I do to prepare for waxing ${idx} ?`} active={tab === idx} key={"sfaq"+idx} onClick={()=> setTab(idx)}/>
                     ))}
                 </div>
             </div>
             <div className='border border-theme p-5 pl-14 rounded-3xl bg-gray-eee bg-opacity-75'>
-                <h6 className='text-black-241 text-base font-semibold mb-3'>What should I do to prepare for waxing ?</h6>
+                <h6 className='text-black-241 text-base font-semibold mb-3'>{`What should I do to prepare for waxing ${tab} ?`}</h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
             </div>
         </div>

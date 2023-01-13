@@ -21,7 +21,7 @@ const ServiceDetail = () => {
     }
   return (
     <div className='container'>
-        <div className='bg-pink p-6 text-black-2a3 mb-5 mt-3'>
+        <div className='bg-pink p-6 text-black-2a3 mb-5 mt-3 rounded-2xl'>
             <div className='shadow-4D bg-white p-5 rounded-2xl'>
                 <h6 className='text-lg text-theme font-semibold'>What Expert Says</h6>
                 <p>"Hair spa requires a lot of head massage that stimulates the blood circulation in your scalp. The procedure enhances the oxygen supply to your hair follicles. It revitalizes your scalp and improves hair growth."</p>

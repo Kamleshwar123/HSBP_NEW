@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import React from 'react'
 import IMAGES from '../../constant/images'
 import SvgIcon from '../../constant/SvgIcon'
 
 const ThankYou = () => {
+    const router = useRouter();
     return (
         <div className='container my-3'>
             <div className='theme-bg text-center text-white py-16 px-5 rounded-2xl'>
@@ -14,11 +16,11 @@ const ThankYou = () => {
                     <Image src={IMAGES.ThankYou} alt="ThankYou" className='mx-auto max-h-24 w-auto'/>
                     {/* <h1 className='text-6xl italic'>Thank You!</h1> */}
                     <div className='text-lg py-2'>FOR APPOINTMENT</div>
-                    <p className='py-2'>Your appointment is almost confirmed. You will get beautician detail soon.</p>
+                    <p className='py-2 font-medium'>Your appointment is almost confirmed. You will get beautician detail soon.</p>
                 </div>
                 <div className='pt-7'>
-                    <button className='back_button'>My Order</button>
-                    <button className='back_button ml-5'>Back to Home</button>
+                    <button className='back_button' onClick={()=> router.push("/my-order")}>My Order</button>
+                    <button className='back_button ml-5' onClick={()=> router.push("/")}>Back to Home</button>
                 </div>
             </div>
         </div>

@@ -32,7 +32,7 @@ const CustomerReview = () => {
         ]
     };
   return (
-    <div className='bg-gray-eee p-6'>
+    <div className='bg-gray-eee p-6 rounded-2xl'>
         <h6 className='mb-5 text-theme text-lg font-medium'>Customer Review</h6>
         <div className='review_slider'>
         <Slider {...settings}>
