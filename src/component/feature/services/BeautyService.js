@@ -6,7 +6,8 @@ import CareBox from './CareBox'
 import CheckoutBox from './CheckoutBox'
 
 const BeautyService = ({type}) => {
-  const [serviceId, setServiceId]= useState(type || "");
+  const [serviceId, setServiceId]= useState(type || 3);
+  const [serviceName, setServiceName]= useState("Hair Care");
   const advData = [
     {label: "Trusted Professionals", img: IMAGES.Adv1},
     {label: "Branded Products", img: IMAGES.Adv2},
@@ -15,11 +16,11 @@ const BeautyService = ({type}) => {
   ]
   return (
     <div className='container'>
-        <BeautyServiceSlider serviceId={serviceId} setServiceId={setServiceId}/>
+        <BeautyServiceSlider serviceId={serviceId} setServiceId={setServiceId} setServiceName={setServiceName}/>
         <div className='grid md:grid-cols-12 gap-7 my-5'>
           <div className='md:col-span-7'>
             <div className='shadow-66 rounded-2xl overflow-hidden'>
-              <div className='theme-heading-box'>Hair Care</div>
+              <div className='theme-heading-box'>{serviceName}</div>
               <div className='text-black-2a3 divide-y divided-black-body px-5'>
               {[...Array(3).keys()].map((item, idx) => (
                 <React.Fragment key={`care${idx}`}>
@@ -42,7 +43,7 @@ const BeautyService = ({type}) => {
         <div>
           <div className='my-6 text-center'>
             <Image src={IMAGES.HSBPAdv} alt="HSBPAdv" className="scale_img"/>
-            <h4 className='mt-4 text-theme text-xl font-medium'>HSBP Advantage</h4>
+            <h4 className='mt-4 text-theme text-xl font-bold'>HSBP Advantage</h4>
           </div>
           <div className='flex flex-wrap gap-7 text-center text-black-2e2 items-end justify-evenly'>
             {advData.map((item,idx)=> (

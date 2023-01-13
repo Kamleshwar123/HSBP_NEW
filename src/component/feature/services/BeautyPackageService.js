@@ -11,6 +11,8 @@ const BeautyPackageService = () => {
     {title: "Normal Packages", img: IMAGES.Beauty1},
     {title: "Normal Packages", img: IMAGES.Beauty1},
     {title: "Deluxe Package", img: IMAGES.Beauty2},
+    {title: "Bridal Packages", img: IMAGES.Beauty3},
+    {title: "Normal Packages", img: IMAGES.Beauty1}
 ]
   return (
     <div className="beautypkg-bg pt-1 mt-3">

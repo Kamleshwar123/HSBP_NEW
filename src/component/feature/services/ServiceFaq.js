@@ -16,7 +16,7 @@ const ServiceFaq = () => {
                 </div>
             </div>
             <div className='border border-theme p-5 pl-14 rounded-3xl bg-gray-eee bg-opacity-75'>
-                <h6 className='text-black-241 text-base font-medium mb-3'>What should I do to prepare for waxing ?</h6>
+                <h6 className='text-black-241 text-base font-semibold mb-3'>What should I do to prepare for waxing ?</h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
             </div>
         </div>

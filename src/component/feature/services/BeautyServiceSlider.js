@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import IMAGES from '../../../constant/images';
 import { SampleNextArrow, SamplePrevArrow } from '../../common/SliderArrow';
 
-const BeautyServiceSlider = ({serviceId,setServiceId}) => {
+const BeautyServiceSlider = ({serviceId,setServiceId,setServiceName}) => {
     var settings = {
         dots: false,
         infinite: true,
@@ -61,8 +61,8 @@ const BeautyServiceSlider = ({serviceId,setServiceId}) => {
             {data.map((item, idx) => (
                 <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 text-center' key={"pkg" + idx}>
                     <div>
-                        <Image src={item.img} alt="Bridal1" className="cursor-pointer mx-auto rounded-full bg-white" height={100} width={100} onClick={()=> setServiceId(idx+1)}/>
-                        <div className={`pt-3 text-white cursor-pointer uppercase font-light ${serviceId === idx+1 ? 'font-bold' : "text-opacity-75"}`} onClick={()=> setServiceId(idx+1)}>{item?.name}</div>
+                        <Image src={item.img} alt="Bridal1" className="cursor-pointer mx-auto rounded-full bg-white" height={100} width={100} onClick={()=> {setServiceName(item?.name);setServiceId(idx+1)}}/>
+                        <div className={`pt-3 text-white cursor-pointer uppercase font-light ${serviceId === idx+1 ? 'font-bold' : "text-opacity-75"}`} onClick={()=> {setServiceName(item?.name);setServiceId(idx+1)}}>{item?.name}</div>
                     </div>
                 </div>
             ))}

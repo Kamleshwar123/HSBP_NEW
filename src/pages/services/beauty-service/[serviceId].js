@@ -63,7 +63,11 @@ const ServiceDetail = () => {
                             </ul>
                         </div>
                         <div className='mt-3 grid sm:grid-cols-2 items-center gap-6'>
-                            <div><span className='text-black-0f0 text-xl'>&#x20B9;1500</span><span className='text-black-a8a text-base ml-3 line-through'>&#x20B9;2000</span><span className='text-red-c80 text-base ml-3'>50% OFF</span></div>
+                            <div>
+                                <span className='text-black-0f0 text-lg font-bold'><span className='rupee-sym'>&#x20B9;</span>1500</span>
+                                <span className='text-black-a8a ml-3 line-through rupee-sym'>&#x20B9;2000</span>
+                                <span className='text-red-c80 ml-3 font-semibold text-base'>50% OFF</span>
+                            </div>
                             <div className='justify-self-end'><AddToCart num={num} inc={inc} dec={dec} addToCart={addToCart}/></div>
                         </div>
                     </div>
