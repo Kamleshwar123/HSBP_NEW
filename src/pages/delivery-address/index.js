@@ -48,7 +48,7 @@ const DeliveryAddress = () => {
                                 </div>
                                 <div className='col-span-6 md:col-span-3'>
                                     <label className="form-label">Nearby Location (Optional)</label>
-                                    <input type="text" className="form-control" placeholder='Nearby Location (Optional)' />
+                                    <input type="text" className="form-control" placeholder='Nearby Location (Optional)' required/>
                                 </div>
                                 <div className='col-span-6 md:col-span-3'>
                                     <label className="form-label">Pin Code</label>

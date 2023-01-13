@@ -21,7 +21,7 @@ const Home = () => {
         <Heading
           title={"India's Largest Platform"}
           desc={"For all your beauty salon needs"}
-          classes="mt-12 mb-9"
+          classes="mt-12 mb-3"
         />
         <Card />
         <Heading

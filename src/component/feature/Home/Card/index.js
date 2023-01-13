@@ -27,13 +27,13 @@ const Card = () => {
                             onClick={() => handleRedirect(item.url)}
                         >
                             <div>
-                                <h3 className='text-xl font-medium pt-5 mb-2'>{item?.title}</h3>
-                                <p>{item?.number}</p>
+                                <h3 className='text-xl font-medium pt-5 mb-2 home_card_h3'>{item?.title}</h3>
+                                <p className='home_card_p'>{item?.number}</p>
                                 <div className='flex justify-center p-3'>
                                     <SvgIcon.IosArrowDown className='scale-75' />
                                 </div>
                             </div>
-                            <div className='text-center px-5 pt-5 h-[250px] relative flex align-bottom'>
+                            <div className='text-center px-5 pt-5 h-[250px] relative flex align-bottom box-cust'>
                                 <Image src={item?.img} alt="Salon" className="mx-auto max-h-[230px] w-auto object-contain" />
                             </div>
                         </div>
