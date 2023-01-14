@@ -21,13 +21,13 @@ const Home = () => {
         <Heading
           title={"India's Largest Platform"}
           desc={"For all your beauty salon needs"}
-          classes="mt-12 mb-3"
+          classes="mt-12 mb-3 heading-homepage"
         />
         <Card />
         <Heading
           title={"Beauty Services"}
           desc={"We provide special offers for students and corporates"}
-          classes="mt-12"
+          classes="mt-12 heading-homepage"
         />
         <ExploreAll text={"Explore All"} url={"/services"}/>
         <BeautyService />
@@ -35,7 +35,7 @@ const Home = () => {
       <Heading
         title={"Book Appointment"}
         desc={"Lorem ipsum dolor sit amet, consectetur adipisci elitsed eiusmod"}
-        classes="mt-12 mb-9"
+        classes="mt-12 mb-9 heading-homepage"
       />
       <Appointment />
       <div className="mt-12">
@@ -43,6 +43,7 @@ const Home = () => {
             <Heading
               title={"Beauty Packages"}
               desc={"We provide special offers for students and corporates"}
+              classes="heading-homepage"
             />
             <ExploreAll text={"Explore All"} url={"/services"} data={{tab: "tab2"}}/>
           <BeautyPackage />
@@ -52,7 +53,7 @@ const Home = () => {
         <Heading
           title={"Near by Salons"}
           desc={"200+ tech enabled salons, serving you quality services across 40+ cities"}
-          classes="mt-12"
+          classes="mt-12 heading-homepage"
         />
         <ExploreAll text={"Explore All"} url={"/salons"}/>
         <Salon />
@@ -62,6 +63,7 @@ const Home = () => {
         <Heading
           title={"Product Shop"}
           desc={"50+ salon professional brands delivered nationally to your doorsteps"}
+          classes="heading-homepage"
         />
         <ExploreAll text={"Explore All"} url={"/product-home"}/>
         <Product />
@@ -70,7 +72,7 @@ const Home = () => {
         <Heading
           title={"Franchise"}
           desc={"100+ Tech enabled Institute, Serving you quality services across 60+ cities"}
-          classes="mt-12 mb-9"
+          classes="mt-12 mb-9 heading-homepage"
         />
         <Franchise />
         <Heading
@@ -82,7 +84,7 @@ const Home = () => {
         <Heading
           title={"Testimonials"}
           desc={"When the age of a person exceeds 50 years, it becomes very important to take care of one’s health as she enters the senior citizen age."}
-          classes="mt-12 mb-9"
+          classes="mt-12 mb-9 heading-homepage"
         />
         <Testimonials />
       <div className="container">

@@ -11,7 +11,7 @@ const BeautyPackageBox = ({item}) => {
                 <Image src={item?.img} alt="beauty" className="scale_img" width={150} height={150} />
             </div>
             <div className='content'>
-                <h3 className='text-xl text-theme font-meduim my-2 capitalize'>{item.title}</h3>
+                <h3 className='text-xl text-theme font-meduim mb-1 mt-1 capitalize'>{item.title}</h3>
                 <p className='mb-1'>Lotus Cleanup</p>
                 <p className='mb-1'> Full Arms (Chocolate Wax)</p>
                 <p className='mb-1'>Full Legs (Chocolate Wax)</p>

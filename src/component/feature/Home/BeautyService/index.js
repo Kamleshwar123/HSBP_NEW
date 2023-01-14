@@ -71,7 +71,7 @@ const BeautyService = () => {
                                 </div>
                                 <div className='px-3'>
                                 <h3 className='text-xl text-theme font-medium pt-4 pb-2'>{item?.title}</h3>
-                                <p className='pb-4'>{item?.desc}</p>
+                                <p className='pb-4 min-height-70'>{item?.desc}</p>
                                 <button className='custom_button'>Know More</button>
                                 </div>
                             </div>
