@@ -34,15 +34,15 @@ const TheHeader = () => {
           <div className="flex gap-5 items-center">
               <p className="ml-5 font-semibold text-base text-black-707 hidden md:block">DOWNLOAD APP</p>
               <Link href={"/"} className='hidden md:block'>
-                <Image src={IMAGES.AppStore} alt="app" className="scale_img" height={30}/>
-              </Link>
-              <Link href={"/"} className='hidden md:block'>
                 <Image
                   src={IMAGES.GoogleStore}
                   alt="g-app"
                   className="scale_img"
                   height={30}
                 />
+              </Link>
+              <Link href={"/"} className='hidden md:block'>
+                <Image src={IMAGES.AppStore} alt="app" className="scale_img" height={30}/>
               </Link>
               <Link href="/cart" legacyBehavior>
                 <Image src={ICONS.Cart} alt="cart" height={30} className="scale_img cursor-pointer" />

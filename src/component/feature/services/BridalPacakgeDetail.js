@@ -9,11 +9,12 @@ const BridalPacakgeDetail = () => {
     const [showLess, setShowLess] = React.useState(true);
     const text = 'Lorem ipsum has been used as dummy text for centuries, which is how lorem Lorem ipsum has been used as dummy text for centuries, which is how lorem'
   return (
-    <div className='bg-[#FFEDEC] py-6 px-9 grid md:grid-cols-[33%_67%] items-center relative gap-y-5 rounded-2xl'>
-            <div className='absolute -top-5 right-6'>
-                <Image src={ICONS.Off} alt="Bridal1" className="mx-auto max-w-[60%] h-auto"/>
-                <p className='text-white text-base font-semibold absolute top-[40%] right-[40%]'>50% Off</p>
-            </div>
+    <div className='relative'>
+        <div className='absolute -top-5 -right-[67px]'>
+            <Image src={ICONS.Off} alt="Bridal1" className="mx-auto max-w-[60%] h-auto"/>
+            <p className='text-white text-base font-semibold absolute top-[40%] right-[40%]'>50% Off</p>
+        </div>
+        <div className='bg-[#FFEDEC] py-6 px-9 grid md:grid-cols-[33%_67%] items-center gap-y-5 rounded-2xl'>
             <div className='text-center pt-9 md:pt-0'>
                 <Image src={IMAGES.Bridal2} alt="Bridal1" className="rounded-2xl scale_img"/>
             </div>
@@ -40,17 +41,18 @@ const BridalPacakgeDetail = () => {
                         <p className='pb-2'>- Bridal Mahendi</p>
                     </div>
                 </div>
-                <div className='grid sm:grid-cols-[60%_40%] pt-7 items-center gap-5'>
-                    <div className='inline-flex space-x-2 items-center justify-self-center md:justify-self-start'>
+                <div className='grid sm:grid-cols-[60%_40%] pt-7 items-center'>
+                    <div className='flex items-center justify-self-center md:justify-self-start'>
                         <span className='text-black-0f0 text-xl font-bold'><span className='rupee-sym'>&#x20B9;</span>3799</span>
-                        <span className='text-black-a8a ml-6 text-lg line-through'><span className='rupee-sym'>&#x20B9;</span>7600</span>
+                        <span className='text-black-a8a ml-3 text-base line-through'><span className='rupee-sym'>&#x20B9;</span>7600</span>
                     </div>
-                    <div className='text-center md:text-right'>
+                    <div className='text-center sm:text-right'>
                         <button className='custom_button' onClick={()=> router.push("/booknow")}>Book Now</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
   )
 }
 

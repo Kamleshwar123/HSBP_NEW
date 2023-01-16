@@ -144,7 +144,6 @@
     transition: 0.3s;
     font-size: 13px;
     outline: none;
-    border: 0.5px solid #2f1a59;
     cursor: pointer;
   }
   .text-underline{
@@ -160,7 +159,7 @@
   .sendLinkBtn {
     white-space: nowrap;
     background: #2A3133 0% 0% no-repeat padding-box;
-    border-radius: 5px;
+    border-radius: 12px;
     text-align: center;
     padding: 8px 25px;
     color: #fff;

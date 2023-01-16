@@ -15,7 +15,7 @@
     @apply focus:bg-white focus:border-border focus:text-body focus:outline-none block w-full px-3 py-1.5 text-sm font-normal text-body bg-white bg-clip-padding border border-solid border-border rounded-xl transition ease-in-out m-0;
   }
   .large-input {
-    @apply px-3 py-3 text-base
+    @apply px-3 py-2 text-base
   }
   .active {
     @apply border-solid border-b-2;

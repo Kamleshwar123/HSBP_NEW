@@ -21,10 +21,10 @@ const BeautyPackageService = () => {
             title={"Beauty Packages"}
             desc={"We provide special offers for students and corporates"}
           />
-          <div className='-m-3 pb-6'>
+          <div className='-mx-3 -my-6 pb-6'>
               <div className='flex flex-wrap justify-center'>
                   {data.map((item, idx) => (
-                      <div className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-3 text-center' key={"pkg" + idx}>
+                      <div className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-3 py-6 text-center' key={"pkg" + idx}>
                       <BeautyPackageBox item={item}/>
                       </div>
                   ))}

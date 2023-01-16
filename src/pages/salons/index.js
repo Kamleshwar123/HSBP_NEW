@@ -13,14 +13,14 @@ const SalonsPage = () => {
             </div>
             <div className='col-span-12 md:col-span-4'>
                 <div className='flex'>
-                <input name="city" type="text" placeholder="Search by City" className='form-control py-2' />
-                <button className="sendLinkBtn">SEARCH</button>
+                <input name="city" type="text" placeholder="Search by City" className='form-control py-2 pr-6' />
+                <button className="sendLinkBtn -ml-3">SEARCH</button>
                 </div>
             </div>
             <div className='col-span-12 md:col-span-5'>
                 <div className='flex'>
-                    <input name="name" type="text" placeholder="Search by Salon Name" className='form-control py-2'/>
-                    <button className="sendLinkBtn">SEARCH</button>
+                    <input name="name" type="text" placeholder="Search by Salon Name" className='form-control py-2 pr-6'/>
+                    <button className="sendLinkBtn -ml-3">SEARCH</button>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@ const SalonsPage = () => {
                 </div>
                 <div className='text-241'>
                     {[...Array(6).keys()].map((item, idx) => (
-                        <div className='shadow-8F rounded-3xl mt-7 p-5' key={`salon${idx}`}>
+                        <div className='shadow-8F rounded-3xl mt-7 px-5 py-3' key={`salon${idx}`}>
                             <div className='flex flex-wrap items-center justify-between'>
                                 <div className='text-xl text-theme font-medium'>HSBP Salon</div>
                                 <div className='inline-flex space-x-3 text-xs'>
@@ -76,7 +76,7 @@ const SalonsPage = () => {
                                 <label className="form-label">Email Address</label>
                                 <input type="text" className="form-control" placeholder='Enter Email Address' />
                             </div>
-                            <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
+                            <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
                                 <div className='mb-3'>
                                     <label className="form-label">Pin Code</label>
                                     <input type="text" className="form-control" placeholder='Enter Pin Code' />
@@ -92,6 +92,7 @@ const SalonsPage = () => {
                                 </div>
                             </div>
                             <div className='mb-3'>
+                            <label className="form-label">Query</label>
                                 <textarea type="text" rows={8} className="form-control" placeholder='Enter your Query' />
                             </div>
                             <div className='text-center'>

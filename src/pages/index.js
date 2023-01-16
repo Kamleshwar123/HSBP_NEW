@@ -58,7 +58,7 @@ const Home = () => {
         <ExploreAll text={"Explore All"} url={"/salons"}/>
         <Salon />
       </div>
-      <div className="mt-12">
+      <div className="mt-6">
         <div className="productshop-bg pt-6">
         <Heading
           title={"Product Shop"}

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import IMAGES from '../../../constant/images'
+import SvgIcon from '../../../constant/SvgIcon'
 import BeautyServiceSlider from './BeautyServiceSlider'
 import CareBox from './CareBox'
 import CheckoutBox from './CheckoutBox'
@@ -20,7 +21,10 @@ const BeautyService = ({type}) => {
         <div className='grid md:grid-cols-12 gap-7 my-5'>
           <div className='md:col-span-7'>
             <div className='shadow-66 rounded-2xl overflow-hidden'>
-              <div className='theme-heading-box'>{serviceName}</div>
+              <div className='theme-heading-box capitalize flex gap-2 justify-between items-center'>
+                <div>{serviceName?.toLowerCase()}</div>
+                <div><SvgIcon.IosArrowDown className='scale-50 rotate-180' /></div>
+              </div>
               <div className='text-black-2a3 divide-y divided-black-body px-5'>
               {[...Array(3).keys()].map((item, idx) => (
                 <React.Fragment key={`care${idx}`}>

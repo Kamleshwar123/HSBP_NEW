@@ -70,8 +70,14 @@ import ThankYou from './../styles/images/thank-you.webp';
 import LoginInner from './../styles/images/login-inner.webp';
 import SlotBookHeader from './../styles/images/slot-book-header.webp';
 import SlotBookSide from './../styles/images/slot-book-side.webp';
+import City1 from './../styles/images/city1.webp';
+import City2 from './../styles/images/city2.webp';
+import City3 from './../styles/images/city3.webp';
 
 const IMAGES = {
+    City1,
+    City2,
+    City3,
     SlotBookHeader,
     SlotBookSide,
     LoginInner,

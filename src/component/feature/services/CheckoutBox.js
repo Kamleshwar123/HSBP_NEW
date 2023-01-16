@@ -39,7 +39,7 @@ const CheckoutBox = () => {
               <div className='flex flex-wrap gap-3 justify-center items-end mb-7'>
                 <div>
                   <div className='text-theme text-xs mb-3'>Have a Discount Coupon?</div>
-                  <input type="text" placeholder='Enter Coupon Here' className={`text-xs large-input form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}/>
+                  <input type="text" placeholder='Enter Coupon Here' className={`text-xs h-10 form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}/>
                 </div>
                 {apply ?
                 <button className='text-[#CC0000] h-10 font-bold cursor-pointer text-center w-32 align-middle rounded-lg' onClick={() => setApply(false)}>Remove</button>
@@ -68,7 +68,7 @@ const CheckoutBox = () => {
             </div>
           </div>
           <div className='text-center'>
-            <button className='custom_button my-2' onClick={()=> router.push("/checkout")}>Checkout</button>
+            <button className='custom_button my-2 h-10' onClick={()=> router.push("/checkout")}>Checkout</button>
           </div>
         </div>
     </div>
