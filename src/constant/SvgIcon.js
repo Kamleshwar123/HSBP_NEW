@@ -26,8 +26,12 @@ import SLeftArrow from "./../styles/svg/s-left-arrow.svg";
 import FaqRightArrow from "./../styles/svg/faq-right-light.svg";
 import Clock from "./../styles/svg/clock.svg";
 import ExploreArrow from "./../styles/svg/explore-arrow.svg";
+import BlackStar from "./../styles/svg/blackstar.svg";
+import ReviewUser from "./../styles/svg/reviewuser.svg";
 
 const SvgIcon = {
+  ReviewUser,
+  BlackStar,
   ExploreArrow,
   Clock,
   FaqRightArrow,

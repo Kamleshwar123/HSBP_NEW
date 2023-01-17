@@ -35,8 +35,16 @@ import UserCart from './../styles/icons/usercart.webp';
 import UserPopover from './../styles/icons/user_popover.webp';
 import CartPlus from './../styles/icons/cart-plus.webp';
 import CartMinus from './../styles/icons/cart-minus.webp';
+import Category1 from './../styles/icons/category1.webp';
+import Category2 from './../styles/icons/category2.webp';
+import Category3 from './../styles/icons/category3.webp';
+import Category4 from './../styles/icons/category4.webp';
 
 const ICONS = {
+    Category1,
+    Category2,
+    Category3,
+    Category4,
     CartPlus,
     CartMinus,
     UserCart,

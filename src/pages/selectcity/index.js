@@ -17,17 +17,8 @@ export default function SelectCity() {
 
   return (
     <>
-
-        <button
-          type="button"
-          onClick={openModal}
-          className="rounded-md bg-black-2e2 bg-opacity-80 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-        >
-          Open dialog
-        </button>
-
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-[9999]" onClose={closeModal}>
+        <Dialog as="div" className="relative z-[9999]" onClose={()=> null}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -52,15 +43,25 @@ export default function SelectCity() {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-[0px_3px_6px_#00000029] transition-all">
-                  <div className='text-center'>
-                    <h3 className='text-lg font-bold'>Select You City</h3>
-                    <p className='text-base'>to view service</p>
-                    <p>We provide services for women only</p>
+                  <div className='flex relative mb-3'>
+                      <input type="text" className="form-control" placeholder='Delhi' />
+                      <button className="custom_button -ml-3">SEARCH</button>
                   </div>
-                  <div className="mt-2 flex gap-5 items-end justify-center">
-                    <div><Image src={IMAGES.City1} alt="City1"/><h6 className='text-xs text-center'>Delhi / NCR</h6></div>
-                    <div><Image src={IMAGES.City2} alt="City1"/><h6 className='text-xs text-center'>Mumbai</h6></div>
-                    <div><Image src={IMAGES.City3} alt="City1"/><h6 className='text-xs text-center'>Ahemadabad</h6></div>
+                  <div className='text-center'>
+                    <h3 className='text-lg font-semibold'>Select You City</h3>
+                    <p>to view service</p>
+                    <p className='text-xs mt-2'>We provide services for women only</p>
+                  </div>
+                  <div className="mt-3 grid grid-cols-3 gap-6 items-end">
+                    <div><Image src={IMAGES.City1} alt="City1" className='scale_img max-w-[60%]'/><h6 className='text-xs text-center'>Delhi / NCR</h6></div>
+                    <div><Image src={IMAGES.City2} alt="City1" className='scale_img max-w-[60%]'/><h6 className='text-xs text-center'>Mumbai</h6></div>
+                    <div><Image src={IMAGES.City3} alt="City1" className='scale_img max-w-[60%]'/><h6 className='text-xs text-center'>Ahemadabad</h6></div>
+                  </div>
+                  <div className="form_check mt-6">
+                      <input type="checkbox" id="s_city" />
+                      <label className='whitespace-nowrap'>
+                      My city is not listed
+                      </label>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

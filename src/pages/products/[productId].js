@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import ProductCategorySlider from '../../component/common/ProductCategorySlider';
 import ProductBox from '../../component/feature/Home/Product/ProductBox';
 import ProductHeading from '../../component/feature/Product/ProductHeading';
+import RatingsReview from '../../component/feature/Product/RatingsReview';
 import ICONS from '../../constant/icons';
 import IMAGES from '../../constant/images';
 import SvgIcon from '../../constant/SvgIcon';
@@ -31,7 +32,7 @@ const ProductDetails = () => {
                 <p className='text-black-686'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolor sit eiusmod consectetur adipiscing tempor amet aliqua.</p>
             </div>
             <div className='p-4 bg-white-f2 bg-opacity-50 shadow-8F rounded-3xl'>
-                <div className='grid md:grid-cols-[40%,_60%] gap-6 p-5'>
+                <div className='grid md:grid-cols-[40%,_60%] items-center gap-6 p-5'>
                     <div className='grid grid-cols-6 items-stretch gap-6'>
                         <div className='col-span-1 flex flex-col justify-between gap-y-2'>
                             {[...Array(4).keys()].map((item, idx) => (
@@ -41,7 +42,7 @@ const ProductDetails = () => {
                             ))}
                         </div>
                         <div className='col-span-5'>
-                            <div className='p-3 text-center shadow-4D rounded-3xl'>
+                            <div className='p-5 text-center shadow-4D rounded-3xl'>
                                 <Image src={IMAGES.Product} alt="Appointment" className="scale_img" />
                             </div>
                         </div>
@@ -49,15 +50,15 @@ const ProductDetails = () => {
                     <div className='px-5 text-black-241'>
                         <div>
                             <h6 className='text-xl w-4/5'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
-                            <div className='py-4 flex gap-4'>
+                            <hr className='border border-[#8B2E5D] opacity-20 my-4'></hr>
+                            <div className='mb-3 flex gap-4'>
                                 <div><Ratings rating={4.5} /></div>
                                 <div className='text-black-707'>4.5/5 <span className='ml-4'>216 Reviews</span></div>
                             </div>
                             <div className='text-theme'>Special Price</div>
-                            <div className='my-2'><span className='font-bold text-base'>&#x20B9;1500</span><span className='ml-3 line-through text-black-a8a'>&#x20B9;2000</span></div>
-                            <div>Size - 200 ML</div>
-                            <div>Quantity - 1</div>
-                            <div className='flex items-center gap-5 mt-3'>
+                            <div className='my-2'><span className='text-black-0f0 font-bold text-base'><span className='rupee-sym'>₹</span>377</span><span className='text-black-a8a ml-3 line-through'><span className='rupee-sym'>₹754</span></span></div>
+                            <div>Size - 50 ML</div>
+                            <div className='flex items-center gap-5 mt-6'>
                                 <button className='custom_button'>Add to Cart</button>
                                 <button className='custom_button'>Buy Now</button>
                             </div>
@@ -65,17 +66,38 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
+            {tab === 'tab2' &&
+                <>
+                <h3 className='text-xl text-black-0f0 font-semibold my-6'>Ratings & Reviews</h3>
+                    <RatingsReview/>
+                </>
+            }
             <div className='mt-10'>
-                <div className='text-lg text-theme gap-5 flex items-center font-medium pb-5'>
-                    <span onClick={() => handleTab("tab1")} className={tab === 'tab1' ? 'cursor-pointer py-1 active': 'cursor-pointer py-1'}>Description</span>
-                    <span onClick={() => handleTab("tab2")} className={tab === 'tab2' ? 'cursor-pointer py-1 active': 'cursor-pointer py-1'}>Review</span>
+                <div className='text-xl text-[#CFCECE] gap-5 flex items-center font-medium pb-5'>
+                    <span onClick={() => handleTab("tab1")} className={`${tab === 'tab1' ? "text-theme ": ""}cursor-pointer py-1 border-solid border-b-2`}>Description</span>
+                    <span onClick={() => handleTab("tab2")} className={`${tab === 'tab2' ? "text-theme ": ""}cursor-pointer py-1 border-solid border-b-2`}>Review</span>
                 </div>
                 {tab === "tab1" &&
                     <div>
                         <div className='bg-white shadow-8F p-5 rounded-2xl mt-3'>
-                            <p>Palladio’s Herbal Lipstick is a richly pigmented long lasting lipstick. This nourishing lipstick goes on soft with color that lasts & can help combat the look of fine lines associated with aging. Gives lips a smooth, moisturized feel. FULL COVERAGE LIP COLOR: Palladio Herbal Lipstick features a creamy texture that glides smoothly over lips. It has full-coverage properties for color that stays in place for hours without drying the lips, feathering, or bleeding. A makeup bag essential.</p>
+                            <div className='flex gap-6'>
+                                <ul>
+                                    <li className='mb-1'>Hair Type</li>
+                                    <li className='mb-1'>Scent</li>
+                                    <li className='mb-1'>Liquid Volume</li>
+                                    <li className='mb-1'>Item Form</li>
+                                    <li className='mb-1'>Brand</li>
+                                </ul>
+                                <ul className='text-black-a8a'>
+                                    <li className='mb-1'>Dry</li>
+                                    <li className='mb-1'>Fresh</li>
+                                    <li className='mb-1'>200 ML</li>
+                                    <li className='mb-1'>Liquid</li>
+                                    <li className='mb-1'> Gillette</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className='bg-white shadow-8F p-5 rounded-2xl my-5'>
+                        <div className='bg-white shadow-8F p-5 rounded-2xl my-5 text-black-686'>
                             <h6 className='text-black-0f0 text-base'>About this item</h6>
                             <p className='my-1'>- Moisturizes dry skin under the beard</p>
                             <p className='my-1'>- Softens beard hair</p>
@@ -87,39 +109,42 @@ const ProductDetails = () => {
                     </div>
                 }
                 {tab === "tab2" &&
-                <div>
+                <div className='divide-y divide-black-707'>
                     {[...Array(3).keys()].map((item, idx) => (
-                    <div className='flex gap-5 py-3 items-start' key={`review${idx}`}>
-                        <div className='rounded-[50%] bg-white-f2 w-20 h-20 text-center'>
-                            <Image src={ICONS.UserProfile} alt="Appointment" className="scale_img" />
-                        </div>
-                        <div className='px-2 w-auto'>
-                            <div className='inline-flex items-center space-x-3'>
-                                <h6 className='text-base text-theme'>Annu</h6>
-                                <span className='text-xs'>21 march 2022</span>
+                    <div className='py-5' key={`review${idx}`}>
+                        <div className='w-auto'>
+                            <div className='inline-flex items-center space-x-2'>
+                                <SvgIcon.ReviewUser className='w-6 h-6 text-theme'/>
+                                <h6 className='text-base text-theme'>Deepak Mathur</h6>
+                                <span className='text-xs text-[#8E9298]'>2 january 2023</span>
                             </div>
-                            <div><Ratings rating={4.5} /></div>
-                            <p className='text-[#7D7D7D] text-xs mt-1'>I work as a hairstylist in the fashion industry. A lot of my clients need to tweak their hairstyles, hair colour rather frequently. The nature of work demands</p>
+                            <div className='flex gap-3 items-end'><Ratings rating={4.5} /><span>Nice Product</span></div>
+                            <p className='text-[#01132F] text-xs mt-1 w-full md:w-1/2'>I work as a hairstylist in the fashion industry. A lot of my clients need to tweak their hairstyles, hair colour rather frequently. The nature of work demands</p>
+                            <div className='flex items-center gap-5 mt-2'>
+                                <button className='text-black-0f0 font-semibold'>Helpful</button>
+                                <button className='text-[#A7A5A5]'>Report abuse</button>
+                            </div>
                         </div>
                     </div>
                     ))}
                 </div>
                 }
             </div>
-            <ProductHeading
-                title={"Related Products"}
-                desc={""}
-            />
-            <div className='bg-white-f2 p-3'>
-                <div className='flex flex-wrap justify-center'>
-                    {[...Array(6).keys()].map((item, idx) => (
-                        <div className='w-full md:w-1/2 lg:w-1/3 p-3' key={"prd" + idx}>
-                            <ProductBox data={item} />
-                        </div>
-                    ))
-                    }
+            {tab === "tab1" &&
+            <>
+                <h1 className="text-[36px] mt-8 text-black-text-black-241 mb-5">Related Products</h1>
+                <div className='bg-white-f2 p-3'>
+                    <div className='flex flex-wrap justify-center'>
+                        {[...Array(3).keys()].map((item, idx) => (
+                            <div className='w-full md:w-1/2 lg:w-1/3 p-3' key={"prd" + idx}>
+                                <ProductBox data={item} />
+                            </div>
+                        ))
+                        }
+                    </div>
                 </div>
-            </div>
+            </>
+            }
         </div>
     )
 }

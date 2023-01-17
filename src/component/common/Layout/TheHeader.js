@@ -3,18 +3,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ICONS from "../../../constant/icons";
 import IMAGES from "../../../constant/images";
 import SvgIcon from "../../../constant/SvgIcon";
 import OutsideClick from "../../../hooks/useOutClick";
+import { setOpenLoginModal } from "../../../redux/Slices/commonSlice";
 import LoginPopover from "./LoginPopover";
+const Login = dynamic(() => import('../Login'), { ssr: false });
 const Sidebar = dynamic(() => import('./Sidebar'), { ssr: false });
 
 const TheHeader = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
   console.log(router);
   const [open, setOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const openLoginModal = useSelector((state) => state.common.openLoginModal);
+  function closeModal() {
+    dispatch(setOpenLoginModal(false));
+  }
+  function openModal() {
+    dispatch(setOpenLoginModal(true));
+  }
   const toggleDrawer = () => {
     setIsOpen(!isOpen)
   }
@@ -51,13 +62,14 @@ const TheHeader = () => {
               <div className="relative flex flex-col items-center">
                 <button className="font-semibold text-sm text-black-707 cursor-pointer inline-block" onClick={()=>setOpen(!open)}>Login</button>
                 {open &&
-                  <LoginPopover setOpen={setOpen}/>
+                  <LoginPopover setOpen={setOpen} openModal={openModal}/>
                 }
               </div>
               </OutsideClick>
           </div>
         </div>
       </div>
+      <Login isOpen={openLoginModal} closeModal={closeModal}/>
     </header>
   );
 };

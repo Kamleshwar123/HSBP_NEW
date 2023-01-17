@@ -44,19 +44,33 @@ const ProductCategorySlider = () => {
             }
         ]
     };
+    const data = [
+        {category: "Hair Serum", icon: ICONS.Category1},
+        {category: "Face Cream", icon: ICONS.Category2},
+        {category: "Lipstick", icon: ICONS.Category3},
+        {category: "Massage Oil", icon: ICONS.Category4},
+        {category: "Hair Serum", icon: ICONS.Category1},
+        {category: "Face Cream", icon: ICONS.Category2},
+        {category: "Lipstick", icon: ICONS.Category3},
+        {category: "Massage Oil", icon: ICONS.Category4},
+        {category: "Hair Serum", icon: ICONS.Category1},
+        {category: "Face Cream", icon: ICONS.Category2},
+        {category: "Lipstick", icon: ICONS.Category3},
+        {category: "Massage Oil", icon: ICONS.Category4},
+    ]
   return (
     <div className='beauty_slider my-3'>
         <Slider {...settings}>
-        {[...Array(16).keys()].map((item, idx) => (
+        {data.map((item, idx) => (
         <div key={idx+"cat"}>
             <div 
-                className='cursor-pointer justify-self-center mx-auto max-w-[160px] text-theme border border-theme rounded-xl flex gap-2 px-1 py-2 items-center justify-center'
+                className='cursor-pointer justify-self-start max-w-[160px] text-theme border border-theme rounded-xl flex gap-2 px-2 py-1 items-center justify-start'
                 onClick={()=> router.push("/products")}
             >
-                <span className='w-4 h-4 rounded-full'>
-                <Image src={ICONS.Call} alt="Appointment" className="scale_img" />
-                </span>
-                <span className='text-xs whitespace-nowrap'>Hair Serum</span>
+                <div className='w-5 h-5 rounded-full'>
+                <Image src={item?.icon} alt="Appointment" className="scale_img" />
+                </div>
+                <div className='text-xs whitespace-nowrap text-center w-full px-2'>{item?.category}</div>
             </div>
         </div>
         ))}

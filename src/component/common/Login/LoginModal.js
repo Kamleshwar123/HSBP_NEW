@@ -2,14 +2,13 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import OtpInput from 'react-otp-input';
 import PhoneInput from 'react-phone-input-2'
-import IMAGES from '../../constant/images';
-import SvgIcon from '../../constant/SvgIcon';
+import IMAGES from '../../../constant/images';
+import SvgIcon from '../../../constant/SvgIcon';
 
-const Login = () => {
+const LoginModal = () => {
   const [screen, setScreen] = useState(1);
   const [otp, setOtp] = useState("");
   return (
-    <div className='container'>
       <div className='bg-[#a05bcf] p-3 sm:p-5 md:p-10'>
           <div className='grid grid-cols-12 items-stretch rounded-2xl overflow-hidden'>
             <div className='col-span-12 md:col-span-5 lg:col-span-7 h-full hidden md:block'>
@@ -63,8 +62,7 @@ const Login = () => {
             </div>
         </div>
       </div>
-    </div>
   )
 }
 
-export default Login
+export default LoginModal

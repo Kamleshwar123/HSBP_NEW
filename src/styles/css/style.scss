@@ -187,14 +187,13 @@
     border-radius: 15px;
     text-align: center;
     padding: 8px 25px;
-    color: #241E1E;
-    font-weight: 500;
+    color: #0F0D0E;
+    font-weight: 600;
     text-decoration: none;
     transition: 0.3s;
     font-size: 13px;
     outline: none;
     letter-spacing: 0.19px;
-    /* border: 0.5px solid #241E1E; */
   }
   .addcard_button {
     background: #FFFFFF no-repeat padding-box;
@@ -303,6 +302,11 @@
     border-right-style: solid;
     bottom: -5px;
     right: -5px;
+  }
+  .thankyou-bg {
+    background: url(./../images/thank-you-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .theme-bg {
     background: url(./../images/testimonial-bg.webp);

@@ -5,10 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import 'react-phone-input-2/lib/style.css';
 import Head from "next/head";
 import Layout from "../component/common/Layout";
+import { Provider } from "react-redux";
+import store from "../redux/store";
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <Provider store={store}>
       <Head>
         <title>HSBP</title>
         <link rel="icon" href="/favicon.ico" />
@@ -18,6 +20,6 @@ export default function App({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </Provider>
   );
 }

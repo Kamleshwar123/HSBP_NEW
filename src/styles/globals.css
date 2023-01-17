@@ -17,9 +17,6 @@
   .large-input {
     @apply px-3 py-2 text-base
   }
-  .active {
-    @apply border-solid border-b-2;
-  }
   .bg-gradient {
     background: transparent linear-gradient(266deg, #993680 0%, #2F1A59 81%) no-repeat padding-box;
   }
@@ -45,5 +42,11 @@
   }
   .img_scale {
     @apply max-w-full h-auto;
+  }
+  .product_sort_filter {
+    @apply cursor-pointer;
+  }
+  .product_sort_filter.active {
+    @apply text-theme font-medium border-b border-b-theme cursor-pointer;
   }
 }

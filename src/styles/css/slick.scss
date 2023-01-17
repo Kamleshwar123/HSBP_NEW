@@ -77,6 +77,39 @@
 .testi_slider .slick-slide.slick-current+.slick-active {
     transform: scale(1);
 }
+.product_slider .slick-prev {
+    top: 90%;
+    left: 94% !important;
+    z-index: 1;
+}
+.product_slider .slick-next {
+    top: 90%;
+    left: 96% !important;
+    z-index: 1;
+}
+.product_slider .slick-prev:before {
+    font-family: unset !important;
+    content: "<";
+    color: #0f0d0e;
+    font-size: 30px;
+}
+  
+.product_slider .slick-next:before {
+    font-family: unset !important;
+    content: ">";
+    color: #949494;
+    font-size: 30px;
+}
+.product_slider .slick-dots {
+    bottom: 15px !important;
+    left:2% !important;
+    width: unset;
+}
+.product_slider .slick-dots .slick-active button{
+    border: 0.5px solid #949494;
+    border-radius: 50%;
+}
+
 
 @media only screen and (max-width: 600px) {
     .beauty_slider .slick-prev {

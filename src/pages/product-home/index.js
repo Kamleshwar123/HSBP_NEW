@@ -3,6 +3,7 @@ import React from 'react'
 import ProductCategorySlider from '../../component/common/ProductCategorySlider'
 import ProductBox from '../../component/feature/Home/Product/ProductBox'
 import ProductAd from '../../component/feature/Product/ProductAd'
+import ProductBannerSlider from '../../component/feature/Product/ProductBannerSlider'
 import ProductHeading from '../../component/feature/Product/ProductHeading'
 import ProductOffer from '../../component/feature/Product/ProductOffer'
 import IMAGES from '../../constant/images'
@@ -11,8 +12,8 @@ const ProductHome = () => {
     return (
         <div className='container'>
             <ProductCategorySlider/>
-            <div className='text-center'>
-                <Image src={IMAGES.ProductBanner} alt="Salon" className="scale_img" />
+            <div className='text-center max-w-[95%]'>
+                <ProductBannerSlider/>
             </div>
             <ProductHeading
                 title={"HSBP Offers"}
