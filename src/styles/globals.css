@@ -12,10 +12,25 @@
   }
 
   .form-control {
-    @apply focus:bg-white focus:border-border focus:text-body focus:outline-none block w-full px-3 py-1.5 text-sm font-normal text-body bg-white bg-clip-padding border border-solid border-border rounded-xl transition ease-in-out m-0;
+    @apply placeholder:text-placeholder-aaa focus:bg-white focus:border-border focus:text-body focus:outline-none block w-full px-3 py-1.5 text-sm font-normal text-body bg-white bg-clip-padding border border-solid border-border rounded-xl transition ease-in-out m-0;
   }
   .large-input {
     @apply px-3 py-2 text-base
+  }
+  .homegetlinkinput {
+    @apply border-body focus:border-body py-2 text-base placeholder:text-placeholder-ccc;
+  }
+  .salonboxinput {
+    @apply border-black-707 focus:border-black-707 py-2 text-base text-black-685 placeholder:text-black-685;
+  }
+  .salonsearchinput {
+    @apply border-black-707 focus:border-black-707 py-2 text-base text-placeholder placeholder:text-placeholder;
+  }
+  .queryform .form-label{
+    @apply text-black-605;
+  }
+  .queryform input, .queryform textarea, .queryform select{
+    @apply placeholder:text-black-7d7 text-black-7d7;
   }
   .bg-gradient {
     background: transparent linear-gradient(266deg, #993680 0%, #2F1A59 81%) no-repeat padding-box;
@@ -48,5 +63,11 @@
   }
   .product_sort_filter.active {
     @apply text-theme font-medium border-b border-b-theme cursor-pointer;
+  }
+  .modal {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+  .selectcitymodal {
+    @apply w-full min-h-[300px] max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-[0px_3px_6px_#00000029] transition-all
   }
 }

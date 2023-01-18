@@ -29,7 +29,7 @@ const AppDownload = () => {
                     <div className="getLink mt-10">
                         <p className='text-base mb-4'>Enter your mobile number to get link to download</p>
                         <div className='flex'>
-                            <input id="onlyMobile" name="mobile_number" type="text" placeholder="Enter your mobile number*" maxLength="10" className='form-control large-input rounded md:max-w-sm' />
+                            <input id="onlyMobile" name="mobile_number" type="text" placeholder="Enter your mobile number*" maxLength="10" className='form-control homegetlinkinput rounded md:max-w-sm' />
                             <button className="downloadLinkButton">SEND LINK</button>
                         </div>
                     </div>

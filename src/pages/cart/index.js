@@ -9,12 +9,9 @@ const Cart = () => {
         <div className='col-span-12 md:col-span-7'>
           <div className='shadow-66 rounded-2xl overflow-hidden'>
             <div className='theme-heading-box'>Hair Care</div>
-            <div>
+            <div className='text-black-2a3 divide-y divided-black-body px-5'>
               {[...Array(3).keys()].map((item, idx) => (
-                <React.Fragment key={`care${idx}`}>
-                  {idx !== 0 && <hr className='my-0 mx-5'/>}
-                  <CareBox/>
-                </React.Fragment>
+                  <CareBox key={`care${idx}`}/>
               ))}
             </div>
           </div>

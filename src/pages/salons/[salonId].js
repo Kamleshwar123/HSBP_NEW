@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react'
+import ReactDatePicker from 'react-datepicker';
 import Services from '../../component/feature/services/Services';
 import ICONS from '../../constant/icons';
 import IMAGES from '../../constant/images';
@@ -11,7 +12,8 @@ const SalonDetail = () => {
   /* const router = useRouter();
     const { salonId } = router.query; */
   return (
-    <div className='container mt-3'>
+    <div className='mt-3'>
+      <div className='container '>
         <div className='rounded-2xl shadow-salon border border--black-707 p-5'>
           <div className='text-black grid md:grid-cols-12 gap-5 items-center'>
             <div className='md:col-span-7'>
@@ -42,42 +44,53 @@ const SalonDetail = () => {
             </div>
           </div>
           <hr/>
-          <div className='flex mt-5 mb-2 text-xs md:divide-x md:divide-black-707'>
-            <div className='basis-full lg:basis-1/2 flex items-end'>
-              <div className='basis-full md:basis-1/2 items-end'>
+          <div className='grid grid-cols-12 mt-5 mb-2 text-xs lg:divide-x lg:divide-black-707 gap-x-3 gap-y-4 items-end'>
+            <div className='col-span-12 lg:col-span-6 grid grid-cols-12 gap-x-3 gap-y-4 items-end'>
+              <div className='col-span-12 md:col-span-6 items-end'>
                 <span className='text-theme border border-theme px-3 py-1 rounded-lg'>4.5 / 5</span>
                 <span className='ml-3 text-[#605F5F]'>482 Reviews</span>
               </div>
-              <div className='basis-full md:basis-1/2 items-end flex'>
+              <div className='col-span-12 md:col-span-6 items-end flex'>
                   <span className='mr-1'>Ambience Rating</span>
                 <Ratings rating={4.5} size={"14px"}/>
               </div>
             </div>
-            <div className='basis-full md:basis-1/2 lg:basis-1/4 text-center'>
+            <div className='col-span-12 md:col-span-6 lg:col-span-3 lg:text-center'>
               Working Monday to Sunday
             </div>
-            <div className='basis-full md:basis-1/2 lg:basis-1/4 text-center'>
+            <div className='col-span-12 md:col-span-6 lg:col-span-3 lg:text-center'>
               Timings 8:00 am -9:00 pm
             </div>
           </div>
         </div>
         <div className='rounded-2xl shadow-salon border border--black-707 p-5 mt-5'>
-          <h5 className='text-[#605F5F] text-base mb-2'>Select Date and Time</h5>
+          <h5 className='text-[#605F5F] text-base mb-2 font-medium'>Book a Slot</h5>
           <div className='grid md:grid-cols-4 gap-6'>
               <div>
-                <input type="date"
-                  className="form-control"
-                  placeholder="Select a date" />
+                  <ReactDatePicker 
+                    placeholderText="Select Date" 
+                    className='form-control datepickerCalender cursor-pointer salonsearchinput'
+                    disabledKeyboardNavigation
+                    dateFormat="YYYY/MM/DD"
+                    showMonthDropdown
+                    showYearDropdown
+                    dropdownMode="select"
+                    minDate={new Date()}
+                  />
               </div>
             <div>
-              <input type="time"
-                className="form-control"
-                placeholder="Select a date" />
+              <select className='form-control salonsearchinput'>
+                <option>Select Time</option>
+                <option>01:00 AM to 02:00 AM</option>
+                <option>01:00 AM to 02:00 AM</option>
+                <option>01:00 AM to 02:00 AM</option>
+              </select>
             </div>
             <div>
-            <button className='custom_button h-9'>Checkout</button>
+            <button className='custom_button h-10 w-40'>Checkout</button>
             </div>
           </div>
+        </div>
         </div>
         <div className='mt-3'>
           <Services/>

@@ -10,6 +10,7 @@ import SvgIcon from "../../../constant/SvgIcon";
 import OutsideClick from "../../../hooks/useOutClick";
 import { setOpenLoginModal } from "../../../redux/Slices/commonSlice";
 import LoginPopover from "./LoginPopover";
+import SearchProduct from "./SearchProduct";
 const Login = dynamic(() => import('../Login'), { ssr: false });
 const Sidebar = dynamic(() => import('./Sidebar'), { ssr: false });
 
@@ -32,18 +33,19 @@ const TheHeader = () => {
   return (
     <header className='w-full bg-white top-0 sticky z-[999] shadow-header'>
       <div className="container">
-        <div className="flex items-center justify-between gap-5 h-20">
+        <div className="flex justify-between items-center gap-5 h-20">
           <div className="flex gap-3 items-center">
             <SvgIcon.Hamburger onClick={toggleDrawer} className='cursor-pointer text-black-707' />
             <Sidebar isOpen={isOpen} toggleDrawer={toggleDrawer} />
             <div>
               <Link href={"/"}>
-                <Image src={IMAGES.Logo} alt="logo" height={40} className="scale_img" />
+                <Image src={IMAGES.Logo} alt="logo" height={36} className="scale_img" />
               </Link>
             </div>
+            {/* <SearchProduct/> */}
           </div>
-          <div className="flex gap-5 items-center">
-              <p className="ml-5 font-semibold text-base text-black-707 hidden md:block">DOWNLOAD APP</p>
+          <div className="flex gap-3 items-center justify-self-end">
+              <p className="ml-5 font-semibold text-black-707 hidden lg:block">DOWNLOAD APP</p>
               <Link href={"/"} className='hidden md:block'>
                 <Image
                   src={IMAGES.GoogleStore}
@@ -56,7 +58,7 @@ const TheHeader = () => {
                 <Image src={IMAGES.AppStore} alt="app" className="scale_img" height={30}/>
               </Link>
               <Link href="/cart" legacyBehavior>
-                <Image src={ICONS.Cart} alt="cart" height={30} className="scale_img cursor-pointer" />
+                <Image src={ICONS.Cart} alt="cart" height={25} className="scale_img cursor-pointer" />
               </Link>
               <OutsideClick open={open} setOpen={setOpen}>
               <div className="relative flex flex-col items-center">

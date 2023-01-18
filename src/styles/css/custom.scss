@@ -1,3 +1,23 @@
+.pricerangeslider.range-slider .range-slider__range {
+    background: #8B2E5D;
+}
+.pricerangeslider.range-slider .range-slider__thumb {
+    background: #FFFFFF;
+    border:1px solid #685F65;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.datepickerCalender {
+    background: url(../icons/calendar.webp) no-repeat right;
+    background-size: 15px;
+    background-position:95%;
+}
+.ReactModal__Overlay {
+    background-color: rgb(46 46 46 / 0.8) !important;
+    z-index: 1300;
+}
 @media only screen and (min-width: 1600px) {
     .banner_img {
        width: 100vw !important;

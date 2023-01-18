@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 import SeeAll from '../../component/common/SeeAll'
 import ICONS from '../../constant/icons'
 import IMAGES from '../../constant/images'
@@ -13,18 +14,18 @@ const SalonsPage = () => {
             </div>
             <div className='col-span-12 md:col-span-4'>
                 <div className='flex'>
-                <input name="city" type="text" placeholder="Search by City" className='form-control py-2 pr-6' />
+                <input name="city" type="text" placeholder="Search by City" className='form-control pr-6 salonsearchinput' />
                 <button className="sendLinkBtn -ml-3">SEARCH</button>
                 </div>
             </div>
             <div className='col-span-12 md:col-span-5'>
                 <div className='flex'>
-                    <input name="name" type="text" placeholder="Search by Salon Name" className='form-control py-2 pr-6'/>
+                    <input name="name" type="text" placeholder="Search by Salon Name" className='form-control pr-6 salonsearchinput'/>
                     <button className="sendLinkBtn -ml-3">SEARCH</button>
                 </div>
             </div>
         </div>
-        <div className='grid grid-flow-row md:grid-flow-col gap-8'>
+        <div className='grid grid-flow-row md:grid-flow-col gap-6'>
             <div className='md:col-span-7 pb-5'>
                 <div className='text-center'>
                 <Image src={IMAGES.SalonBanner} alt="beauty" className="scale_img" />
@@ -62,8 +63,8 @@ const SalonsPage = () => {
             </div>
             <div className='md:col-span-5'>
                 <div className='bg-[#EEEEEE] shadow-[0px_6px_16px_#00000059] p-5 rounded-3xl'>
-                        <div className='text-[#5B0F35] font-medium text-base text-center'>QUERY FORM</div>
-                        <form className='mt-3'>
+                        <div className='text-[#5B0F35] font-semibold text-base text-center'>QUERY FORM</div>
+                        <form className='mt-3 queryform'>
                             <div className='mb-3'>
                                 <label className="form-label">Name</label>
                                 <input type="text" className="form-control" placeholder='Enter Name' />
@@ -94,6 +95,13 @@ const SalonsPage = () => {
                             <div className='mb-3'>
                             <label className="form-label">Query</label>
                                 <textarea type="text" rows={8} className="form-control" placeholder='Enter your Query' />
+                            </div>
+                            <div className='grid grid-cols-12'>
+                            <div className='md:col-span-5 mb-3'>
+                            <ReCAPTCHA
+                                sitekey={process.env.REACT_APP_SITE_KEY || "6LdT4gckAAAAALAO8LIr88ZGcCtkO2s6dGOmOwcq"}
+                            />
+                            </div>
                             </div>
                             <div className='text-center'>
                                 <button className='custom_button'>SUBMIT</button>

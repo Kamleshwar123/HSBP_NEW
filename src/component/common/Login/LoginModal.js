@@ -9,7 +9,7 @@ const LoginModal = () => {
   const [screen, setScreen] = useState(1);
   const [otp, setOtp] = useState("");
   return (
-      <div className='bg-[#a05bcf] p-3 sm:p-5 md:p-10'>
+      <div className='bg-[#a05bcf] p-3 sm:p-5 md:py-12 md:px-16'>
           <div className='grid grid-cols-12 items-stretch rounded-2xl overflow-hidden'>
             <div className='col-span-12 md:col-span-5 lg:col-span-7 h-full hidden md:block'>
               <div className='bg-[#6322a3] flex flex-col justify-center items-center h-full'>
@@ -31,7 +31,7 @@ const LoginModal = () => {
                     <PhoneInput
                     country={'in'}
                     className="font-Poppins"
-                    inputClass='form-control w-full'
+                    inputClass='form-control w-full focus:border-black-241 border-black-241 text-black-241'
                     inputStyle={{width: "100%"}}
                     />
                   </div>
@@ -50,13 +50,13 @@ const LoginModal = () => {
                         onChange={(otp)=> setOtp(otp)}
                         numInputs={4}
                         separator={<span className='px-2'></span>}
-                        inputStyle={{width: "35px", height: "35px", border: '1px solid #CCC9C9', borderRadius: "5px"}}
+                        inputStyle={{width: "35px", height: "35px", border: '1px solid #707070', borderRadius: "5px", color: "241E1E"}}
                       />
                     </div>
                     <div className='text-blue-477 my-2 cursor-pointer text-center font-medium' onClick={()=>{}}>Resend Otp?</div>
                   </div>
                   }
-                  <button className='custom_button w-full mt-3' onClick={()=> setScreen(2)}>Continue</button>
+                  <button className='custom_button w-full mt-3 h-10' onClick={()=> setScreen(2)}>{screen === 1 ? "Continue": "login"}</button>
                 </div>
               </div>
             </div>

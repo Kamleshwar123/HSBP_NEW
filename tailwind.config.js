@@ -57,7 +57,9 @@ module.exports = {
       'green-0b5': '#0B551C',
       'green-088': '#08872A',
       'red-c21': '#C2133C',
-      'red-8b2': '#8B2E5D'
+      'red-8b2': '#8B2E5D',
+      'placeholder-aaa': '#AAA1A1',
+      'placeholder-ccc': '#CCCCCC'
     },
     extend: {
       boxShadow: {
