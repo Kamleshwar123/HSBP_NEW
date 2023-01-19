@@ -73,8 +73,10 @@ import SlotBookSide from './../styles/images/slot-book-side.webp';
 import City1 from './../styles/images/city1.webp';
 import City2 from './../styles/images/city2.webp';
 import City3 from './../styles/images/city3.webp';
+import ModalGirl from './../styles/images/modal-girl.webp';
 
 const IMAGES = {
+    ModalGirl,
     City1,
     City2,
     City3,

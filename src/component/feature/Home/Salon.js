@@ -65,7 +65,7 @@ const Salon = () => {
                 {[...Array(4).keys()].map((item, idx) => (
                     <div key={"salon" + idx}>
                         <div>
-                            <div className='shadow-[13px_13px_15px_#00000029] bg-white rounded-3xl pb-5 border border-black-707'>
+                            <div className='shadow-[13px_13px_15px_#00000029] bg-white rounded-3xl pb-4 border border-black-707'>
                                 <div className='text-center'>
                                     <Image src={IMAGES.Salon} alt="Salon" className="scale_img" />
                                 </div>
@@ -84,7 +84,7 @@ const Salon = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='text-center'>
+                                <div className='text-center mt-2'>
                                     <button className='custom_button' onClick={()=> router.push('/salons/1')}>Book Appointment</button>
                                 </div>
                             </div>

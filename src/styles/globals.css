@@ -70,4 +70,7 @@
   .selectcitymodal {
     @apply w-full min-h-[300px] max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-[0px_3px_6px_#00000029] transition-all
   }
+  .numberProceedModal {
+    @apply w-full border border-black-707 max-w-md transform overflow-hidden rounded-2xl bg-white p-6 align-middle shadow-none transition-all;
+  }
 }

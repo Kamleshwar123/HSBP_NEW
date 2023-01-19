@@ -56,12 +56,12 @@ const BeautyServiceSlider = ({serviceId,setServiceId,setServiceName}) => {
         {name: "MEHNDI ART SERVICES", img: IMAGES.BeautySlider2}
     ]
   return (
-    <div className='beauty_service_slider bg-gradient mt-3'>
+    <div className='beauty_service_slider bg-gradient mt-3 rounded-[22px]'>
         <Slider {...settings}>
             {data.map((item, idx) => (
                 <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 text-center' key={"pkg" + idx}>
                     <div>
-                        <Image src={item.img} alt="Bridal1" className="cursor-pointer mx-auto rounded-full bg-white" height={90} width={90} onClick={()=> {setServiceName(item?.name);setServiceId(idx+1)}}/>
+                        <Image src={item.img} alt="Bridal1" className="cursor-pointer mx-auto rounded-[50%] bg-white" height={80} width={80} onClick={()=> {setServiceName(item?.name);setServiceId(idx+1)}}/>
                         <div className={`pt-3 text-white cursor-pointer uppercase font-light ${serviceId === idx+1 ? 'font-bold' : "text-opacity-75"}`} onClick={()=> {setServiceName(item?.name);setServiceId(idx+1)}}>{item?.name}</div>
                     </div>
                 </div>

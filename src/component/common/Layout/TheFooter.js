@@ -69,7 +69,7 @@ const TheFooter = () => {
               </div>
             </div>
           </div>
-          <hr />
+          <hr className="opacity-50"/>
           <div>
             <ul className="flex flex-wrap w-full items-center justify-center divide divide-x px-5">
               {FooterCity.map((item, idx) => (
@@ -79,7 +79,7 @@ const TheFooter = () => {
               ))}
             </ul>
           </div>
-          <hr />
+          <hr className="opacity-50"/>
           <div className="flex flex-wrap items-center justify-between gap-y-3 gap-x-5">
             <div className="flex flex-wrap items-center gap-3">
               <span><SvgIcon.Security className='scale-75'/></span>

@@ -52,18 +52,29 @@
     color: #2E2E2E !important;
 }
 .beauty_service_slider .slick-prev {
-    top: 42% !important;
+    top: 43% !important;
     left: -40px !important;
     z-index: 1;
     color: #2E2E2E !important;
 }
 .beauty_service_slider .slick-next {
-    top: 42% !important;
+    top: 43% !important;
     right: -46px !important;
     z-index: 1;
     color: #2E2E2E !important;
 }
-
+.beauty_pkg_slider .slick-prev {
+    top: 40% !important;
+    left: -31px !important;
+    z-index: 1;
+    color: #2E2E2E !important;
+}
+.beauty_pkg_slider .slick-next {
+    top: 40% !important;
+    right: -37px !important;
+    z-index: 1;
+    color: #2E2E2E !important;
+}
 .testi_slider .slick-next, .testi_slider .slick-prev{
     z-index: 1;
     color: #707070 !important;
@@ -122,6 +133,12 @@
         left: -15px !important;
     }
     .service_slider .slick-next {
+        right: -15px !important;
+    }
+    .beauty_pkg_slider .slick-prev {
+        left: -15px !important;
+    }
+    .beauty_pkg_slider .slick-next {
         right: -15px !important;
     }
     .beauty_service_slider .slick-prev {

@@ -9,7 +9,6 @@ const Checkout = () => {
   const router = useRouter();
   const [paymentType, setPaymentType] = useState(1);
   const [isAddNewAddress, setIsAddNewAddress] = useState(false);
-  const [isBook, setIsBook] = useState(false);
   
   return (
     <div className='container my-3'>
@@ -21,8 +20,7 @@ const Checkout = () => {
         </div>
           <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
             <div className='theme-heading-box flex justify-between'>
-              <p>Delivery Address</p>
-              <p>Price (INR)</p>
+              <p>Address Details</p>
             </div>
             <div className='p-5'>
               {[...Array(3).keys()].map((item, idx) => (
@@ -50,14 +48,9 @@ const Checkout = () => {
               <label className='whitespace-nowrap font-semibold'>Add a new address</label>
           </div>
           {isAddNewAddress && <AddAddressForm/>}
-          <div className="flex gap-2 my-6">
-              <input type="radio" id="selectBooking" checked={isBook} onChange={(e)=> setIsBook(e.target.checked)}/>
-              <label className='whitespace-nowrap font-semibold'>Select Booking Date/Time</label>
-          </div>
-          {isBook &&
             <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
                 <div className='theme-heading-box'>
-                  Fill The Details
+                Select Booking Date/Time
                 </div>
                 <div className='p-5'>
                   <div className='grid grid-cols-6 gap-6'>
@@ -86,7 +79,6 @@ const Checkout = () => {
                   </div>
                 </div>
             </div>
-          }
         </div>
         <div className='col-span-12 md:col-span-5'>
           <CheckoutBox/>

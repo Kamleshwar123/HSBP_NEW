@@ -2,6 +2,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
 import { Fragment, useState } from 'react'
+import NumberProceedModal from '../../component/common/CityModal/NumberProceedModal'
 import SelectCityModal from '../../component/common/CityModal/SelectCityModal'
 import IMAGES from '../../constant/images'
 import SvgIcon from '../../constant/SvgIcon'
@@ -9,6 +10,7 @@ import SvgIcon from '../../constant/SvgIcon'
 export default function SelectCity() {
   let [isOpen, setIsOpen] = useState(true);
   let [modal2, setModal2] = useState(false);
+  let [modal3, setModal3] = useState(false);
 
   function closeModal() {
     setIsOpen(false)
@@ -20,6 +22,7 @@ export default function SelectCity() {
 
   return (
     <>
+    <div onClick={()=>setModal3(true)}>Openmodal3</div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-[9999]" onClose={()=> null}>
           <Transition.Child
@@ -73,6 +76,7 @@ export default function SelectCity() {
         </Dialog>
       </Transition>
       {modal2 && <SelectCityModal closeModal={()=>setModal2(false)}/>}
+      {modal3 && <NumberProceedModal closeModal={()=>setModal3(false)}/>}
     </>
   )
 }
