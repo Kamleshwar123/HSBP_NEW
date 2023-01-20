@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import ExploreAll from '../../component/common/ExploreAll'
 import ProductCategorySlider from '../../component/common/ProductCategorySlider'
 import ProductBox from '../../component/feature/Home/Product/ProductBox'
 import ProductAd from '../../component/feature/Product/ProductAd'
@@ -12,7 +13,7 @@ const ProductHome = () => {
     return (
         <div className='container'>
             <ProductCategorySlider/>
-            <div className='text-center max-w-[95%]'>
+            <div className='text-center'>
                 <ProductBannerSlider/>
             </div>
             <ProductHeading
@@ -24,6 +25,7 @@ const ProductHome = () => {
                 title={"Top Selling Product"}
                 desc={"Need ideas? See our list of top-selling products that are being loved by the masses."}
             />
+            <ExploreAll text={"Explore All"} url={"/products"}/>
             <div className='bg-white py-3'>
                 <div className='flex flex-wrap justify-center -m-3'>
                     {[...Array(4).keys()].map((item, idx) => (
@@ -39,6 +41,7 @@ const ProductHome = () => {
                 title={"New Arrivals"}
                 desc={"Need ideas? See our list of top-selling products that are being loved by the masses."}
             />
+            <ExploreAll text={"Explore All"} url={"/products"}/>
             <div className='bg-white py-3'>
                 <div className='flex flex-wrap justify-center -m-3'>
                     {[...Array(4).keys()].map((item, idx) => (
@@ -53,6 +56,7 @@ const ProductHome = () => {
                 title={"Recommended Products"}
                 desc={"Need ideas? See our list of top-selling products that are being loved by the masses."}
             />
+            <ExploreAll text={"Explore All"} url={"/products"}/>
             <div className='bg-white py-3'>
                 <div className='flex flex-wrap justify-center -m-3'>
                     {[...Array(4).keys()].map((item, idx) => (

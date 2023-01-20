@@ -4,7 +4,7 @@ import IMAGES from '../../../constant/images'
 
 const ProductOffer = () => {
   return (
-    <div className='grid md:grid-cols-3 gap-6 justify-center items-center max-w-[95%]'>
+    <div className='grid md:grid-cols-3 gap-6 justify-center items-center'>
         <div>
             <Image src={IMAGES.Offer1} alt="Ad1" className="scale_img" />
         </div>

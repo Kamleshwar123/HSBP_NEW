@@ -95,7 +95,7 @@ const Checkout = () => {
             </div>
         </div>
         <div className='col-span-12 md:col-span-5'>
-          <CheckoutBox/>
+          <div className='sticky top-20'><CheckoutBox/></div>
         </div>
       </div>
     </div>

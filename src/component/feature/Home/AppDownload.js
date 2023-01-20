@@ -22,8 +22,8 @@ const AppDownload = () => {
                         <h1 className='text-[#0F0D0E] text-4xl mb-4'>Download HSBP App</h1>
                         <p className='text-base mb-4'>To consult with OMI astros and get a personalised Remedy Plan for all your problems. Download the app now</p>
                         <div className='flex w-fit gap-3'>
-                            <Image src={IMAGES.AppStore} alt="Banner1" className="scale_img" />
                             <Image src={IMAGES.GoogleStore} alt="Banner1" className="scale_img" />
+                            <Image src={IMAGES.AppStore} alt="Banner1" className="scale_img" />
                         </div>
                     </div>
                     <div className="getLink mt-10">

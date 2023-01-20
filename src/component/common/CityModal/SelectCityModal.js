@@ -15,13 +15,13 @@ const SelectCityModal = ({closeModal}) => {
           maxHeight: "90%",
         },
       };
-    const disableScroll = () => { document.body.style.overflow = 'hidden' }
+    /* const disableScroll = () => { document.body.style.overflow = 'hidden' } */
   return (
     <Modal
         isOpen={true}
         contentLabel="Example Modal"
         onRequestClose={closeModal}
-        onAfterOpen={disableScroll}
+        /* onAfterOpen={disableScroll} */
         className="modal selectcitymodal"
       >
         <div>

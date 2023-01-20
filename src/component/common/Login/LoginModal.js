@@ -5,11 +5,14 @@ import PhoneInput from 'react-phone-input-2'
 import IMAGES from '../../../constant/images';
 import SvgIcon from '../../../constant/SvgIcon';
 
-const LoginModal = () => {
+const LoginModal = ({isopen,closeModal}) => {
   const [screen, setScreen] = useState(1);
   const [otp, setOtp] = useState("");
   return (
-      <div className='bg-[#a05bcf] p-3 sm:p-5 md:py-12 md:px-16'>
+      <div className='bg-[#a05bcf] p-3 sm:p-5 md:py-12 md:px-16 relative'>
+          <span className='absolute top-1 right-1 text-white p-2 cursor-pointer'>
+            <SvgIcon.Cross className="w-8 h-8" onClick={closeModal}/>
+          </span>
           <div className='grid grid-cols-12 items-stretch rounded-2xl overflow-hidden'>
             <div className='col-span-12 md:col-span-5 lg:col-span-7 h-full hidden md:block'>
               <div className='bg-[#6322a3] flex flex-col justify-center items-center h-full'>
@@ -33,6 +36,8 @@ const LoginModal = () => {
                     className="font-Poppins"
                     inputClass='form-control w-full focus:border-black-241 border-black-241 text-black-241'
                     inputStyle={{width: "100%"}}
+                    disableDropdown={true}
+                    countryCodeEditable={false}
                     />
                   </div>
                   :

@@ -50,7 +50,7 @@ export default function SelectCity() {
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-[0px_3px_6px_#00000029] transition-all">
                   <div className='flex relative mb-3'>
-                      <input type="text" className="form-control text-black-686 placeholder:text-black-686 shadow-[0px_4px_8px_#00000029] border-black-2a3 focus:border-black-2a3" placeholder='Delhi' />
+                      <input type="text" className=" pr-5 form-control text-black-686 placeholder:text-black-686 shadow-[0px_4px_8px_#00000029] border-black-2a3 focus:border-black-2a3 rounded-r-none border-r-none" placeholder='Delhi' />
                       <button className="custom_button -ml-3">SEARCH</button>
                   </div>
                   <div className='text-center'>

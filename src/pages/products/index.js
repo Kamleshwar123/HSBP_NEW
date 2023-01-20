@@ -11,7 +11,7 @@ const Products = () => {
             <ProductCategorySlider/>
             <div className='grid grid-cols-12 gap-3'>
                 <div className='col-span-12 lg:col-span-3'>
-                    <div className='bg-white-f2 rounded-2xl p-5'>
+                    <div className='bg-white-f2 rounded-2xl p-5 sticky top-[135px]'>
                         <div className='flex items-center gap-3 justify-between'>
                             <div>Filters</div>
                             <div className='font-medium text-blue-274 cursor-pointer'>Clear all</div>

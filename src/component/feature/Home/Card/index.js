@@ -7,7 +7,7 @@ import SvgIcon from '../../../../constant/SvgIcon'
 const data = [
     { title: "Salon at Home", number: "100+ Services", img: IMAGES.Card1, url: "/services"},
     { title: "Near by Salons", number: "100+ Salons", img: IMAGES.Card2, url: "/salons"},
-    { title: "Beauty Products", number: "100+ Products", img: IMAGES.Card3, url: "/products"},
+    { title: "Beauty Products", number: "100+ Products", img: IMAGES.Card3, url: "/product-home"},
     { title: "Franchise", number: "100+ Franchises", img: IMAGES.Card4 , url: "/franchise"},
     { title: "Training Centres", number: "100+ Centres", img: IMAGES.Card5, url: "/institutes"}
 ]

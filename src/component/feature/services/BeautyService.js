@@ -51,7 +51,7 @@ const BeautyService = ({type}) => {
           }
           </div>
           <div className='md:col-span-5'>
-              <CheckoutBox/>
+              <div className='sticky top-20'><CheckoutBox/></div>
           </div>
         </div>
         <div className='bg-pink-light bg-opacity-30 py-5 px-7 text-black-2e2 rounded-2xl'>

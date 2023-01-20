@@ -59,7 +59,7 @@ const ProductCategorySlider = () => {
         {category: "Massage Oil", icon: ICONS.Category4},
     ]
   return (
-    <div className='beauty_slider my-3 sticky top-20 z-[999] bg-white'>
+    <div className='beauty_slider my-3 sticky top-[92px] z-[100] bg-white'>
         <Slider {...settings}>
         {data.map((item, idx) => (
         <div key={idx+"cat"} className='textcenter md:text-left'>
