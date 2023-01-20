@@ -59,12 +59,12 @@ const ProductCategorySlider = () => {
         {category: "Massage Oil", icon: ICONS.Category4},
     ]
   return (
-    <div className='beauty_slider my-3'>
+    <div className='beauty_slider my-3 sticky top-20 z-[999] bg-white'>
         <Slider {...settings}>
         {data.map((item, idx) => (
-        <div key={idx+"cat"}>
+        <div key={idx+"cat"} className='textcenter md:text-left'>
             <div 
-                className='cursor-pointer justify-self-start max-w-[160px] text-theme border border-theme rounded-xl flex gap-2 px-2 py-1 items-center justify-start'
+                className='mx-auto md:mx-0 cursor-pointer justify-self-start max-w-[160px] text-theme border border-theme rounded-xl flex gap-2 px-2 py-1 items-center justify-start'
                 onClick={()=> router.push("/products")}
             >
                 <div className='w-5 h-5 rounded-full'>

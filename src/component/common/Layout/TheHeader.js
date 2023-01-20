@@ -31,7 +31,7 @@ const TheHeader = () => {
     setIsOpen(!isOpen)
   }
   return (
-    <header className='w-full bg-white top-0 sticky z-[999] shadow-header'>
+    <header className='w-full bg-white sticky top-0 z-[999] shadow-header'>
       <div className="container">
         <div className="flex justify-between items-center gap-5 h-20">
           <div className="flex gap-3 items-center">

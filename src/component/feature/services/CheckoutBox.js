@@ -5,6 +5,7 @@ import AddToCart from '../../common/AddToCart';
 const CheckoutBox = () => {
   const router = useRouter();
   const [num, setNum]= useState(1);
+  const [haveCoupen, setHaveCoupen]= useState(false);
   const [apply, setApply]= useState(false);
     const inc = (e) => {
         num < 5 ? setNum(num + 1) : e.preventDefault();
@@ -36,17 +37,20 @@ const CheckoutBox = () => {
           </div>
           <hr className='my-3'/>
           <div>
-              <div className='flex flex-wrap gap-3 justify-center items-end mb-7'>
+          <div className='text-theme text-base cursor-pointer' onClick={()=> setHaveCoupen(!haveCoupen)}>Have a Discount Coupon?</div>
+              {haveCoupen &&
+              <div className='flex flex-wrap gap-3 justify-center items-end mb-7 mt-3'>
                 <div>
-                  <div className='text-theme text-xs mb-3'>Have a Discount Coupon?</div>
                   <input type="text" placeholder='Enter Coupon Here' className={`text-xs h-10 form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}/>
                 </div>
-                {apply ?
-                <button className='text-[#CC0000] h-10 font-bold cursor-pointer text-center w-32 align-middle rounded-lg' onClick={() => setApply(false)}>Remove</button>
-                :
-                <button className='custom_button h-10 w-32' onClick={() => setApply(true)}>Apply</button>
-                }
-              </div>
+                <div>
+                  {apply ?
+                    <button className='text-[#CC0000] h-10 font-bold cursor-pointer text-center w-32 align-middle rounded-lg' onClick={() => setApply(false)}>Remove</button>
+                    :
+                    <button className='custom_button h-10 w-32' onClick={() => setApply(true)}>Apply</button>
+                  }
+                </div>
+              </div>}
           </div>
           <div className='my-3 px-4 bg-white border border-black-707 text-black-7d7 rounded-xl text-xs'>
             <div className='my-2 grid grid-cols-[70%_30%]'>

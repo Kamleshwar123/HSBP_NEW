@@ -1,12 +1,16 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import IMAGES from '../../../constant/images'
 import SvgIcon from '../../../constant/SvgIcon'
+import CustomLoader from '../../common/CustomLoader'
 import BeautyServiceSlider from './BeautyServiceSlider'
 import CareBox from './CareBox'
 import CheckoutBox from './CheckoutBox'
 
 const BeautyService = ({type}) => {
+  const boxRef = useRef(null);
+  const [loading, setLoading]= useState(false);
+  const [openBox, setOpenBox]= useState(true);
   const [serviceId, setServiceId]= useState(type || 3);
   const [serviceName, setServiceName]= useState("Hair Care");
   const advData = [
@@ -15,24 +19,36 @@ const BeautyService = ({type}) => {
     {label: "Satisfaction Guaranteed", img: IMAGES.Adv3},
     {label: "Reasonable Price", img: IMAGES.Adv4}
   ]
+  const setServiceData = (name,id) => {
+    setLoading(true);
+    setServiceId(id); 
+    setServiceName(name);
+    boxRef?.current?.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+    setTimeout(()=>setLoading(false), 2000);
+  }
   return (
-    <div className='container'>
-        <BeautyServiceSlider serviceId={serviceId} setServiceId={setServiceId} setServiceName={setServiceName}/>
-        <div className='grid md:grid-cols-12 gap-7 my-5'>
+    <div className='container relative'>
+        <BeautyServiceSlider serviceId={serviceId} setServiceData={setServiceData} ref={boxRef}/>
+        <div className='grid md:grid-cols-12 gap-7 my-5 scroll-my-20' ref={boxRef} >
           <div className='md:col-span-7'>
+          {loading ? <CustomLoader/> 
+          :
             <div className='shadow-66 rounded-2xl overflow-hidden'>
-              <div className='theme-heading-box capitalize flex gap-2 justify-between items-center'>
+              <div className='theme-heading-box capitalize flex gap-2 justify-between items-center cursor-pointer' onClick={()=> setOpenBox(!openBox)}>
                 <div>{serviceName?.toLowerCase()}</div>
-                <div><SvgIcon.IosArrowDown className='scale-50 rotate-180' /></div>
+                <div><SvgIcon.IosArrowDown className={`scale-50 ${openBox ? 'rotate-180' : "rotate-0"}`}/></div>
               </div>
-              <div className='text-black-2a3 divide-y divided-black-body px-5'>
-              {[...Array(3).keys()].map((item, idx) => (
-                <React.Fragment key={`care${idx}`}>
-                  <CareBox/>
-                </React.Fragment>
-              ))}
-              </div>
+              {openBox &&
+                <div className='text-black-2a3 divide-y divided-black-body px-5'>
+                {[...Array(3).keys()].map((item, idx) => (
+                  <React.Fragment key={`care${idx}`}>
+                    <CareBox/>
+                  </React.Fragment>
+                ))}
+                </div>
+              }
             </div>
+          }
           </div>
           <div className='md:col-span-5'>
               <CheckoutBox/>

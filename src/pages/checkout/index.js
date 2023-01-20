@@ -4,12 +4,22 @@ import React, { useState } from 'react'
 import AddAddressForm from '../../component/feature/CheckoutPage/AddAddressForm'
 import CheckoutBox from '../../component/feature/services/CheckoutBox'
 import ICONS from '../../constant/icons'
+import SvgIcon from '../../constant/SvgIcon'
 
 const Checkout = () => {
+  const [openBox, setOpenBox]= useState(true);
   const router = useRouter();
   const [paymentType, setPaymentType] = useState(1);
   const [isAddNewAddress, setIsAddNewAddress] = useState(false);
-  
+  const [selectedAddress, setSelectedAddress] = useState("");
+  const handleNewAddress = () => {
+    setSelectedAddress("");
+    setIsAddNewAddress(true);
+  }
+  const handleSelectAddress = (val) => {
+    setSelectedAddress(val);
+    setIsAddNewAddress(false);
+  }
   return (
     <div className='container my-3'>
       <div className='grid grid-cols-12 gap-6'>
@@ -19,33 +29,37 @@ const Checkout = () => {
           <p>+91-9599043601</p>
         </div>
           <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
-            <div className='theme-heading-box flex justify-between'>
+            <div className='theme-heading-box flex justify-between cursor-pointer' onClick={()=> setOpenBox(!openBox)}>
               <p>Address Details</p>
+              <div><SvgIcon.IosArrowDown className={`scale-50 ${openBox ? 'rotate-180' : "rotate-0"}`}/></div>
             </div>
-            <div className='p-5'>
-              {[...Array(3).keys()].map((item, idx) => (
-                <div key={idx+"add"}>
-                  {idx !==0 &&<hr className='my-2'/>}
-                  <div className='inline-flex space-x-5 text-black-685'>
-                    <input type='radio' id={idx+"add"} name="address"/>
-                    <label>
-                      <div className='inline-flex items-center'>
-                        <div className='mr-3 text-black-0f0'>Manoj</div>
-                        <div className='mr-3 p-1 text-xs bg-[#F1F1F1] text-black-686'>home</div>
-                        <Image src={ICONS.Call} alt="call" className='max-h-[12px] w-auto'/>
-                        <div className='ml-1 text-black-0f0'>+9599043601</div>
-                      </div>
-                      <p className='text-xs pt-1'>RZ-95, Adarsh Nagar, Indirapuram,</p>
-                      <p className='text-xs'>Ghaziabad - 201309</p>
-                    </label>
+            {openBox &&
+              <div className='p-5'>
+                {[...Array(3).keys()].map((item, idx) => (
+                  <div key={idx+"add"} className='cursor-pointer'>
+                    {idx !==0 &&<hr className='my-2'/>}
+                    <div className='inline-flex space-x-5 text-black-685 w-full'>
+                      <input type='radio' id={"add"+idx} name="address" checked={selectedAddress === idx} onChange={()=>handleSelectAddress(idx)}/>
+                      <label htmlFor={"add"+idx} className='w-full cursor-pointer'>
+                        <div className='inline-flex items-center'>
+                          <div className='mr-3 text-black-0f0'>Manoj</div>
+                          <div className='mr-3 p-1 text-xs bg-[#F1F1F1] text-black-686'>home</div>
+                          <Image src={ICONS.Call} alt="call" className='max-h-[12px] w-auto'/>
+                          <div className='ml-1 text-black-0f0'>+9599043601</div>
+                        </div>
+                        <p className='text-xs pt-1'>RZ-95, Adarsh Nagar, Indirapuram,</p>
+                        <p className='text-xs'>Ghaziabad - 201309</p>
+                      </label>
+                    </div>
                   </div>
+                ))}
+                <hr className='my-4'/>
+                <div className="inline-flex space-x-5 w-full">
+                    <input type="radio" name="addressnew" id="addAddress" checked={isAddNewAddress} onChange={handleNewAddress}/>
+                    <label htmlFor="addAddress" className='whitespace-nowrap font-semibold cursor-pointer w-full'>Add a new address</label>
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex gap-2 my-6">
-              <input type="radio" id="addAddress" checked={isAddNewAddress} onChange={(e)=> setIsAddNewAddress(e.target.checked)}/>
-              <label className='whitespace-nowrap font-semibold'>Add a new address</label>
+              </div>
+            }
           </div>
           {isAddNewAddress && <AddAddressForm/>}
             <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
@@ -66,11 +80,11 @@ const Checkout = () => {
                         <label className="form-label">Check your payment mode</label>
                         <div className="form_check">
                             <input type="radio" id="online" name="payment" checked={paymentType === 1} value={1} onChange={()=> setPaymentType(1)}/>
-                            <label className='whitespace-nowrap'>Online payment</label>
+                            <label className='whitespace-nowrap cursor-pointer' htmlFor='online'>Online payment</label>
                         </div>
                         <div className="form_check">
                             <input type="radio" id="Cash" name="payment" checked={paymentType === 2} value={2} onChange={()=> setPaymentType(2)}/>
-                            <label className='whitespace-nowrap'>Cash (Cash after service)</label>
+                            <label className='whitespace-nowrap cursor-pointer' htmlFor='Cash'>Cash (Cash after service)</label>
                         </div>
                     </div>
                   </div>

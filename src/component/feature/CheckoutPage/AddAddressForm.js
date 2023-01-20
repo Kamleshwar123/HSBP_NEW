@@ -4,7 +4,7 @@ import React from 'react'
 const AddAddressForm = () => {
     const router = useRouter();
   return (
-    <div className='shadow-checkout rounded-2xl overflow-hidden'>
+    <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
             <div className='theme-heading-box'>
               Fill The Details
             </div>

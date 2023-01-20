@@ -39,7 +39,7 @@
     @apply bg-gradient px-5 py-3 text-white;
   }
   input[type=checkbox], input[type=radio] {
-    @apply accent-[#993680];
+    @apply accent-[#993680] cursor-pointer;
   }
   .accent_green {
     @apply accent-green !important;
