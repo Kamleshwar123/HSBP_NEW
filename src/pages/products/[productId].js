@@ -15,6 +15,7 @@ const ProductDetails = () => {
     const router = useRouter()
     const { productId } = router.query;
     const [tab, setTab] = useState("tab1");
+    const [image, setImage]= useState(IMAGES.Product);
     useEffect(() => {
         setTab("tab1");
         return () => { }
@@ -23,7 +24,10 @@ const ProductDetails = () => {
     const handleTab = (data) => {
         setTab(data);
     }
-
+    const handleImg = () => {
+        setImage("");
+        setTimeout(()=>setImage(IMAGES.Product), 300);
+    }
     return (
         <div className='container'>
             <ProductCategorySlider/>
@@ -32,23 +36,23 @@ const ProductDetails = () => {
                 <p className='text-black-686'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolor sit eiusmod consectetur adipiscing tempor amet aliqua.</p>
             </div>
             <div className='p-4 bg-white-f2 bg-opacity-50 shadow-8F rounded-3xl'>
-                <div className='grid md:grid-cols-[40%,_60%] items-center gap-6 p-5'>
-                    <div className='grid grid-cols-6 items-stretch gap-6'>
-                        <div className='col-span-1 flex flex-col justify-between gap-y-2'>
+                <div className='grid md:grid-cols-[40%,_60%] gap-6 p-3'>
+                    <div className='grid grid-cols-12 items-stretch gap-6'>
+                        <div className='col-span-3 flex flex-col justify-between items-stretch gap-y-2'>
                             {[...Array(4).keys()].map((item, idx) => (
-                                <div className='p-1 w-12 h-12 text-center shadow-4D rounded-lg' key={"pdimg"+idx}>
+                                <div className='p-2 text-center shadow-4D rounded-xl cursor-pointer' key={"pdimg"+idx} onClick={handleImg}>
                                     <Image src={IMAGES.Product} alt="Product" className="scale_img" />
                                 </div>
                             ))}
                         </div>
-                        <div className='col-span-5'>
-                            <div className='p-5 text-center shadow-4D rounded-3xl'>
-                                <Image src={IMAGES.Product} alt="Appointment" className="scale_img" />
+                        <div className='col-span-9'>
+                            <div className='p-8 text-center shadow-4D rounded-3xl h-full flex items-center'>
+                                {image && <Image src={IMAGES.Product} alt="Appointment" className="scale_img" />}
                             </div>
                         </div>
                     </div>
                     <div className='px-5 text-black-241'>
-                        <div>
+                        <div className='pt-0 md:pt-5'>
                             <h6 className='text-xl w-4/5'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
                             <hr className='border border-[#8B2E5D] opacity-20 my-4'></hr>
                             <div className='mb-3 flex gap-4'>
@@ -60,7 +64,7 @@ const ProductDetails = () => {
                             <div>Size - 50 ML</div>
                             <div className='flex items-center gap-5 mt-6'>
                                 <button className='custom_button'>Add to Cart</button>
-                                <button className='custom_button'>Buy Now</button>
+                                <button className='custom_button' onClick={()=> router.push("/thank-you")}>Buy Now</button>
                             </div>
                         </div>
                     </div>

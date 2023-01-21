@@ -2,11 +2,12 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import AddToCart from '../../common/AddToCart';
 
-const CheckoutBox = () => {
+const CheckoutBox = ({showCheckout = false}) => {
   const router = useRouter();
   const [num, setNum]= useState(1);
   const [haveCoupen, setHaveCoupen]= useState(false);
   const [apply, setApply]= useState(false);
+  const [coupenCode, setCoupenCode]= useState("");
     const inc = (e) => {
         num < 5 ? setNum(num + 1) : e.preventDefault();
     }
@@ -41,13 +42,20 @@ const CheckoutBox = () => {
               {haveCoupen &&
               <div className='flex flex-wrap gap-3 justify-center items-end mb-7 mt-3'>
                 <div>
-                  <input type="text" placeholder='Enter Coupon Here' className={`text-xs h-10 form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}/>
+                  <input 
+                    type="text" 
+                    placeholder='Enter Coupon Here' 
+                    className={`text-xs h-10 form-control border rounded-3xl border-dashed uppercase text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}
+                    onChange={(e)=>setCoupenCode(e.target.value)}
+                    value={coupenCode}
+                    disabled={apply}
+                  />
                 </div>
                 <div>
                   {apply ?
-                    <button className='text-[#CC0000] h-10 font-bold cursor-pointer text-center w-32 align-middle rounded-lg' onClick={() => setApply(false)}>Remove</button>
+                    <button className='text-[#CC0000] h-10 font-bold cursor-pointer text-center w-32 align-middle rounded-lg' onClick={() => {setApply(false); setCoupenCode("")}}>Remove</button>
                     :
-                    <button className='custom_button h-10 w-32' onClick={() => setApply(true)}>Apply</button>
+                    <button className='custom_button h-10 w-32' disabled={!!!coupenCode} onClick={() => setApply(true)}>Apply</button>
                   }
                 </div>
               </div>}
@@ -71,9 +79,11 @@ const CheckoutBox = () => {
               <span className='text-theme'><span className='rupee-sym'>&#x20B9;</span>1500</span>
             </div>
           </div>
-          <div className='text-center'>
-            <button className='custom_button my-2 h-10' onClick={()=> router.push("/checkout")}>Checkout</button>
-          </div>
+          {showCheckout && 
+            <div className='text-center'>
+              <button className='custom_button my-2 h-10' onClick={()=> router.push("/checkout")}>Checkout</button>
+            </div>
+          }
         </div>
     </div>
   )

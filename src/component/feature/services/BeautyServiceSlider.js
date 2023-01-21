@@ -61,7 +61,7 @@ const BeautyServiceSlider = ({serviceId,setServiceData}) => {
             {data.map((item, idx) => (
                 <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 text-center' key={"pkg" + idx}>
                     <div>
-                        <Image src={item.img} alt="Bridal1" className={`cursor-pointer mx-auto rounded-[50%] bg-white ${serviceId === idx+1 ? 'opacity-100' : "opacity-50"}`} height={80} width={80} onClick={()=> setServiceData(item?.name,idx+1)}/>
+                        <Image src={item.img} alt="Bridal1" className={`cursor-pointer mx-auto rounded-[50%] bg-white ${serviceId === idx+1 ? 'opacity-100' : "opacity-50"}`} height={100} width={100} onClick={()=> setServiceData(item?.name,idx+1)}/>
                         <div className={`pt-3 text-white cursor-pointer uppercase font-light ${serviceId === idx+1 ? 'font-bold' : "text-opacity-75"}`} onClick={()=> setServiceData(item?.name,idx+1)}>{item?.name}</div>
                     </div>
                 </div>

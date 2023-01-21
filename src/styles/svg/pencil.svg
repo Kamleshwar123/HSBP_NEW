@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27.576" height="26.883" viewBox="0 0 27.576 26.883">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#993680"/>
+      <stop offset="1" stop-color="#2f1a59"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_3480" data-name="Group 3480" transform="translate(20157.283 9920.354)">
+    <g id="Group_3479" data-name="Group 3479">
+      <path id="Icon_awesome-pencil-alt" data-name="Icon awesome-pencil-alt" d="M18.2,5.2,16.518,6.883a.439.439,0,0,1-.622,0L11.839,2.825a.439.439,0,0,1,0-.622L13.524.518a1.759,1.759,0,0,1,2.482,0l2.2,2.2A1.752,1.752,0,0,1,18.2,5.2ZM10.391,3.651l-9.6,9.6L.015,17.694A.879.879,0,0,0,1.032,18.71l4.442-.779,9.6-9.6a.439.439,0,0,0,0-.622L11.016,3.651a.444.444,0,0,0-.625,0ZM4.538,12.429a.51.51,0,0,1,0-.724l1.6-1.6,4.029-4.029a.512.512,0,1,1,.724.724l-5.63,5.63a.51.51,0,0,1-.724,0ZM3.218,15.5H4.973v1.327l-2.358.413L1.478,16.107l.413-2.358H3.218Z" transform="translate(-20148.426 -9920.358)" fill="url(#linear-gradient)"/>
+      <path id="Path_6662" data-name="Path 6662" d="M14.361,6H5.525A2.525,2.525,0,0,0,3,8.525V26.2a2.525,2.525,0,0,0,2.525,2.525H23.2A2.525,2.525,0,0,0,25.721,26.2V17.361" transform="translate(-20159.283 -9923.191)" fill="none" stroke="#5b2669" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

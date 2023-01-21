@@ -24,12 +24,12 @@ const BeautyService = ({type}) => {
     setServiceId(id); 
     setServiceName(name);
     boxRef?.current?.scrollIntoView({ block: 'start',  behavior: 'smooth' });
-    setTimeout(()=>setLoading(false), 2000);
+    setTimeout(()=>setLoading(false), 1000);
   }
   return (
     <div className='container relative'>
-        <BeautyServiceSlider serviceId={serviceId} setServiceData={setServiceData} ref={boxRef}/>
-        <div className='grid md:grid-cols-12 gap-7 my-5 scroll-my-20' ref={boxRef} >
+        <div className='scroll-my-20' ref={boxRef}><BeautyServiceSlider serviceId={serviceId} setServiceData={setServiceData} ref={boxRef}/></div>
+        <div className='grid md:grid-cols-12 gap-7 my-5' >
           <div className='md:col-span-7'>
           {loading ? <CustomLoader/> 
           :
@@ -51,10 +51,10 @@ const BeautyService = ({type}) => {
           }
           </div>
           <div className='md:col-span-5'>
-              <div className='sticky top-20'><CheckoutBox/></div>
+              <div className='sticky top-20'><CheckoutBox showCheckout={true}/></div>
           </div>
         </div>
-        <div className='bg-pink-light bg-opacity-30 py-5 px-7 text-black-2e2 rounded-2xl'>
+        <div className='bg-pink-light bg-opacity-30 py-5 px-7 text-black-2e2 rounded-2xl pb-8'>
           <h6 className='font-bold text-base'>Home beauty service packages for your monthly need at an affordable price</h6>
           <p className='mt-5'>Being a women means juggling with a myriad of responsibilities. It's difficult to carve out time for yourself. We tried to make it bit easier for you.</p>
           <p className='mt-5'> We bring you customized beauty packages to cater your grooming essentials at most jaw-dropping prices. Although you still have the flexibility to add services even after the expert has arrived at your home.</p>
@@ -62,13 +62,13 @@ const BeautyService = ({type}) => {
         </div>
         <div>
           <div className='my-6 text-center'>
-            <Image src={IMAGES.HSBPAdv} alt="HSBPAdv" className="scale_img"/>
-            <h4 className='mt-4 text-theme text-xl font-bold'>HSBP Advantage</h4>
+            <Image src={IMAGES.HSBPAdv} alt="HSBPAdv" width={55} className="scale_img"/>
+            <h1 className='mt-2 text-theme text-2xl font-black'>HSBP Advantage</h1>
           </div>
           <div className='flex flex-wrap gap-7 text-center text-black-2e2 items-end justify-evenly'>
             {advData.map((item,idx)=> (
               <div key={`adv${idx}`}>
-                <Image src={item?.img} alt="HSBPAdv" className="mx-auto w-auto max-h-75"/>
+                <Image src={item?.img} alt="HSBPAdv" className="mx-auto h-auto max-w-[60px]"/>
                 <p className='font-bold py-2'>{item?.label}</p>
               </div>
             ))}

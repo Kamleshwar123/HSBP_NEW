@@ -29,8 +29,10 @@ import ExploreArrow from "./../styles/svg/explore-arrow.svg";
 import BlackStar from "./../styles/svg/blackstar.svg";
 import ReviewUser from "./../styles/svg/reviewuser.svg";
 import Cross from "./../styles/svg/cross.svg";
+import Pencil from "./../styles/svg/pencil.svg";
 
 const SvgIcon = {
+  Pencil,
   Cross,
   ReviewUser,
   BlackStar,

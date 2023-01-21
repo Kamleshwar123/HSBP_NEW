@@ -1,20 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Modal from 'react-modal';
 
 const SelectCityModal = ({closeModal}) => {
     Modal.setAppElement('#main_layout');
-    const customStyles = {
-        content: {
-          top: '50%',
-          left: '50%',
-          right: 'auto',
-          bottom: 'auto',
-          marginRight: '-50%',
-          transform: 'translate(-50%, -50%)',
-          overflowY: 'auto',
-          maxHeight: "90%",
-        },
-      };
+    useEffect(() => {
+      document.body.style.overflow = 'hidden';
+      return () => {document.body.style.overflow = 'unset';}
+    }, [])
     /* const disableScroll = () => { document.body.style.overflow = 'hidden' } */
   return (
     <Modal

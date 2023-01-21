@@ -54,10 +54,10 @@
   .home_card_h3{
     font-size: 25px;
   }
-  .text-theme {
+  /* .text-theme {
     color: #8B2E5D;
     font-weight: 600;
-}
+  } */
   .home_card_p{
     font-size: 16px;
     margin-top: 10px;
@@ -344,6 +344,11 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .franchise-support-bg {
+    background: url(./../images/support.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 .pt-3.text-white.cursor-pointer.uppercase.font-light.font-bold {
     font-weight: bolder;
 }
@@ -361,4 +366,16 @@
 }
 .beauty_slider .shadow-4D {
   --tw-shadow: 0px 3px 6px #0000004D;
+}
+.right-tick li:before{
+  content: '✓';
+  position: absolute;
+  color: #000000;
+  left: -20px;
+  font-weight: bold;
+}
+.right-tick li{
+  position: relative;
+  margin-left: 20px;
+  padding: 5px 0;
 }

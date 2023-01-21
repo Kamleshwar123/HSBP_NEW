@@ -5,7 +5,6 @@ import { Fragment, useState } from 'react'
 import NumberProceedModal from '../../component/common/CityModal/NumberProceedModal'
 import SelectCityModal from '../../component/common/CityModal/SelectCityModal'
 import IMAGES from '../../constant/images'
-import SvgIcon from '../../constant/SvgIcon'
 
 export default function SelectCity() {
   let [isOpen, setIsOpen] = useState(true);

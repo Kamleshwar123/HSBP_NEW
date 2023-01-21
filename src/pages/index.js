@@ -1,4 +1,6 @@
 import React from "react";
+import CityModal from "../component/common/CityModal/CityModal";
+import SelectCityModal from "../component/common/CityModal/SelectCityModal";
 import ExploreAll from "../component/common/ExploreAll";
 import AppDownload from "../component/feature/Home/AppDownload";
 import Appointment from "../component/feature/Home/Appointment";
@@ -14,6 +16,8 @@ import Salon from "../component/feature/Home/Salon";
 import Testimonials from "../component/feature/Home/Testimonials";
 
 const Home = () => {
+  /* const openLoginModal = useSelector((state) => state.common.openLoginModal);
+  const openLoginModal = useSelector((state) => state.common.openLoginModal); */
   return (
     <div>
       <Banner />
@@ -65,7 +69,7 @@ const Home = () => {
           desc={"50+ salon professional brands delivered nationally to your doorsteps"}
           classes="heading-homepage"
         />
-        <ExploreAll text={"Explore All"} url={"/product-home"}/>
+        <ExploreAll text={"Explore All"} url={"/products"}/>
         <Product />
         </div>
       </div>
@@ -90,6 +94,8 @@ const Home = () => {
       <div className="container">
         <AppDownload />
       </div>
+      {/* <CityModal/>
+      <SelectCityModal/> */}
     </div>
   );
 };

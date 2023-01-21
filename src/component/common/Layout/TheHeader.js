@@ -36,7 +36,7 @@ const TheHeader = () => {
         <div className="flex justify-between items-center gap-5 h-20">
           <div className="flex gap-3 items-center">
             <SvgIcon.Hamburger onClick={toggleDrawer} className='cursor-pointer text-black-707' />
-            <Sidebar isOpen={isOpen} toggleDrawer={toggleDrawer} />
+            {isOpen && <Sidebar isOpen={isOpen} toggleDrawer={toggleDrawer} />}
             <div>
               <Link href={"/"}>
                 <Image src={IMAGES.Logo} alt="logo" height={36} className="scale_img" />

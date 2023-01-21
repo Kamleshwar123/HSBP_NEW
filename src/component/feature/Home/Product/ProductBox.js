@@ -10,7 +10,7 @@ const ProductBox = () => {
     const router = useRouter();
     const [wishList, setWishlist] = useState(false);
     return (
-        <div className='overflow-hidden shadow-4D h-full rounded-3xl bg-white border-[#DCDCDC] text-center cursor-pointer' onClick={()=> router.push("products/1")}>
+        <div className='overflow-hidden shadow-4D h-full rounded-3xl bg-white border-[#DCDCDC] text-center cursor-pointer' onClick={()=> router.push("/products/1")}>
             <div>
                 <div className='flex justify-between relative'>
                     <div>

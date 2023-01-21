@@ -8,6 +8,7 @@ import SvgIcon from '../../constant/SvgIcon'
 
 const Checkout = () => {
   const [openBox, setOpenBox]= useState(true);
+  const [openBookingBox, setOpenBookingBox]= useState(false);
   const router = useRouter();
   const [paymentType, setPaymentType] = useState(1);
   const [isAddNewAddress, setIsAddNewAddress] = useState(false);
@@ -38,10 +39,10 @@ const Checkout = () => {
                 {[...Array(3).keys()].map((item, idx) => (
                   <div key={idx+"add"} className='cursor-pointer'>
                     {idx !==0 &&<hr className='my-2'/>}
-                    <div className='inline-flex space-x-5 text-black-685 w-full'>
+                    <div className='flex space-x-5 text-black-685 w-full items-center'>
                       <input type='radio' id={"add"+idx} name="address" checked={selectedAddress === idx} onChange={()=>handleSelectAddress(idx)}/>
                       <label htmlFor={"add"+idx} className='w-full cursor-pointer'>
-                        <div className='inline-flex items-center'>
+                        <div className='flex flex-wrap items-center'>
                           <div className='mr-3 text-black-0f0'>Manoj</div>
                           <div className='mr-3 p-1 text-xs bg-[#F1F1F1] text-black-686'>home</div>
                           <Image src={ICONS.Call} alt="call" className='max-h-[12px] w-auto'/>
@@ -50,6 +51,7 @@ const Checkout = () => {
                         <p className='text-xs pt-1'>RZ-95, Adarsh Nagar, Indirapuram,</p>
                         <p className='text-xs'>Ghaziabad - 201309</p>
                       </label>
+                      <div className='px-2'><SvgIcon.Pencil className="cursor-pointer" onClick={()=> {}}/></div>
                     </div>
                   </div>
                 ))}
@@ -63,9 +65,11 @@ const Checkout = () => {
           </div>
           {isAddNewAddress && <AddAddressForm/>}
             <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
-                <div className='theme-heading-box'>
-                Select Booking Date/Time
+                <div className='theme-heading-box flex justify-between cursor-pointer' onClick={()=> setOpenBookingBox(!openBookingBox)}>
+                <p>Select Booking Date/Time</p>
+                <div><SvgIcon.IosArrowDown className={`scale-50 ${openBookingBox ? 'rotate-180' : "rotate-0"}`}/></div>
                 </div>
+                {openBookingBox &&
                 <div className='p-5'>
                   <div className='grid grid-cols-6 gap-6'>
                     <div className='col-span-6 md:col-span-3'>
@@ -76,23 +80,31 @@ const Checkout = () => {
                         <label className="form-label">Timing</label>
                         <input type="time" className="form-control" placeholder='Timing' />
                     </div>
-                    <div className='col-span-6'>
-                        <label className="form-label">Check your payment mode</label>
-                        <div className="form_check">
-                            <input type="radio" id="online" name="payment" checked={paymentType === 1} value={1} onChange={()=> setPaymentType(1)}/>
-                            <label className='whitespace-nowrap cursor-pointer' htmlFor='online'>Online payment</label>
-                        </div>
-                        <div className="form_check">
-                            <input type="radio" id="Cash" name="payment" checked={paymentType === 2} value={2} onChange={()=> setPaymentType(2)}/>
-                            <label className='whitespace-nowrap cursor-pointer' htmlFor='Cash'>Cash (Cash after service)</label>
-                        </div>
-                    </div>
                   </div>
-                  <div className='text-center mt-6'>
+                  {/* <div className='text-center mt-6'>
                       <button className='custom_button' onClick={()=> router.push(paymentType === 1 ? "/payment-mode" :"/thank-you")}>{paymentType === 1 ? "Pay Now" :"Book Now"}</button>
+                  </div> */}
+                </div>
+                }
+            </div>
+            <div className='p-6'>
+                <div className='grid grid-cols-6 gap-6'>
+                  <div className='col-span-6'>
+                      <label className="form-label">Check your payment mode</label>
+                      <div className="form_check">
+                          <input type="radio" id="online" name="payment" checked={paymentType === 1} value={1} onChange={()=> setPaymentType(1)}/>
+                          <label className='whitespace-nowrap cursor-pointer' htmlFor='online'>Online payment</label>
+                      </div>
+                      <div className="form_check">
+                          <input type="radio" id="Cash" name="payment" checked={paymentType === 2} value={2} onChange={()=> setPaymentType(2)}/>
+                          <label className='whitespace-nowrap cursor-pointer' htmlFor='Cash'>Cash (Cash after service)</label>
+                      </div>
                   </div>
                 </div>
-            </div>
+                <div className='text-center mt-6'>
+                    <button className='custom_button' onClick={()=> router.push(paymentType === 1 ? "/payment-mode" :"/thank-you")}>{paymentType === 1 ? "Pay Now" :"Book Now"}</button>
+                </div>
+              </div>
         </div>
         <div className='col-span-12 md:col-span-5'>
           <div className='sticky top-20'><CheckoutBox/></div>

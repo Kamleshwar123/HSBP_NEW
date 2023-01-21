@@ -10,6 +10,7 @@ const ProductCategorySlider = () => {
         dots: false,
         infinite: true,
         autoplay: true,
+        arrows:false,
         slidesToShow: 6,
         speed: 500,
         slidesToScroll: 1,
@@ -59,12 +60,12 @@ const ProductCategorySlider = () => {
         {category: "Massage Oil", icon: ICONS.Category4},
     ]
   return (
-    <div className='beauty_slider my-3 sticky top-[92px] z-[100] bg-white'>
+    <div className='beauty_slider my-3 sticky top-[80px] z-[100] bg-white -mx-3'>
         <Slider {...settings}>
         {data.map((item, idx) => (
-        <div key={idx+"cat"} className='textcenter md:text-left'>
+        <div key={idx+"cat"} className='text-center px-3'>
             <div 
-                className='mx-auto md:mx-0 cursor-pointer justify-self-start max-w-[160px] text-theme border border-theme rounded-xl flex gap-2 px-2 py-1 items-center justify-start'
+                className='mx-auto cursor-pointer text-theme border border-theme rounded-xl flex gap-2 px-2 py-1 items-center justify-start'
                 onClick={()=> router.push("/products")}
             >
                 <div className='w-5 h-5 rounded-full'>
