@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CityModal from "../component/common/CityModal/CityModal";
 import SelectCityModal from "../component/common/CityModal/SelectCityModal";
 import ExploreAll from "../component/common/ExploreAll";
@@ -16,8 +16,13 @@ import Salon from "../component/feature/Home/Salon";
 import Testimonials from "../component/feature/Home/Testimonials";
 
 const Home = () => {
-  /* const openLoginModal = useSelector((state) => state.common.openLoginModal);
-  const openLoginModal = useSelector((state) => state.common.openLoginModal); */
+  const [openCityModal, setOpenCityModal] = useState(false);
+  const [openSelectCityModal, setOpenSelectCityModal] = useState(false);
+
+  useEffect(()=> {
+    setOpenCityModal(true);
+  },[])
+  
   return (
     <div>
       <Banner />
@@ -94,8 +99,8 @@ const Home = () => {
       <div className="container">
         <AppDownload />
       </div>
-      {/* <CityModal/>
-      <SelectCityModal/> */}
+      {openCityModal && <CityModal isOpen={openCityModal} closeModal={()=> setOpenCityModal(false)} setOpenSelectCityModal={setOpenSelectCityModal}/>}
+      {openSelectCityModal && <SelectCityModal isOpen={openSelectCityModal} closeModal={()=> {setOpenCityModal(false);setOpenSelectCityModal(false)}}/>}
     </div>
   );
 };

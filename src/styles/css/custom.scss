@@ -18,6 +18,9 @@
     background-color: rgb(46 46 46 / 0.8) !important;
     z-index: 1300;
 }
+.ReactModal__Content:focus-visible {
+    outline: none;
+}
 .loader {
 	border-top-color: #8B2E5D;
 	-webkit-animation: spinner 1.5s linear infinite;

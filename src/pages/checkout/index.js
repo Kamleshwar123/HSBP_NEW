@@ -29,6 +29,7 @@ const Checkout = () => {
           <div className='flex items-center gap-2'>LOGIN <span><Image src={ICONS.LoginCheck} alt="call" className='max-h-[10px] w-auto'/></span></div>
           <p>+91-9599043601</p>
         </div>
+        <div className='block md:hidden mt-6'><CheckoutBox/></div>
           <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
             <div className='theme-heading-box flex justify-between cursor-pointer' onClick={()=> setOpenBox(!openBox)}>
               <p>Address Details</p>
@@ -107,7 +108,7 @@ const Checkout = () => {
               </div>
         </div>
         <div className='col-span-12 md:col-span-5'>
-          <div className='sticky top-20'><CheckoutBox/></div>
+          <div className='sticky top-20 hidden md:block'><CheckoutBox/></div>
         </div>
       </div>
     </div>

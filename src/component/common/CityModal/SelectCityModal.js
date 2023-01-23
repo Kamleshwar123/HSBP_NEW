@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Modal from 'react-modal';
 
-const SelectCityModal = ({closeModal}) => {
+const SelectCityModal = ({isOpen,closeModal}) => {
     Modal.setAppElement('#main_layout');
     useEffect(() => {
       document.body.style.overflow = 'hidden';
@@ -10,8 +10,8 @@ const SelectCityModal = ({closeModal}) => {
     /* const disableScroll = () => { document.body.style.overflow = 'hidden' } */
   return (
     <Modal
-        isOpen={true}
-        contentLabel="Example Modal"
+        isOpen={isOpen}
+        contentLabel="Example Modal2"
         onRequestClose={closeModal}
         /* onAfterOpen={disableScroll} */
         className="modal selectcitymodal"
@@ -27,7 +27,7 @@ const SelectCityModal = ({closeModal}) => {
               <option className='hover:bg-black-605 hover:text-white'>Chandigrah</option>
               <option className='hover:bg-black-605 hover:text-white'>Chennai</option>
             </select>
-            <button className="custom_button" style={{borderTopLeftRadius: '0px',borderBottomLeftRadius: '0px',}}>Proceed</button>
+            <button className="custom_button" style={{borderTopLeftRadius: '0px',borderBottomLeftRadius: '0px'}} onClick={closeModal}>Proceed</button>
           </div>
         </div>
       </Modal>

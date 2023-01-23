@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import IMAGES from '../../../constant/images';
 import { onylMobileInput,isNumberOnly } from '../../../utils';
 
-const NumberProceedModal = ({closeModal}) => {
+const NumberProceedModal = ({is,OpencloseModal}) => {
     Modal.setAppElement('#main_layout');
     useEffect(() => {
       document.body.style.overflow = 'hidden';
