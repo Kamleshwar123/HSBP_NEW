@@ -77,7 +77,8 @@ module.exports = {
         'checkout': '0px 5px 15px #00000066',
         'beautician':'0px 6px 10px #00000029',
         '42': '0px 8px 22px #00000042',
-        'filterbox':'10px 8px 15px #00000029'
+        'filterbox':'10px 8px 15px #00000029',
+        "feedback":'0px 4px 17px #0000006B'
       }
     },
   },

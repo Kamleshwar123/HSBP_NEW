@@ -10,8 +10,8 @@ const Faqs = () => {
     const noShow = 'font-semibold flex justify-between items-center py-3 px-5 text-black-605';
     return (
         <div className='container'>
-            <div className='theme-bg text-white py-6 px-4 rounded-3xl text-center'>
-                <h1 className='text-[42px] pb-2'>Frequently Asked Questions</h1>
+            <div className='faq-bg text-white py-6 px-4 rounded-3xl text-center'>
+                <h1 className='text-4xl pb-2'>Frequently Asked Questions</h1>
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div className='py-7'>

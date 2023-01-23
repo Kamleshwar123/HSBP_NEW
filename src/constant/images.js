@@ -78,8 +78,10 @@ import Support from './../styles/images/support.webp';
 import Criteria from './../styles/images/criteria.webp';
 import FranchiseBanner from './../styles/images/franchise-banner.webp';
 import Process from './../styles/images/process.webp';
+import InsImg from './../styles/images/ins_img.webp';
 
 const IMAGES = {
+    InsImg,
     Support,
     Criteria,
     FranchiseBanner,

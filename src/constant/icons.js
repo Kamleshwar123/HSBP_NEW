@@ -39,8 +39,18 @@ import Category1 from './../styles/icons/category1.webp';
 import Category2 from './../styles/icons/category2.webp';
 import Category3 from './../styles/icons/category3.webp';
 import Category4 from './../styles/icons/category4.webp';
+import InsLocation from './../styles/icons/ins_location.webp';
+import InsBook from './../styles/icons/ins_book.webp';
+import ThumbUp from './../styles/icons/thumb-up.webp';
+import ThumbDown from './../styles/icons/thumb-down.webp';
+import ThumbColor from './../styles/icons/thumb-color.webp';
 
 const ICONS = {
+    ThumbColor,
+    ThumbDown,
+    ThumbUp,
+    InsBook,
+    InsLocation,
     Category1,
     Category2,
     Category3,
