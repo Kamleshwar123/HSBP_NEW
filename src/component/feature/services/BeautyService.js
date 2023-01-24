@@ -28,7 +28,7 @@ const BeautyService = ({type}) => {
   }
   return (
     <div className='container relative'>
-        <div className='scroll-my-20' ref={boxRef}><BeautyServiceSlider serviceId={serviceId} setServiceData={setServiceData} ref={boxRef}/></div>
+        <div className='scroll-my-20' ref={boxRef}><BeautyServiceSlider serviceId={serviceId} setServiceData={setServiceData}/></div>
         <div className='grid md:grid-cols-12 gap-7 my-5' >
           <div className='md:col-span-7'>
           {loading ? <CustomLoader/> 

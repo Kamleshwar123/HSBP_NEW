@@ -18,8 +18,8 @@ const SalonDetail = () => {
           <div className='text-black grid md:grid-cols-12 gap-5 items-center'>
             <div className='md:col-span-7'>
               <h6 className='text-xl text-theme font-medium'>HSBP Salon</h6>
-              <p>C-56/11, Sector 62, Near Staller IT Park</p>
-              <p>Noda Tel. : +91 958 257 7510 / 9582-577-510, E-mail : hsbpncr@gmail.com</p>
+              <p>C-56/11, Sector 62, Near Staller IT Park, Noida  </p>
+              <p>Tel. : +91 958 257 7510 / 9582-577-510, E-mail : hsbpncr@gmail.com</p>
               <div className='grid sm:grid-cols-2 md:grid-cols-4 text-center md:divide-x md:divide-black-707 items-center justify-center gap-5 mt-5 mb-2 text-black-241 font-semibold'>
                   <div>
                       <div><Image src={ICONS.Call} alt="beauty" className="scale_icon-24" /></div>

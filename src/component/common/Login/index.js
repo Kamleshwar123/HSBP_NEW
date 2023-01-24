@@ -20,7 +20,7 @@ const Login = ({isOpen,closeModal}) => {
             <div className="fixed inset-0 bg-black-2e2 bg-opacity-80" />
           </Transition.Child>
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex min-h-full items-center justify-center text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"

@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import Slider from "react-slick";
 import IMAGES from "../../../constant/images";
 
 const Banner = () => {
+  const router = useRouter();
   var settings = {
     dots: true,
     arrows: false,
@@ -21,9 +23,9 @@ const Banner = () => {
             <h6 className="text-xl my-3">Now Serving at your Home</h6>
             <h2 className="text-2xl font-bold">BEAUTICIANS/HAIRDRESSERS</h2>
             <div className="mt-7">
-              <Link href={"/"} className="custom_button">
+              <sapn  className="custom_button" onClick={()=>router.push("/booknow")}>
               Book Now
-              </Link>
+              </sapn>
             </div>
           </div>
         </div>
@@ -31,9 +33,9 @@ const Banner = () => {
           <Image src={IMAGES.Banner2} alt="Banner2" className="scale_img banner_img" />
           <div className="hidden md:block absolute bottom-[20px] pl-12 text-black-2a3">
             <div className="mt-7">
-              <Link href={"/"} className="custom_button">
+            <div  className="custom_button" onClick={()=>router.push("/booknow")}>
               Book Now
-              </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -41,9 +43,9 @@ const Banner = () => {
           <Image src={IMAGES.Banner3} alt="Banner3" className="scale_img banner_img" />
           <div className="hidden md:block absolute bottom-[20px] pl-12 text-black-2a3">
             <div className="mt-7">
-              <Link href={"/"} className="custom_button">
+            <div  className="custom_button" onClick={()=>router.push("/booknow")}>
               Book Now
-              </Link>
+              </div>
             </div>
           </div>
         </div>

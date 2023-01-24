@@ -97,7 +97,7 @@ const TheFooter = () => {
         </div>
       </div>
       <div className="container text-center mx-auto w-4/5 text-[#827E81] text-sm p-3">
-        <div className="mb-3">Copyright © 2021 Home Service Beauty Parlour. </div>
+        <div className="mb-3">{`Copyright © ${new Date()?.getFullYear()} Home Service Beauty Parlour.`}</div>
         <div> All rights reserved | Terms of Use | Privacy Policy. Designed and Powered by 
           <a href={"https://abym.in/"} rel="noopener noreferrer" target="_blank" className="font-semibold text-[#827E81]">{" "}AbyM Technology</a>
           </div>

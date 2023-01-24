@@ -2,14 +2,16 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import OtpInput from 'react-otp-input';
 import PhoneInput from 'react-phone-input-2'
+import ICONS from '../../../constant/icons';
 import IMAGES from '../../../constant/images';
 import SvgIcon from '../../../constant/SvgIcon';
+import { isNumberOnly } from '../../../utils';
 
 const LoginModal = ({isopen,closeModal}) => {
   const [screen, setScreen] = useState(1);
   const [otp, setOtp] = useState("");
   return (
-      <div className='bg-[#a05bcf] p-3 sm:p-5 md:py-12 md:px-16 relative'>
+      <div className='bg-[#a05bcf] p-1 sm:p-5 md:py-12 md:px-16 relative'>
           <span className='absolute top-1 right-1 text-white p-2 cursor-pointer'>
             <SvgIcon.Cross className="w-8 h-8" onClick={closeModal}/>
           </span>
@@ -30,15 +32,19 @@ const LoginModal = ({isopen,closeModal}) => {
                 <div className='shadow-4D rounded-2xl px-5 pt-7 pb-10 w-full'>
                   {screen === 1 ?
                   <div>
-                    <p className='font-medium mb-3'>Enter your mobile number</p>
-                    <PhoneInput
+                    <p className='font-medium mb-3 text-left'>Enter your mobile number</p>
+                    {/* <PhoneInput
                     country={'in'}
                     className="font-Poppins"
                     inputClass='form-control w-full focus:border-black-241 border-black-241 text-black-241'
                     inputStyle={{width: "100%"}}
                     disableDropdown={true}
                     countryCodeEditable={false}
-                    />
+                    /> */}
+                    <div className='flex items-stretch relative'>
+                      <div className='flex items-center absolute h-full left-1 gap-1 border-r border-border pr-1'><Image src={ICONS.Indianflag} height={16} width={24} alt="Indianflag"/><span>+91</span><Image src={ICONS.CountryArrowDown} alt="CountryArrowDown" width={10}/></div>
+                      <input type="text" className='form-control pl-20' maxLength={10} onKeyPress={(e)=>isNumberOnly(e)}/>
+                    </div>
                   </div>
                   :
                   <div>
@@ -61,7 +67,7 @@ const LoginModal = ({isopen,closeModal}) => {
                     <div className='text-blue-477 my-2 cursor-pointer text-center font-medium' onClick={()=>{}}>Resend Otp?</div>
                   </div>
                   }
-                  <button className='custom_button w-full mt-3 h-10' onClick={()=> setScreen(2)}>{screen === 1 ? "Continue": "login"}</button>
+                  <button className='custom_button w-full mt-3 h-10' onClick={()=> setScreen(2)}>{screen === 1 ? "Continue": "Login"}</button>
                 </div>
               </div>
             </div>

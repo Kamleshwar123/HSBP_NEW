@@ -62,7 +62,7 @@ const Institues = () => {
                             <div className='shadow-42 bg-white mb-7 rounded-[22px] overflow-hidden' key={idx}>
                                 <div className='grid grid-cols-12 gap-y-5 place-items-stretch'>
                                     <div className='col-span-12 md:col-span-4'>
-                                        <div className='text-center relative h-full'>
+                                        <div className='text-center relative h-full min-h-[200px]'>
                                             <Image src={IMAGES.InsImg} alt="Salon" fill/>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@ const Institues = () => {
                                                     </div>
                                                 </div>
                                                 <div className='flex justify-center sm:justify-between gap-7 mt-7'>
-                                                    <button className='custom_button flex gap-1 items-center'><span><Image src={ICONS.InsBook} className='scale_img w-4' alt="InsBook"/></span><span>Book Appointment</span></button>
+                                                    <button className='custom_button flex gap-1 items-center'><span><Image src={ICONS.InsBook} className='w-4 h-4' alt="InsBook"/></span><span>Book Appointment</span></button>
                                                     <button className='custom_button' onClick={()=> router.push("/salons/1")}>View Details</button>
                                                 </div>
                                             </div>

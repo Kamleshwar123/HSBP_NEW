@@ -17,13 +17,13 @@ const Feedback = () => {
         </div>
         <div className='grid grid-cols-10 items-center gap-6 mt-5'>
           <div className='col-span-10 md:col-span-3'>
-            <input type="text" className='form-control' placeholder='Name'/>
+            <input type="text" className='form-control text-black-241 placeholder:text-black-241 rounded-none border-r-0 border-l-0 border-t-0' placeholder='Name'/>
           </div>
           <div className='col-span-10 md:col-span-4'>
-            <input type="text" className='form-control' placeholder='E-mail ID'/>
+            <input type="text" className='form-control text-black-241 placeholder:text-black-241 rounded-none border-r-0 border-l-0 border-t-0' placeholder='E-mail ID'/>
           </div>
           <div className='col-span-10 md:col-span-3'>
-            <input type="text" className='form-control' placeholder='Mobile No.'/>
+            <input type="text" className='form-control text-black-241 placeholder:text-black-241 rounded-none border-r-0 border-l-0 border-t-0' placeholder='Mobile No.'/>
           </div>
         </div>
         <div className='my-6'>

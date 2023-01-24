@@ -1,20 +1,21 @@
 import Image from 'next/image'
 import React from 'react'
 import IMAGES from '../../constant/images'
+import SvgIcon from '../../constant/SvgIcon'
 
 const MyOrderDetails = () => {
   return (
     <div className='container mt-3'>
       <h3 className='text-2xl font-medium mb-2 text-black-2a3'>Order Details</h3>
       <div className='grid grid-cols-12 gap-6 text-black-2a3'>
-        <div className='col-span-12 sm:col-span-6'>
+        <div className='col-span-12 sm:col-span-5'>
           <p>Order Id : #HSBP021548485</p>
           <p>Order Place : 30/05/2022 10.19 am</p>
           <p>Items : 05</p>
           <p>Payment Mode : Online</p>
           <p>Total Amount : ₹ 1685.00</p>
         </div>
-        <div className='col-span-12 sm:col-span-6 justify-self-end text-right'>
+        <div className='col-span-12 sm:col-span-7 justify-self-end text-right'>
           <p className='text-lg font-medium'>Delivery Address :</p>
           <p className='text-lg font-medium'> Rakesh Singh</p>
           <p>RZ-95, Adarsh Nagar, Indirapuram,</p>
@@ -25,9 +26,11 @@ const MyOrderDetails = () => {
           <p>Expected : 03/06/2022</p>
         </div>
         <div className='col-span-12 sm:col-span-7 justify-self-end text-right'>
-          <button className='custom_button mr-2 mb-2'>Continue Shopping</button>
-          <button className='custom_button mr-2 mb-2'>Order Cancel</button>
-          <button className='custom_button'>Download Invoice</button>
+          <div className='flex flex-wrap gap-2'>
+            <button className='custom_button'>Continue Shopping</button>
+            <button className='custom_button'>Order Cancel</button>
+            <button className='custom_button flex items-center gap-1'><span><SvgIcon.Download className='w-4 h-auto'/></span> Invoice</button>
+          </div>
         </div>
       </div>
       <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>

@@ -97,14 +97,16 @@ const SalonsPage = () => {
                                 <textarea type="text" rows={8} className="form-control" placeholder='Enter your Query' />
                             </div>
                             <div className='grid grid-cols-12'>
-                            <div className='md:col-span-5 mb-3'>
-                            <ReCAPTCHA
-                                sitekey={process.env.REACT_APP_SITE_KEY || "6LdT4gckAAAAALAO8LIr88ZGcCtkO2s6dGOmOwcq"}
-                            />
+                            <div className='md:col-span-12 mb-3'>
+                            <div>
+                                <ReCAPTCHA
+                                    sitekey={process.env.REACT_APP_SITE_KEY || "6LdT4gckAAAAALAO8LIr88ZGcCtkO2s6dGOmOwcq"}
+                                />
+                            </div>
                             </div>
                             </div>
                             <div className='text-center'>
-                                <button className='custom_button'>SUBMIT</button>
+                                <button className='custom_button' style={{paddingRight: "50px",paddingLeft: "50px"}}>SUBMIT</button>
                             </div>
                         </form>
                 </div>

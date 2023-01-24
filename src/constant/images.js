@@ -79,8 +79,14 @@ import Criteria from './../styles/images/criteria.webp';
 import FranchiseBanner from './../styles/images/franchise-banner.webp';
 import Process from './../styles/images/process.webp';
 import InsImg from './../styles/images/ins_img.webp';
+import OrderProduct from './../styles/images/order-product.webp';
+import OrderSalon from './../styles/images/order-salon.webp';
+import OrderBridal from './../styles/images/order-bridal.webp';
 
 const IMAGES = {
+    OrderBridal,
+    OrderSalon,
+    OrderProduct,
     InsImg,
     Support,
     Criteria,

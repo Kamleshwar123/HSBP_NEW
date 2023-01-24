@@ -44,8 +44,14 @@ import InsBook from './../styles/icons/ins_book.webp';
 import ThumbUp from './../styles/icons/thumb-up.webp';
 import ThumbDown from './../styles/icons/thumb-down.webp';
 import ThumbColor from './../styles/icons/thumb-color.webp';
+import BookCalender from './../styles/icons/book-calender.webp';
+import Indianflag from './../styles/icons/india-flag.webp';
+import CountryArrowDown from './../styles/icons/country-arrow-down.webp';
 
 const ICONS = {
+    Indianflag,
+    CountryArrowDown,
+    BookCalender,
     ThumbColor,
     ThumbDown,
     ThumbUp,

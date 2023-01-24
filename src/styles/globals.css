@@ -18,7 +18,7 @@
     @apply px-3 py-2 text-base
   }
   .homegetlinkinput {
-    @apply border-body focus:border-body py-2 text-base placeholder:text-placeholder-ccc;
+    @apply border-body focus:border-body py-2 text-base placeholder:text-placeholder-ccc border-r-0 -mr-1 pr-4;
   }
   .salonboxinput {
     @apply border-black-707 focus:border-black-707 py-2 text-base text-black-685 placeholder:text-black-685;

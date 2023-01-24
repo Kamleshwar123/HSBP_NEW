@@ -30,8 +30,22 @@ import BlackStar from "./../styles/svg/blackstar.svg";
 import ReviewUser from "./../styles/svg/reviewuser.svg";
 import Cross from "./../styles/svg/cross.svg";
 import Pencil from "./../styles/svg/pencil.svg";
+import Download from "./../styles/svg/download.svg";
+import OrderService from "./../styles/svg/order-service-icon.svg";
+import SalonService from "./../styles/svg/salon-service-icon.svg";
+import ProductService from "./../styles/svg/product-service-icon.svg";
+import OrderServiceActive from "./../styles/svg/order-service-active.svg";
+import SalonServiceActive from "./../styles/svg/salon-service-active.svg";
+import ProductServiceActive from "./../styles/svg/product-service-active.svg";
 
 const SvgIcon = {
+  OrderServiceActive,
+  SalonServiceActive,
+  ProductServiceActive,
+  Download,
+  OrderService,
+  SalonService,
+  ProductService,
   Pencil,
   Cross,
   ReviewUser,

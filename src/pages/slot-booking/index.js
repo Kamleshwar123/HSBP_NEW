@@ -7,8 +7,8 @@ const SlotBooking = () => {
   return (
     <div className='container my-3'>
         <div className='relative'>
-            <Image src={IMAGES.SlotBookHeader} alt="slotbook" className='scale_img'/>
-            <h5 className='text-white text-xl absolute top-0 left-0 p-3 md:p-7'>Fill The Form Details</h5>
+            <Image src={IMAGES.SlotBookHeader} alt="slotbook" className='scale_img h-[150px]'/>
+            <h5 className='text-white text-xl absolute top-0 left-10 p-3 md:p-7'>Fill The Form Details</h5>
         </div>
         <div className='grid grid-cols-12 items-center gap-6 px-6 -mt-16 z-10 relative'>
             <div className='col-span-12 md:col-span-6'>

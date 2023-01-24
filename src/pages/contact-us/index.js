@@ -9,28 +9,28 @@ const ContactUs = () => {
         <div className='bg-[#F5F5F5] bg-opacity-[0.83] px-6 py-8'>
             <div className='grid grid-cols-12 gap-5'>
               <div className='col-span-12 md:col-span-6'>
-                <h6 className='text-base text-black'>DETAILS</h6>
+                <h6 className='text-base text-black font-bold'>DETAILS</h6>
                 <div className='mt-5'>
-                  <div className='inline-flex space-x-3 mb-2'>
+                  <div className='inline-flex space-x-3 mb-2 items-center'>
                     <Image src={ICONS.Cuser} alt="contact-us" className='scale_icon-18'/>
-                    <span className='text-theme font-medium text-base'>Customer Care</span>
+                    <span className='text-theme font-semibold text-base'>Customer Care</span>
                   </div>
                   <p className='text-black mb-2'>+91 958-257-7510, 9582-577-510</p>
                   <p className='text-black-241'>Monday to Sunday 8.00 AM - 9.00 PM</p>
                 </div>
                 <hr className='my-5'/>
                 <div className='mt-5'>
-                  <div className='inline-flex space-x-3 mb-2'>
-                    <Image src={ICONS.Cmail} alt="contact-us" className='scale_icon-18'/>
-                    <span className='text-theme font-medium text-base'>Email ID</span>
+                  <div className='inline-flex space-x-3 mb-2 items-center'>
+                    <Image src={ICONS.Cmail} alt="contact-us" className='h-3 w-auto'/>
+                    <span className='text-theme font-semibold text-base'>Email ID</span>
                   </div>
                   <p className='text-black'>hsbpncr@gmail.com</p>
                 </div>
                 <hr className='my-5'/>
                 <div className='mt-5'>
-                  <div className='inline-flex space-x-3 mb-2'>
+                  <div className='inline-flex space-x-3 mb-2 items-center'>
                     <Image src={ICONS.Location} alt="contact-us" className='scale_icon-18'/>
-                    <span className='text-theme font-medium text-base'>Social Media Pages</span>
+                    <span className='text-theme font-semibold text-base'>Social Media Pages</span>
                   </div>
                   <div className='mt-3'>
                     <div className='inline-flex space-x-2'>
@@ -46,9 +46,9 @@ const ContactUs = () => {
                 </div>
                 <hr className='my-5'/>
                 <div className='mt-5'>
-                  <div className='inline-flex space-x-3 mb-2'>
-                    <Image src={ICONS.Partner} alt="contact-us" className='scale_icon-18'/>
-                    <span className='text-theme font-medium text-base'>Our Partners</span>
+                  <div className='inline-flex space-x-3 mb-2 items-center'>
+                    <Image src={ICONS.Partner} alt="contact-us" className='h-4 w-auto'/>
+                    <span className='text-theme font-semibold text-base'>Our Partners</span>
                   </div>
                   <div>
                     <Image src={ICONS.AllPartner} alt="contact-us" className='max-w-4/5 h-auto'/>
