@@ -43,7 +43,7 @@ const LoginModal = ({isopen,closeModal}) => {
                     /> */}
                     <div className='flex items-stretch relative'>
                       <div className='flex items-center absolute h-full left-1 gap-1 border-r border-border pr-1'><Image src={ICONS.Indianflag} height={16} width={24} alt="Indianflag"/><span>+91</span><Image src={ICONS.CountryArrowDown} alt="CountryArrowDown" width={10}/></div>
-                      <input type="text" className='form-control pl-20' maxLength={10} onKeyPress={(e)=>isNumberOnly(e)}/>
+                      <input type="tel" className='form-control pl-20' maxLength={10} onKeyPress={(e)=>isNumberOnly(e)}/>
                     </div>
                   </div>
                   :

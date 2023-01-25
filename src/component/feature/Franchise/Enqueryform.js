@@ -3,7 +3,7 @@ import ReactDatePicker from 'react-datepicker'
 
 const Enqueryform = () => {
   return (
-    <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
+    <div className='shadow-checkout rounded-[30px] overflow-hidden mt-6'>
         <div className='theme-heading-box text-lg font-medium'>
             Enquiry Details
         </div>
