@@ -38,7 +38,7 @@ const CheckoutBox = ({showCheckout = false}) => {
           </div>
           <hr className='my-3'/>
           <div>
-          <div className='text-theme text-base cursor-pointer' onClick={()=> setHaveCoupen(!haveCoupen)}>Have a Discount Coupon?</div>
+          <div className='text-theme text-base cursor-pointer text-center' onClick={()=> setHaveCoupen(!haveCoupen)}>Have a Discount Coupon?</div>
               {haveCoupen &&
               <div className='flex flex-wrap gap-3 justify-center items-end mb-7 mt-3'>
                 <div>
@@ -55,33 +55,33 @@ const CheckoutBox = ({showCheckout = false}) => {
                   {apply ?
                     <button className='text-[#CC0000] h-10 font-bold cursor-pointer text-center w-32 align-middle rounded-lg' onClick={() => {setApply(false); setCoupenCode("")}}>Remove</button>
                     :
-                    <button className='custom_button h-10 w-32' disabled={!!!coupenCode} onClick={() => setApply(true)}>Apply</button>
+                    <button className='custom_button h-10 w-40' disabled={!!!coupenCode} onClick={() => setApply(true)}>Apply</button>
                   }
                 </div>
               </div>}
           </div>
           <div className='my-3 px-4 bg-white border border-black-707 text-black-7d7 rounded-xl text-xs'>
-            <div className='my-2 grid grid-cols-[70%_30%]'>
+            <div className='my-2 grid grid-cols-[auto_40px]'>
               <span>Subtotal</span>
               <span><span className='rupee-sym'>&#x20B9;</span>1500</span>
             </div>
-            <div className='my-2 grid grid-cols-[70%_30%]'>
+            <div className='my-2 grid grid-cols-[auto_40px]'>
               <span>Product Discount</span>
               <span><span className='rupee-sym'>&#x20B9;</span>200</span>
             </div>
-            <div className='my-2 grid grid-cols-[70%_30%]'>
+            <div className='my-2 grid grid-cols-[auto_40px]'>
               <span>Other Charges</span>
               <span className='rupee-sym'><span className='rupee-sym'>&#x20B9;</span>0</span>
             </div>
             <hr className='my-2 border-theme'/>
-            <div className='my-1 pb-2 grid grid-cols-[70%_30%]'>
+            <div className='my-1 pb-2 grid grid-cols-[auto_40px]'>
               <span>Total</span>
               <span className='text-theme'><span className='rupee-sym'>&#x20B9;</span>1500</span>
             </div>
           </div>
           {showCheckout && 
             <div className='text-center'>
-              <button className='custom_button my-2 h-10' onClick={()=> router.push("/checkout")}>Checkout</button>
+              <button className='custom_button my-2 h-10 w-40' onClick={()=> router.push("/checkout")}>Checkout</button>
             </div>
           }
         </div>

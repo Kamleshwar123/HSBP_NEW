@@ -36,7 +36,7 @@ const AddAddressForm = () => {
                         <input type="text" className="form-control" placeholder='Street Name / Area / Colony' />
                     </div>
                     <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Select State</label>
+                        <label className="form-label">State</label>
                         <select className='form-control'>
                             <option>Select State</option>
                             <option>Punjab</option>
@@ -45,7 +45,7 @@ const AddAddressForm = () => {
                         </select>
                     </div>
                     <div className='col-span-6 md:col-span-3'>
-                        <label className="form-label">Select City</label>
+                        <label className="form-label">City</label>
                         <select className='form-control'>
                             <option>Select City</option>
                             <option>Agra</option>

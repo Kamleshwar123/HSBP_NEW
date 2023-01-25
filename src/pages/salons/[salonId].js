@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react'
+import { useState } from 'react';
 import ReactDatePicker from 'react-datepicker';
 import Services from '../../component/feature/services/Services';
 import ICONS from '../../constant/icons';
@@ -11,10 +12,14 @@ const Ratings = dynamic(() => import('../../component/common/Ratings'), { ssr: f
 const SalonDetail = () => {
   const router = useRouter();
     const { salonId } = router.query;
+    const [selectedDate,setSelectedDate]= useState("");
+    const handleDateChange = (date) => {
+      setSelectedDate(date);
+    }
   return (
     <div className='mt-3'>
       <div className='container '>
-        <div className='rounded-2xl shadow-salon border border--black-707 p-5'>
+        <div className='rounded-2xl shadow-salon border border-opacity-50 border-black-707 p-5'>
           <div className='text-black grid md:grid-cols-12 gap-5 items-center'>
             <div className='md:col-span-7'>
               <h6 className='text-xl text-theme font-medium'>HSBP Salon</h6>
@@ -65,23 +70,26 @@ const SalonDetail = () => {
             </div>
           </div>
         </div>
-        <div className='rounded-2xl shadow-salon border border--black-707 p-5 mt-5'>
-          <h5 className='text-[#605F5F] text-base mb-2 font-medium'>Book a Slot</h5>
-          <div className='grid md:grid-cols-4 gap-6'>
+        <div className='rounded-2xl shadow-salon border border-black-707 pr-5 py-3 mt-5 border-opacity-50'>
+          <h5 className='text-[#605F5F] text-base font-medium pl-5'>Book a Slot</h5>
+          <hr className='mt-2 my-3 border-black-707 opacity-30'></hr>
+          <div className='grid md:grid-cols-4 gap-5 pl-5'>
               <div>
                   <ReactDatePicker 
                     placeholderText="Select Date" 
-                    className='form-control datepickerCalender cursor-pointer salonsearchinput'
+                    className='form-control datepickerCalender py-1.5 cursor-pointer salonsearchinput'
                     disabledKeyboardNavigation
-                    dateFormat="YYYY/MM/DD"
+                    dateFormat="yyyy/MM/dd"
                     showMonthDropdown
                     showYearDropdown
                     dropdownMode="select"
                     minDate={new Date()}
+                    selected={selectedDate}
+                    onChange={handleDateChange}
                   />
               </div>
             <div>
-              <select className='form-control salonsearchinput'>
+              <select className='form-control py-1.5 salonsearchinput'>
                 <option>Select Time</option>
                 <option>01:00 AM to 02:00 AM</option>
                 <option>01:00 AM to 02:00 AM</option>
@@ -89,7 +97,7 @@ const SalonDetail = () => {
               </select>
             </div>
             <div>
-            <button className='custom_button h-10 w-40' onClick={()=> router.push("/booknow")}>Checkout</button>
+            <button className='custom_button h-9 w-40' onClick={()=> router.push("/booknow")}>Checkout</button>
             </div>
           </div>
         </div>

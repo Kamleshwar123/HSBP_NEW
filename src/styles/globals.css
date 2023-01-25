@@ -2,7 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer components {
   select {
     @apply appearance-none;
@@ -10,7 +9,6 @@
   .form-label {
     @apply inline-block mb-2 text-black-2e2 font-medium;
   }
-
   .form-control {
     @apply placeholder:text-placeholder-aaa focus:bg-white focus:border-border focus:text-body focus:outline-none block w-full px-3 py-1.5 text-sm font-normal text-body bg-white bg-clip-padding border border-solid border-border rounded-xl transition ease-in-out m-0;
   }
@@ -75,5 +73,9 @@
   }
   .cityModal {
     @apply w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-[0px_3px_6px_#00000029] transition-all text-[#100E0E]
+  }
+  .custom_button {
+    transition: 0.3s;
+    @apply bg-gradient rounded-[13px] text-center py-[6px] px-[25px] text-white font-medium no-underline text-[13px] outline-0 cursor-pointer disabled:opacity-50 disabled:pointer-events-none;
   }
 }

@@ -8,7 +8,7 @@ import SvgIcon from '../../constant/SvgIcon'
 
 const Checkout = () => {
   const [openBox, setOpenBox]= useState(true);
-  const [openBookingBox, setOpenBookingBox]= useState(false);
+  const [openBookingBox, setOpenBookingBox]= useState(true);
   const router = useRouter();
   const [paymentType, setPaymentType] = useState(1);
   const [isAddNewAddress, setIsAddNewAddress] = useState(false);
@@ -45,12 +45,12 @@ const Checkout = () => {
                       <label htmlFor={"add"+idx} className='w-full cursor-pointer'>
                         <div className='flex flex-wrap items-center'>
                           <div className='mr-3 text-black-0f0'>Manoj</div>
-                          <div className='mr-3 p-1 text-xs bg-[#F1F1F1] text-black-686'>home</div>
+                          <div className='mr-3 px-2 py-[2px] rounded-lg text-xs bg-[#F1F1F1] text-black-686'>Home</div>
                           <Image src={ICONS.Call} alt="call" className='max-h-[12px] w-auto'/>
                           <div className='ml-1 text-black-0f0'>+9599043601</div>
                         </div>
-                        <p className='text-xs pt-1'>RZ-95, Adarsh Nagar, Indirapuram,</p>
-                        <p className='text-xs'>Ghaziabad - 201309</p>
+                        <p className='pt-1'>RZ-95, Adarsh Nagar, Indirapuram,</p>
+                        <p>Ghaziabad - 201309</p>
                       </label>
                       <div className='px-2'><SvgIcon.Pencil className="cursor-pointer" onClick={()=> {}}/></div>
                     </div>
@@ -88,7 +88,7 @@ const Checkout = () => {
                 </div>
                 }
             </div>
-            <div className='p-6'>
+            <div className='pt-6 pb-0'>
                 <div className='grid grid-cols-6 gap-6'>
                   <div className='col-span-6'>
                       <label className="form-label">Check your payment mode</label>
@@ -102,8 +102,8 @@ const Checkout = () => {
                       </div>
                   </div>
                 </div>
-                <div className='text-center mt-6'>
-                    <button className='custom_button' onClick={()=> router.push(paymentType === 1 ? "/payment-mode" :"/thank-you")}>{paymentType === 1 ? "Pay Now" :"Book Now"}</button>
+                <div className='text-center mt-3'>
+                    <button className='custom_button w-32' onClick={()=> router.push(paymentType === 1 ? "/payment-mode" :"/thank-you")}>{paymentType === 1 ? "Pay Now" :"Book Now"}</button>
                 </div>
               </div>
         </div>

@@ -65,7 +65,7 @@ const Salon = () => {
                 {[...Array(4).keys()].map((item, idx) => (
                     <div key={"salon" + idx}>
                         <div>
-                            <div className='shadow-[13px_13px_15px_#00000029] bg-white rounded-3xl pb-4 border border-black-707'>
+                            <div className='shadow-[13px_13px_15px_#00000029] bg-white rounded-3xl pb-4 border border-black-707 border-opacity-60'>
                                 <div className='text-center'>
                                     <Image src={IMAGES.Salon} alt="Salon" className="scale_img" />
                                 </div>
@@ -79,8 +79,12 @@ const Salon = () => {
                                         <div className='flex justify-end text-white-fc mb-1'><span className='flex gap-1 bg-green items-center px-3 py-1 rounded'><span>4.5</span><span><SvgIcon.Rating /></span></span></div>
                                         <p className='text-[10px] mb-2 text-black-0f0'>482 Reviews</p>
                                         <div className='flex gap-1 items-center justify-end'>
-                                            <a href="tel:+4733378901"><Image src={ICONS.Scall} alt="Scall" className="scale_icon-24"/></a>
-                                            <a href="https://www.google.com/maps/place/1,+Block+B,+Sector+34,+Gurugram,+Haryana+122015/@28.4327897,77.0111773,17z/data=!3m1!4b1!4m5!3m4!1s0x390d181cdf34ffbb:0xc492782cb98402e1!8m2!3d28.432785!4d77.013366" rel="noopener noreferrer" target="_blank"><Image src={ICONS.Slocation} alt="Slocation" className="scale_icon-24"/></a>
+                                            <a href="tel:+4733378901">
+                                                <Image src={ICONS.Scall} alt="Scall" className="h-7 w-auto"/>
+                                            </a>
+                                            <a href="https://www.google.com/maps/place/1,+Block+B,+Sector+34,+Gurugram,+Haryana+122015/@28.4327897,77.0111773,17z/data=!3m1!4b1!4m5!3m4!1s0x390d181cdf34ffbb:0xc492782cb98402e1!8m2!3d28.432785!4d77.013366" rel="noopener noreferrer" target="_blank">
+                                                <Image src={ICONS.Slocation} alt="Slocation" className="h-7 w-auto"/>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

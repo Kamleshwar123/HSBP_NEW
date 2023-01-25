@@ -19,7 +19,7 @@ const CityModal = ({isOpen,closeModal,setOpenSelectCityModal}) => {
         className="modal cityModal"
       >
         <div className='flex relative mb-3'>
-            <input type="text" className=" pr-5 form-control text-black-686 placeholder:text-black-686 shadow-[0px_4px_8px_#00000029] border-black-2a3 focus:border-black-2a3 rounded-r-none border-r-none" placeholder='Delhi' />
+            <input type="text" className=" pr-5 form-control text-black-686 placeholder:text-black-686 shadow-[0px_4px_8px_#00000029] border-black-2a3 focus:border-black-2a3 rounded-r-none border-r-none" placeholder='Enter Your City' />
             <button className="custom_button -ml-3" /* onClick={closeModal} */>SEARCH</button>
         </div>
         <div className='text-center'>

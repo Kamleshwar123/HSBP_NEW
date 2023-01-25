@@ -59,20 +59,20 @@ const PaymentMode = () => {
                 <button className='custom_button'>Edit</button>
                 <div className='my-5 px-4 bg-white border border-black-707 text-black-7d7 rounded-xl text-xs'>
                   <h6 className='text-black-2a3 text-sm font-medium mt-2'>Payment Details</h6>
-                  <div className='my-2 grid grid-cols-[70%_30%]'>
+                  <div className='my-2 grid grid-cols-[auto_40px]'>
                     <span>Subtotal</span>
                     <span>&#x20B9;1500</span>
                   </div>
-                  <div className='my-2 grid grid-cols-[70%_30%]'>
+                  <div className='my-2 grid grid-cols-[auto_40px]'>
                     <span>Product Discount</span>
                     <span>&#x20B9;200</span>
                   </div>
-                  <div className='my-2 grid grid-cols-[70%_30%]'>
+                  <div className='my-2 grid grid-cols-[auto_40px]'>
                     <span>Other Charges</span>
                     <span>&#x20B9;0</span>
                   </div>
                   <hr className='my-2 border-theme'/>
-                  <div className='my-1 grid grid-cols-[70%_30%]'>
+                  <div className='my-1 grid grid-cols-[auto_40px]'>
                     <span>Total</span>
                     <span className='text-theme'>&#x20B9;1500</span>
                   </div>
