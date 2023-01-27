@@ -63,23 +63,23 @@ const BeautyService = () => {
                 <Slider {...settings}>
                     {data && data?.map((item, idx) => (
                         < div className='h-full p-3 text-center' key={"beauty" + idx}>
-                            <div className='h-full service-bg p-7 rounded-2xl cursor-pointer' onClick={()=> handleRedirect("/services", item?._data)}>
+                            <div className='h-full service-bg p-7 rounded-2xl cursor-pointer relative' onClick={()=> handleRedirect("/services", item?._data)}>
                                 <div className='text-center relative'>
                                     <div className='corner upper_corner'></div>
                                     <Image src={item?.img} alt="beauty" className="scale_img" />
                                     <div className='corner lower_corner'></div>
                                 </div>
-                                <div className='px-3'>
-                                <h3 className='text-xl text-theme font-medium pt-4 pb-2'>{item?.title}</h3>
-                                <p className='pb-4 min-height-70'>{item?.desc}</p>
-                                <button className='custom_button'>Know More</button>
+                                <div className='px-3 mb-10'>
+                                    <h3 className='text-xl text-theme font-medium pt-4 pb-2'>{item?.title}</h3>
+                                    <p className='pb-2'>{item?.desc}</p>
                                 </div>
+                                <button className='custom_button whitespace-nowrap absolute bottom-7 -translate-x-1/2'>Know More</button>
                             </div>
                         </div>
                     ))}
                 </Slider>
             </div>
-            <div className='mt-3'>
+            <div className='mt-4'>
             <SeeAll text={"See All Beauty Services"} url={"/services"}/>
             </div>
         </div>

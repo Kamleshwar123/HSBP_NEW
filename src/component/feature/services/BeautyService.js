@@ -63,7 +63,7 @@ const BeautyService = ({type}) => {
         <div>
           <div className='my-6 text-center'>
             <Image src={IMAGES.HSBPAdv} alt="HSBPAdv" width={55} className="scale_img"/>
-            <h1 className='mt-2 text-theme text-2xl font-black'>HSBP Advantage</h1>
+            <span className='mt-2 text-theme text-2xl font-black sm:relative hsbp_text_line'>HSBP Advantage</span>
           </div>
           <div className='flex flex-wrap gap-7 text-center text-black-2e2 items-end justify-evenly'>
             {advData.map((item,idx)=> (

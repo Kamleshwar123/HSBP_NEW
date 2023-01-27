@@ -23,9 +23,9 @@ const Banner = () => {
             <h6 className="text-xl my-3">Now Serving at your Home</h6>
             <h2 className="text-2xl font-bold">BEAUTICIANS/HAIRDRESSERS</h2>
             <div className="mt-7">
-              <sapn  className="custom_button" onClick={()=>router.push("/booknow")}>
+              <span  className="custom_button" onClick={()=>router.push("/booknow")}>
               Book Now
-              </sapn>
+              </span>
             </div>
           </div>
         </div>

@@ -44,7 +44,7 @@ const Home = () => {
       <Heading
         title={"Book Appointment"}
         desc={"Lorem ipsum dolor sit amet, consectetur adipisci elitsed eiusmod"}
-        classes="mt-12 mb-9 heading-homepage"
+        classes="mt-4 mb-9 heading-homepage"
       />
       <Appointment />
       <div className="mt-12">

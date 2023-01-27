@@ -39,14 +39,14 @@ const TheHeader = () => {
             {isOpen && <Sidebar isOpen={isOpen} toggleDrawer={toggleDrawer} />}
             <div>
               <Link href={"/"}>
-                <Image src={IMAGES.Logo} alt="logo" height={36} className="scale_img" />
+                <Image src={IMAGES.Logo} alt="logo" className="w-auto mx-auto h-9" />
               </Link>
             </div>
             {/* <SearchProduct/> */}
           </div>
           <div className="flex gap-3 items-center justify-self-end">
               <p className="ml-5 font-semibold text-black-707 hidden lg:block">DOWNLOAD APP</p>
-              <Link href={"/"} className='hidden md:block'>
+              <Link href={"/"} className='hidden lg:block'>
                 <Image
                   src={IMAGES.GoogleStore}
                   alt="g-app"
@@ -54,7 +54,7 @@ const TheHeader = () => {
                   height={30}
                 />
               </Link>
-              <Link href={"/"} className='hidden md:block'>
+              <Link href={"/"} className='hidden lg:block'>
                 <Image src={IMAGES.AppStore} alt="app" className="scale_img" height={30}/>
               </Link>
               <Link href="/cart" legacyBehavior>

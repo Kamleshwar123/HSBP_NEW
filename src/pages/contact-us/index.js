@@ -6,7 +6,7 @@ import IMAGES from '../../constant/images'
 const ContactUs = () => {
   return (
     <div className='container mt-3'>
-        <div className='bg-[#F5F5F5] bg-opacity-[0.83] px-6 py-8'>
+        <div className='bg-[#F5F5F5] bg-opacity-[0.83] px-6 py-8 rounded-2xl'>
             <div className='grid grid-cols-12 gap-5'>
               <div className='col-span-12 md:col-span-6'>
                 <h6 className='text-base text-black font-bold'>DETAILS</h6>

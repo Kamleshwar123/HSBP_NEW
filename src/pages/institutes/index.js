@@ -92,7 +92,7 @@ const Institues = () => {
                                                 </div>
                                                 <div className='flex justify-center sm:justify-between gap-7 mt-7'>
                                                     <button className='custom_button flex gap-1 items-center'><span><Image src={ICONS.InsBook} className='w-4 h-4' alt="InsBook"/></span><span>Book Appointment</span></button>
-                                                    <button className='custom_button' onClick={()=> router.push("/salons/1")}>View Details</button>
+                                                    <button className='custom_button' onClick={()=> router.push("/institutes/1")}>View Details</button>
                                                 </div>
                                             </div>
                                         </div>

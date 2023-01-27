@@ -6,18 +6,18 @@ import SvgIcon from '../../constant/SvgIcon'
 const MyOrderDetails = () => {
   return (
     <div className='container mt-3'>
-      <h3 className='text-2xl font-medium mb-2 text-black-2a3'>Order Details</h3>
+      <h3 className='text-2xl font-bold mb-2 text-black-2a3'>Order Details</h3>
       <div className='grid grid-cols-12 gap-6 text-black-2a3'>
         <div className='col-span-12 sm:col-span-5'>
           <p>Order Id : #HSBP021548485</p>
           <p>Order Place : 30/05/2022 10.19 am</p>
           <p>Items : 05</p>
           <p>Payment Mode : Online</p>
-          <p>Total Amount : ₹ 1685.00</p>
+          <p>Total Amount : <span className='font-bold text-base'><span className='rupee-sym'>₹</span>1685.00</span></p>
         </div>
         <div className='col-span-12 sm:col-span-7 justify-self-end text-right'>
-          <p className='text-lg font-medium'>Delivery Address :</p>
-          <p className='text-lg font-medium'> Rakesh Singh</p>
+          <p className='text-lg font-bold'>Delivery Address :</p>
+          <p className='text-lg font-bold'> Rakesh Singh</p>
           <p>RZ-95, Adarsh Nagar, Indirapuram,</p>
           <p>Ghaziabad - 201309</p> 
         </div>
