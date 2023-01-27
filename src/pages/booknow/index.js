@@ -20,15 +20,15 @@ const BookNow = () => {
                   <div className='grid grid-cols-6 gap-6'>
                       <div className='col-span-6'>
                           <label className="form-label">Name</label>
-                          <input type="text" className="form-control" placeholder='Name' />
+                          <input type="text" className="form-control" placeholder='Enter Name' />
                       </div>
                       <div className='col-span-6'>
                           <label className="form-label">Mobile Number</label>
                           <input type="text" className="form-control" placeholder='10 Digit Mobile No.' />
                       </div>
                       <div className='col-span-6'>
-                          <label className="form-label">Email ID</label>
-                          <input type="text" className="form-control" placeholder='Email ID' />
+                          <label className="form-label">Email Address</label>
+                          <input type="text" className="form-control" placeholder='Enter Email Address' />
                       </div>
                       <div className='col-span-6 md:col-span-3'>
                           <label className="form-label">Date</label>

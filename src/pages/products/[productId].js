@@ -15,7 +15,7 @@ const ProductDetails = () => {
     const router = useRouter()
     const { productId } = router.query;
     const [tab, setTab] = useState("tab1");
-    const [image, setImage]= useState(IMAGES.Product);
+    const [image, setImage]= useState(1);
     useEffect(() => {
         setTab("tab1");
         return () => { }
@@ -24,9 +24,9 @@ const ProductDetails = () => {
     const handleTab = (data) => {
         setTab(data);
     }
-    const handleImg = () => {
+    const handleImg = (val) => {
         setImage("");
-        setTimeout(()=>setImage(IMAGES.Product), 300);
+        setTimeout(()=>setImage(val), 300);
     }
     return (
         <div className='container'>
@@ -40,7 +40,7 @@ const ProductDetails = () => {
                     <div className='grid grid-cols-12 items-stretch gap-6'>
                         <div className='col-span-3 flex flex-col justify-between items-stretch gap-y-2'>
                             {[...Array(4).keys()].map((item, idx) => (
-                                <div className='p-2 text-center shadow-4D rounded-xl cursor-pointer' key={"pdimg"+idx} onClick={handleImg}>
+                                <div className={`p-2 text-center shadow-4D rounded-xl cursor-pointer ${image === (idx+1) ? "border border-theme": ""}`} key={"pdimg"+idx} onClick={() => handleImg(idx+1)}>
                                     <Image src={IMAGES.Product} alt="Product" className="scale_img" />
                                 </div>
                             ))}
@@ -83,7 +83,7 @@ const ProductDetails = () => {
                 </div>
                 {tab === "tab1" &&
                     <div>
-                        <div className='bg-white shadow-8F p-5 rounded-2xl mt-3'>
+                        <div className='bg-white bg-opacity-50 border border-black-707 border-opacity-60 shadow-8F p-5 rounded-2xl mt-3'>
                             <div className='flex gap-6'>
                                 <ul>
                                     <li className='mb-1'>Hair Type</li>
@@ -101,7 +101,7 @@ const ProductDetails = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className='bg-white shadow-8F p-5 rounded-2xl my-5 text-black-686'>
+                        <div className='bg-white shadow-8F p-5 rounded-2xl my-5 text-black-686 bg-opacity-50 border border-black-707 border-opacity-60'>
                             <h6 className='text-black-0f0 text-base'>About this item</h6>
                             <p className='my-1'>- Moisturizes dry skin under the beard</p>
                             <p className='my-1'>- Softens beard hair</p>

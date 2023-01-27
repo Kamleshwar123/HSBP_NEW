@@ -82,8 +82,10 @@ import InsImg from './../styles/images/ins_img.webp';
 import OrderProduct from './../styles/images/order-product.webp';
 import OrderSalon from './../styles/images/order-salon.webp';
 import OrderBridal from './../styles/images/order-bridal.webp';
+import InstituteBanner from './../styles/images/institute_banner.webp';
 
 const IMAGES = {
+    InstituteBanner,
     OrderBridal,
     OrderSalon,
     OrderProduct,

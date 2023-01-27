@@ -71,13 +71,13 @@ const SalonDetail = () => {
           </div>
         </div>
         <div className='rounded-2xl shadow-salon border border-black-707 pr-5 py-3 mt-5 border-opacity-50'>
-          <h5 className='text-[#605F5F] text-base font-medium pl-5'>Book a Slot</h5>
+          <h5 className='text-[#605F5F] text-base font-bold pl-5'>Book a Slot</h5>
           <hr className='mt-2 my-3 border-black-707 opacity-30'></hr>
           <div className='grid md:grid-cols-4 gap-5 pl-5'>
               <div>
                   <ReactDatePicker 
                     placeholderText="Select Date" 
-                    className='form-control datepickerCalender py-1.5 cursor-pointer salonsearchinput'
+                    className='form-control datepickerCalender py-1.5 cursor-pointer salonbookinput'
                     disabledKeyboardNavigation
                     dateFormat="yyyy/MM/dd"
                     showMonthDropdown
@@ -89,7 +89,7 @@ const SalonDetail = () => {
                   />
               </div>
             <div>
-              <select className='form-control py-1.5 salonsearchinput'>
+              <select className='form-control py-1.5 salonbookinput'>
                 <option>Select Time</option>
                 <option>01:00 AM to 02:00 AM</option>
                 <option>01:00 AM to 02:00 AM</option>
@@ -101,7 +101,7 @@ const SalonDetail = () => {
             </div>
           </div>
         </div>
-        </div>
+      </div>
         <div className='mt-3'>
           <Services/>
         </div>

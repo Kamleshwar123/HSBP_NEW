@@ -22,7 +22,13 @@
     @apply border-black-707 focus:border-black-707 py-2 text-base text-black-685 placeholder:text-black-685;
   }
   .salonsearchinput {
-    @apply border-black-707 focus:border-black-707 py-2 text-base text-placeholder placeholder:text-placeholder;
+    @apply border-black-707 focus:border-black-707 py-2 text-base text-placeholder placeholder:text-placeholder rounded-r-none border-r-0;
+  }
+  .salonbookinput {
+    @apply border-black-707 focus:border-black-707 py-2 text-base text-placeholder placeholder:text-placeholder rounded-2xl;
+  }
+  .instituebookinput {
+    @apply border-black-707 focus:border-black-707 text-placeholder placeholder:text-placeholder rounded-2xl border-0;
   }
   .queryform .form-label{
     @apply text-black-605;

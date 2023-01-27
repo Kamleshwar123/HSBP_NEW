@@ -47,8 +47,16 @@ import ThumbColor from './../styles/icons/thumb-color.webp';
 import BookCalender from './../styles/icons/book-calender.webp';
 import Indianflag from './../styles/icons/india-flag.webp';
 import CountryArrowDown from './../styles/icons/country-arrow-down.webp';
+import InsCall from './../styles/icons/ins-call.webp';
+import Inswhatsapp from './../styles/icons/ins-whatsapp.webp';
+import InsNewLocation from './../styles/icons/ins-location.webp';
+import InsReview from './../styles/icons/ins-review.webp';
 
 const ICONS = {
+    InsCall,
+    Inswhatsapp,
+    InsNewLocation,
+    InsReview,
     Indianflag,
     CountryArrowDown,
     BookCalender,

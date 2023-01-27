@@ -83,7 +83,7 @@ const SalonsPage = () => {
                                     <input type="text" className="form-control" placeholder='Enter Pin Code' />
                                 </div>
                                 <div className='mb-3'>
-                                    <label className="form-label">Select City</label>
+                                    <label className="form-label">City</label>
                                     <select className='form-control'>
                                         <option>Select City</option>
                                         <option>Agra</option>
