@@ -84,7 +84,7 @@ const InstitueDetail = () => {
                   />
               </div>
             <div>
-              <input type="time" defaultValue={"12:57"} onChange={(e)=> console.log(e.target.value)} className="form-control cursor-pointer instituebookinput w-32"/>
+              <input type="time" defaultValue="12:57" onChange={(e)=> console.log(e.target.value)} className="form-control cursor-pointer instituebookinput w-32"/>
             </div>
             <div>
             <button className='custom_button h-9 w-40' onClick={()=> router.push("/booknow")}>Checkout</button>
