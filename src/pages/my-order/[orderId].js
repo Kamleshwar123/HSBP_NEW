@@ -6,30 +6,28 @@ import SvgIcon from '../../constant/SvgIcon'
 const MyOrderDetails = () => {
   return (
     <div className='container mt-3'>
-      <h3 className='text-2xl font-bold mb-2 text-black-2a3'>Order Details</h3>
-      <div className='grid grid-cols-12 gap-6 text-black-2a3'>
-        <div className='col-span-12 sm:col-span-5'>
-          <p>Order Id : #HSBP021548485</p>
-          <p>Order Place : 30/05/2022 10.19 am</p>
-          <p>Items : 05</p>
-          <p>Payment Mode : Online</p>
-          <p>Total Amount : <span className='font-bold text-base'><span className='rupee-sym'>₹</span>1685.00</span></p>
+      <div className='grid grid-cols-12 shadow-4D rounded-2xl p-5 text-black-0f0'>
+        <div className='col-span-12 md:col-span-6'>
+          <h3 className='text-lg font-bold mb-1 text-theme'>Order Details</h3>
+          <p className='text-black-685 mb-1'>Order ID : <b className='text-black-0f0'>HSBP101010</b></p>
+          <p className='text-black-685 mb-1'>Date : <b className='text-black-0f0'>25 Jan, 2023 11:30 pm</b></p>
+          <p className='text-black-685 mb-1'>Payment Mode : <b className='text-black-0f0'>Online</b></p>
+          <p className='text-black-685'>Total Amount : <span className='text-black-0f0 font-bold'><span className='rupee-sym'>₹</span>1500</span></p>
         </div>
-        <div className='col-span-12 sm:col-span-7 justify-self-end text-right'>
-          <p className='text-lg font-bold'>Delivery Address :</p>
-          <p className='text-lg font-bold'> Rakesh Singh</p>
-          <p>RZ-95, Adarsh Nagar, Indirapuram,</p>
-          <p>Ghaziabad - 201309</p> 
+        <div className='col-span-12 md:col-span-6'>
+          <h3 className='text-lg font-bold mb-1 text-theme'>Address Details</h3>
+          <p className='text-base font-bold mb-1'>Soniya Gupta</p>
+          <p>RZ-95, Adarsh Nagar, Indirapuram</p>
+          <p>Ghaziabad, (U.P.) - 201309</p>
+          <p className='mt-1 font-semibold'>Phone Number</p>
+          <p>9599043602, 9250452511</p>
         </div>
-        <div className='col-span-12 sm:col-span-5'>
-          <p>Status : Processing Delivery</p>
-          <p>Expected : 03/06/2022</p>
-        </div>
-        <div className='col-span-12 sm:col-span-7 justify-self-end text-right'>
+        <div className='col-span-12'>
           <div className='flex flex-wrap gap-2'>
-            <button className='custom_button'>Continue Shopping</button>
-            <button className='custom_button'>Order Cancel</button>
-            <button className='custom_button flex items-center gap-1'><span><SvgIcon.Download className='w-4 h-auto'/></span> Invoice</button>
+            <button className='custom_button'>Cancel Order</button>
+            <button className='custom_button'>Reorder</button>
+            <button className='custom_button'>Rate Us</button>
+            <button className='addcard_button flex items-center gap-1 px-3'><span><SvgIcon.Download className='w-4 h-auto'/></span><b className='font-semibold'>Download Invoice</b></button>
           </div>
         </div>
       </div>

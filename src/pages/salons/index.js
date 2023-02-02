@@ -98,7 +98,7 @@ const SalonsPage = () => {
                             </div>
                             <div className='grid grid-cols-12'>
                             <div className='md:col-span-12 mb-3'>
-                            <div>
+                            <div className='recaptcha'>
                                 <ReCAPTCHA
                                     sitekey={process.env.REACT_APP_SITE_KEY || "6LdT4gckAAAAALAO8LIr88ZGcCtkO2s6dGOmOwcq"}
                                 />

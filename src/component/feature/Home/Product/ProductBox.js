@@ -10,7 +10,7 @@ const ProductBox = () => {
     const router = useRouter();
     const [wishList, setWishlist] = useState(false);
     return (
-        <div className='overflow-hidden shadow-4D h-full rounded-3xl bg-white border-[#DCDCDC] text-center cursor-pointer' onClick={()=> router.push("/products/1")}>
+        <div className='overflow-hidden shadow-4D h-full rounded-3xl bg-white border border-[#DCDCDC] text-center cursor-pointer' onClick={()=> router.push("/products/1")}>
             <div>
                 <div className='flex justify-between relative'>
                     <div>
@@ -24,7 +24,7 @@ const ProductBox = () => {
                         <Image src={IMAGES.Product} alt="Appointment" className="scale_img" />
                     </div>
                     <div className='content'>
-                        <h6 className='font-medium text-theme'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
+                        <h6 className='font-semibold text-theme'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
                         <div className='my-2'>
                             <Ratings rating={4.5} />
                         </div>

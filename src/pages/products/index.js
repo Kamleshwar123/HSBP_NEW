@@ -89,11 +89,13 @@ const Products = () => {
                 <div className='col-span-12 lg:col-span-9'>
                     <div className='bg-white-f2 rounded-2xl p-5'>
                         <div><b>Lipstick</b><span className='font-light ml-2'>(Showing 1 – 40 products of 257 products)</span></div>
-                        <div className='inline-flex space-x-5 items-center mt-3'>
-                            <div>Sort by</div>
-                            <div className={sortFilter === 1 ? "product_sort_filter active": "product_sort_filter"} onClick={()=> setSortFilter(1)}>Popularity</div>
-                            <div className={sortFilter === 2 ? "product_sort_filter active": "product_sort_filter"} onClick={()=> setSortFilter(2)}>Price - Low to High</div>
-                            <div className={sortFilter === 3 ? "product_sort_filter active": "product_sort_filter"} onClick={()=> setSortFilter(3)}>Price - High to Low</div>
+                        <div className='flex gap-x-7 items-center mt-3 font-medium'>
+                            <div className='whitespace-nowrap'>Sort by</div>
+                            <div className='flex flex-wrap gap-x-7 gap-y-2 items-center'>
+                                <div className={sortFilter === 1 ? "product_sort_filter active": "product_sort_filter"} onClick={()=> setSortFilter(1)}>Popularity</div>
+                                <div className={sortFilter === 2 ? "product_sort_filter active": "product_sort_filter"} onClick={()=> setSortFilter(2)}>Price - Low to High</div>
+                                <div className={sortFilter === 3 ? "product_sort_filter active": "product_sort_filter"} onClick={()=> setSortFilter(3)}>Price - High to Low</div>
+                            </div>
                         </div>
                         <div className='flex flex-wrap justify-center items-stretch -m-3 py-5'>
                             {[...Array(14).keys()].map((item, idx) => (

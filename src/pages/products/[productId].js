@@ -32,7 +32,7 @@ const ProductDetails = () => {
         <div className='container'>
             <ProductCategorySlider/>
             <div className='mt-4 mb-7 text-black-0f0'>
-                <h1 className='text-[42px]'>Product Details</h1>
+                <h1 className='md:text-[42px] sm:text-3xl text-2xl'>Product Details</h1>
                 <p className='text-black-686'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolor sit eiusmod consectetur adipiscing tempor amet aliqua.</p>
             </div>
             <div className='p-4 bg-white-f2 bg-opacity-50 shadow-8F rounded-3xl'>
@@ -53,7 +53,7 @@ const ProductDetails = () => {
                     </div>
                     <div className='px-5 text-black-241'>
                         <div className='pt-0 md:pt-5'>
-                            <h6 className='text-xl w-4/5'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
+                            <h6 className='text-xl w-4/5 font-bold'>King C. Gillette Men's Beard Oil with Plant Based Argan...</h6>
                             <hr className='border border-[#8B2E5D] opacity-20 my-4'></hr>
                             <div className='mb-3 flex gap-4'>
                                 <div><Ratings rating={4.5} /></div>
@@ -62,9 +62,9 @@ const ProductDetails = () => {
                             <div className='text-theme'>Special Price</div>
                             <div className='my-2'><span className='text-black-0f0 font-bold text-base'><span className='rupee-sym'>₹</span>377</span><span className='text-black-a8a ml-3 line-through'><span className='rupee-sym'>₹754</span></span></div>
                             <div>Size - 50 ML</div>
-                            <div className='flex items-center gap-5 mt-6'>
-                                <button className='custom_button'>Add to Cart</button>
-                                <button className='custom_button' onClick={()=> router.push("/thank-you")}>Buy Now</button>
+                            <div className='flex flex-wrap items-center gap-5 mt-6'>
+                                <button className='custom_button w-36'>Add to Cart</button>
+                                <button className='custom_button w-36' onClick={()=> router.push("/checkout")}>Buy Now</button>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ const ProductDetails = () => {
                 </>
             }
             <div className='mt-10'>
-                <div className='text-xl text-[#CFCECE] gap-5 flex items-center font-medium pb-5'>
+                <div className='text-xl text-[#CFCECE] gap-5 flex items-center font-bold pb-5'>
                     <span onClick={() => handleTab("tab1")} className={`${tab === 'tab1' ? "text-theme ": ""}cursor-pointer py-1 border-solid border-b-2`}>Description</span>
                     <span onClick={() => handleTab("tab2")} className={`${tab === 'tab2' ? "text-theme ": ""}cursor-pointer py-1 border-solid border-b-2`}>Review</span>
                 </div>
@@ -136,7 +136,7 @@ const ProductDetails = () => {
             </div>
             {tab === "tab1" &&
             <>
-                <h1 className="text-[36px] mt-8 text-black-text-black-241 mb-5">Related Products</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-[40px] mt-8 text-black-text-black-241 mb-5">Related Products</h1>
                 <div className='bg-white-f2 p-3'>
                     <div className='flex flex-wrap justify-center'>
                         {[...Array(3).keys()].map((item, idx) => (

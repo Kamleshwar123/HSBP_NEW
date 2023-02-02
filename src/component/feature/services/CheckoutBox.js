@@ -45,7 +45,7 @@ const CheckoutBox = ({showCheckout = false}) => {
                   <input 
                     type="text" 
                     placeholder='Enter Coupon Here' 
-                    className={`text-xs h-10 form-control border rounded-3xl border-dashed text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}
+                    className={`text-xs h-10 form-control border border-dashed text-center max-w-[180px]${apply ? ' text-green-0b5 border-green-0b5 bg-white' : ' bg-transparent'}`}
                     onChange={(e)=>setCoupenCode(e.target.value?.toUpperCase())}
                     value={coupenCode}
                     disabled={apply}

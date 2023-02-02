@@ -7,23 +7,23 @@ const Enqueryform = () => {
         <div className='theme-heading-box text-lg font-medium'>
             Enquiry Details
         </div>
-        <div className='p-5'>
+        <div className='p-5 enqueryform'>
             <div className='grid grid-cols-6 gap-6'>
                 <div className='col-span-6 md:col-span-3'>
                     <label className="form-label">First Name</label>
-                    <input type="text" className="form-control" placeholder='First Name' />
+                    <input type="text" className="form-control" placeholder='Enter First Name' />
                 </div>
                 <div className='col-span-6 md:col-span-3'>
                     <label className="form-label">Last Name</label>
-                    <input type="text" className="form-control" placeholder='Last Name' />
+                    <input type="text" className="form-control" placeholder='Enter Email ID' />
                 </div>
                 <div className='col-span-6 md:col-span-3'>
                     <label className="form-label">Mobile Number</label>
-                    <input type="text" className="form-control" placeholder='10 Digit Mobile No.' />
+                    <input type="text" className="form-control" placeholder='Enter Email ID.' />
                 </div>
                 <div className='col-span-6 md:col-span-3'>
                     <label className="form-label">Email ID</label>
-                    <input type="text" className="form-control" placeholder='Email ID' />
+                    <input type="text" className="form-control" placeholder='Enter Email ID' />
                 </div>
                 <div className='col-span-6 md:col-span-3'>
                     <label className="form-label">House No./ Building Name</label>
@@ -34,18 +34,18 @@ const Enqueryform = () => {
                     <input type="text" className="form-control" placeholder='Street Name / Area / Colony' />
                 </div>
                 <div className='col-span-6 md:col-span-3'>
-                    <label className="form-label">Select State</label>
+                    <label className="form-label">State</label>
                     <select className='form-control'>
-                        <option>Select State</option>
+                        <option>-Select State-</option>
                         <option>Punjab</option>
                         <option>Delhi</option>
                         <option>Rajasthan</option>
                     </select>
                 </div>
                 <div className='col-span-6 md:col-span-3'>
-                    <label className="form-label">Select City</label>
+                    <label className="form-label">City</label>
                     <select className='form-control'>
-                        <option>Select City</option>
+                        <option>-Select City-</option>
                         <option>Agra</option>
                         <option>Delhi</option>
                         <option>Jaipur</option>

@@ -52,7 +52,7 @@ const LoginModal = ({isopen,closeModal}) => {
                       <h6 className='text-base font-medium mb-2 text-black-241'>Enter your verification code</h6>
                       <div>
                         We have send you a 4 digit OTP on 9599043601 
-                        <span className='text-blue-477 cursor-pointer font-medium' onClick={()=>setScreen(1)}>{" Edit"}</span>
+                        <span className='text-blue-477 cursor-pointer font-semibold' onClick={()=>setScreen(1)}>{" Edit"}</span>
                       </div>
                     </div>
                     <div className='flex justify-center'>
@@ -64,7 +64,7 @@ const LoginModal = ({isopen,closeModal}) => {
                         inputStyle={{width: "35px", height: "35px", border: '1px solid #707070', borderRadius: "5px", color: "241E1E"}}
                       />
                     </div>
-                    <div className='text-blue-477 my-2 cursor-pointer text-center font-medium' onClick={()=>{}}>Resend Otp?</div>
+                    <div className='text-blue-477 my-2 cursor-pointer text-center font-semibold' onClick={()=>{}}>Resend OTP</div>
                   </div>
                   }
                   <button className='custom_button w-full mt-3 h-10' onClick={()=> setScreen(2)}>{screen === 1 ? "Continue": "Login"}</button>

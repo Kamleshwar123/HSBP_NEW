@@ -35,7 +35,7 @@ const BeautyService = ({type}) => {
           :
             <div className='shadow-66 rounded-2xl overflow-hidden'>
               <div className='theme-heading-box capitalize flex gap-2 justify-between items-center cursor-pointer' onClick={()=> setOpenBox(!openBox)}>
-                <div>{serviceName?.toLowerCase()}</div>
+                <div className='text-[#EBEBEB]'>{serviceName?.toLowerCase()}</div>
                 <div><SvgIcon.IosArrowDown className={`scale-50 ${openBox ? 'rotate-180' : "rotate-0"}`}/></div>
               </div>
               {openBox &&

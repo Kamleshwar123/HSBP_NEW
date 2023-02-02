@@ -17,13 +17,13 @@ const MyOrder = () => {
         <div className='col-span-12 md:col-span-3'>
           <div className='shadow-4D p-3 rounded-2xl'>
             <div className='font-medium'>CATEGORIES</div>
-            <hr className='my-1 color-black-707'/>
+            <hr className='my-1 color-black-707 opacity-60'/>
             <div className='text-black-0f0 font-semibold py-1'>
-              <div className='flex gap-2 py-1 mb-1 cursor-pointer' onClick={()=>handleTab(1)}>
+              <div className='flex gap-2 py-1 mb-3 mt-1 cursor-pointer' onClick={()=>handleTab(1)}>
                 {tab === 1 ? <SvgIcon.OrderServiceActive className='scale-[0.65] mx-0'/> :<SvgIcon.OrderService className='scale-[0.65] mx-0'/>}
                 <span className={`${tab === 1 ? "text-theme" : ""}`}>Home Services</span>
               </div>
-              <div className='flex gap-2 py-1 mb-1 cursor-pointer' onClick={()=>handleTab(2)}>
+              <div className='flex gap-2 py-1 mb-3 cursor-pointer' onClick={()=>handleTab(2)}>
                 {tab === 2 ? <SvgIcon.SalonServiceActive className='scale-[0.65] mx-0'/> :<SvgIcon.SalonService className='scale-[0.65] mx-0'/>}
                 <span className={`${tab === 2 ? "text-theme" : ""}`}>Salon Appointments</span>
               </div>
