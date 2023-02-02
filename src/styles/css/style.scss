@@ -322,6 +322,9 @@
   .service-bg {
     background:linear-gradient(30deg, #ECEEF0 60%, #561334 30%);
   }
+  .testi-bg {
+    background: linear-gradient(340deg, #ECEEF0 45%, #561334 0%);
+  }
   .footer-bg {
     background: url(./../images/footer-bg.webp);
     background-size: cover;
@@ -350,6 +353,16 @@
   .franchise-support-bg {
     background: url(./../images/support.webp);
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .ins-form-bg {
+    background: url(./../images/ins-form-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .speak-bg {
+    background: url(./../images/speak-bg.webp);
+    background-size: cover;
     background-repeat: no-repeat;
   }
 .pt-3.text-white.cursor-pointer.uppercase.font-light.font-bold {
@@ -397,6 +410,21 @@
 }
 .hsbp_text_line:after {
   right: -105px !important;
+}
+.whyhsbp li {
+position: relative;
+margin-left: 26px;
+margin-bottom: 8px;
+}
+.whyhsbp li::before {
+  content: '';
+  position: absolute;
+  background: url(../icons/squre-tick.webp);
+  left: -26px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  scale: 0.75;
 }
 @media only screen and (max-width: 600px) {
   .hsbp_text_line:before, .hsbp_text_line:after {

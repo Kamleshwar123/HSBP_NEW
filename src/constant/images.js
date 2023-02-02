@@ -83,8 +83,36 @@ import OrderProduct from './../styles/images/order-product.webp';
 import OrderSalon from './../styles/images/order-salon.webp';
 import OrderBridal from './../styles/images/order-bridal.webp';
 import InstituteBanner from './../styles/images/institute_banner.webp';
+import BeauticianBanner from './../styles/images/beautician-banner.webp';
+import TestiBanner from './../styles/images/testi-banner.webp';
+import InstituteDetailBanner from './../styles/images/institute-detail-banner.webp';
+import WhyHsbp from './../styles/images/why-hsbp.webp';
+import Award from './../styles/images/award.webp';
+import Instestiprofile1 from './../styles/images/ins-testi-profile1.webp';
+import Instestiprofile2 from './../styles/images/ins-testi-profile2.webp';
+import Speakprofile from './../styles/images/speak-profile.webp';
+import Course1 from './../styles/images/course-1.webp';
+import Course2 from './../styles/images/course-2.webp';
+import Course3 from './../styles/images/course-3.webp';
+import Course4 from './../styles/images/course-4.webp';
+import Course5 from './../styles/images/course-5.webp';
+import Course6 from './../styles/images/course-6.webp';
 
 const IMAGES = {
+    InstituteDetailBanner,
+    WhyHsbp,
+    Award,
+    Instestiprofile1,
+    Instestiprofile2,
+    Speakprofile,
+    Course1,
+    Course2,
+    Course3,
+    Course4,
+    Course5,
+    Course6,
+    TestiBanner,
+    BeauticianBanner,
     InstituteBanner,
     OrderBridal,
     OrderSalon,

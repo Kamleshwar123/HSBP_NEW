@@ -20,7 +20,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'white': '#ffffff',
+      'white': '#FFFFFF',
       'white-fc': '#FCFCFC',
       'white-f2': '#F2F2F2',
       'white-eb': '#EBEBEB',
@@ -78,7 +78,8 @@ module.exports = {
         'beautician':'0px 6px 10px #00000029',
         '42': '0px 8px 22px #00000042',
         'filterbox':'10px 8px 15px #00000029',
-        "feedback":'0px 4px 17px #0000006B'
+        "feedback":'0px 4px 17px #0000006B',
+        "insti-search": "0px 6px 17px #00000066",
       }
     },
   },

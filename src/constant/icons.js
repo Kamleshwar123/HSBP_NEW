@@ -51,8 +51,10 @@ import InsCall from './../styles/icons/ins-call.webp';
 import Inswhatsapp from './../styles/icons/ins-whatsapp.webp';
 import InsNewLocation from './../styles/icons/ins-location.webp';
 import InsReview from './../styles/icons/ins-review.webp';
+import ClientRating from './../styles/icons/client-rating.webp';
 
 const ICONS = {
+    ClientRating,
     InsCall,
     Inswhatsapp,
     InsNewLocation,

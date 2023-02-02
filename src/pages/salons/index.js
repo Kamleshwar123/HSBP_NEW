@@ -77,7 +77,7 @@ const SalonsPage = () => {
                                 <label className="form-label">Email Address</label>
                                 <input type="text" className="form-control" placeholder='Enter Email Address' />
                             </div>
-                            <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
+                            <div className='grid md:grid-cols-2 grid-cols-1 gap-x-6'>
                                 <div className='mb-3'>
                                     <label className="form-label">Pin Code</label>
                                     <input type="text" className="form-control" placeholder='Enter Pin Code' />

@@ -55,7 +55,7 @@ const RightLink = [
     },
     {
         label: "Query I am a Beautician",
-        srcUrl: "/",
+        srcUrl: "/i-am-beautician",
         openNewTab: false
     },
     {

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import OderDetailStep from '../../component/common/OderdetailStep'
 import IMAGES from '../../constant/images'
 import SvgIcon from '../../constant/SvgIcon'
 
@@ -30,6 +31,9 @@ const MyOrderDetails = () => {
             <button className='addcard_button flex items-center gap-1 px-3'><span><SvgIcon.Download className='w-4 h-auto'/></span><b className='font-semibold'>Download Invoice</b></button>
           </div>
         </div>
+      </div>
+      <div>
+        <OderDetailStep/>
       </div>
       <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
       <div className='grid grid-cols-12 items-center gap-6 px-5 py-4 theme-heading-box'>

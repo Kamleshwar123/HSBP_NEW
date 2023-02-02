@@ -19,7 +19,7 @@ const ThankYou = () => {
                     <p className='py-2 font-medium'>Your appointment is almost confirmed. You will get beautician detail soon.</p>
                 </div>
                 <div className='pt-7'>
-                    <button className='back_button' onClick={()=> router.push("/my-order")}>My Order</button>
+                    <button className='back_button' onClick={()=> router.push("/my-order")}>My Orders</button>
                     <button className='back_button ml-5' onClick={()=> router.push("/")}>Back to Home</button>
                 </div>
             </div>

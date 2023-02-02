@@ -8,7 +8,6 @@ import SvgIcon from '../../constant/SvgIcon'
 
 const Checkout = () => {
   const [openBox, setOpenBox]= useState(true);
-  const [openBookingBox, setOpenBookingBox]= useState(true);
   const router = useRouter();
   const [paymentType, setPaymentType] = useState(1);
   const [isAddNewAddress, setIsAddNewAddress] = useState(false);
@@ -66,11 +65,9 @@ const Checkout = () => {
           </div>
           {isAddNewAddress && <AddAddressForm/>}
             <div className='shadow-checkout rounded-2xl overflow-hidden mt-6'>
-                <div className='theme-heading-box flex justify-between cursor-pointer' onClick={()=> setOpenBookingBox(!openBookingBox)}>
+                <div className='theme-heading-box'>
                 <p>Select Booking Date/Time</p>
-                <div><SvgIcon.IosArrowDown className={`scale-50 ${openBookingBox ? 'rotate-180' : "rotate-0"}`}/></div>
                 </div>
-                {openBookingBox &&
                 <div className='p-5'>
                   <div className='grid grid-cols-6 gap-6'>
                     <div className='col-span-6 md:col-span-3'>
@@ -82,11 +79,7 @@ const Checkout = () => {
                         <input type="time" className="form-control" placeholder='Timing' />
                     </div>
                   </div>
-                  {/* <div className='text-center mt-6'>
-                      <button className='custom_button' onClick={()=> router.push(paymentType === 1 ? "/payment-mode" :"/thank-you")}>{paymentType === 1 ? "Pay Now" :"Book Now"}</button>
-                  </div> */}
                 </div>
-                }
             </div>
             <div className='pt-6 pb-0'>
                 <div className='grid grid-cols-6 gap-6'>
