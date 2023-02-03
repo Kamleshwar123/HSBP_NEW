@@ -97,8 +97,10 @@ import Course3 from './../styles/images/course-3.webp';
 import Course4 from './../styles/images/course-4.webp';
 import Course5 from './../styles/images/course-5.webp';
 import Course6 from './../styles/images/course-6.webp';
+import ClientSpeakBg from './../styles/images/client-speak-bg.webp';
 
 const IMAGES = {
+    ClientSpeakBg,
     InstituteDetailBanner,
     WhyHsbp,
     Award,

@@ -81,7 +81,7 @@ const CheckoutBox = ({showCheckout = false}) => {
           </div>
           {showCheckout && 
             <div className='text-center'>
-              <button className='custom_button my-2 h-10 w-40' onClick={()=> router.push("/checkout")}>Checkout</button>
+              <button className='custom_button my-2 h-10 w-40' onClick={()=> {router.pathname?.includes("/salons") ? router.push("/booknow"): router.push("/checkout")}}>Checkout</button>
             </div>
           }
         </div>

@@ -8,7 +8,8 @@ module.exports = {
       center: true,
     },
     fontFamily: {
-      'Poppins': ['Poppins']
+      'Poppins': ['Poppins'],
+      'Montserrat':['Montserrat']
     },
     screens: {
       sm: "576px",
@@ -80,6 +81,7 @@ module.exports = {
         'filterbox':'10px 8px 15px #00000029',
         "feedback":'0px 4px 17px #0000006B',
         "insti-search": "0px 6px 17px #00000066",
+        "ins-testi": "0px 3px 26px #5A5A5A38",
       }
     },
   },

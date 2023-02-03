@@ -3,6 +3,8 @@ import Image from 'next/image'
 import React from 'react'
 import { useState } from 'react'
 import ReactDatePicker from 'react-datepicker'
+import Slider from 'react-slick'
+import { SampleNextArrow, SamplePrevArrow } from '../../component/common/SliderArrow'
 import BeautyService from '../../component/feature/services/BeautyService'
 import ICONS from '../../constant/icons'
 import IMAGES from '../../constant/images'
@@ -21,8 +23,28 @@ const InstitueDetail = () => {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   }
+  var settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: <SamplePrevArrow style={{width: "95px", height: "95px"}}/>,
+    nextArrow: <SampleNextArrow style={{width: "95px", height: "95px"}}/>,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:false
+            }
+        }
+    ]
+};
   return (
-    <div className='container mt-3'>
+    <div className='container mt-3 -mb-[30px]'>
         <div className='text-center'>
           <Image src={IMAGES.InstituteDetailBanner} className='scale_img' alt="InstituteBanner"/>
         </div>
@@ -94,6 +116,49 @@ const InstitueDetail = () => {
             </div>
           ))}
         </div>
+        <section className='insti-testi-bg mt-6 py-7'>
+          <div className='grid grid-cols-12 gap-6 pt-16 px-12'>
+            <div className='col-span-12 md:col-span-5'>
+              <div className='text-white pt-10 pl-10 hidden lg:block'>
+                <h3 className='text-4xl font-medium'>Testimonial</h3>
+                <p className='mt-4 text-lg font-Montserrat'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+              </div>
+            </div>
+            <div className='col-span-12 md:col-span-7'>
+              <div className='-m-3 insti_testi_slider'>
+              <Slider {...settings}>
+                <div className='p-3'>
+                  <div className='shadow-ins-testi bg-white p-6 text-center rounded-2xl'>
+                    <Image src={IMAGES.Instestiprofile1} alt="Instestiprofile1" className="h-24 w-24 mx-auto" />
+                    <p className='text-[#444444] text-xs pt-3'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make......</p>
+                    <hr className='my-3 text-theme w-28 mx-auto'/>
+                    <div className='text-base font-medium text-[#3D3D3D]'>Anurag Bansal</div>
+                    <Ratings rating={4} size={"12px"}/>
+                  </div>
+                </div>
+                <div className='p-3'>
+                  <div className='shadow-ins-testi bg-white p-6 text-center rounded-2xl'>
+                    <Image src={IMAGES.Instestiprofile2} alt="Instestiprofile1" className="h-24 w-24 mx-auto" />
+                    <p className='text-[#444444] text-xs pt-3'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make......</p>
+                    <hr className='my-3 text-theme w-28 mx-auto'/>
+                    <div className='text-base font-medium text-[#3D3D3D]'>Priya Gupta</div>
+                    <Ratings rating={4} size={"12px"}/>
+                  </div>
+                </div>
+                <div className='p-3'>
+                  <div className='shadow-ins-testi bg-white p-6 text-center rounded-2xl'>
+                    <Image src={IMAGES.Instestiprofile1} alt="Instestiprofile1" className="h-24 w-24 mx-auto" />
+                    <p className='text-[#444444] text-xs pt-3'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make......</p>
+                    <hr className='my-3 text-theme w-28 mx-auto'/>
+                    <div className='text-base font-medium text-[#3D3D3D]'>Anurag Bansal</div>
+                    <Ratings rating={4} size={"12px"}/>
+                  </div>
+                </div>
+              </Slider>
+              </div>
+            </div>
+          </div>
+        </section>
     </div>
   )
 }

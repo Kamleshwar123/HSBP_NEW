@@ -322,9 +322,6 @@
   .service-bg {
     background:linear-gradient(30deg, #ECEEF0 60%, #561334 30%);
   }
-  .testi-bg {
-    background: linear-gradient(340deg, #ECEEF0 45%, #561334 0%);
-  }
   .footer-bg {
     background: url(./../images/footer-bg.webp);
     background-size: cover;
@@ -363,6 +360,16 @@
   .speak-bg {
     background: url(./../images/speak-bg.webp);
     background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .insti-testi-bg {
+    background: url(./../images/ins-testi-bg.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .client-speak-bg {
+    background: url(./../images/client-speak-bg.webp);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
   }
 .pt-3.text-white.cursor-pointer.uppercase.font-light.font-bold {

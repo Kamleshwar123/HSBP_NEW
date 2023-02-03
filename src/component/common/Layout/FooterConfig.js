@@ -3,7 +3,7 @@ import SvgIcon from "../../../constant/SvgIcon";
 const LeftLink = [
     {
         label: "About Us",
-        srcUrl: "/",
+        srcUrl: "/about-us",
         openNewTab: false
     },
     {
@@ -50,7 +50,7 @@ const RightLink = [
     },
     {
         label: "Query",
-        srcUrl: "/",
+        srcUrl: "/faqs",
         openNewTab: false
     },
     {
@@ -85,7 +85,7 @@ const RightLink = [
     },
     {
         label: "Client's Speak",
-        srcUrl: "/",
+        srcUrl: "/clients-speak",
         openNewTab: false
     }
 ];
