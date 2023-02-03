@@ -15,7 +15,7 @@ const ClientsSpeak = () => {
       <div className='flex flex-wrap justify-center items-stretch -m-3 py-5'>
           {[...Array(8).keys()].map((item, idx) => (
               <div className='p-3 w-full md:w-1/2 lg:w-1/3' key={"prd" + idx}>
-                <Image src={IMAGES.ClientSpeakBg} className="scale_img" alt="ClientSpeak"/>
+                <Image src={IMAGES.ClientSpeakBg} className="scale_img" alt="ClientSpeakBg"/>
                   {/* <div className='client-speak-bg rounded-2xl'>
                     <div className='text-white text-center'>
                       <p className='text-opacity-75'>WHAT SAY</p>
