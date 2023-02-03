@@ -98,8 +98,10 @@ import Course4 from './../styles/images/course-4.webp';
 import Course5 from './../styles/images/course-5.webp';
 import Course6 from './../styles/images/course-6.webp';
 import ClientSpeakBg from './../styles/images/client-speak-bg.webp';
+import TestiImageProfile from './../styles/images/testi-img.webp';
 
 const IMAGES = {
+    TestiImageProfile,
     ClientSpeakBg,
     InstituteDetailBanner,
     WhyHsbp,

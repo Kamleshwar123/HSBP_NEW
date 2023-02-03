@@ -37,8 +37,10 @@ import ProductService from "./../styles/svg/product-service-icon.svg";
 import OrderServiceActive from "./../styles/svg/order-service-active.svg";
 import SalonServiceActive from "./../styles/svg/salon-service-active.svg";
 import ProductServiceActive from "./../styles/svg/product-service-active.svg";
+import Stepcheck from "./../styles/svg/step-check.svg";
 
 const SvgIcon = {
+  Stepcheck,
   OrderServiceActive,
   SalonServiceActive,
   ProductServiceActive,

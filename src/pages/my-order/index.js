@@ -38,7 +38,7 @@ const MyOrder = () => {
           {tab === 1 &&
             <div>
                 {[...Array(3).keys()].map((item,idx)=> (
-                <div className='shadow-4D p-4 mb-4 rounded-2xl cursor-pointer' key={`serorderbox${idx}`} onClick={()=> router.push("/my-order/1")}>
+                <div className='shadow-4D p-4 mb-4 rounded-2xl cursor-pointer' key={`serorderbox${idx}`} onClick={()=> router.push("/service-order/1")}>
                   <div className='grid grid-cols-12 gap-5'>
                     <div className='col-span-12 md:col-span-8'>
                       <div className='flex gap-2 flex-wrap'>
@@ -65,7 +65,7 @@ const MyOrder = () => {
           {tab === 2 &&
           <div>
               {[...Array(3).keys()].map((item,idx)=> (
-              <div className='shadow-4D p-4 mb-4 rounded-2xl cursor-pointer' key={`sorderbox${idx}`} onClick={()=> router.push("/my-order/1")}>
+              <div className='shadow-4D p-4 mb-4 rounded-2xl cursor-pointer' key={`sorderbox${idx}`} onClick={()=> router.push("/salon-order/1")}>
                 <div className='grid grid-cols-12 gap-5'>
                   <div className='col-span-12 md:col-span-8'>
                     <div className='flex gap-2 flex-wrap'>
@@ -92,15 +92,15 @@ const MyOrder = () => {
           {tab === 3 &&
           <div>
               {[...Array(3).keys()].map((item,idx)=> (
-              <div className='shadow-4D p-4 mb-4 rounded-2xl cursor-pointer' key={`porderbox${idx}`} onClick={()=> router.push("/my-order/1")}>
+              <div className='shadow-4D p-4 mb-4 rounded-2xl cursor-pointer' key={`porderbox${idx}`} onClick={()=> router.push("/product-order/1")}>
                 <div className='grid grid-cols-12 gap-5'>
                   <div className='col-span-12 md:col-span-8'>
                     <div className='flex gap-2 flex-wrap'>
-                    <div><Image src={IMAGES.OrderProduct} className='scale_img max-w-[71px]' alt="OrderProduct"/></div>
+                    <div><Image src={IMAGES.OrderProduct} className='scale_img max-w-[71px] border border-border rounded-lg' alt="OrderProduct"/></div>
                       <div>
                         <h6 className='font-semibold mb-1'>King C. Gillette Men's Beard Oil with Plant Based Argan... </h6>
                         <h6 className='font-semibold mb-1'>Vitamin C Hair Serum...…..</h6>
-                        <p className='text-black-0f0'>2 Items</p>
+                        <p className='text-black-0f0 text-xs'>2 Items</p>
                       </div>
                     </div>
                   </div>
