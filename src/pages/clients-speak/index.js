@@ -8,7 +8,7 @@ const ClientsSpeak = () => {
       <div className='text-center'>
         <Image src={IMAGES.TestiBanner} className="scale_img" alt="TestiBanner"/>
       </div>
-      <div className={`text-center w-[85%] mx-auto font-meduim mt-7 mb-5`}>
+      <div className={`text-center w-[85%] mx-auto font-medium mt-7 mb-5`}>
         <h1 className="md:text-[42px] sm:text-3xl text-2xl">Testimonials</h1>
         <p className="text-base mt-3 text-black">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
       </div>

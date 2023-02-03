@@ -40,21 +40,21 @@ const LeftLink = [
         label: "Blog",
         srcUrl: "/",
         openNewTab: false
+    },
+    {
+        label: "Faq's",
+        srcUrl: "/faqs",
+        openNewTab: false
     }
 ];
 const RightLink = [
     {
-        label: "Appointment",
+        label: "Appointment Query",
         srcUrl: "/",
         openNewTab: false
     },
     {
-        label: "Query",
-        srcUrl: "/faqs",
-        openNewTab: false
-    },
-    {
-        label: "Query I am a Beautician",
+        label: "I am a Beautician",
         srcUrl: "/i-am-beautician",
         openNewTab: false
     },
