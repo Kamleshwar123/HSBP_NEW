@@ -45,7 +45,8 @@ const TheHeader = () => {
             {/* <SearchProduct/> */}
           </div>
           <div className="flex gap-3 items-center justify-self-end">
-              <p className="ml-5 font-semibold text-black-707 hidden lg:block">DOWNLOAD APP</p>
+              {router?.pathname === "/" && <Link href={"/price-list"} className="p-1 font-semibold text-theme">Price List</Link>}
+              <p className="ml-5 font-bold text-black-707 hidden lg:block">DOWNLOAD APP</p>
               <Link href={"/"} className='hidden lg:block'>
                 <Image
                   src={IMAGES.GoogleStore}

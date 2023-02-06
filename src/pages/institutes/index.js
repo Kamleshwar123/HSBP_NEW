@@ -13,15 +13,16 @@ const Institues = () => {
     const [openStateFilter, setOpenStateFilter]= useState(true);
     const router = useRouter();
     const countryData = ["Assam", "Banglore", "Bhopal", "Chennai", "Delhi", "Faridabad", "Gujarat", "Goa", "Jammu", "Telangana", "Haryana", "Himachal Pradesh", "Maharastra", "Rajasthan", "Punjab", "Uttar Pradesh"];
-    const packageFilter = ["Reception", "Celebrate Sangeet", "Engagement", "Wedding", "Pre-Bridal Care"];
+    const course = ["Diet And Nutrition", "Cosmetology", "Laser Courses", "Hair Designing", "Dermatology"];
     return (
+        <>
         <div className='container mt-3'>
             <div className='text-center'>
                 <Image src={IMAGES.InstituteBanner} className="scale_img" alt="InstituteBanner"/>
             </div>
-            <div className='-mt-7 mb-9 shadow-insti-search rounded-3xl bg-white p-6 w-[90%] mx-auto relative z-10'>
-                <h3 className='text-lg text-theme font-semibold mb-2 text-center'>Beauty Training Center Search</h3>
-                <div className='grid grid-cols-12 gap-6 enquryform'>
+            <div className='-mt-7 mb-9 shadow-insti-search rounded-3xl bg-white w-[95%] xs:w-[90%] lg:w-[80%] mx-auto relative z-10 pt-4'>
+                <h3 className='text-xl text-theme font-semibold text-center'>Beauty Training Center Search</h3>
+                <div className='grid grid-cols-12 gap-6 enquryform p-5'>
                     <div className='col-span-12 md:col-span-4'>
                         <label className="form-label">Institute / Center Name</label>
                         <div className="flex w-full flex-wrap items-stretch relative">
@@ -33,18 +34,18 @@ const Institues = () => {
                         <label className="form-label">State</label>
                         <select className='form-control'>
                             <option>Select State</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
+                            {countryData?.map((item,idx)=> (
+                                <option value={item} key={"country"+idx}>{item}</option>
+                            ))}
                         </select>
                     </div>
                     <div className='col-span-12 md:col-span-4'>
                         <label className="form-label">Course</label>
                         <select className='form-control'>
                             <option>Select Course</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
+                            {course?.map((item,idx)=> (
+                                <option value={item} key={"course"+idx}>{item}</option>
+                            ))}
                         </select>
                     </div>
                 </div>
@@ -60,8 +61,8 @@ const Institues = () => {
                             </div>
                             <div className='col-span-12 md:col-span-9'>
                                 <div className='p-5 text-black-241'>
-                                    <div className='flex flex-wrap items-center justify-between'>
-                                    <div className='text-xl text-theme font-bold'>HSBP Salon</div>
+                                    <div className='flex flex-wrap gap-3 items-center justify-between'>
+                                    <div className='text-2xl text-theme font-bold'>HSBP Salon</div>
                                         <div className='inline-flex space-x-3 text-xs'>
                                             <div className='inline-flex items-center space-x-1'>
                                                 <Image src={ICONS.Share} alt="Share" className="cursor-pointer scale_icon-24" />
@@ -82,7 +83,7 @@ const Institues = () => {
                                             <div><Image src={ICONS.Call} alt="beauty" className="mx-auto max-h-[16px] w-auto" /></div>
                                             <a href="tel: +91 9582-577-510">+91 9582-577-510</a>
                                         </div>
-                                        <SeeAll text={"See Salon Detail"} url={"/institutes/1"} data={{}}/>
+                                        <SeeAll text={"See Institute Detail"} url={"/institutes/1"} data={{}}/>
                                     </div>
                                 </div>
                             </div>
@@ -90,8 +91,11 @@ const Institues = () => {
                     </div>
                 ))}
             </div>
-            <div className='ins-form-bg py-6'>
-                <div className='enquryform bg-white max-w-md sm:ml-10 p-5 rounded-[30px] mx-3 sm:mx-0'>
+        </div>
+        <div className='ins-form-bg py-6'>
+            <div className='container'>
+                <div className='enquryform bg-white max-w-md p-5 rounded-[30px]'>
+                    <h6 className='text-theme-light text-lg font-semibold text-center mb-1'>Enquiry Details</h6>
                     <div className='mb-3'>
                         <label className="form-label">Name</label>
                         <input type="text" className="form-control" placeholder='Enter Name' />
@@ -133,7 +137,8 @@ const Institues = () => {
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
+        </>
     )
 }
 

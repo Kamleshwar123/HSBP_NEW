@@ -137,7 +137,9 @@
     z-index: 1;
     color: #3D363A;
 }
-
+.insti_testi_slider .slick-next:hover, .insti_testi_slider .slick-prev:hover {
+    color: #3D363A !important;
+}
 @media only screen and (max-width: 600px) {
     .beauty_slider .slick-prev {
         left: -15px !important;

@@ -5,11 +5,17 @@ import OrderDetail from '../../component/feature/OrderDetails/OrderDetail'
 import IMAGES from '../../constant/images'
 
 const MyServiceOrderDetails = () => {
+  const statusData = [
+    {status:1, label: "Booked", date: "20 Jan, 2023"},
+    {status:2, label: "Confirmed", date: "21 Jan, 2023"},
+    {status:3, label: "Beautician Allocated", date: "22 Jan, 2023"},
+    {status:4, label: "Service Completed", date: "23 Jan, 2023"},
+  ];
   return (
     <div className='container mt-3'>
-      <OrderDetail/>
+      <OrderDetail orderStatus={2}/>
       <div>
-        <OderDetailStep/>
+        <OderDetailStep orderStatus={2} statusData={statusData}/>
       </div>
       <div>
         {[...Array(4).keys()].map((item,idx)=> (

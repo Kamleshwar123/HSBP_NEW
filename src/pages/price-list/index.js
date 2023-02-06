@@ -94,8 +94,8 @@ const PriceList = () => {
                                 >
                                 <div className='flex items-center gap-2'>
                                     {/* <input type="checkbox" className='pricecheckbox'/> */}
-                                    <span className='w-4 h-4 border border-black-707 rounded-[3px] text-xs flex justify-center items-center text-theme'>{selectedPackages === pkg?.id ? "✓" : ""}</span>
-                                    <span className='uppercase'>{pkg?.name}</span>
+                                    <div className='w-4 h-4 min-w-[16px] border border-black-707 rounded-[3px] text-xs flex justify-center items-center text-theme'>{selectedPackages === pkg?.id ? "✓" : ""}</div>
+                                    <div className='uppercase w-auto'>{pkg?.name}</div>
                                 </div>
                                 <div className='flex justify-end gap-4'>
                                     <div className='w-12'><span className='rupee-sym'>&#x20B9;</span>{pkg?.price1}</div>

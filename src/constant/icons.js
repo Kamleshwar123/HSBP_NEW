@@ -52,8 +52,18 @@ import Inswhatsapp from './../styles/icons/ins-whatsapp.webp';
 import InsNewLocation from './../styles/icons/ins-location.webp';
 import InsReview from './../styles/icons/ins-review.webp';
 import ClientRating from './../styles/icons/client-rating.webp';
+import RateUs1 from './../styles/icons/rateus1.png';
+import RateUs2 from './../styles/icons/rateus2.png';
+import RateUs3 from './../styles/icons/rateus3.png';
+import RateUs4 from './../styles/icons/rateus4.png';
+import RateUs5 from './../styles/icons/rateus5.png';
 
 const ICONS = {
+    RateUs1,
+    RateUs2,
+    RateUs3,
+    RateUs4,
+    RateUs5,
     ClientRating,
     InsCall,
     Inswhatsapp,

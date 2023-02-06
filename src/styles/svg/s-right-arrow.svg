@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82.747" height="82.747" viewBox="0 0 82.747 82.747">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
   <defs>
-    <filter id="Ellipse_1" x="0" y="0" width="82.747" height="82.747" filterUnits="userSpaceOnUse">
+    <filter id="Ellipse_1" x="0" y="0" width="95" height="95" filterUnits="userSpaceOnUse">
       <feOffset dy="5" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="6" result="blur"/>
       <feFlood flood-opacity="0.349"/>
