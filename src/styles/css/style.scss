@@ -368,8 +368,13 @@
     background-repeat: no-repeat;
   }
   .client-speak-bg {
-    background: url(./../images/client-speak-bg.webp);
-    background-size: 100% 100%;
+    background: url(./../images/client-speak-bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .client-speak-des {
+    background: url(./../images/client-speak-des.png);
+    background-size: cover;
     background-repeat: no-repeat;
   }
 .pt-3.text-white.cursor-pointer.uppercase.font-light.font-bold {

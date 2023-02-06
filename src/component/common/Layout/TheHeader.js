@@ -30,6 +30,7 @@ const TheHeader = () => {
   const toggleDrawer = () => {
     setIsOpen(!isOpen)
   }
+  
   return (
     <header className='w-full bg-white sticky top-0 z-[999] shadow-header'>
       <div className="container">
@@ -42,7 +43,11 @@ const TheHeader = () => {
                 <Image src={IMAGES.Logo} alt="logo" className="w-auto mx-auto h-9" />
               </Link>
             </div>
-            {/* <SearchProduct/> */}
+            {router.pathname.includes("product") &&
+              <div className="hidden md:inline">
+              <SearchProduct/>
+            </div>
+            }
           </div>
           <div className="flex gap-3 items-center justify-self-end">
               {router?.pathname === "/" && <Link href={"/price-list"} className="p-1 font-semibold text-theme">Price List</Link>}

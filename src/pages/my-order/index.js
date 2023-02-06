@@ -17,7 +17,7 @@ const MyOrder = () => {
         <div className='col-span-12 md:col-span-3'>
           <div className='shadow-4D p-3 rounded-2xl'>
             <div className='font-medium'>CATEGORIES</div>
-            <hr className='my-1 color-black-707 opacity-60'/>
+            <hr className='my-1 text-black-707 border-t-2 text-opacity-60'/>
             <div className='text-black-0f0 font-semibold py-1'>
               <div className='flex gap-2 py-1 mb-3 mt-1 cursor-pointer' onClick={()=>handleTab(1)}>
                 {tab === 1 ? <SvgIcon.OrderServiceActive className='scale-[0.65] mx-0'/> :<SvgIcon.OrderService className='scale-[0.65] mx-0'/>}

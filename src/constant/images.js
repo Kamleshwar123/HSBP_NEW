@@ -99,8 +99,12 @@ import Course5 from './../styles/images/course-5.webp';
 import Course6 from './../styles/images/course-6.webp';
 import ClientSpeakBg from './../styles/images/client-speak-bg.webp';
 import TestiImageProfile from './../styles/images/testi-img.webp';
+import ClientSpeakBg1 from './../styles/images/client-speak-bg1.png';
+import ClientSpeakDes from './../styles/images/client-speak-des.png';
 
 const IMAGES = {
+    ClientSpeakBg1,
+    ClientSpeakDes,
     TestiImageProfile,
     ClientSpeakBg,
     InstituteDetailBanner,
