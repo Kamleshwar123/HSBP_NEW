@@ -38,8 +38,12 @@ import OrderServiceActive from "./../styles/svg/order-service-active.svg";
 import SalonServiceActive from "./../styles/svg/salon-service-active.svg";
 import ProductServiceActive from "./../styles/svg/product-service-active.svg";
 import Stepcheck from "./../styles/svg/step-check.svg";
+import Home from "./../styles/svg/home.svg";
+import Logout from "./../styles/svg/logout.svg";
 
 const SvgIcon = {
+  Home,
+  Logout,
   Stepcheck,
   OrderServiceActive,
   SalonServiceActive,

@@ -32,8 +32,8 @@ const OderDetailStep = ({orderStatus,statusData}) => {
         return (
             <div className='flex flex-col items-center relative'>
                 <div className="absolute flex flex-col whitespace-nowrap left-10 -top-0">
-                <p className='text-[#0B6804] text-semibold'>Booked</p>
-                <p className='mt-2'>20 Jan, 2023</p>
+                <p className='text-[#0B6804] text-semibold'>{item?.label}</p>
+                <p className='mt-2'>{item?.date}</p>
                 </div>
                 <div className="bg-[#0B6804] h-6 w-6 rounded-[50%] shadow flex items-center justify-center">
                     <SvgIcon.Stepcheck/>
@@ -45,8 +45,8 @@ const OderDetailStep = ({orderStatus,statusData}) => {
         return (
             <div className='flex flex-col items-center relative'>
                 <div className="absolute flex flex-col whitespace-nowrap left-10 -top-0">
-                <p>Delivered</p>
-                <p className='mt-2'>25 Jan, 2023</p>
+                <p>{item?.label}</p>
+                <p className='mt-2'>2{item?.date}</p>
                 </div>
                 <div className="bg-[#9D9D9D] h-6 w-6 rounded-[50%] shadow flex items-center justify-center">
                     <div className="h-3 w-3 bg-[#7B7B7B] rounded-full"></div>

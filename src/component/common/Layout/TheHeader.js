@@ -17,7 +17,6 @@ const Sidebar = dynamic(() => import('./Sidebar'), { ssr: false });
 const TheHeader = () => {
   const router = useRouter();
   const dispatch = useDispatch();
-  console.log(router);
   const [open, setOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const openLoginModal = useSelector((state) => state.common.openLoginModal);
@@ -30,7 +29,8 @@ const TheHeader = () => {
   const toggleDrawer = () => {
     setIsOpen(!isOpen)
   }
-  
+  console.log(router)
+  const haveSearchBox = ["/products", "/product-home", "/products/[productId]", "my-order", "my-order", '/service-order/[orderId]', '/salon-order/[orderId]',"/product-order/[orderId]","/institutes","/institutes/[instituteId]"]
   return (
     <header className='w-full bg-white sticky top-0 z-[999] shadow-header'>
       <div className="container">
@@ -43,10 +43,15 @@ const TheHeader = () => {
                 <Image src={IMAGES.Logo} alt="logo" className="w-auto mx-auto h-9" />
               </Link>
             </div>
-            {router.pathname.includes("product") &&
-              <div className="hidden md:inline">
-              <SearchProduct/>
-            </div>
+            {haveSearchBox.includes(router.pathname) &&
+              <>
+                <div className="hidden md:inline">
+                  <SearchProduct/>
+                </div>
+                {/* <div className="inline md:hidden">
+                  <SearchProduct/>
+                </div> */}
+              </>
             }
           </div>
           <div className="flex gap-3 items-center justify-self-end">

@@ -37,7 +37,7 @@ const CustomerReview = () => {
         <div className='review_slider'>
         <Slider {...settings}>
         {[...Array(6).keys()].map((item, idx) => (
-            <div key={idx+"review"}>
+            <div key={idx+"review"} className="w-full">
                 <div className='text-left m-2 relative'>
                     <Image src={IMAGES.Btesti} alt="layer" className='scale_img'/>
                     <Image src={IMAGES.BtestiProfile} alt="layer" className='absolute right-0 top-0 rounded-full' height={80} width={80}/>
@@ -54,6 +54,15 @@ const CustomerReview = () => {
         ))}
         </Slider>
         </div>
+                {/* <div className='flex justify-between'>
+                    <div className='bg-[#993680] text-white px-7 py-4 text-left ropunded-2xl'>
+                        <h6>Nikita Chaudhary</h6>
+                        <p className='text-xs'>Beautician</p>
+                    </div>
+                    <div>
+                        <Image src={IMAGES.BtestiProfile} alt="layer" className='rounded-full' height={120} width={120}/>
+                    </div>
+                </div> */}
     </div>
   )
 }
