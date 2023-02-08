@@ -23,7 +23,7 @@ const CityModal = ({isOpen,closeModal,setOpenSelectCityModal}) => {
             <button className="custom_button -ml-3" /* onClick={closeModal} */>Search</button>
         </div>
         <div className='text-center'>
-        <h3 className='text-lg font-semibold'>Select You City</h3>
+        <h3 className='text-lg font-semibold'>Select Your City</h3>
         <p>to view service</p>
         <p className='text-xs mt-1'>We provide services for women only</p>
         </div>

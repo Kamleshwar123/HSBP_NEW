@@ -83,6 +83,7 @@ module.exports = {
         "feedback":'0px 4px 17px #0000006B',
         "insti-search": "0px 6px 17px #00000066",
         "ins-testi": "0px 3px 26px #5A5A5A38",
+        'nearcity': '0px 6px 16px #00000026'
       }
     },
   },

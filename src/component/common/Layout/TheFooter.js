@@ -74,7 +74,7 @@ const TheFooter = () => {
             <ul className="flex flex-wrap w-full items-center justify-center divide divide-x px-5">
               {FooterCity.map((item, idx) => (
                 <li key={"city" + idx} className='list-style-none px-3 whitespace-nowrap leading-4 my-2'>
-                  <Link href={"/selectcity"}>{item}</Link>
+                  <Link href={"/city/1"}>{item}</Link>
                 </li>
               ))}
             </ul>
