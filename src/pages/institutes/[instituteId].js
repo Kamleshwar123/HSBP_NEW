@@ -125,7 +125,7 @@ const InstitueDetail = () => {
         </section>
     </div>
     <section className='mt-6 py-7 bg-[#F6F6F4FC] h-full -mb-[30px]'>
-      <div className='insti-testi-bg container'>
+      <div className='insti-testi-bg container py-5'>
         <div className='grid grid-cols-12 gap-6 pt-16 px-12'>
           <div className='col-span-12 md:col-span-5'>
             <div className='text-white pt-10 pl-10 hidden lg:block'>

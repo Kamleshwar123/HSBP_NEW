@@ -77,7 +77,7 @@ const Enqueryform = () => {
                 </div>
             </div>
             <div className='text-center mt-6'>
-                <button className='custom_button'>Send Query</button>
+                <button className='custom_button w-36 h-10'>Send Query</button>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@ const OderDetailStep = ({orderStatus,statusData}) => {
                     <p className='mt-12'>{item?.date}</p>
                 </div>
                 <div className="bg-[#9D9D9D] h-6 w-6 rounded-[50%] shadow flex items-center justify-center">
-                    <div className="h-3 w-3 bg-[#7B7B7B] rounded-full"></div>
+                    <div className="h-[50%] w-[50%] bg-[#7B7B7B] rounded-[50%]"></div>
                 </div>
             </div>
         )
@@ -49,14 +49,14 @@ const OderDetailStep = ({orderStatus,statusData}) => {
                 <p className='mt-2'>2{item?.date}</p>
                 </div>
                 <div className="bg-[#9D9D9D] h-6 w-6 rounded-[50%] shadow flex items-center justify-center">
-                    <div className="h-3 w-3 bg-[#7B7B7B] rounded-full"></div>
+                    <div className="h-[50%] w-[50%] bg-[#7B7B7B] rounded-[50%]"></div>
                 </div>
             </div>
         )
     }
   return (
     <div className="py-20">
-        <div className="w-11/12 lg:w-4/5 mx-auto text-xs">
+        <div className="mx-auto text-xs">
 {/*             <div  className="bg-gray-e5e h-2 flex items-center justify-between text-xs text-black-685 w-full">
                 <div className='flex flex-col items-start'>
                     <p className='text-[#0B6804] mb-2'>Booked</p>
@@ -94,11 +94,11 @@ const OderDetailStep = ({orderStatus,statusData}) => {
                     <p className='mt-2'>24 Jan, 2023</p>
                 </div>
             </div> */}
-            <ol className="hidden items-center w-full sm:flex">
+            <ol className="hidden items-center justify-center w-auto sm:flex">
                 {statusData.map((item,idx)=> (
                     <React.Fragment key={"stpe"+idx}>
                         {item?.status <= orderStatus ? renderActiveStep(item, idx) : renderStep(item,idx)}
-                        {idx < (statusData?.length-1) && <div className="flex-auto border-t-8 transition duration-500 ease-in-out border-gray-e5e"></div>}
+                        {idx < (statusData?.length-1) && <div className="w-[140px] border-t-8 transition duration-500 ease-in-out border-gray-e5e"></div>}
                     </React.Fragment>
                 ))}
                 {/* <div className="flex-auto border-t-8 transition duration-500 ease-in-out border-gray-e5e"></div>
@@ -143,11 +143,11 @@ const OderDetailStep = ({orderStatus,statusData}) => {
                 </div> */}
             </ol>
 
-            <ol className="flex flex-col items-center h-[450px] sm:hidden">
+            <ol className="flex flex-col items-center sm:hidden">
                 {statusData.map((item,idx)=> (
                     <React.Fragment key={"stpe"+idx}>
                         {item?.status <= orderStatus ? renderMdActiveStep(item, idx) : renderMdStep(item,idx)}
-                        {idx < (statusData?.length-1) && <div className="flex-auto border-l-8 transition duration-500 ease-in-out border-gray-e5e"></div>}
+                        {idx < (statusData?.length-1) && <div className="h-[80px] border-l-8 transition duration-500 ease-in-out border-gray-e5e"></div>}
                     </React.Fragment>
                 ))}
                 {/* <div className='flex flex-col items-center relative'>

@@ -26,6 +26,16 @@
 	-webkit-animation: spinner 1.5s linear infinite;
 	animation: spinner 1.5s linear infinite;
 }
+/* .recaptcha {
+    transform:scale(0.77);
+    -webkit-transform:scale(0.77);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+} */
+/* .rc-anchor.rc-anchor-normal.rc-anchor-light {
+    border:1px solid #CCC9C9 !important;
+    border-radius: 12px !important;
+} */
 @-webkit-keyframes spinner {
 	0% {
 		-webkit-transform: rotate(0deg);
@@ -46,5 +56,13 @@
 @media only screen and (min-width: 1600px) {
     .banner_img {
        width: 100vw !important;
+    }
+}
+@media only screen and (max-width: 524px) {
+    .recaptcha {
+        transform:scale(0.77);
+        -webkit-transform:scale(0.77);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
     }
 }

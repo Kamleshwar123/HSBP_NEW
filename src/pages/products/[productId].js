@@ -63,7 +63,7 @@ const ProductDetails = () => {
                             <div className='my-2'><span className='text-black-0f0 font-bold text-base'><span className='rupee-sym'>₹</span>377</span><span className='text-black-a8a ml-3 line-through'><span className='rupee-sym'>₹754</span></span></div>
                             <div>Size - 50 ML</div>
                             <div className='flex flex-wrap items-center gap-5 mt-6'>
-                                <button className='custom_button w-36'>Add to Cart</button>
+                                <button className='custom_button w-36' onClick={()=> router.push("/product-cart")}>Add to Cart</button>
                                 <button className='custom_button w-36' onClick={()=> router.push("/checkout")}>Buy Now</button>
                             </div>
                         </div>

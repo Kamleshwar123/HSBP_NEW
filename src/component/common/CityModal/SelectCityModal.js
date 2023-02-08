@@ -19,7 +19,7 @@ const SelectCityModal = ({isOpen,closeModal}) => {
         <div>
           <h2 className='text-lg text-black-2e2 font-semibold mb-3 text-center'>Please Select your city</h2>
           <div className='flex'>
-            <select className='form-control rounded-r-none text-black-2e2 cityproceed'>
+            <select className='form-control rounded-r-none text-black-2e2 cityproceed selectCitybox'>
               <option>-- Select City --</option>
               <option className='bg-black-605 text-white'>Agra</option>
               <option className='hover:bg-black-605 hover:text-white'>Banglore</option>

@@ -40,12 +40,12 @@ const PriceList = () => {
         {name:"Rica Wax"}
     ]
     const Packages = [
-        {id: 1, name:"FULL HAND SCRUB + POLISHING", price1: "₹849", price2: "₹649"},
-        {id: 2, name:"FULL HAND SCRUB + POLISHING", price1: "₹849", price2: "₹649"},
-        {id: 3, name:"FULL BACK + FULL FRONT SCRUBING + POLISH", price1: "₹849", price2: "₹649"},
-        {id: 4, name:"FULL BODY SCRUBBING", price1: "₹849", price2: "₹649"},
-        {id: 5, name:"FULL BODY SPA", price1: "₹849", price2: "₹649"},
-        {id: 6, name:"FULL BODY POLISHING (MASSAGE OLIVE OIL OR CREAM + SCRUB + PACK)", price1: "₹849", price2: "₹649"}
+        {id: 1, name:"FULL HAND SCRUB + POLISHING", price1: "849", price2: "649"},
+        {id: 2, name:"FULL HAND SCRUB + POLISHING", price1: "849", price2: "649"},
+        {id: 3, name:"FULL BACK + FULL FRONT SCRUBING + POLISH", price1: "849", price2: "649"},
+        {id: 4, name:"FULL BODY SCRUBBING", price1: "849", price2: "649"},
+        {id: 5, name:"FULL BODY SPA", price1: "849", price2: "649"},
+        {id: 6, name:"FULL BODY POLISHING (MASSAGE OLIVE OIL OR CREAM + SCRUB + PACK)", price1: "849", price2: "649"}
     ]
     const handleOpenBox = (val) => {
         let openBoxArr = [...openBox];
@@ -85,7 +85,7 @@ const PriceList = () => {
                             ))}
                         </ul>
                         <h6 className='text-theme text-center font-semibold my-3 uppercase px-4'>{selectedCategory}</h6>
-                        <ul className='text-xs font-semibold font-Roboto'>
+                        <ul className='text-xs font-semibold'>
                             {Packages?.map((pkg,idx)=> (
                                 <li 
                                     className={`flex justify-between cursor-pointer items-center gap-3  py-1 px-3 mb-1 ${selectedPackages === pkg?.id ? "bg-[#FBE0E0]" : "border-[0.4px] border-black-707 border-opacity-40"}`}

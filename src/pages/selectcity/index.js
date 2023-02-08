@@ -2,7 +2,8 @@ import React from 'react'
 
 const SelectcityPage = () => {
   return (
-    <div className='container'>SelectcityPage</div>
+    <div className='container'>
+    </div>
   )
 }
 

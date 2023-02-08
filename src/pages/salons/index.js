@@ -34,7 +34,7 @@ const SalonsPage = () => {
                     {[...Array(6).keys()].map((item, idx) => (
                         <div className='shadow-8F rounded-3xl mt-7 px-5 py-3' key={`salon${idx}`}>
                             <div className='flex flex-wrap items-center justify-between'>
-                                <div className='text-xl text-theme font-medium'>HSBP Salon</div>
+                                <div className='text-xl text-theme font-bold'>HSBP Salon</div>
                                 <div className='inline-flex space-x-3 text-xs'>
                                     <div className='inline-flex items-center space-x-1'>
                                         <Image src={ICONS.Share} alt="Share" className="cursor-pointer scale_icon-24" />

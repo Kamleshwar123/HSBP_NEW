@@ -22,9 +22,9 @@ const Salon = () => {
     return (
         <div>
             <div className='text-xl md:text-3xl text-black-2e2 text-center'>Discover the best salons near you</div>
-            <div className='flex flex-wrap justify-center items-center gap-6 p-6'>
-                <div className='flex justify-center md:justify-end w-[278px]'>
-                    <label htmlFor="selectcity" className="relative block">
+            <div className='grid grid-cols-12 items-center gap-6 p-6 mx-auto md:w-11/12 lg:w-2/3'>
+                <div className='flex w-full col-span-12 md:col-span-4'>
+                    <label htmlFor="selectcity" className="relative block w-full">
                         <SvgIcon.LocationTheme className="scale-75 pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"/>
                         <select className='form-control rounded-xl salonboxinput pl-10' id="selectcity">
                             <option>Select City</option>
@@ -35,9 +35,9 @@ const Salon = () => {
                         </select>
                     </label>
                 </div>
-                <div className='w-full max-w-sm'>
+                <div className='w-full col-span-12 md:col-span-8'>
                 <OutsideClick open={showAutoComplete} setOpen={setShowAutoComplete}>
-                    <div className="flex w-full flex-wrap items-stretch max-w-sm">
+                    <div className="flex w-full flex-wrap items-stretch">
                         <SvgIcon.Search className="text-theme pointer-events-none w-5 h-5 absolute top-1/2 transform -translate-y-1/2 left-3"/>
                         <input type="text" placeholder="Search for Services" className="salonboxinput form-control rounded-xl pl-10" onChange={(e)=> setSearch(e.target.value)} onFocus={()=> setShowAutoComplete(true)}/>
                     </div>
@@ -60,7 +60,7 @@ const Salon = () => {
                 </OutsideClick>
                 </div>
             </div>
-            <div className='text-theme-light text-base'>Near by Salons</div>
+            <div className='text-theme-light text-base font-medium'>Near by Salons</div>
             <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 py-6'>
                 {[...Array(4).keys()].map((item, idx) => (
                     <div key={"salon" + idx}>
@@ -71,7 +71,7 @@ const Salon = () => {
                                 </div>
                                 <div className='py-4 px-3 flex justify-between gap-3'>
                                     <div>
-                                        <h3 className='text-theme text-base font-medium pb-2'>HSBP Studio</h3>
+                                        <h3 className='text-theme text-base font-bold pb-2'>HSBP Studio</h3>
                                         <p className='text-xs'>Near Mahagun Mall,</p>
                                         <p className='text-xs'>Vaishali, Ghaziabad</p>
                                     </div>

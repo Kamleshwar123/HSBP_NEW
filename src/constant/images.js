@@ -101,8 +101,12 @@ import ClientSpeakBg from './../styles/images/client-speak-bg.webp';
 import TestiImageProfile from './../styles/images/testi-img.webp';
 import ClientSpeakBg1 from './../styles/images/client-speak-bg1.png';
 import ClientSpeakDes from './../styles/images/client-speak-des.png';
+import ReviewTag from './../styles/images/review-tag.png';
+import ProductCartProduct from './../styles/images/product-cart-product.webp';
 
 const IMAGES = {
+    ProductCartProduct,
+    ReviewTag,
     ClientSpeakBg1,
     ClientSpeakDes,
     TestiImageProfile,

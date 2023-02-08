@@ -30,7 +30,7 @@ const TheHeader = () => {
     setIsOpen(!isOpen)
   }
   console.log(router)
-  const haveSearchBox = ["/products", "/product-home", "/products/[productId]", "my-order", "my-order", '/service-order/[orderId]', '/salon-order/[orderId]',"/product-order/[orderId]","/institutes","/institutes/[instituteId]"]
+  const haveSearchBox = ["/faqs","/franchise", "/products", "/product-home", "/products/[productId]", "/my-order", '/service-order/[orderId]', '/salon-order/[orderId]',"/product-order/[orderId]","/institutes","/institutes/[instituteId]"]
   return (
     <header className='w-full bg-white sticky top-0 z-[999] shadow-header'>
       <div className="container">
