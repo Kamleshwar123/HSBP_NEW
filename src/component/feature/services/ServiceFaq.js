@@ -4,7 +4,7 @@ import FaqQuestion from './FaqQuestion'
 const ServiceFaq = () => {
     const [tab,setTab] = useState(0);
   return (
-    <div className='bg-white p-6 mt-5 shadow-4D rounded-2xl text-[#605F5F]'>
+    <div className='bg-white p-6 lg:px-10 mt-5 shadow-4D rounded-3xl text-[#605F5F]'>
         <h6 className='text-theme text-xl font-semibold'>Frequently Asked Questions</h6>
         <p className='text-lg'>If you have any further questions you can contact us</p>
         <div className='grid md:grid-cols-2 items-stretch gap-y-6 mt-6'>

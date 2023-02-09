@@ -8,7 +8,7 @@ import ActiveShadow from './ActiveShadow';
 
 const BridalPackageSlider = () => {
     const router = useRouter();
-    const [select, setSelect] = useState(0);
+    const [select, setSelect] = useState();
     var settings = {
         dots: false,
         infinite: true,
@@ -49,10 +49,10 @@ const BridalPackageSlider = () => {
     <div className='beauty_pkg_slider -m-3'>
         <Slider {...settings}>
             {data.map((item, idx) => (
-                <div className='w-full xs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 text-center' key={"pkg" + idx}>
-                    <div>
+                <div className='w-full h-full xs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 p-3 text-center' key={"pkg" + idx}>
+                    <div className='h-full cursor-pointer' onClick={()=> router.push("/services/bridal-package/1")} onMouseEnter={()=> setSelect(idx)} onMouseLeave={()=> setSelect()}>
                         <Image src={item?.img} alt="Bridal1" className="scale_img"/>
-                        <div className='py-3 cursor-pointer' onClick={()=> router.push("/services/bridal-package/1")}>
+                        <div className='py-3'>
                             <h6 className={`text-lg px-3 capitalize font-semibold ${idx === select ? "text-theme" : "text-black-241"}`}>{item?.name}</h6>
                             <ActiveShadow val={(idx === select)}/>
                         </div>

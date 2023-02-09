@@ -29,7 +29,7 @@ const TheHeader = () => {
   const toggleDrawer = () => {
     setIsOpen(!isOpen)
   }
-  console.log(router)
+  const priceListHave = ["/services", "/services/beauty-service/[serviceId]","/services/bridal-package/[bridalId]"];
   const haveSearchBox = ["/faqs","/franchise", "/products", "/product-home", "/products/[productId]", "/my-order", '/service-order/[orderId]', '/salon-order/[orderId]',"/product-order/[orderId]","/institutes","/institutes/[instituteId]"]
   return (
     <header className='w-full bg-white sticky top-0 z-[999] shadow-header'>
@@ -55,7 +55,7 @@ const TheHeader = () => {
             }
           </div>
           <div className="flex gap-3 items-center justify-self-end">
-              {router?.pathname === "/" && <Link href={"/price-list"} className="p-1 font-semibold text-theme">Price List</Link>}
+              {priceListHave.includes(router.pathname) && <Link href={"/price-list"} className="p-1 font-semibold text-theme">Price List</Link>}
               <p className="ml-5 font-bold text-black-707 hidden lg:block">DOWNLOAD APP</p>
               <Link href={"/"} className='hidden lg:block'>
                 <Image

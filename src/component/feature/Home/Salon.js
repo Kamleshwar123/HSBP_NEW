@@ -22,7 +22,7 @@ const Salon = () => {
     return (
         <div>
             <div className='text-xl md:text-3xl text-black-2e2 text-center'>Discover the best salons near you</div>
-            <div className='grid grid-cols-12 items-center gap-6 p-6 mx-auto md:w-11/12 lg:w-2/3'>
+            <div className='grid grid-cols-12 items-center gap-6 p-6 mx-auto md:w-11/12 lg:w-2/3 xl:w-[55%]'>
                 <div className='flex w-full col-span-12 md:col-span-4'>
                     <label htmlFor="selectcity" className="relative block w-full">
                         <SvgIcon.LocationTheme className="scale-75 pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3"/>

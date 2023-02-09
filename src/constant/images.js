@@ -103,8 +103,18 @@ import ClientSpeakBg1 from './../styles/images/client-speak-bg1.png';
 import ClientSpeakDes from './../styles/images/client-speak-des.png';
 import ReviewTag from './../styles/images/review-tag.png';
 import ProductCartProduct from './../styles/images/product-cart-product.webp';
+import LocalityBanner from './../styles/images/locality-banner.webp';
+import LocalityTestiProfile1 from './../styles/images/locality-testi-profile1.webp';
+import LocalityTestiProfile2 from './../styles/images/locality-testi-profile2.webp';
+import LocalityTestiProfile3 from './../styles/images/locality-testi-profile3.webp';
+import LocalityTestiProfile4 from './../styles/images/locality-testi-profile4.webp';
 
 const IMAGES = {
+    LocalityTestiProfile1,
+    LocalityTestiProfile2,
+    LocalityTestiProfile3,
+    LocalityTestiProfile4,
+    LocalityBanner,
     ProductCartProduct,
     ReviewTag,
     ClientSpeakBg1,

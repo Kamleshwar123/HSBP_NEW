@@ -57,8 +57,48 @@ import RateUs2 from './../styles/icons/rateus2.png';
 import RateUs3 from './../styles/icons/rateus3.png';
 import RateUs4 from './../styles/icons/rateus4.png';
 import RateUs5 from './../styles/icons/rateus5.png';
+import Brand1 from './../styles/icons/brand1.webp';
+import Brand2 from './../styles/icons/brand2.webp';
+import Brand3 from './../styles/icons/brand3.webp';
+import Brand4 from './../styles/icons/brand4.webp';
+import Brand5 from './../styles/icons/brand5.webp';
+import CityPhone from './../styles/icons/city-phone.webp';
+import CityService1 from './../styles/icons/city-service1.webp';
+import CityService2 from './../styles/icons/city-service2.webp';
+import CityService3 from './../styles/icons/city-service3.webp';
+import CityService4 from './../styles/icons/city-service4.webp';
+import CityService5 from './../styles/icons/city-service5.webp';
+import CityService6 from './../styles/icons/city-service6.webp';
+import LocalityBook from './../styles/icons/locality-book.webp';
+import LocalityRelax from './../styles/icons/locality-relax.webp';
+import LocalityShare from './../styles/icons/locality-share.webp';
+import LocalityShedual from './../styles/icons/locality-shedual.webp';
+import LocalityInc1 from './../styles/icons/locality-inc-1.webp';
+import LocalityInc2 from './../styles/icons/locality-inc-2.webp';
+import LocalityInc3 from './../styles/icons/locality-inc-3.webp';
+import LocalityInc4 from './../styles/icons/locality-inc-4.webp';
 
 const ICONS = {
+    Brand1,
+    Brand2,
+    Brand3,
+    Brand4,
+    Brand5,
+    CityPhone,
+    CityService1,
+    CityService2,
+    CityService3,
+    CityService4,
+    CityService5,
+    CityService6,
+    LocalityBook,
+    LocalityRelax,
+    LocalityShare,
+    LocalityShedual,
+    LocalityInc1,
+    LocalityInc2,
+    LocalityInc3,
+    LocalityInc4,
     RateUs1,
     RateUs2,
     RateUs3,

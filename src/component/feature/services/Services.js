@@ -28,7 +28,7 @@ const Services = () => {
             {TabData?.map((item, idx) => (
                 <div key={"tabs"+idx} className='relative font-semibold cursor-pointer' onClick={()=> setTab(item.val)}>
                     <Image src={IMAGES.ServiceTab} alt="beauty" className="relative h-110 object-cover"/>
-                    <div className={`flex items-center text-opacity-100 justify-center absolute top-0 left-0 bottom-0 right-0 text-base${tab === item.val ? " text-white bg-gradient opacity-75" : " text-black-f0f"}`}>{item.label}</div>
+                    <div className={`flex items-center text-opacity-100 justify-center absolute top-0 left-0 bottom-0 right-0 text-xl ${tab === item.val ? "text-white bg-gradient opacity-75" : "text-black-f0f"}`}>{item.label}</div>
                 </div>
             ))}
             </div>

@@ -8,14 +8,12 @@ const SmartText = ({name="", text, length, styleClass}) => {
     }
 
     return (
-        <div>
             <p className={styleClass}>
-                <span>{showLess ? `${text.slice(0, length)}...` : text}</span>
-                <span className="text-blue-274 cursor-pointer whitespace-nowrap" onClick={() => setShowLess(!showLess)}>
+                {showLess ? `${text.slice(0, length)}...` : text}
+                <span className="text-blue-274 font-bold cursor-pointer whitespace-nowrap ml-2" onClick={() => setShowLess(!showLess)}>
                 {name ? name : "Read"} {" "}{showLess ? "More" : "Less"}
                 </span>
             </p>
-        </div>
     );
 };
 export default SmartText;

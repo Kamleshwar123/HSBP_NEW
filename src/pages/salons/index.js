@@ -32,7 +32,7 @@ const SalonsPage = () => {
                 </div>
                 <div className='text-241'>
                     {[...Array(6).keys()].map((item, idx) => (
-                        <div className='shadow-8F rounded-3xl mt-7 px-5 py-3' key={`salon${idx}`}>
+                        <div className='shadow-salonbox rounded-3xl mt-7 px-5 py-3' key={`salon${idx}`}>
                             <div className='flex flex-wrap items-center justify-between'>
                                 <div className='text-xl text-theme font-bold'>HSBP Salon</div>
                                 <div className='inline-flex space-x-3 text-xs'>
@@ -63,7 +63,7 @@ const SalonsPage = () => {
             </div>
             <div className='md:col-span-5'>
                 <div className='bg-[#EEEEEE] shadow-[0px_6px_16px_#00000059] p-5 rounded-3xl'>
-                        <div className='text-[#5B0F35] font-semibold text-base text-center'>QUERY FORM</div>
+                        <div className='text-[#5B0F35] font-semibold text-lg text-center'>QUERY FORM</div>
                         <form className='mt-3 queryform'>
                             <div className='mb-3'>
                                 <label className="form-label">Name</label>

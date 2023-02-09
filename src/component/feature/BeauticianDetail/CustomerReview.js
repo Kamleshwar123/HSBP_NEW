@@ -42,7 +42,7 @@ const CustomerReview = () => {
                 <div className='text-left m-2 relative'>
                     <Image src={IMAGES.Btesti} alt="layer" className='scale_img min-h-[250px]'/>
                     <Image src={IMAGES.BtestiProfile} alt="layer" className='absolute right-0 top-0 rounded-full' height={80} width={80}/>
-                    <div className='absolute left-5 pr-2 top-2 text-white'>
+                    <div className='absolute left-5 pr-2 top-4 text-white'>
                         <h6>Nikita Chaudhary</h6>
                         <p className='text-xs'>Beautician</p>
                     </div>

@@ -21,7 +21,7 @@ const BeautyPackageBox = ({item}) => {
                         <p className='mb-1'>Upper Lip</p>
                     </div>
                     <div className='my-3'><span className='text-black-0f0 text-base font-bold'><span className='rupee-sym'>₹</span>1500</span><span className='text-black-a8a ml-3 line-through rupee-sym'>₹2000</span></div>
-                    <button className='custom_button'>Book Now</button>
+                    <button className='custom_button py-2 px-9'>Book Now</button>
                 </div>
             </div>
         </div>

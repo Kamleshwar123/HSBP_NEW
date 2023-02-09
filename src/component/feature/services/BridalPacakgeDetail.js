@@ -14,9 +14,9 @@ const BridalPacakgeDetail = () => {
             <Image src={ICONS.Off} alt="Bridal1" className="mx-auto max-w-[60%] h-auto"/>
             <p className='text-white text-base font-semibold absolute top-[40%] right-[40%]'>50% Off</p>
         </div>
-        <div className='bg-[#FFEDEC] py-6 px-9 grid md:grid-cols-[33%_67%] items-center gap-y-5 rounded-2xl'>
+        <div className='bg-[#FFEDEC] py-6 lg:px-10 grid md:grid-cols-[33%_67%] items-center gap-y-5 rounded-3xl'>
             <div className='text-center pt-9 md:pt-0'>
-                <Image src={IMAGES.Bridal2} alt="Bridal1" className="rounded-2xl scale_img"/>
+                <Image src={IMAGES.Bridal2} alt="Bridal1" className="rounded-3xl scale_img"/>
             </div>
             <div className='px-5 py-0'>
                 <h1 className='text-theme text-3xl font-semibold'>Reception</h1>

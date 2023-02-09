@@ -91,6 +91,10 @@
     transition: 0.3s;
     @apply bg-gradient rounded-[13px] text-center py-[6px] px-[25px] text-white font-medium no-underline text-[13px] outline-0 cursor-pointer disabled:opacity-50 disabled:pointer-events-none;
   }
+  .brand_button {
+    transition: 0.3s;
+    @apply bg-white border w-28 border-theme rounded-[13px] text-center py-1 text-theme font-medium no-underline text-[13px] outline-0 cursor-pointer disabled:opacity-50 disabled:pointer-events-none;
+  }
   .font-Alex-Brush {
     font-family: 'Alex Brush';
   }

@@ -73,7 +73,7 @@ const BeautyService = () => {
                                     <h3 className='text-xl text-theme font-medium pt-4 pb-2'>{item?.title}</h3>
                                     <p className='pb-2'>{item?.desc}</p>
                                 </div>
-                                <button className='custom_button whitespace-nowrap absolute bottom-7 -translate-x-1/2'>Know More</button>
+                                <button className='custom_button py-2 whitespace-nowrap absolute bottom-5 -translate-x-1/2'>Know More</button>
                             </div>
                         </div>
                     ))}
