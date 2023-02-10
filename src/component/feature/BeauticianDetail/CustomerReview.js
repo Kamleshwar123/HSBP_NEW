@@ -33,16 +33,16 @@ const CustomerReview = () => {
     };
   return (
     <div className='bg-gray-eee p-6 rounded-2xl'>
-        <h6 className='mb-5 text-theme text-lg font-medium'>Customer Review</h6>
+        <h6 className='mb-2 text-theme text-lg font-bold'>Customer Review</h6>
         <div>
             <div className='review_slider'>
             <Slider {...settings}>
             {[...Array(6).keys()].map((item, idx) => (
-                <div key={idx+"review"} className="w-full h-full">
+                <div key={idx+"review"} className="w-full h-full pt-7">
                 <div className='text-left m-2 relative'>
-                    <Image src={IMAGES.Btesti} alt="layer" className='scale_img min-h-[250px]'/>
-                    <Image src={IMAGES.BtestiProfile} alt="layer" className='absolute right-0 top-0 rounded-full' height={80} width={80}/>
-                    <div className='absolute left-5 pr-2 top-4 text-white'>
+                    <Image src={IMAGES.Btesti} alt="layer" className='scale_img min-h-[220px]'/>
+                    <Image src={IMAGES.BtestiProfile} alt="layer" className='absolute z-10 right-0 -top-7 rounded-full' height={100} width={100}/>
+                    <div className='absolute left-5 pr-2 top-2 text-white'>
                         <h6>Nikita Chaudhary</h6>
                         <p className='text-xs'>Beautician</p>
                     </div>

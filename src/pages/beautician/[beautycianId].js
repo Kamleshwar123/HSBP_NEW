@@ -11,9 +11,9 @@ const BeautycianDetails = () => {
   return (
     <div className='container'>
         <h1 className="text-center text-black-2e2 mt-7 mb-8 text-2xl lg:text-[42px] md:text-3xl w-3/4 mx-auto">Our Beauticians are our core Strength</h1>
-        <div className='grid grid-cols-12 gap-6'>
-            <div className='col-span-12 md:col-span-4 text-center'>
-                <Image src={IMAGES.Beautician} alt="Beautician" className="scale_img rounded-2xl mx-0"/>
+        <div className='grid grid-cols-12 gap-6 rounded-3xl overflow-hidden'>
+            <div className='col-span-12 md:col-span-4 text-center relative'>
+                <Image src={IMAGES.Beautician} alt="Beautician" className="rounded-3xl" fill/>
             </div>
             <div className='col-span-12 md:col-span-8'>
                 <div className='pr-0 md:pr-10'>
@@ -25,7 +25,7 @@ const BeautycianDetails = () => {
                         <span>4.5/5</span>
                         <span>482 Reviews</span>
                     </div>
-                    <div className='my-5 px-5 py-8 bg-gray-f3f rounded-2xl text-left relative'>
+                    <div className='mt-5 px-5 py-8 bg-gray-f3f rounded-3xl text-left relative'>
                     <Image src={ICONS.Qstart} alt="Qstart" className="scale_icon-18 absolute top-4 left-5"/>
                         <div className='px-8'>
                             <p>Deepika Singh is a makeup queen as well as Family Lawyer who rules the makeup industry and creates magic with her work and makes everyone spellbound with her extraordinary talent.</p>

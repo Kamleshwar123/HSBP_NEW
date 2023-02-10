@@ -16,7 +16,7 @@ const BeautycianImgGallary = () => {
     ]
   return (
     <div className='bg-gray-eee p-6 rounded-2xl'>
-        <h6 className='mb-5 text-theme text-lg font-medium'>Image Gallery</h6>
+        <h6 className='mb-5 text-theme text-lg font-bold'>Image Gallery</h6>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6'>
         {IMG.map((item, idx) => (
             <div className='text-center' key={idx+"gallary"}>
