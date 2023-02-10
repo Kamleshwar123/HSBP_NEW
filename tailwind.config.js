@@ -84,7 +84,8 @@ module.exports = {
         "insti-search": "0px 6px 17px #00000066",
         "ins-testi": "0px 3px 26px #5A5A5A38",
         'nearcity': '0px 6px 16px #00000026',
-        'salonbox':'0px 4px 15px #0000008F'
+        'salonbox':'0px 4px 15px #0000008F',
+        'sidebar-name':'0px 5px 5px #838b97 inset'
       }
     },
   },

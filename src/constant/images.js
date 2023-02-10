@@ -2,6 +2,8 @@ import Logo from './../styles/images/logo.webp';
 import Cart from './../styles/images/cart.webp';
 import AppStore from './../styles/images/app-s.webp';
 import GoogleStore from './../styles/images/g-app.webp';
+import HomeAppStore from './../styles/images/home-app-store.webp';
+import HomeGoogleStore from './../styles/images/home-google-play.webp';
 import Banner1 from './../styles/images/banner_1.webp';
 import Banner2 from './../styles/images/banner_2.webp';
 import Banner3 from './../styles/images/banner_3.webp';
@@ -108,8 +110,12 @@ import LocalityTestiProfile1 from './../styles/images/locality-testi-profile1.we
 import LocalityTestiProfile2 from './../styles/images/locality-testi-profile2.webp';
 import LocalityTestiProfile3 from './../styles/images/locality-testi-profile3.webp';
 import LocalityTestiProfile4 from './../styles/images/locality-testi-profile4.webp';
+import ArtBoardUpper from './../styles/images/art-board-upper.webp';
 
 const IMAGES = {
+    ArtBoardUpper,
+    HomeAppStore,
+    HomeGoogleStore,
     LocalityTestiProfile1,
     LocalityTestiProfile2,
     LocalityTestiProfile3,

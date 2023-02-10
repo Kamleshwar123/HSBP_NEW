@@ -77,8 +77,42 @@ import LocalityInc1 from './../styles/icons/locality-inc-1.webp';
 import LocalityInc2 from './../styles/icons/locality-inc-2.webp';
 import LocalityInc3 from './../styles/icons/locality-inc-3.webp';
 import LocalityInc4 from './../styles/icons/locality-inc-4.webp';
+import CameraProfile from './../styles/icons/camera-profile.webp';
+import BeautyProductMenu from './../styles/icons/beauty-product-menu.webp';
+import ContactUsMenu from './../styles/icons/contact-us-menu.webp';
+import FranchiseMenu from './../styles/icons/franchise-menu.webp';
+import PriceMenu from './../styles/icons/price-menu.webp';
+import MyOrderMenu from './../styles/icons/my-order-menu.webp';
+import NearBySalonMenu from './../styles/icons/near-by-salon-menu.webp';
+import SalonMenu from './../styles/icons/salon-menu.webp';
+import TrainingCenterMenu from './../styles/icons/training-center-menu.webp';
+import SidebarProfileBg from './../styles/icons/sidebar-profile-bg.webp';
+import SidebarProfile from './../styles/icons/sidebar-profile.webp';
+import SidebarFacebook from './../styles/icons/sidebar-facebook.webp';
+import SidebarInstagram from './../styles/icons/sidebar-instagram.webp';
+import SidebarLinkedin from './../styles/icons/sidebar-linkedin.webp';
+import SidebarTwitter from './../styles/icons/sidebar-twitter.webp';
+import LogoutMenu from './../styles/icons/logout.webp';
+import BGSidebarCircle from './../styles/icons/bg-sidebar-circle.webp';
 
 const ICONS = {
+    BGSidebarCircle,
+    CameraProfile,
+    BeautyProductMenu,
+    ContactUsMenu,
+    FranchiseMenu,
+    PriceMenu,
+    MyOrderMenu,
+    NearBySalonMenu,
+    SalonMenu,
+    TrainingCenterMenu,
+    SidebarProfileBg,
+    SidebarProfile,
+    SidebarFacebook,
+    SidebarInstagram,
+    SidebarLinkedin,
+    SidebarTwitter,
+    LogoutMenu,
     Brand1,
     Brand2,
     Brand3,

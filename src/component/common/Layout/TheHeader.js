@@ -29,7 +29,7 @@ const TheHeader = () => {
   const toggleDrawer = () => {
     setIsOpen(!isOpen)
   }
-  const priceListHave = ["/services", "/services/beauty-service/[serviceId]","/services/bridal-package/[bridalId]"];
+  const priceListHave = ["/","/services", "/services/beauty-service/[serviceId]","/services/bridal-package/[bridalId]"];
   const haveSearchBox = ["/faqs","/franchise", "/products", "/product-home", "/products/[productId]", "/my-order", '/service-order/[orderId]', '/salon-order/[orderId]',"/product-order/[orderId]","/institutes","/institutes/[instituteId]"]
   return (
     <header className='w-full bg-white sticky top-0 z-[999] shadow-header'>

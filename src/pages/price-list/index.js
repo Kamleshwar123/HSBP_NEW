@@ -98,7 +98,7 @@ const PriceList = () => {
                                     <div className='uppercase w-auto'>{pkg?.name}</div>
                                 </div>
                                 <div className='flex justify-end gap-4'>
-                                    <div className='w-12'><span className='rupee-sym'>&#x20B9;</span>{pkg?.price1}</div>
+                                    <div className='w-12 line-through'><span className='rupee-sym'>&#x20B9;</span>{pkg?.price1}</div>
                                     <div className='w-12'><span className='rupee-sym'>&#x20B9;</span>{pkg?.price2}</div>
                                 </div>
                             </li>

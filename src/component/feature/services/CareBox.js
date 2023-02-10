@@ -24,9 +24,9 @@ const CareBox = () => {
             <AddToCart num={num} inc={inc} dec={dec} addToCart={addToCart}/>
         </div>
         <div className='mt-3 mb-2'>
-            <span className='text-black-0f0 text-lg font-bold f-weight-bolder'><span className='rupee-sym'>&#x20B9;</span>1500</span>
+            <span className='text-black-0f0 text-base font-bold f-weight-bolder'><span className='rupee-sym'>&#x20B9;</span>1500</span>
             <span className='text-black-a8a ml-3 line-through rupee-sym'>&#x20B9;2000</span>
-            <span className='text-red-c80 ml-3 font-semibold text-base'>50% OFF</span>
+            <span className='text-red-c80 ml-3 font-semibold'>50% OFF</span>
         </div>
     </div>
   )

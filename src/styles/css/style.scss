@@ -397,6 +397,11 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .art-board-bg {
+    background: url(./../images/art-board.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 .pt-3.text-white.cursor-pointer.uppercase.font-light.font-bold {
     font-weight: bolder;
 }
@@ -457,6 +462,23 @@ margin-bottom: 8px;
   height: 24px;
   background-repeat: no-repeat;
   scale: 0.75;
+}
+.sidebar_menu {
+  display: flex;
+  gap:12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.sidebar_menu svg{
+  display: none;
+}
+.sidebar_menu:hover, .sidebar_menu.active_menu {
+  background: transparent linear-gradient(266deg, #993680 0%, #2F1A59 81%) no-repeat padding-box;
+  color: #FFFFFF;
+}
+.sidebar_menu:hover svg, .sidebar_menu.active_menu svg {
+  display: block;
 }
 @media only screen and (max-width: 600px) {
   .hsbp_text_line:before, .hsbp_text_line:after {
