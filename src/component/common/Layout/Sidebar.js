@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
             size={300}
             className='custom_drawer'
         >
-            <div className='art-board-bg w-full h-full text-black'>
+            <div className='art-board-bg w-full text-black h-screen'>
                 <div className='h-full relative flex flex-col'>
                     <div className='relative'>
                         <div className='h-16 min-h-[64px] relative'>

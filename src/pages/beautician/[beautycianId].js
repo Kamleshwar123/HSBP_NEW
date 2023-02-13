@@ -13,7 +13,8 @@ const BeautycianDetails = () => {
         <h1 className="text-center text-black-2e2 mt-7 mb-8 text-2xl lg:text-[42px] md:text-3xl w-3/4 mx-auto">Our Beauticians are our core Strength</h1>
         <div className='grid grid-cols-12 gap-6 rounded-3xl overflow-hidden'>
             <div className='col-span-12 md:col-span-4 text-center relative'>
-                <Image src={IMAGES.Beautician} alt="Beautician" className="rounded-3xl" fill/>
+                <Image src={IMAGES.Beautician} alt="Beautician" className="rounded-3xl hidden md:block" fill/>
+                <Image src={IMAGES.Beautician} alt="Beautician" className="scale_img mx-0 rounded-3xl block md:hidden"/>
             </div>
             <div className='col-span-12 md:col-span-8'>
                 <div className='pr-0 md:pr-10'>
