@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
+import BackToTop from "../component/common/BackToTop";
 import CityModal from "../component/common/CityModal/CityModal";
 import SelectCityModal from "../component/common/CityModal/SelectCityModal";
 import ExploreAll from "../component/common/ExploreAll";
@@ -25,7 +26,7 @@ const Home = () => {
   },[])
   
   return (
-    <div>
+    <div className="relative">
       <Head>
         <title>Best Beauty parlor service at home, beautician, makeup artist in Noida, Kolakta, Pune - HSBP</title>
         <meta name="description" content="HSBP is one of the best beauty parlor service provide bridal makeup, facial, full body, leg, arm wax, hairdo, saree draping at home in Noida, Kolkata, Pune, Lucknow, Delhi"/><meta name="keywords" content="Bridal makeup, ladies salon service in Noida, Delhi, Gurgaon, makeup artist, facial, waxing, spa, online, hair care, manicure, pedicure, salon services at home, hair stylist, home service beauty parlour"/>
@@ -109,6 +110,7 @@ const Home = () => {
       <div className="container">
         <AppDownload />
       </div>
+      <BackToTop/>
       {openCityModal && <CityModal isOpen={openCityModal} closeModal={()=> setOpenCityModal(false)} setOpenSelectCityModal={setOpenSelectCityModal}/>}
       {openSelectCityModal && <SelectCityModal isOpen={openSelectCityModal} closeModal={()=> {setOpenCityModal(false);setOpenSelectCityModal(false)}}/>}
     </div>

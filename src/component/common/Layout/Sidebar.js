@@ -39,7 +39,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
                             <Image src={ICONS.SidebarProfile} alt="SidebarProfile" className='h-16 max-w-[80px] rounded-[50%]'/>
                         </div>
                     </div>
-                    <div className='text-center mt-12 py-3'>
+                    <div className='text-center mt-12 py-3 h-[100px]'>
                         <div className='inline-block mx-auto'>
                             <h6 className="font-bold text-center shadow-sidebar-name py-3 px-5 rounded-3xl">Aashvi Kaur</h6>
                         </div>
@@ -137,7 +137,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
                             </li>
                         </Link>
                     </ul>
-                    <div className='flex items-start h-20 min-h-[80px] justify-center gap-2 pt-3'>
+                    <div className='flex items-start h-16 min-h-[64px] justify-center gap-2 pt-3'>
                         <div className='flex justify-center items-center'>
                             <Image src={ICONS.SidebarFacebook} alt="SidebarFacebook" width={40}/>
                         </div>

@@ -32,9 +32,9 @@ const TheHeader = () => {
   const priceListHave = ["/","/services", "/services/beauty-service/[serviceId]","/services/bridal-package/[bridalId]"];
   const haveSearchBox = ["/faqs","/franchise", "/products", "/product-home", "/products/[productId]", "/my-order", '/service-order/[orderId]', '/salon-order/[orderId]',"/product-order/[orderId]","/institutes","/institutes/[instituteId]"]
   return (
-    <header className='w-full bg-white sticky top-0 z-[999] shadow-header'>
-      <div className="container">
-        <div className="flex justify-between items-center gap-5 h-20 min-h-[80px]">
+    <header className='w-full bg-white sticky top-0 z-[999] shadow-header h-20 min-h-[80px]'>
+      <div className="container h-full">
+        <div className="flex justify-between items-center gap-5 h-full">
           <div className="flex gap-3 items-center">
             <SvgIcon.Hamburger onClick={toggleDrawer} className='cursor-pointer text-black-707' />
             {isOpen && <Sidebar isOpen={isOpen} toggleDrawer={toggleDrawer} />}

@@ -18,8 +18,8 @@ const ClientsSpeak = () => {
         </div>
         <div className='flex flex-wrap justify-center items-stretch -m-3 py-5'>
             {[...Array(8).keys()].map((item, idx) => (
-                <div className='p-3 w-full md:w-1/2 lg:w-1/3 mx-auto' key={"prd" + idx}>
-                  <div className='relative max-w-[360px] mx-auto'>
+                <div className='p-3 w-full md:w-1/2 lg:w-1/3' key={"prd" + idx}>
+                  <div className='relative'>
                   <Image src={IMAGES.ClientSpeakBg1} className="scale_img rounded-2xl" alt="ClientSpeakBg"/>
                     <div className='absolute flex flex-col justify-center top-0'>
                       <div className='flex justify-center w-full py-4'>

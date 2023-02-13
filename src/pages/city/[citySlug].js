@@ -118,10 +118,10 @@ const SelectcityPage = () => {
         <p className='mt-5 text-xl font-semibold w-4/5 mx-auto'>Beautician and Parlour Near Locality in Noida for Home Services.</p>
       </div>
       <div className='bg-white-f2 py-4 px-6 rounded-3xl shadow-nearcity'>
-        <ul className='grid grid-cols-12 gap-x-6'>
+        <ul className='grid grid-cols-12 gap-x-6 gap-y-2'>
           {[...Array(15).fill().map((item,idx)=> (
             <li className='col-span-12 sm:col-span-6 md:col-span-4' key={"locationbox"+idx}>
-              <Link href={`/locality/${citySlug}/${"sector-68-noida"}`} className='py-1 text-theme font-semibold cursor-pointer'>Service At Home in Sector-58, Noida</Link>
+              <Link href={`/locality/${citySlug}/${"sector-68-noida"}`} className='text-theme font-semibold cursor-pointer'>Service At Home in Sector-58, Noida</Link>
             </li>
           ))]}
         </ul>

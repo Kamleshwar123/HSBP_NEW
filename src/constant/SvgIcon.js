@@ -40,8 +40,10 @@ import ProductServiceActive from "./../styles/svg/product-service-active.svg";
 import Stepcheck from "./../styles/svg/step-check.svg";
 import Home from "./../styles/svg/home.svg";
 import Logout from "./../styles/svg/logout.svg";
+import BackToTop from "./../styles/svg/backtotop.svg";
 
 const SvgIcon = {
+  BackToTop,
   Home,
   Logout,
   Stepcheck,

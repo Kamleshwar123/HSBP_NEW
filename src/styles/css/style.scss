@@ -447,6 +447,13 @@ margin-bottom: 8px;
 .sidebar_menu:hover svg, .sidebar_menu.active_menu svg {
   display: block;
 }
+.recaptcha .rc-anchor-light {
+  color: #2F1A59 !important;
+  background-color: #993680 !important;
+}
+.recaptcha .rc-anchor-checkbox-label {
+  color: #2F1A59;
+}
 @media only screen and (max-width: 600px) {
   .hsbp_text_line:before, .hsbp_text_line:after {
     content: unset;

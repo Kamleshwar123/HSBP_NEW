@@ -101,6 +101,7 @@ const SalonsPage = () => {
                             <div className='recaptcha'>
                                 <ReCAPTCHA
                                     sitekey={process.env.REACT_APP_SITE_KEY || "6LdT4gckAAAAALAO8LIr88ZGcCtkO2s6dGOmOwcq"}
+                                    
                                 />
                             </div>
                             </div>
