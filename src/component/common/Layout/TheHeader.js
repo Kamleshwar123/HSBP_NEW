@@ -34,8 +34,8 @@ const TheHeader = () => {
   return (
     <header className='w-full bg-white sticky top-0 z-[999] shadow-header h-20 min-h-[80px]'>
       <div className="container h-full">
-        <div className="flex justify-between items-center gap-5 h-full">
-          <div className="flex gap-3 items-center">
+        <div className="flex items-center gap-5 h-full">
+          <div className="flex gap-5 items-center w-full flex-1">
             <SvgIcon.Hamburger onClick={toggleDrawer} className='cursor-pointer text-black-707' />
             {isOpen && <Sidebar isOpen={isOpen} toggleDrawer={toggleDrawer} />}
             <div>
@@ -44,15 +44,8 @@ const TheHeader = () => {
               </Link>
             </div>
             {haveSearchBox.includes(router.pathname) &&
-              <>
-                <div className="hidden md:inline">
-                  <SearchProduct/>
-                </div>
-                {/* <div className="inline md:hidden">
-                  <SearchProduct/>
-                </div> */}
-              </>
-            }
+                    <SearchProduct/>
+              }
           </div>
           <div className="flex gap-3 items-center justify-self-end">
               {priceListHave.includes(router.pathname) && <Link href={"/price-list"} className="p-1 font-semibold text-theme">Price List</Link>}
@@ -69,7 +62,7 @@ const TheHeader = () => {
                 <Image src={IMAGES.AppStore} alt="app" className="scale_img" height={30}/>
               </Link>
               <Link href="/cart" legacyBehavior>
-                <Image src={ICONS.Cart} alt="cart" height={25} className="scale_img cursor-pointer" />
+                <Image src={ICONS.Cart} alt="cart" width={30} className="scale_img cursor-pointer" />
               </Link>
               <OutsideClick open={open} setOpen={setOpen}>
               <div className="relative flex flex-col items-center">
