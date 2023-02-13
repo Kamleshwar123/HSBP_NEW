@@ -230,44 +230,11 @@
   
   
   .custom_drawer {
-    /*  position: fixed;
-    overflow-y: auto;
-    width: 280px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100vh; */
-    background: #993680;
-    /* z-index: 1300;
-    transition: opacity 0.3s ease 0s, transform 0s ease 0.3s; */
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
   }
   
-  /* .drawer {
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 1;
-    transition: opacity 0.3s ease 0s;
-  }
-  .close {
-    color: #FFFFFF;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #aaa;
-    text-decoration: none;
-    cursor: pointer;
-  } */
   .corner::before, .corner::after {
       border-color: #b13592;
       border-width: 5px;

@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
             size={300}
             className='custom_drawer'
         >
-            <div className='art-board-bg w-full text-black h-screen'>
+            <div className='art-board-bg w-full text-black h-full'>
                 <div className='h-full relative flex flex-col'>
                     <div className='relative'>
                         <div className='h-16 min-h-[64px] relative'>
@@ -137,7 +137,7 @@ const Sidebar = ({ isOpen, toggleDrawer }) => {
                             </li>
                         </Link>
                     </ul>
-                    <div className='flex items-start h-20 justify-center gap-2 pt-3'>
+                    <div className='flex items-start h-20 min-h-[80px] justify-center gap-2 pt-3'>
                         <div className='flex justify-center items-center'>
                             <Image src={ICONS.SidebarFacebook} alt="SidebarFacebook" width={40}/>
                         </div>
