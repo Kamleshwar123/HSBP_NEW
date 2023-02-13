@@ -61,8 +61,9 @@ const TheHeader = () => {
               <Link href={"/"} className='hidden lg:block'>
                 <Image src={IMAGES.AppStore} alt="app" className="scale_img" height={30}/>
               </Link>
-              <Link href="/cart" legacyBehavior>
+              <Link href="/cart" className="relative">
                 <Image src={ICONS.Cart} alt="cart" width={30} className="scale_img cursor-pointer" />
+                {/* <span className="font-thin absolute -bottom-1 -right-1 bg-body text-[10px] text-white w-4 h-4 rounded-[50%] flex justify-center items-center">3</span> */}
               </Link>
               <OutsideClick open={open} setOpen={setOpen}>
               <div className="relative flex flex-col items-center">
