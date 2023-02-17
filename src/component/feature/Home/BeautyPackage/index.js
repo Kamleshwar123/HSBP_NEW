@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import IMAGES from '../../../../constant/images';
 import SeeAll from '../../../common/SeeAll';
@@ -6,6 +7,7 @@ import { SampleNextArrow, SamplePrevArrow } from '../../../common/SliderArrow';
 import BeautyPackageBox from './BeautyPackageBox';
 
 const BeautyPackage = () => {
+    const packageList = useSelector(state => state.package.packageList || []);
     var settings = {
         dots: false,
         infinite: true,

@@ -1,5 +1,7 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
+import { useMutation } from "react-query";
+import { useDispatch } from "react-redux";
 import BackToTop from "../component/common/BackToTop";
 import CityModal from "../component/common/CityModal/CityModal";
 import SelectCityModal from "../component/common/CityModal/SelectCityModal";
@@ -16,10 +18,21 @@ import Institute from "../component/feature/Home/Institute";
 import Product from "../component/feature/Home/Product";
 import Salon from "../component/feature/Home/Salon";
 import Testimonials from "../component/feature/Home/Testimonials";
+import { HomeServices, PackageService, ServiceService } from "../services";
 
 const Home = () => {
   const [openCityModal, setOpenCityModal] = useState(false);
   const [openSelectCityModal, setOpenSelectCityModal] = useState(false);
+  const dispatch = useDispatch();
+  const { mutate: getBannerList } = useMutation((data) => dispatch(HomeServices.bannerListApi(data)));
+  const { mutate: getServiceList } = useMutation((data) => dispatch(ServiceService.serviceListApi(data)));
+  const { mutate: getPackageList } = useMutation((data) => dispatch(PackageService.packageListApi(data)));
+
+  useEffect(() => {
+    getBannerList({});
+    getServiceList({});
+    getPackageList({});
+  }, [])
 
   useEffect(()=> {
     setOpenCityModal(true);

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 import React from 'react'
+import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import IMAGES from "../../../../constant/images";
 import SeeAll from '../../../common/SeeAll';
@@ -8,6 +9,7 @@ import { SampleNextArrow, SamplePrevArrow } from '../../../common/SliderArrow';
 
 const BeautyService = () => {
     const router = useRouter();
+    const serviceList = useSelector(state => state.service.serviceList || []);
     const handleRedirect = (url,data) => {
         router.push({
             pathname: url,

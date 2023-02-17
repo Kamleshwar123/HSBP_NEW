@@ -2,11 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { useSelector } from "react-redux";
 import Slider from "react-slick";
 import IMAGES from "../../../constant/images";
 
 const Banner = () => {
   const router = useRouter();
+  const bannerList = useSelector(state => state.home.bannerList || []);
   var settings = {
     dots: true,
     arrows: false,

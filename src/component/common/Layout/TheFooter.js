@@ -1,11 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import { useMutation } from "react-query";
+import { useDispatch, useSelector } from "react-redux";
 import IMAGES from "../../../constant/images";
 import SvgIcon from "../../../constant/SvgIcon";
+import { HomeServices } from "../../../services";
 import { FooterCity, LeftLink, RightLink, SocialLink } from "./FooterConfig";
 
 const TheFooter = () => {
+  const dispatch = useDispatch();
+  const { mutate: getCityList } = useMutation((data) => dispatch(HomeServices.getCityListApi(data)));
+  const cityList = useSelector(state => state.home.cityList || []);
+
+  useEffect(()=> {
+    getCityList({})
+  },[])
+  
   return (
     <footer className="mt-[30px]">
       <div className="footer-bg text-black opacity-[.84] pt-[30px] pb-[10px]">

@@ -16,3 +16,19 @@ export function isNumberOnly(evt) {
     }
     return true;
 }
+export function getToken() {
+    if (typeof window !== "undefined" && localStorage.getItem("hsbp-token")) {
+      let token = localStorage.getItem("hsbp-token");
+      return token;
+    }
+};
+export function setToken(token) {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("hsbp-token", token);
+    }
+};
+export function deleteToken(token) {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("hsbp-token");
+    }
+};

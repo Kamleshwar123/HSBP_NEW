@@ -2,14 +2,39 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import OtpInput from 'react-otp-input';
 import PhoneInput from 'react-phone-input-2'
+import { useMutation } from 'react-query';
+import { useDispatch, useSelector } from 'react-redux';
 import ICONS from '../../../constant/icons';
 import IMAGES from '../../../constant/images';
 import SvgIcon from '../../../constant/SvgIcon';
+import { UserServices } from '../../../services';
 import { isNumberOnly } from '../../../utils';
 
 const LoginModal = ({isopen,closeModal}) => {
+  const dispatch = useDispatch();
   const [screen, setScreen] = useState(1);
   const [otp, setOtp] = useState("");
+  const [MobileNo, setMobileNo] = useState("");
+  const { mutate: login } = useMutation((data) => dispatch(UserServices.loginApi(data)));
+  const { mutate: verifyOtp } = useMutation((data) => dispatch(UserServices.verifyOtpApi(data)));
+  const customerId = useSelector(state => state.user.customerId || []);
+  const handleSubmit = () => {
+    if(screen === 1) {
+      login({MobileNo:MobileNo}, {
+        onSuccess: () => {
+          setScreen(1);
+        }
+      });
+    }
+    else if(screen === 2) {
+      verifyOtp({CustomerId:customerId,OTP:otp}, {
+        onSuccess: () => {
+          closeModal();
+        }
+      });
+    }
+  }
+
   return (
       <div className='bg-[#a05bcf] p-1 sm:p-5 md:py-12 md:px-16 relative'>
           <span className='absolute top-1 right-1 text-white p-2 cursor-pointer'>
@@ -43,7 +68,7 @@ const LoginModal = ({isopen,closeModal}) => {
                     /> */}
                     <div className='flex items-stretch relative'>
                       <div className='flex items-center absolute h-full left-1 gap-1 border-r border-border pr-1'><Image src={ICONS.Indianflag} height={16} width={24} alt="Indianflag"/><span>+91</span><Image src={ICONS.CountryArrowDown} alt="CountryArrowDown" width={10}/></div>
-                      <input type="tel" className='form-control pl-20' maxLength={10} onKeyPress={(e)=>isNumberOnly(e)}/>
+                      <input type="tel" className='form-control pl-20' maxLength={10} onKeyPress={(e)=>isNumberOnly(e)} name="MobileNo" onChange={(e)=> setMobileNo(e.target.value)} value={MobileNo}/>
                     </div>
                   </div>
                   :
@@ -67,7 +92,13 @@ const LoginModal = ({isopen,closeModal}) => {
                     <div className='text-blue-477 my-2 cursor-pointer text-center font-semibold' onClick={()=>{}}>Resend OTP</div>
                   </div>
                   }
-                  <button className='custom_button w-full mt-3 h-10' onClick={()=> setScreen(2)}>{screen === 1 ? "Continue": "Login"}</button>
+                  <button 
+                    className='custom_button w-full mt-3 h-10' 
+                    onClick={()=> handleSubmit()}
+                    disabled={screen === 1 ? MobileNo.length < 10 : otp.length < 4}
+                  >
+                    {screen === 1 ? "Continue": "Login"}
+                  </button>
                 </div>
               </div>
             </div>

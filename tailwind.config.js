@@ -44,6 +44,7 @@ module.exports = {
       'black-605':'#605F5F',
       'black-949':'#949494',
       'placeholder': '#AFA9A9',
+      'error': '#DC2626',
       'red-c80': '#C8052C',
       'border': '#CCC9C9',
       'blue': '#0B3ECF',
