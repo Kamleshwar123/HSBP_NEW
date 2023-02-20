@@ -4,7 +4,7 @@ import PriceListCheckout from '../../component/feature/PriceList/PriceListChecko
 import SvgIcon from '../../constant/SvgIcon';
 
 const PriceList = () => {
-    const [openBox, setOpenBox]= useState([]);
+    const [openBox, setOpenBox]= useState(0);
     const [selectedPackages, setSelectedPackages]= useState(1);
     const [selectedCategory, setSelectedCategory]= useState("Body Scrubbing & Polishing");
     const services = [
@@ -48,14 +48,7 @@ const PriceList = () => {
         {id: 6, name:"FULL BODY POLISHING (MASSAGE OLIVE OIL OR CREAM + SCRUB + PACK)", price1: "849", price2: "649"}
     ]
     const handleOpenBox = (val) => {
-        let openBoxArr = [...openBox];
-        let index = openBoxArr.indexOf(val);
-        if(index > -1 ){
-            openBoxArr.splice(index,1);
-        } else {
-            openBoxArr.push(val);
-        }
-        setOpenBox(openBoxArr);
+        setOpenBox(val === openBox ? "" : val);
     }
   return (
     <div className='container my-3'>
@@ -67,11 +60,11 @@ const PriceList = () => {
             <div className='col-span-12 md:col-span-7 flex flex-col gap-y-6'>
                 {services?.map((service,idx)=> (
                 <div className='shadow-4D rounded-2xl overflow-hidden' key={"service"+idx}>
-                    <div className='theme-heading-box flex justify-between cursor-pointer' onClick={()=>handleOpenBox(service?.id)}>
+                    <div className='theme-heading-box flex justify-between cursor-pointer' onClick={()=>handleOpenBox(idx)}>
                         <p className='text-[#EBEBEB] uppercase'>{service?.service}</p>
-                        <div><SvgIcon.IosArrowDown className={`scale-50 ${openBox ? 'rotate-180' : "rotate-0"}`}/></div>
+                        <div><SvgIcon.IosArrowDown className={`scale-50 ${openBox === idx ? 'rotate-180' : "rotate-0"}`}/></div>
                     </div>
-                    {!openBox?.includes(service?.id) &&
+                    {openBox === idx  &&
                     <div className='py-3'>
                         <ul className='flex flex-wrap gap-4 text-xs px-3'>
                             {category?.map((cat,idx)=> (
