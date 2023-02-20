@@ -7,7 +7,7 @@ const Api = axios.create({
 })
 
 Api.interceptors.request.use((request) => {
-  request.headers["Authtoken"] = getToken() ? `Bearer ${getToken()}` : ""
+  request.headers["Authtoken"] = `Bearer 3HCG7f8Qv49E1kfDDXxzLntiWI3LM642` 
   return request
 },(error) => {
   return Promise.reject(error);
