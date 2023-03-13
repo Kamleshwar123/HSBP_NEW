@@ -82,7 +82,7 @@
     @apply w-full border border-black-707 max-w-md transform overflow-hidden rounded-2xl bg-white p-6 align-middle shadow-none transition-all;
   }
   .cityModal {
-    @apply w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-[0px_3px_6px_#00000029] transition-all text-[#100E0E]
+    @apply w-full max-w-md transform rounded-2xl bg-white p-6 text-left align-middle shadow-[0px_3px_6px_#00000029] transition-all text-[#100E0E]
   }
   .rateusModal {
     @apply mx-auto w-full max-w-md transform rounded-tr-none rounded-3xl bg-white text-center align-middle shadow-none transition-all border border-black-707;
