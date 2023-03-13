@@ -1,55 +1,61 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
+import { useMutation, useQuery } from 'react-query';
+import { useDispatch, useSelector } from 'react-redux';
 import PriceListCheckout from '../../component/feature/PriceList/PriceListCheckout';
 import SvgIcon from '../../constant/SvgIcon';
+import { ServiceService } from '../../services';
 
 const PriceList = () => {
-    const [openBox, setOpenBox]= useState(0);
-    const [selectedPackages, setSelectedPackages]= useState(1);
-    const [selectedCategory, setSelectedCategory]= useState("Body Scrubbing & Polishing");
-    const services = [
-        {
-            id:1, 
-            service: "BODY CARE SERVICES",
-        },
-        {
-            id:2, 
-            service: "SKIN CARE SERVICES",
-        },
-        {
-            id:3, 
-            service: "HAIR CARE SERVICES",
-        },
-        {
-            id:4, 
-            service: "MAKE UP SERVICES",
-        },
-        {
-            id:5, 
-            service: "MEHNDI ART SERVICES",
+    const dispatch = useDispatch();
+    const [category, setCategory] = useState("");
+    const [subCategory, setSubCategory] = useState({name: "", id: ""});
+    const [filterService, setFilterService]= useState([]);
+    const [selectedService, setSelectedService]= useState("");
+    const { mutate: getServiceList } = useMutation((data) => dispatch(ServiceService.serviceListApi(data)));
+    const serviceList = useSelector(state => state.service.serviceList || []);
+    const CityId = useSelector((state)=> state.common.localCity);
+
+    useEffect(()=> {
+        getServiceList({CityId: CityId});
+        return () => { }; 
+    },[CityId])
+
+    useEffect(()=> {
+        if(serviceList?.length > 0 ) {
+            setCategory(serviceList[0]?.CategoryId);
+            if(serviceList[0]?.SubCategories?.length > 0) {
+                setSubCategory({name: serviceList[0]?.SubCategories[0]?.SubCategoryName, id: serviceList[0]?.SubCategories[0]?.SubCategoryId});
+            }
         }
-    ]
-    const category = [
-        {name:"Body Scrubbing & Polishing"},
-        {name:"Brazilian Wax"},
-        {name:"Chocolate Wax"},
-        {name:"Honey Wax"},
-        {name:"Manicure"},
-        {name:"Massages"},
-        {name:"Pedicure"},
-        {name:"Rica Wax"}
-    ]
-    const Packages = [
-        {id: 1, name:"FULL HAND SCRUB + POLISHING", price1: "849", price2: "649"},
-        {id: 2, name:"FULL HAND SCRUB + POLISHING", price1: "849", price2: "649"},
-        {id: 3, name:"FULL BACK + FULL FRONT SCRUBING + POLISH", price1: "849", price2: "649"},
-        {id: 4, name:"FULL BODY SCRUBBING", price1: "849", price2: "649"},
-        {id: 5, name:"FULL BODY SPA", price1: "849", price2: "649"},
-        {id: 6, name:"FULL BODY POLISHING (MASSAGE OLIVE OIL OR CREAM + SCRUB + PACK)", price1: "849", price2: "649"}
-    ]
+        return () => { }; 
+    },[serviceList])
+
+    useEffect(()=> {
+        if(category && subCategory) {
+            let _category = serviceList?.find((cat)=> cat?.CategoryId === category);
+            if(_category?.SubCategories && _category?.SubCategories?.length > 0) {
+                let _data = _category?.SubCategories.find((subcat)=> subcat?.SubCategoryId === subCategory?.id);
+                setFilterService(_data?.SubCategoryProductList || []);
+            }
+        }
+        return () => { }; 
+    },[subCategory])
+
     const handleOpenBox = (val) => {
-        setOpenBox(val === openBox ? "" : val);
+        if(val?.CategoryId === category) {
+            setCategory("");
+        } else {
+            setCategory(val?.CategoryId);
+            if(val?.SubCategories?.length > 0){
+                setSubCategory({name: val?.SubCategories[0]?.SubCategoryName, id: val?.SubCategories[0]?.SubCategoryId});
+            }
+        }
     }
+    const handleSubCategory = (val) => {
+        setSubCategory({name: val?.SubCategoryName, id: val?.SubCategoryId});
+    }
+    
   return (
     <div className='container my-3'>
         <div className={`text-center w-[85%] mx-auto font-medium mt-7 mb-5`}>
@@ -58,41 +64,41 @@ const PriceList = () => {
         </div>
         <div className='grid grid-cols-12 gap-6'>
             <div className='col-span-12 md:col-span-7 flex flex-col gap-y-6'>
-                {services?.map((service,idx)=> (
-                <div className='shadow-4D rounded-2xl overflow-hidden' key={"service"+idx}>
-                    <div className='theme-heading-box flex justify-between cursor-pointer' onClick={()=>handleOpenBox(idx)}>
-                        <p className='text-[#EBEBEB] uppercase'>{service?.service}</p>
-                        <div><SvgIcon.IosArrowDown className={`scale-50 ${openBox === idx ? 'rotate-180' : "rotate-0"}`}/></div>
+                {serviceList?.map((cat,idx)=> (
+                <div className='shadow-4D rounded-2xl overflow-hidden' key={"cat"+idx}>
+                    <div className='theme-heading-box flex justify-between cursor-pointer' onClick={()=>handleOpenBox(cat)}>
+                        <p className='text-[#EBEBEB] uppercase'>{cat?.CategoryName}</p>
+                        <div><SvgIcon.IosArrowDown className={`scale-50 ${category === cat?.CategoryId ? 'rotate-180' : "rotate-0"}`}/></div>
                     </div>
-                    {openBox === idx  &&
+                    {category === cat?.CategoryId  &&
                     <div className='py-3'>
                         <ul className='flex flex-wrap gap-4 text-xs px-3'>
-                            {category?.map((cat,idx)=> (
+                            {cat?.SubCategories?.length > 0 && cat?.SubCategories?.map((subcat,idx)=> (
                                 <li 
-                                    className={`cursor-pointer py-2 px-5 rounded-3xl ${selectedCategory === cat?.name ? "bg-gradient text-white": "border border-body"}`} 
-                                    onClick={()=> setSelectedCategory(cat?.name)}
-                                    key={"category"+idx}
+                                    className={`cursor-pointer py-2 px-5 rounded-3xl ${subCategory?.id === subcat?.SubCategoryId ? "bg-gradient text-white": "border border-body"}`} 
+                                    onClick={()=> handleSubCategory(subcat)}
+                                    key={"subcategory"+idx}
                                 >
-                                    {cat?.name}
+                                    {subcat?.SubCategoryName}
                                 </li>
                             ))}
                         </ul>
-                        <h6 className='text-theme text-center font-semibold my-3 uppercase px-4'>{selectedCategory}</h6>
+                        <h6 className='text-theme text-center font-semibold my-3 uppercase px-4'>{subCategory?.name}</h6>
                         <ul className='text-xs font-semibold'>
-                            {Packages?.map((pkg,idx)=> (
+                            {filterService?.length > 0 && filterService?.map((service,idx)=> (
                                 <li 
-                                    className={`flex justify-between cursor-pointer items-center gap-3  py-1 px-3 mb-1 ${selectedPackages === pkg?.id ? "bg-[#FBE0E0]" : "border-[0.4px] border-black-707 border-opacity-40"}`}
-                                    onClick={()=>setSelectedPackages(pkg?.id)}
-                                    key={"package"+idx}
+                                    className={`flex justify-between cursor-pointer items-center gap-3  py-1 px-3 mb-1 ${selectedService === service?.ProductId ? "bg-[#FBE0E0]" : "border-[0.4px] border-black-707 border-opacity-40"}`}
+                                    onClick={()=>setSelectedService(service?.ProductId)}
+                                    key={"filterService"+idx}
                                 >
                                 <div className='flex items-center gap-2'>
                                     {/* <input type="checkbox" className='pricecheckbox'/> */}
-                                    <div className='w-4 h-4 min-w-[16px] border border-black-707 rounded-[3px] text-xs flex justify-center items-center text-theme'>{selectedPackages === pkg?.id ? "✓" : ""}</div>
-                                    <div className='uppercase w-auto'>{pkg?.name}</div>
+                                    <div className='w-4 h-4 min-w-[16px] border border-black-707 rounded-[3px] text-xs flex justify-center items-center text-theme'>{selectedService === service?.ProductId ? "✓" : ""}</div>
+                                    <div className='uppercase w-auto'>{service?.ProductName}</div>
                                 </div>
                                 <div className='flex justify-end gap-4'>
-                                    <div className='w-12 line-through'><span className='rupee-sym'>&#x20B9;</span>{pkg?.price1}</div>
-                                    <div className='w-12'><span className='rupee-sym'>&#x20B9;</span>{pkg?.price2}</div>
+                                    <div className='w-12 line-through'><span className='rupee-sym'>&#x20B9;</span>{service?.ProductPrice}</div>
+                                    <div className='w-12'><span className='rupee-sym'>&#x20B9;</span>{service?.ProductDiscountPrice}</div>
                                 </div>
                             </li>
                             ))}

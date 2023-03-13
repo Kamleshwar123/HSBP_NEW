@@ -7,11 +7,11 @@ import { SampleNextArrow, SamplePrevArrow } from '../../../common/SliderArrow';
 import BeautyPackageBox from './BeautyPackageBox';
 
 const BeautyPackage = () => {
-    const packageList = useSelector(state => state.package.packageList || []);
+    const PackageList = useSelector((state)=> state.package.packageList);
     var settings = {
         dots: false,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -55,7 +55,7 @@ const BeautyPackage = () => {
         <div className='container'>
             <div className='beauty_slider -m-3 pb-3'>
             <Slider {...settings}>
-                {data.map((item, idx) => (
+                {PackageList && PackageList?.length > 0 && PackageList?.map((item, idx) => (
                     <div className='h-full p-3 text-center' key={"pkg" + idx}>
                     <BeautyPackageBox item={item}/>
                     </div>

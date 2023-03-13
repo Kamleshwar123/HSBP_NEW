@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { useMutation } from "react-query";
+import { QueryClient, useMutation, useQuery } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
 import IMAGES from "../../../constant/images";
 import SvgIcon from "../../../constant/SvgIcon";
 import { HomeServices } from "../../../services";
 import { FooterCity, LeftLink, RightLink, SocialLink } from "./FooterConfig";
+
 
 const TheFooter = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const TheFooter = () => {
   const cityList = useSelector(state => state.home.cityList || []);
 
   useEffect(()=> {
-    getCityList({})
+    getCityList({});
   },[])
   
   return (
@@ -83,9 +84,9 @@ const TheFooter = () => {
           <hr className="opacity-50"/>
           <div>
             <ul className="flex flex-wrap w-full items-center justify-center divide divide-x px-5">
-              {FooterCity.map((item, idx) => (
+              {cityList.map((item, idx) => (
                 <li key={"city" + idx} className='list-style-none px-3 whitespace-nowrap leading-4 my-2'>
-                  <Link href={`/city/${item?.toLowerCase()}`}>{item}</Link>
+                  <Link href={`/city/${item?.CityName?.toLowerCase()}`}>{item?.CityName}</Link>
                 </li>
               ))}
             </ul>

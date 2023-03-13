@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
+import Cookies from 'js-cookie'
 const initialState = {
     customerId:"",
-    customerData: {}
+    customerData:  JSON.parse(Cookies?.get("hsbpUserData")|| "{}"),
 }
 
 export const userSlice = createSlice({

@@ -1,10 +1,11 @@
+import axios from "axios";
+import Cookies from "js-cookie";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { useMutation } from "react-query";
-import { useDispatch } from "react-redux";
+import { dehydrate, QueryClient, useMutation, useQuery } from "react-query";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 import BackToTop from "../component/common/BackToTop";
-import CityModal from "../component/common/CityModal/CityModal";
-import SelectCityModal from "../component/common/CityModal/SelectCityModal";
 import ExploreAll from "../component/common/ExploreAll";
 import AppDownload from "../component/feature/Home/AppDownload";
 import Appointment from "../component/feature/Home/Appointment";
@@ -21,22 +22,19 @@ import Testimonials from "../component/feature/Home/Testimonials";
 import { HomeServices, PackageService, ServiceService } from "../services";
 
 const Home = () => {
-  const [openCityModal, setOpenCityModal] = useState(false);
-  const [openSelectCityModal, setOpenSelectCityModal] = useState(false);
   const dispatch = useDispatch();
   const { mutate: getBannerList } = useMutation((data) => dispatch(HomeServices.bannerListApi(data)));
   const { mutate: getServiceList } = useMutation((data) => dispatch(ServiceService.serviceListApi(data)));
   const { mutate: getPackageList } = useMutation((data) => dispatch(PackageService.packageListApi(data)));
-
+  const CityId = useSelector((state)=> state.common.localCity);
   useEffect(() => {
-    getBannerList({});
-    getServiceList({});
-    getPackageList({});
-  }, [])
-
-  useEffect(()=> {
-    setOpenCityModal(true);
-  },[])
+    if(CityId) {
+      getBannerList({CityId});
+      getServiceList({CityId});
+      getPackageList({CityId});
+    }
+    return () => {}
+  }, [CityId])
   
   return (
     <div className="relative">
@@ -124,8 +122,6 @@ const Home = () => {
         <AppDownload />
       </div>
       <BackToTop/>
-      {openCityModal && <CityModal isOpen={openCityModal} closeModal={()=> setOpenCityModal(false)} setOpenSelectCityModal={setOpenSelectCityModal}/>}
-      {openSelectCityModal && <SelectCityModal isOpen={openSelectCityModal} closeModal={()=> {setOpenCityModal(false);setOpenSelectCityModal(false)}}/>}
     </div>
   );
 };

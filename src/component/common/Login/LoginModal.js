@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import OtpInput from 'react-otp-input';
 import PhoneInput from 'react-phone-input-2'
@@ -12,24 +13,27 @@ import { isNumberOnly } from '../../../utils';
 
 const LoginModal = ({isopen,closeModal}) => {
   const dispatch = useDispatch();
+  const router = useRouter();
   const [screen, setScreen] = useState(1);
   const [otp, setOtp] = useState("");
   const [MobileNo, setMobileNo] = useState("");
   const { mutate: login } = useMutation((data) => dispatch(UserServices.loginApi(data)));
-  const { mutate: verifyOtp } = useMutation((data) => dispatch(UserServices.verifyOtpApi(data)));
+  const { mutate: verifyOtp } = useMutation((data) => dispatch(UserServices.verifyOtpApi(data,router)));
   const customerId = useSelector(state => state.user.customerId || []);
   const handleSubmit = () => {
     if(screen === 1) {
       login({MobileNo:MobileNo}, {
         onSuccess: () => {
-          setScreen(1);
+          setScreen(2);
         }
       });
     }
     else if(screen === 2) {
       verifyOtp({CustomerId:customerId,OTP:otp}, {
-        onSuccess: () => {
-          closeModal();
+        onSuccess: (res) => {
+          if(res.data?.Success === "TRUE") {
+            closeModal();
+          }
         }
       });
     }
@@ -76,7 +80,7 @@ const LoginModal = ({isopen,closeModal}) => {
                     <div className='w-4/5 mx-auto text-center mb-5'>
                       <h6 className='text-base font-medium mb-2 text-black-241'>Enter your verification code</h6>
                       <div>
-                        We have send you a 4 digit OTP on 9599043601 
+                        We have send you a 4 digit OTP on {MobileNo} 
                         <span className='text-blue-477 cursor-pointer font-semibold' onClick={()=>setScreen(1)}>{" Edit"}</span>
                       </div>
                     </div>
@@ -84,7 +88,7 @@ const LoginModal = ({isopen,closeModal}) => {
                       <OtpInput
                         value={otp}
                         onChange={(otp)=> setOtp(otp)}
-                        numInputs={4}
+                        numInputs={6}
                         separator={<span className='px-2'></span>}
                         inputStyle={{width: "35px", height: "35px", border: '1px solid #707070', borderRadius: "5px", color: "241E1E"}}
                       />

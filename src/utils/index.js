@@ -16,19 +16,20 @@ export function isNumberOnly(evt) {
     }
     return true;
 }
-export function getToken() {
-    if (typeof window !== "undefined" && localStorage.getItem("hsbp-token")) {
-      let token = localStorage.getItem("hsbp-token");
-      return token;
+export function getLocalCity() {
+    if (typeof window !== "undefined" && localStorage.getItem("hsbp-cityId")) {
+      let cityId = localStorage.getItem("hsbp-cityId") || "";
+      return cityId;
+    }
+    return ""
+};
+export function setLocalCity(cityId) {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("hsbp-cityId", cityId);
     }
 };
-export function setToken(token) {
+export function deleteLocalCity() {
     if (typeof window !== "undefined") {
-      localStorage.setItem("hsbp-token", token);
-    }
-};
-export function deleteToken(token) {
-    if (typeof window !== "undefined") {
-      localStorage.removeItem("hsbp-token");
+      localStorage.removeItem("hsbp-cityId");
     }
 };

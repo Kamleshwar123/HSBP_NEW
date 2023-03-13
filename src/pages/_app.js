@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import 'react-phone-input-2/lib/style.css';
 import 'react-range-slider-input/dist/style.css';
 import "react-datepicker/dist/react-datepicker.css";
+import 'react-toastify/dist/ReactToastify.css';
 import Head from "next/head";
 import Layout from "../component/common/Layout";
 import { Provider } from "react-redux";

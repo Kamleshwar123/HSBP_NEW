@@ -17,6 +17,6 @@ const API_URL = {
   UPDATE_ADDRESS: `/updateCustomerAddress`,
   UPDATE_PROFILE: `/updateProfile`,
   ADD_TO_CART: `/addtocart`,
-  APPLY_COUPEN: `/applyCoupon`
+  APPLY_COUPEN: `/applyCoupon`,
 };
 export default API_URL;

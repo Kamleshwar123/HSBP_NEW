@@ -1,4 +1,4 @@
-import { Router } from "next/router";
+import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import API_URL from "../constant/urls";
 import { setCustomerData, setCustomerId } from "../redux/Slices/userSlice";
@@ -20,13 +20,16 @@ export const loginApi = (data) => async (dispatch) => {
         return err
     }
 };
-export const verifyOtpApi = (data) => async (dispatch) => {
+export const verifyOtpApi = (data,router) => async (dispatch) => {
     try {
         const res = await Api.post(API_URL.VERIFY_OTP, data);
-        if (res.status === 200) {
+        if (res.data?.Success === "TRUE") {
             dispatch(setCustomerData(res?.data?.Result));
-            Router.push('/')
+            Cookies.set("hsbpUserData", JSON.stringify(res?.data?.Result || "{}"));
+            router.push('/')
             toast.success(res?.data?.Message || "");
+        } else {
+            toast.error(res?.data?.Message || "");
         }
         return res;
     } catch (err) {

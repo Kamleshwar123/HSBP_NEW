@@ -7,7 +7,7 @@ const Login = ({isOpen,closeModal}) => {
   return (
     <>
     <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-[9999]" onClose={closeModal}>
+        <Dialog as="div" className="relative z-[1300]" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"

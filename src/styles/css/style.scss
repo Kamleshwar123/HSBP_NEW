@@ -454,6 +454,10 @@ margin-bottom: 8px;
 .recaptcha .rc-anchor-checkbox-label {
   color: #2F1A59;
 }
+.pkgclip {
+  -webkit-clip-path: polygon(0% 0%, 100% 3%, 100% 89%, 37% 89%, 23% 99%, 15% 89%, 1% 88%);
+clip-path: polygon(0% 0%, 100% 3%, 100% 89%, 37% 89%, 23% 99%, 15% 89%, 1% 88%);
+}
 @media only screen and (max-width: 600px) {
   .hsbp_text_line:before, .hsbp_text_line:after {
     content: unset;
